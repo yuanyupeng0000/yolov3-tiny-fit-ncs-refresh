@@ -1,0 +1,1 @@
+python3 object_detection_demo_yolov3_tiny.py -m /data/NCS/OpenVINO/tensorflow-yolo-v3/model_optimizer/20190218182235_TinyYoloV3NCS.xml -i standard_size_416_persons.jpg -d CPU -l /home/yyp/inference_engine_samples_build/intel64/Release/lib/libcpu_extension.so -pt 0.1

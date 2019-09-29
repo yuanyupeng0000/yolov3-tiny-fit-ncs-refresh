@@ -1,0 +1,35 @@
+[18:0:38][info](main.c:23)====>.............programe start.............
+[18:0:38][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[18:0:38][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[18:0:39][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[18:0:39][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[18:3:10][info](main.c:23)====>.............programe start.............
+[18:3:10][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[18:3:10][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[18:3:10][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[18:3:10][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[18:5:40][info](main.c:23)====>.............programe start.............
+[18:5:40][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[18:5:40][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[18:5:40][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[18:5:40][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[18:7:4][info](main.c:23)====>.............programe start.............
+[18:7:4][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[18:7:4][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[18:7:4][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[18:7:4][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[18:7:54][info](main.c:23)====>.............programe start.............
+[18:7:54][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[18:7:55][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[18:7:55][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[18:7:55][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &

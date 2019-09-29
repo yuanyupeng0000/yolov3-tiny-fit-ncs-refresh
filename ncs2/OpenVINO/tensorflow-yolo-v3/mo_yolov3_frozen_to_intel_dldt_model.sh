@@ -1,0 +1,1 @@
+python3 /opt/intel/openvino_2019.2.242/deployment_tools/model_optimizer/mo_tf.py --input_model frozen_darknet_yolov3_model.pb --tensorflow_use_custom_operations_config /opt/intel/openvino_2019.2.242/deployment_tools/model_optimizer/extensions/front/tf/yolo_v3.json --batch 1 --data_type FP16

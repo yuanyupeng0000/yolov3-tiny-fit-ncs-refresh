@@ -1,0 +1,1 @@
+python3 yolov3-tiny-ncs-mini-pack/async_multi_request_id.py -m /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/model_optimizer/FP16/20190410105125_TinyYoloV3NCS.xml -i /video/person/person/wuhan/12_25_14.264 -d MYRIAD

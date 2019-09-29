@@ -1,0 +1,1 @@
+python3 mo_tf.py --input_model ../../tensorflow-yolo-v3/frozen_darknet_yolov3_model.pb --tensorflow_use_custom_operations_config extensions/front/tf/yolo_v3.json --input_shape [1,416,416,3] --data_type FP32

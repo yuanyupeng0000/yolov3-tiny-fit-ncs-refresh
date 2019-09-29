@@ -1,0 +1,81 @@
+[2:7:58][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[2:7:58][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[2:7:58][info](camera_service.c:137)====>camera: 0 open 
+
+[2:7:58][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[2:7:59][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[2:8:12][info](camera_service.c:309)====>cam_info[0]: creating thread ............................
+[2:8:12][info](camera_service.c:137)====>camera: 1 open 
+
+[2:8:12][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[2:8:12][info](camera_service.c:309)====>cam_info[1]: creating thread ............................
+[2:8:12][info](camera_service.c:137)====>camera: 2 open 
+
+[2:8:12][info](camera_service.c:309)====>cam_info[2]: creating thread ............................
+[2:8:12][info](camera_service.c:137)====>camera: 3 open 
+
+[2:8:12][info](camera_service.c:309)====>cam_info[3]: creating thread ............................
+[2:8:13][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[2:8:14][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[2:8:22][info](camera_service.c:430)====>watchdog dog for cam 0 , fp10s:50 / 363
+[2:8:22][info](camera_service.c:430)====>watchdog dog for cam 1 , fp10s:57 / 161
+[2:8:22][info](camera_service.c:430)====>watchdog dog for cam 2 , fp10s:42 / 155
+[2:8:22][info](camera_service.c:430)====>watchdog dog for cam 3 , fp10s:42 / 149
+[2:8:32][info](camera_service.c:430)====>watchdog dog for cam 0 , fp10s:48 / 152
+[2:8:32][info](camera_service.c:430)====>watchdog dog for cam 1 , fp10s:51 / 152
+[2:8:32][info](camera_service.c:430)====>watchdog dog for cam 2 , fp10s:44 / 150
+[2:8:32][info](camera_service.c:430)====>watchdog dog for cam 3 , fp10s:51 / 151
+[2:8:42][info](camera_service.c:430)====>watchdog dog for cam 0 , fp10s:52 / 150
+[2:8:42][info](camera_service.c:430)====>watchdog dog for cam 1 , fp10s:53 / 150
+[2:8:42][info](camera_service.c:430)====>watchdog dog for cam 2 , fp10s:48 / 151
+[2:8:42][info](tcp_server.c:272)====>timeout!
+
+[2:8:42][info](camera_service.c:430)====>watchdog dog for cam 3 , fp10s:47 / 150
+[2:8:52][info](camera_service.c:430)====>watchdog dog for cam 0 , fp10s:47 / 150
+[2:8:52][info](camera_service.c:430)====>watchdog dog for cam 1 , fp10s:47 / 150
+[2:8:52][info](camera_service.c:430)====>watchdog dog for cam 2 , fp10s:45 / 151
+[2:8:52][info](camera_service.c:430)====>watchdog dog for cam 3 , fp10s:53 / 150
+[2:9:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[2:9:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[2:9:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[2:9:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[2:9:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[2:9:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[2:9:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[2:9:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[2:9:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[2:9:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[2:9:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[2:9:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[2:9:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[2:9:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[2:9:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[2:9:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[2:9:0][info](cam_alg.c:874)====>(cam 1)force change alg index to 2
+[2:9:2][info](camera_service.c:430)====>watchdog dog for cam 0 , fp10s:44 / 151
+[2:9:2][info](camera_service.c:430)====>watchdog dog for cam 1 , fp10s:53 / 151
+[2:9:2][info](camera_service.c:430)====>watchdog dog for cam 2 , fp10s:43 / 150
+[2:9:3][info](camera_service.c:430)====>watchdog dog for cam 3 , fp10s:48 / 150
+[2:9:4][info](cam_alg.c:874)====>(cam 0)force change alg index to 2
+[2:9:5][info](cam_alg.c:874)====>(cam 3)force change alg index to 2
