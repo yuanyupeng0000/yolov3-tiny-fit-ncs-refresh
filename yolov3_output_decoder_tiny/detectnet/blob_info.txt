@@ -1,0 +1,134 @@
+num_inputs is 1
+num_outputs is 2
+I1007 11:10:53.628432 18902 detectnet.cpp:80] Input data layer channels is  3
+I1007 11:10:53.628443 18902 detectnet.cpp:81] Input data layer width is  416
+I1007 11:10:53.628445 18902 detectnet.cpp:82] Input data layer height is  416
+input
+layer1-conv
+blob shape:16 3 3 3 (432)
+layer1-bn
+blob shape:16 (16)
+blob shape:16 (16)
+blob shape:1 (1)
+layer1-scale
+blob shape:16 (16)
+blob shape:16 (16)
+layer1-act
+layer2-maxpool
+layer3-conv
+blob shape:32 16 3 3 (4608)
+layer3-bn
+blob shape:32 (32)
+blob shape:32 (32)
+blob shape:1 (1)
+layer3-scale
+blob shape:32 (32)
+blob shape:32 (32)
+layer3-act
+layer4-maxpool
+layer5-conv
+blob shape:64 32 3 3 (18432)
+layer5-bn
+blob shape:64 (64)
+blob shape:64 (64)
+blob shape:1 (1)
+layer5-scale
+blob shape:64 (64)
+blob shape:64 (64)
+layer5-act
+layer6-maxpool
+layer7-conv
+blob shape:128 64 3 3 (73728)
+layer7-bn
+blob shape:128 (128)
+blob shape:128 (128)
+blob shape:1 (1)
+layer7-scale
+blob shape:128 (128)
+blob shape:128 (128)
+layer7-act
+layer8-maxpool
+layer9-conv
+blob shape:256 128 3 3 (294912)
+layer9-bn
+blob shape:256 (256)
+blob shape:256 (256)
+blob shape:1 (1)
+layer9-scale
+blob shape:256 (256)
+blob shape:256 (256)
+layer9-act
+layer9-conv_layer9-act_0_split
+layer10-maxpool
+layer11-conv
+blob shape:512 256 3 3 (1179648)
+layer11-bn
+blob shape:512 (512)
+blob shape:512 (512)
+blob shape:1 (1)
+layer11-scale
+blob shape:512 (512)
+blob shape:512 (512)
+layer11-act
+layer12-maxpool
+layer13-conv
+blob shape:1024 512 3 3 (4718592)
+layer13-bn
+blob shape:1024 (1024)
+blob shape:1024 (1024)
+blob shape:1 (1)
+layer13-scale
+blob shape:1024 (1024)
+blob shape:1024 (1024)
+layer13-act
+layer14-conv
+blob shape:256 1024 1 1 (262144)
+layer14-bn
+blob shape:256 (256)
+blob shape:256 (256)
+blob shape:1 (1)
+layer14-scale
+blob shape:256 (256)
+blob shape:256 (256)
+layer14-act
+layer14-conv_layer14-act_0_split
+layer15-conv
+blob shape:512 256 3 3 (1179648)
+layer15-bn
+blob shape:512 (512)
+blob shape:512 (512)
+blob shape:1 (1)
+layer15-scale
+blob shape:512 (512)
+blob shape:512 (512)
+layer15-act
+layer16-conv
+blob shape:255 512 1 1 (130560)
+blob shape:255 (255)
+layer18-route
+layer19-conv
+blob shape:128 256 1 1 (32768)
+layer19-bn
+blob shape:128 (128)
+blob shape:128 (128)
+blob shape:1 (1)
+layer19-scale
+blob shape:128 (128)
+blob shape:128 (128)
+layer19-act
+layer20-upsample
+layer21-route
+layer22-conv
+blob shape:256 384 3 3 (884736)
+layer22-bn
+blob shape:256 (256)
+blob shape:256 (256)
+blob shape:1 (1)
+layer22-scale
+blob shape:256 (256)
+blob shape:256 (256)
+layer22-act
+layer23-conv
+blob shape:255 256 1 1 (65280)
+blob shape:255 (255)
+

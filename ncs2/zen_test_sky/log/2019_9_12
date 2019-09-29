@@ -1,0 +1,537 @@
+[10:56:15][info](main.c:23)====>.............programe start.............
+[10:56:15][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[10:56:15][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[10:56:15][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[10:56:15][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[10:56:17][info](common.c:787)====>calling exit@@@@@@@@@@@@@@@@@@@@
+[11:31:52][info](main.c:23)====>.............programe start.............
+[11:31:52][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[11:31:53][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[11:31:53][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[11:31:53][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[11:38:4][info](main.c:23)====>.............programe start.............
+[11:38:4][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[11:38:4][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[11:38:4][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[11:38:4][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[11:41:14][info](main.c:23)====>.............programe start.............
+[11:41:14][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[11:41:14][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[11:41:14][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[11:41:15][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[11:42:31][info](main.c:23)====>.............programe start.............
+[11:42:31][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[11:42:31][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[11:42:31][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[11:42:31][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[11:42:57][info](main.c:23)====>.............programe start.............
+[11:42:57][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[11:42:57][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[11:42:57][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[11:42:57][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[11:44:50][info](main.c:23)====>.............programe start.............
+[11:44:50][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[11:44:50][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[11:44:51][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[11:44:51][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[11:47:39][info](main.c:23)====>.............programe start.............
+[11:47:39][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[11:47:39][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[11:47:39][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[11:47:39][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[11:50:11][info](main.c:23)====>.............programe start.............
+[11:50:11][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[11:50:11][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[11:50:11][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[11:50:11][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[11:50:55][info](main.c:23)====>.............programe start.............
+[11:50:55][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[11:50:55][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[11:50:55][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[11:50:55][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[11:53:29][info](main.c:23)====>.............programe start.............
+[11:53:29][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[11:53:29][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[11:53:29][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[11:53:29][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[11:53:43][info](main.c:23)====>.............programe start.............
+[11:53:43][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[11:53:43][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[11:53:43][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[11:53:43][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[16:58:43][info](main.c:23)====>.............programe start.............
+[16:58:43][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[16:58:43][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[16:58:43][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[16:58:43][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[16:58:43][info](common.c:787)====>calling exit@@@@@@@@@@@@@@@@@@@@
+[16:59:2][info](main.c:23)====>.............programe start.............
+[16:59:2][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[16:59:2][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[16:59:2][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[16:59:2][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[17:0:28][info](main.c:23)====>.............programe start.............
+[17:0:28][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:0:28][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[17:0:28][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[17:0:28][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[17:4:7][info](main.c:23)====>.............programe start.............
+[17:4:7][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:4:7][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[17:4:7][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[17:4:7][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[17:7:52][info](main.c:23)====>.............programe start.............
+[17:7:52][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:7:52][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[17:7:52][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[17:7:52][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[17:7:52][info](common.c:739)====> err================================>seg fault,restart system
+
+[17:7:52][info](common.c:787)====>calling exit@@@@@@@@@@@@@@@@@@@@
+[17:8:30][info](main.c:23)====>.............programe start.............
+[17:8:30][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:8:30][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[17:8:30][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[17:8:30][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[17:10:51][info](main.c:23)====>.............programe start.............
+[17:10:51][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:10:51][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[17:10:51][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[17:10:51][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[17:11:14][info](main.c:23)====>.............programe start.............
+[17:11:14][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:11:14][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[17:11:14][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[17:11:14][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[17:13:56][info](main.c:23)====>.............programe start.............
+[17:13:56][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:13:56][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[17:13:56][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[17:13:56][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[17:15:33][info](main.c:23)====>.............programe start.............
+[17:15:33][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:15:33][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[17:15:33][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[17:15:33][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[17:15:40][info](camera_service.c:527)====>cam_info[0]: creating thread
+[17:15:41][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:12 / 189 list: 3
+[17:15:42][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:15:43][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:15:44][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 2
+[17:15:45][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:15:46][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:15:47][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:15:48][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 27 list: 3
+[17:15:49][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:15:50][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:15:51][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:17 / 26 list: 2
+[17:15:52][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 26 list: 3
+[17:15:53][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 27 list: 3
+[17:15:54][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 25 list: 3
+[17:15:55][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 3
+[17:15:56][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 3
+[17:15:57][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 2
+[17:15:58][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 25 list: 3
+[17:15:59][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 25 list: 3
+[17:16:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:16:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:16:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:16:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:16:0][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 25 list: 3
+[17:16:1][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 25 list: 2
+[17:16:2][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 25 list: 3
+[17:16:3][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 2
+[17:16:4][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 25 list: 2
+[17:16:4][info](common.c:739)====> err================================>seg fault,restart system
+
+[17:16:4][info](common.c:787)====>calling exit@@@@@@@@@@@@@@@@@@@@
+[17:21:43][info](main.c:23)====>.............programe start.............
+[17:21:43][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:21:43][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[17:21:43][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[17:21:43][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[17:21:47][info](camera_service.c:527)====>cam_info[0]: creating thread
+[17:21:48][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 126 list: 2
+[17:21:49][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:21:50][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:21:51][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:21:52][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 25 list: 2
+[17:21:53][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:21:54][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:21:55][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 25 list: 3
+[17:21:56][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:21:57][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:21:58][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:21:59][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:22:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:22:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:22:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:22:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:22:0][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:22:1][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:22:2][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:22:3][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:22:4][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:22:5][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:22:6][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:22:7][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:22:8][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:22:9][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:22:10][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:16 / 25 list: 3
+[17:22:11][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 25 list: 3
+[17:22:12][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 25 list: 3
+[17:22:13][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 25 list: 3
+[17:22:14][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 25 list: 3
+[17:22:15][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 25 list: 3
+[17:22:16][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:16 / 25 list: 3
+[17:22:17][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:16 / 25 list: 2
+[17:22:17][info](tcp_server.c:280)====>timeout!
+
+[17:22:18][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 25 list: 2
+[17:22:19][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 2
+[17:22:20][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 3
+[17:22:21][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 3
+[17:22:22][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 25 list: 2
+[17:22:23][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 3
+[17:22:24][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 25 list: 2
+[17:22:25][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 3
+[17:22:26][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 2
+[17:22:27][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 3
+[17:22:28][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 25 list: 2
+[17:22:29][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 3
+[17:22:30][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 25 list: 3
+[17:22:31][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 3
+[17:22:32][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 2
+[17:22:33][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 25 list: 3
+[17:22:34][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 25 list: 3
+[17:22:35][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 2
+[17:22:36][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 2
+[17:22:37][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 25 list: 3
+[17:22:38][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 25 list: 3
+[17:27:9][info](main.c:23)====>.............programe start.............
+[17:27:9][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:27:9][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[17:27:9][info](camera_service.c:212)====>camera[0] open: rtsp://192.168.1.103:554/av0_1 
+
+[17:27:9][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[17:27:14][info](camera_service.c:527)====>cam_info[0]: creating thread
+[17:27:15][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:0 / 0 list: 0
+[17:27:16][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:0 / 0 list: 0
+[17:27:17][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:0 / 0 list: 0
+[17:27:18][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:0 / 0 list: 0
+[17:27:19][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:0 / 0 list: 0
+[17:27:20][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:0 / 0 list: 0
+[17:27:21][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:0 / 0 list: 0
+[17:27:21][info](camera_service.c:718)====>watch dog for cam 0:camera loop stopped,resetting...
+[17:27:22][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:0 / 0 list: 0
+[17:27:23][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:0 / 0 list: 0
+[17:27:23][info](camera_service.c:580)====>cam[0] rtsp_thread: 424453888 process_thread: 3221223168 
+[17:28:27][info](main.c:23)====>.............programe start.............
+[17:28:27][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:28:27][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[17:28:27][info](camera_service.c:212)====>camera[0] open: /video/09_58_09.264 
+
+[17:28:27][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[17:28:32][info](camera_service.c:527)====>cam_info[0]: creating thread
+[17:28:33][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 136 list: 3
+[17:28:34][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:28:35][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:28:36][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:28:37][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:28:38][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:16 / 26 list: 2
+[17:28:39][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:28:40][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:28:41][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 26 list: 3
+[17:28:42][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 3
+[17:28:43][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:28:44][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:28:45][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 26 list: 3
+[17:28:46][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:28:47][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:28:48][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 2
+[17:28:49][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:28:50][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:28:51][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:28:52][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:28:53][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:28:54][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 27 list: 3
+[17:28:55][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:28:56][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 27 list: 3
+[17:28:57][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:28:58][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:28:59][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:16 / 27 list: 3
+[17:29:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:29:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:29:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:29:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:29:0][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:29:1][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:29:2][info](tcp_server.c:280)====>timeout!
+
+[17:29:2][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 25 list: 3
+[17:29:3][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:29:4][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 2
+[17:29:5][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:6][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:7][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:29:8][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:29:9][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:29:10][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:29:11][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:29:12][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:13][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:29:14][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 27 list: 3
+[17:29:15][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:29:16][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:17][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:29:18][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 27 list: 3
+[17:29:19][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 26 list: 3
+[17:29:20][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:21][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:29:22][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:29:23][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:29:24][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 27 list: 3
+[17:29:25][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:26][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:29:27][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:28][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:29][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:30][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:31][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:29:32][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:29:32][info](tcp_server.c:280)====>timeout!
+
+[17:29:33][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:34][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 27 list: 3
+[17:29:35][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:29:36][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 27 list: 3
+[17:29:37][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:38][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:29:39][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:29:40][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:29:41][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:42][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:16 / 27 list: 3
+[17:29:43][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:44][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:45][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:29:46][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:47][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:48][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:49][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:29:50][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:29:51][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:29:52][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:29:53][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 27 list: 3
+[17:29:54][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:55][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:56][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:57][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 27 list: 3
+[17:29:58][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:29:59][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 26 list: 3
+[17:30:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:30:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:30:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:30:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:30:0][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:30:1][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:30:2][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:30:2][info](tcp_server.c:280)====>timeout!
+
+[17:30:3][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:30:4][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:30:5][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:30:6][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:30:7][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 26 list: 3
+[17:30:8][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:30:9][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:30:10][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:30:11][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 26 list: 3
+[17:30:12][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:30:13][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 27 list: 3
+[17:30:14][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 25 list: 3
+[17:30:15][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 27 list: 3
+[17:30:16][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 26 list: 3
+[17:30:17][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:30:18][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 26 list: 3
+[17:30:19][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:30:20][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:30:21][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:30:22][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:30:23][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 3
+[17:30:24][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:30:25][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:30:26][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:30:27][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:30:28][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 2
+[17:30:29][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:30:30][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:30:31][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:30:32][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 26 list: 3
+[17:30:32][info](tcp_server.c:280)====>timeout!
+
+[17:30:33][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:30:34][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:30:35][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 2
+[17:30:36][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:30:37][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 25 list: 3
+[17:30:38][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:30:39][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:30:40][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 26 list: 3
+[17:30:41][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:30:42][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:30:43][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:16 / 27 list: 3
+[17:30:44][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:17 / 26 list: 2
+[17:30:45][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:16 / 27 list: 2
+[17:30:46][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 27 list: 3
+[17:30:47][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 26 list: 3
+[17:30:48][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:30:49][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:30:50][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:30:51][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 27 list: 3
+[17:30:52][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:30:53][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:30:54][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:16 / 26 list: 2
+[17:30:55][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:30:56][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:30:57][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:30:58][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:30:59][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 26 list: 3
+[17:31:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:31:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:31:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:31:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:31:0][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[17:31:1][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:31:2][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 27 list: 3
+[17:31:2][info](tcp_server.c:280)====>timeout!
+
+[17:31:3][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:31:4][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:31:5][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:31:6][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:31:7][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:31:8][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:31:9][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:31:10][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 27 list: 3
+[17:31:11][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:31:12][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:31:13][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:31:14][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:31:15][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:31:16][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:31:17][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:31:18][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:31:19][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:17 / 27 list: 2
+[17:31:20][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:31:21][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:16 / 26 list: 2
+[17:31:22][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:31:23][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:16 / 26 list: 3
+[17:31:24][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:31:25][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:16 / 26 list: 2
+[17:31:26][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:31:27][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:31:28][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:31:29][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:31:30][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:16 / 26 list: 2
+[17:31:31][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:31:32][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:31:32][info](tcp_server.c:280)====>timeout!
+
+[17:31:33][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 3
+[17:31:34][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:31:35][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:31:36][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:31:37][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:31:38][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:16 / 26 list: 3
+[17:31:39][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:16 / 26 list: 2
+[17:31:40][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:31:41][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:17 / 27 list: 2
+[17:31:42][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:16 / 27 list: 3
+[17:31:43][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:16 / 26 list: 2
+[17:31:44][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[17:31:45][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 27 list: 3
+[17:31:46][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:31:47][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 25 list: 2
+[17:31:48][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 3
+[17:31:49][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:15 / 26 list: 2
+[17:31:49][info](main.c:23)====>.............programe start.............
+[17:31:49][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[17:31:49][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[17:31:49][info](camera_service.c:212)====>camera[0] open: /video/09_58_09.264 
+
+[17:31:49][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[17:31:50][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:17 / 26 list: 2
+[17:31:51][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:18 / 27 list: 2
+[17:31:52][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:18 / 28 list: 3
+[17:31:53][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:18 / 27 list: 3
+[17:31:54][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:18 / 27 list: 3
+[17:31:55][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:18 / 27 list: 3

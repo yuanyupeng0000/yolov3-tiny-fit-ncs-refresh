@@ -1,0 +1,256 @@
+[3:41:40][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[3:41:40][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[3:41:40][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[3:41:40][info](camera_service.c:137)====>camera: 0 open 
+
+[3:41:41][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:41:50][info](camera_service.c:309)====>cam_info[0]: creating thread ............................
+[3:41:50][info](camera_service.c:137)====>camera: 1 open 
+
+[3:41:50][info](camera_service.c:309)====>cam_info[1]: creating thread ............................
+[3:41:50][info](camera_service.c:137)====>camera: 2 open 
+
+[3:41:51][info](camera_service.c:309)====>cam_info[2]: creating thread ............................
+[3:41:51][info](camera_service.c:137)====>camera: 3 open 
+
+[3:41:51][info](camera_service.c:309)====>cam_info[3]: creating thread ............................
+[3:41:51][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:41:51][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:41:52][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:46:11][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[3:46:11][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[3:46:12][info](camera_service.c:137)====>camera: 0 open 
+
+[3:46:12][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[3:46:12][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:46:22][info](camera_service.c:309)====>cam_info[0]: creating thread ............................
+[3:46:22][info](camera_service.c:137)====>camera: 1 open 
+
+[3:46:22][info](camera_service.c:309)====>cam_info[1]: creating thread ............................
+[3:46:22][info](camera_service.c:137)====>camera: 2 open 
+
+[3:46:22][info](camera_service.c:309)====>cam_info[2]: creating thread ............................
+[3:46:22][info](camera_service.c:137)====>camera: 3 open 
+
+[3:46:22][info](camera_service.c:309)====>cam_info[3]: creating thread ............................
+[3:46:23][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:46:23][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:46:23][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:47:16][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[3:47:16][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[3:47:16][info](camera_service.c:137)====>camera: 0 open 
+
+[3:47:16][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[3:47:17][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:47:27][info](camera_service.c:309)====>cam_info[0]: creating thread ............................
+[3:47:27][info](camera_service.c:137)====>camera: 1 open 
+
+[3:47:27][info](camera_service.c:309)====>cam_info[1]: creating thread ............................
+[3:47:27][info](camera_service.c:137)====>camera: 2 open 
+
+[3:47:27][info](camera_service.c:309)====>cam_info[2]: creating thread ............................
+[3:47:27][info](camera_service.c:137)====>camera: 3 open 
+
+[3:47:27][info](camera_service.c:309)====>cam_info[3]: creating thread ............................
+[3:47:28][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:47:28][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:47:28][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:48:37][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[3:48:37][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[3:48:37][info](camera_service.c:137)====>camera: 0 open 
+
+[3:48:37][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[3:48:38][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:48:47][info](camera_service.c:309)====>cam_info[0]: creating thread ............................
+[3:48:47][info](camera_service.c:137)====>camera: 1 open 
+
+[3:48:47][info](camera_service.c:309)====>cam_info[1]: creating thread ............................
+[3:48:47][info](camera_service.c:137)====>camera: 2 open 
+
+[3:48:48][info](camera_service.c:309)====>cam_info[2]: creating thread ............................
+[3:48:48][info](camera_service.c:137)====>camera: 3 open 
+
+[3:48:48][info](camera_service.c:309)====>cam_info[3]: creating thread ............................
+[3:48:48][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:48:48][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:48:49][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:51:24][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[3:51:24][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[3:51:24][info](camera_service.c:137)====>camera: 0 open 
+
+[3:51:24][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[3:51:25][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:51:35][info](camera_service.c:309)====>cam_info[0]: creating thread ............................
+[3:51:35][info](camera_service.c:137)====>camera: 1 open 
+
+[3:51:35][info](camera_service.c:309)====>cam_info[1]: creating thread ............................
+[3:51:35][info](camera_service.c:137)====>camera: 2 open 
+
+[3:51:35][info](camera_service.c:309)====>cam_info[2]: creating thread ............................
+[3:51:35][info](camera_service.c:137)====>camera: 3 open 
+
+[3:51:35][info](camera_service.c:309)====>cam_info[3]: creating thread ............................
+[3:51:35][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:51:35][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:51:36][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:55:23][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[3:55:23][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[3:55:23][info](camera_service.c:137)====>camera: 0 open 
+
+[3:55:23][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[3:55:24][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:55:34][info](camera_service.c:309)====>cam_info[0]: creating thread ............................
+[3:55:34][info](camera_service.c:137)====>camera: 1 open 
+
+[3:55:34][info](camera_service.c:309)====>cam_info[1]: creating thread ............................
+[3:55:34][info](camera_service.c:137)====>camera: 2 open 
+
+[3:55:34][info](camera_service.c:309)====>cam_info[2]: creating thread ............................
+[3:55:34][info](camera_service.c:137)====>camera: 3 open 
+
+[3:55:34][info](camera_service.c:309)====>cam_info[3]: creating thread ............................
+[3:55:34][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:55:35][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:55:35][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:55:59][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[3:55:59][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[3:55:59][info](camera_service.c:137)====>camera: 0 open 
+
+[3:55:59][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[3:56:0][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:56:10][info](camera_service.c:309)====>cam_info[0]: creating thread ............................
+[3:56:10][info](camera_service.c:137)====>camera: 1 open 
+
+[3:56:10][info](camera_service.c:309)====>cam_info[1]: creating thread ............................
+[3:56:10][info](camera_service.c:137)====>camera: 2 open 
+
+[3:56:10][info](camera_service.c:309)====>cam_info[2]: creating thread ............................
+[3:56:10][info](camera_service.c:137)====>camera: 3 open 
+
+[3:56:10][info](camera_service.c:309)====>cam_info[3]: creating thread ............................
+[3:56:10][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:56:11][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[3:56:11][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[4:23:56][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[4:23:56][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[4:23:56][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[4:23:56][info](camera_service.c:137)====>camera: 0 open 
+
+[4:23:57][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[4:24:6][info](camera_service.c:309)====>cam_info[0]: creating thread ............................
+[4:24:6][info](camera_service.c:137)====>camera: 1 open 
+
+[4:24:7][info](camera_service.c:309)====>cam_info[1]: creating thread ............................
+[4:24:7][info](camera_service.c:137)====>camera: 2 open 
+
+[4:24:7][info](camera_service.c:309)====>cam_info[2]: creating thread ............................
+[4:24:7][info](camera_service.c:137)====>camera: 3 open 
+
+[4:24:7][info](camera_service.c:309)====>cam_info[3]: creating thread ............................
+[4:24:7][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[4:24:8][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[4:24:8][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[4:29:9][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[4:29:9][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[4:29:9][info](camera_service.c:137)====>camera: 0 open 
+
+[4:29:9][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[4:29:10][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[4:29:20][info](camera_service.c:309)====>cam_info[0]: creating thread ............................
+[4:29:20][info](camera_service.c:137)====>camera: 1 open 
+
+[4:29:20][info](camera_service.c:309)====>cam_info[1]: creating thread ............................
+[4:29:20][info](camera_service.c:137)====>camera: 2 open 
+
+[4:29:20][info](camera_service.c:309)====>cam_info[2]: creating thread ............................
+[4:29:20][info](camera_service.c:137)====>camera: 3 open 
+
+[4:29:20][info](camera_service.c:309)====>cam_info[3]: creating thread ............................
+[4:29:21][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[4:29:21][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[4:29:21][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[4:32:17][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[4:32:18][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[4:32:18][info](camera_service.c:137)====>camera: 0 open 
+
+[4:32:18][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[4:32:19][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[4:32:28][info](camera_service.c:309)====>cam_info[0]: creating thread ............................
+[4:32:28][info](camera_service.c:137)====>camera: 1 open 
+
+[4:32:28][info](camera_service.c:309)====>cam_info[1]: creating thread ............................
+[4:32:28][info](camera_service.c:137)====>camera: 2 open 
+
+[4:32:28][info](camera_service.c:309)====>cam_info[2]: creating thread ............................
+[4:32:28][info](camera_service.c:137)====>camera: 3 open 
+
+[4:32:28][info](camera_service.c:309)====>cam_info[3]: creating thread ............................
+[4:32:29][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[4:32:29][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[4:32:30][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[6:15:5][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[6:15:5][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[6:15:5][info](camera_service.c:137)====>camera: 0 open 
+
+[6:15:5][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[6:15:6][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[6:16:8][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[6:16:8][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[6:16:8][info](camera_service.c:137)====>camera: 0 open 
+
+[6:16:8][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[6:16:10][info](camera/camera_rtsp.c:23)====>camera open is ok.
+

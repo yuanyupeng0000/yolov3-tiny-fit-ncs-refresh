@@ -1,0 +1,1 @@
+python3 mo_tf.py --input_model /media/yyp/DATA/tf_frozen/frozen_inference_graph.pb --tensorflow_use_custom_operations_config extensions/front/tf/ssd_v2_support_new.json --tensorflow_object_detection_api_pipeline_config /media/yyp/DATA/tf_frozen/pipeline.config  --data_type FP16 --output_dir FP16 --log_level DEBUG

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8572b528-187d-467a-8177-bfd5b562cf04" name="Default Changelist" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/convert_tools/yolov3-tiny-ncs-convert-weights-2-caffemodel.py" beforeDir="false" afterPath="$PROJECT_DIR$/convert_tools/yolov3-tiny-ncs-convert-weights-2-caffemodel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ncs2/OpenVINO/inference_engine/samples/python_samples/object_detection_demo_yolov3_tiny.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ncs2/OpenVINO/inference_engine/samples/python_samples/object_detection_demo_yolov3_tiny.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/00002.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/00002.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/CONTRIBUTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/CONTRIBUTORS.md" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/CONTRIBUTORS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/CaffeConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/CaffeConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/CaffeTargets.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/CaffeTargets.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/INSTALL.md" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/INSTALL.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/Makefile.config.example" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/Makefile.config.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/caffe.cloc" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/caffe.cloc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/caffe_config.h" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/caffe_config.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/demo_darknet_yolov3.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/demo_darknet_yolov3.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/demo_yolo.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/demo_yolo.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/demo_yolo_lite.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/demo_yolo_lite.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/detect_cuda_archs.cu" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/detect_cuda_archs.cu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_darknet.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_darknet.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_yolo.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_yolo.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_yolo_lite.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_yolo_lite.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_yolov3.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_yolov3.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_yolov3_coco.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_yolov3_coco.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_yolov3_coco_lite.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_yolov3_coco_lite.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_yolov3_darknet.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_yolov3_darknet.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_yolov3_lite.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_yolov3_lite.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../YoloV3NCS-master/detectionExample/ObjectWrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/../YoloV3NCS-master/detectionExample/ObjectWrapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/convert_tools/output_expected.npy" beforeDir="false" afterPath="$PROJECT_DIR$/convert_tools/output_expected.npy" afterDir="false" />
+>>>>>>> cfc2a59d08f8d0545d34c83921b843e1236eb00d
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+<<<<<<< HEAD
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/convert_tools/yolov3-tiny-ncs-convert-weights-2-caffemodel.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+=======
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/convert_tools/yolov3-tiny-ncs-convert-weights-2-caffemodel.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="14" column="98" selection-start-line="14" selection-start-column="98" selection-end-line="14" selection-end-column="98" />
+>>>>>>> cfc2a59d08f8d0545d34c83921b843e1236eb00d
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Setup Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/convert_tools/yolov3-tiny-ncs-convert-weights-2-caffemodel.ipynb" />
+        <option value="$PROJECT_DIR$/convert_tools/yolov3-tiny-ncs-convert-weights-2-caffemodel.py" />
+      </list>
+    </option>
+  </component>
+<<<<<<< HEAD
+  <component name="ProjectFrameBounds">
+=======
+  <component name="ProjectFrameBounds" extendedState="1">
+>>>>>>> cfc2a59d08f8d0545d34c83921b843e1236eb00d
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1355" />
+    <option name="height" value="836" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+<<<<<<< HEAD
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+=======
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ncs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ncs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ncs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ncs" type="462c0819:PsiDirectoryNode" />
+              <item name="convert_tools" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+>>>>>>> cfc2a59d08f8d0545d34c83921b843e1236eb00d
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/convert_tools" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="yolov3-tiny-ncs-convert-weights-2-caffemodel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ncs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="LD_LIBRARY_PATH" value="/usr/local/cuda-8.0/lib64;" />
+      </envs>
+<<<<<<< HEAD
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/convert_tools" />
+      <option name="IS_MODULE_SDK" value="false" />
+=======
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/convert_tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+>>>>>>> cfc2a59d08f8d0545d34c83921b843e1236eb00d
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/convert_tools/yolov3-tiny-ncs-convert-weights-2-caffemodel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.yolov3-tiny-ncs-convert-weights-2-caffemodel" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8572b528-187d-467a-8177-bfd5b562cf04" name="Default Changelist" comment="" />
+      <created>1550459898665</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550459898665</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="65" y="24" width="1355" height="836" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.47107437" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+=======
+    <frame x="65" y="24" width="1355" height="836" extended-state="1" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17430504" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" weight="0.32909605" />
+      <window_info anchor="bottom" id="Python Console" weight="0.32909605" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32909605" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+>>>>>>> cfc2a59d08f8d0545d34c83921b843e1236eb00d
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32909605" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32909605" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32768363" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32909605" />
+=======
+>>>>>>> cfc2a59d08f8d0545d34c83921b843e1236eb00d
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/convert_tools/yolov3-tiny-ncs-convert-weights-2-caffemodel.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../ssd-caffe/new-yolov3-caffe/python/caffe/io.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/convert_tools/yolov3-tiny-ncs-convert-weights-2-caffemodel.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+=======
+        <state relative-caret-position="165">
+          <caret line="14" column="98" selection-start-line="14" selection-start-column="98" selection-end-line="14" selection-end-column="98" />
+>>>>>>> cfc2a59d08f8d0545d34c83921b843e1236eb00d
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

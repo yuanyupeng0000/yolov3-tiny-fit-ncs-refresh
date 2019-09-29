@@ -1,0 +1,1 @@
+python3 ./object_detection_demo_ssd_async_update.py -m /home/hddl/Downloads/ssd_model/FP16/ssd_mobilenet_v2_FP16.xml -i /home/hddl/Downloads/video/demo_1600x1200_mask.mp4 -d HDDL -pt 0.4

@@ -1,0 +1,1 @@
+python3 object_detection_demo_yolov3.py -m /data/NCS/OpenVINO/tensorflow-yolo-v3/model_optimizer/frozen_darknet_yolov3_model.xml -i /video/test/17_34_44.264 -d CPU -l /home/yyp/inference_engine_samples_build/intel64/Release/lib/libcpu_extension.so -pt 0.1
