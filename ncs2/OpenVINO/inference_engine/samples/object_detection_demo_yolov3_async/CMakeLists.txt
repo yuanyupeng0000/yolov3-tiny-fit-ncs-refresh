@@ -21,7 +21,7 @@ link_directories(/opt/intel/openvino/deployment_tools/inference_engine/lib/intel
 
 cmake_minimum_required(VERSION 3.0)
 
-set(TARGET_NAME "object_detection_yolov3_tiny_async")
+set(TARGET_NAME "object_detection_yolov3_async")
 
 # Find OpenCV components if exist
 #find_package(OpenCV COMPONENTS highgui QUIET)

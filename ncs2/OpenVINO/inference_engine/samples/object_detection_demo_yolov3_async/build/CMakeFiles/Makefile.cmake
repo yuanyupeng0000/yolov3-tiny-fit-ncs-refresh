@@ -111,5 +111,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/object_detection_yolov3_tiny_async.dir/DependInfo.cmake"
+  "CMakeFiles/object_detection_yolov3_async.dir/DependInfo.cmake"
   )

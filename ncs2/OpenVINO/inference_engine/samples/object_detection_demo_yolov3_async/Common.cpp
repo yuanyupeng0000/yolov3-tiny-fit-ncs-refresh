@@ -242,7 +242,7 @@ void ParseYOLOV3TinyNcsOutput(const CNNLayerPtr &layer, const Blob::Ptr &blob, c
     /*if (layer->type != "RegionYolo")
         throw std::runtime_error("Invalid output type: " + layer->type + ". RegionYolo expected");*/
     const int out_blob_c = static_cast<int>(blob->getTensorDesc().getDims()[1]);
-    std::cout << "[ INFO ] Output blob chanel = " << out_blob_c << std::endl;
+    //std::cout << "[ INFO ] Output blob chanel = " << out_blob_c << std::endl;
     const int out_blob_h = static_cast<int>(blob->getTensorDesc().getDims()[2]);
     const int out_blob_w = static_cast<int>(blob->getTensorDesc().getDims()[3]);
     if (out_blob_h != out_blob_w)
@@ -346,7 +346,7 @@ void ParseYOLOV3TinyNcsOutput(const CNNLayerPtr &layer, const Blob::Ptr &blob, c
     /*if (layer->type != "RegionYolo")
         throw std::runtime_error("Invalid output type: " + layer->type + ". RegionYolo expected");*/
     const int out_blob_c = static_cast<int>(blob->getTensorDesc().getDims()[1]);
-    std::cout << "[ INFO ] Output blob chanel = " << out_blob_c << std::endl;
+    //std::cout << "[ INFO ] Output blob chanel = " << out_blob_c << std::endl;
     const int out_blob_h = static_cast<int>(blob->getTensorDesc().getDims()[2]);
     const int out_blob_w = static_cast<int>(blob->getTensorDesc().getDims()[3]);
     if (out_blob_h != out_blob_w)
@@ -392,7 +392,7 @@ void ParseYOLOV3TinyNcsOutput(const CNNLayerPtr &layer, const Blob::Ptr &blob, c
             throw std::runtime_error("Invalid output size");
     }*/
     anchor_offset = 2*(1-layer_order_id)*3;
-    std::cout << "[INFO] layer_order_id = " << layer_order_id << std::endl;
+    //std::cout << "[ INFO ] layer_order_id = " << layer_order_id << std::endl;
     auto side_square = side * side;
     const float *output_blob = blob->buffer().as<PrecisionTrait<Precision::FP32>::value_type *>();
     // --------------------------- Parsing YOLO Region output -------------------------------------

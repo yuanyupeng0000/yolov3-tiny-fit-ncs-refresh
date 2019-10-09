@@ -1,3 +1,2 @@
-#./object_detection_demo_yolov3_async -m /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/model_optimizer/20190218182235_TinyYoloV3NCS.xml -i /video/09_58_09.264
-./object_detection_demo_yolov3_tiny_async -m /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/model_optimizer/FP16/20190104102512_TinyYoloV3NCS.xml -i /video/09_58_09.264 -d MYRIAD
+./object_detection_yolov3_tiny_async -m /datasets/252/data/yolov3-model/yolov3-vpu-model/model_person/20190729115105_TinyYoloV3NCS_bgr.xml -i /video/person/person/wuhan/16_41_11.264 -d MYRIAD
 

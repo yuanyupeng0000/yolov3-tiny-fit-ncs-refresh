@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named object_detection_yolov3_tiny_async
+# Target rules for targets named object_detection_yolov3_async
 
 # Build rule for target.
-object_detection_yolov3_tiny_async: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 object_detection_yolov3_tiny_async
-.PHONY : object_detection_yolov3_tiny_async
+object_detection_yolov3_async: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 object_detection_yolov3_async
+.PHONY : object_detection_yolov3_async
 
 # fast build rule for target.
-object_detection_yolov3_tiny_async/fast:
-	$(MAKE) -f CMakeFiles/object_detection_yolov3_tiny_async.dir/build.make CMakeFiles/object_detection_yolov3_tiny_async.dir/build
-.PHONY : object_detection_yolov3_tiny_async/fast
+object_detection_yolov3_async/fast:
+	$(MAKE) -f CMakeFiles/object_detection_yolov3_async.dir/build.make CMakeFiles/object_detection_yolov3_async.dir/build
+.PHONY : object_detection_yolov3_async/fast
 
 Common.o: Common.cpp.o
 
@@ -129,7 +129,7 @@ Common.o: Common.cpp.o
 
 # target to build an object file
 Common.cpp.o:
-	$(MAKE) -f CMakeFiles/object_detection_yolov3_tiny_async.dir/build.make CMakeFiles/object_detection_yolov3_tiny_async.dir/Common.cpp.o
+	$(MAKE) -f CMakeFiles/object_detection_yolov3_async.dir/build.make CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o
 .PHONY : Common.cpp.o
 
 Common.i: Common.cpp.i
@@ -138,7 +138,7 @@ Common.i: Common.cpp.i
 
 # target to preprocess a source file
 Common.cpp.i:
-	$(MAKE) -f CMakeFiles/object_detection_yolov3_tiny_async.dir/build.make CMakeFiles/object_detection_yolov3_tiny_async.dir/Common.cpp.i
+	$(MAKE) -f CMakeFiles/object_detection_yolov3_async.dir/build.make CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.i
 .PHONY : Common.cpp.i
 
 Common.s: Common.cpp.s
@@ -147,7 +147,7 @@ Common.s: Common.cpp.s
 
 # target to generate assembly for a file
 Common.cpp.s:
-	$(MAKE) -f CMakeFiles/object_detection_yolov3_tiny_async.dir/build.make CMakeFiles/object_detection_yolov3_tiny_async.dir/Common.cpp.s
+	$(MAKE) -f CMakeFiles/object_detection_yolov3_async.dir/build.make CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.s
 .PHONY : Common.cpp.s
 
 detector.o: detector.cpp.o
@@ -156,7 +156,7 @@ detector.o: detector.cpp.o
 
 # target to build an object file
 detector.cpp.o:
-	$(MAKE) -f CMakeFiles/object_detection_yolov3_tiny_async.dir/build.make CMakeFiles/object_detection_yolov3_tiny_async.dir/detector.cpp.o
+	$(MAKE) -f CMakeFiles/object_detection_yolov3_async.dir/build.make CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o
 .PHONY : detector.cpp.o
 
 detector.i: detector.cpp.i
@@ -165,7 +165,7 @@ detector.i: detector.cpp.i
 
 # target to preprocess a source file
 detector.cpp.i:
-	$(MAKE) -f CMakeFiles/object_detection_yolov3_tiny_async.dir/build.make CMakeFiles/object_detection_yolov3_tiny_async.dir/detector.cpp.i
+	$(MAKE) -f CMakeFiles/object_detection_yolov3_async.dir/build.make CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.i
 .PHONY : detector.cpp.i
 
 detector.s: detector.cpp.s
@@ -174,7 +174,7 @@ detector.s: detector.cpp.s
 
 # target to generate assembly for a file
 detector.cpp.s:
-	$(MAKE) -f CMakeFiles/object_detection_yolov3_tiny_async.dir/build.make CMakeFiles/object_detection_yolov3_tiny_async.dir/detector.cpp.s
+	$(MAKE) -f CMakeFiles/object_detection_yolov3_async.dir/build.make CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.s
 .PHONY : detector.cpp.s
 
 intel_dldt.o: intel_dldt.cpp.o
@@ -183,7 +183,7 @@ intel_dldt.o: intel_dldt.cpp.o
 
 # target to build an object file
 intel_dldt.cpp.o:
-	$(MAKE) -f CMakeFiles/object_detection_yolov3_tiny_async.dir/build.make CMakeFiles/object_detection_yolov3_tiny_async.dir/intel_dldt.cpp.o
+	$(MAKE) -f CMakeFiles/object_detection_yolov3_async.dir/build.make CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o
 .PHONY : intel_dldt.cpp.o
 
 intel_dldt.i: intel_dldt.cpp.i
@@ -192,7 +192,7 @@ intel_dldt.i: intel_dldt.cpp.i
 
 # target to preprocess a source file
 intel_dldt.cpp.i:
-	$(MAKE) -f CMakeFiles/object_detection_yolov3_tiny_async.dir/build.make CMakeFiles/object_detection_yolov3_tiny_async.dir/intel_dldt.cpp.i
+	$(MAKE) -f CMakeFiles/object_detection_yolov3_async.dir/build.make CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.i
 .PHONY : intel_dldt.cpp.i
 
 intel_dldt.s: intel_dldt.cpp.s
@@ -201,7 +201,7 @@ intel_dldt.s: intel_dldt.cpp.s
 
 # target to generate assembly for a file
 intel_dldt.cpp.s:
-	$(MAKE) -f CMakeFiles/object_detection_yolov3_tiny_async.dir/build.make CMakeFiles/object_detection_yolov3_tiny_async.dir/intel_dldt.cpp.s
+	$(MAKE) -f CMakeFiles/object_detection_yolov3_async.dir/build.make CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.s
 .PHONY : intel_dldt.cpp.s
 
 main.o: main.cpp.o
@@ -210,7 +210,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/object_detection_yolov3_tiny_async.dir/build.make CMakeFiles/object_detection_yolov3_tiny_async.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/object_detection_yolov3_async.dir/build.make CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -219,7 +219,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/object_detection_yolov3_tiny_async.dir/build.make CMakeFiles/object_detection_yolov3_tiny_async.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/object_detection_yolov3_async.dir/build.make CMakeFiles/object_detection_yolov3_async.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -228,7 +228,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/object_detection_yolov3_tiny_async.dir/build.make CMakeFiles/object_detection_yolov3_tiny_async.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/object_detection_yolov3_async.dir/build.make CMakeFiles/object_detection_yolov3_async.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -239,7 +239,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... object_detection_yolov3_tiny_async"
+	@echo "... object_detection_yolov3_async"
 	@echo "... Common.o"
 	@echo "... Common.i"
 	@echo "... Common.s"

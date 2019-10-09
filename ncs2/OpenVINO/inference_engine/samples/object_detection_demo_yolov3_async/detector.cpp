@@ -212,7 +212,7 @@ void Detector::Detect(const cv::Mat frame){
                     if (objects[i].confidence == 0)
                         continue;
                     for (int j = i + 1; j < objects.size(); ++j)
-                        if (IntersectionOverUnion(objects[i], objects[j]) >= /*FLAGS_iou_t*/0.5)
+                        if (IntersectionOverUnion(objects[i], objects[j]) >= iou)
                             objects[j].confidence = 0;
                 }
                 // Drawing boxes
@@ -304,18 +304,18 @@ int Detector::Detect(const cv::Mat frame, std::vector<DetectionObject>& objects)
                 unsigned long layer_order_id = 0;
                 for (auto &output : outputInfo) {
                     auto output_name = output.first;
-                    std::cout << "[INFO] output_name = " << output_name << std::endl;
+                    std::cout << "[ INFO ] output_name = " << output_name << std::endl;
                     CNNLayerPtr layer = netReader.getNetwork().getLayerByName(output_name.c_str());
                     Blob::Ptr blob = IfReqs[current_request_id]->GetBlob(output_name);
                     if(this->input_xml.find("SSD") != this->input_xml.npos){
-                        std::cout << "[INFO] SSD" << std::endl;
+                        std::cout << "[ INFO ] SSD" << std::endl;
                         ParseSSDNcsOutput(layer, blob, resized_im_h, resized_im_w, height, width, thresh, objects);
                     }else if(this->input_xml.find("TinyYoloV3") != this->input_xml.npos){
-                        std::cout << "[INFO] TinyYoloV3" << std::endl;
+                        std::cout << "[ INFO ] TinyYoloV3" << std::endl;
                         ParseYOLOV3TinyNcsOutput(layer, blob, resized_im_h, resized_im_w, height, width, layer_order_id, thresh, objects);
                         layer_order_id += 1;
                     }else if(this->input_xml.find("YoloV3") != this->input_xml.npos){
-                        std::cout << "[INFO] YoloV3" << std::endl;
+                        std::cout << "[ INFO ] YoloV3" << std::endl;
                         ParseYOLOV3Output(layer, blob, resized_im_h, resized_im_w, height, width, thresh, objects);
                     }
                 }
@@ -332,9 +332,18 @@ int Detector::Detect(const cv::Mat frame, std::vector<DetectionObject>& objects)
                     if (objects[i].confidence == 0)
                         continue;
                     for (int j = i + 1; j < objects.size(); ++j)
-                        if (IntersectionOverUnion(objects[i], objects[j]) >= /*FLAGS_iou_t*/0.5)
+                        if (IntersectionOverUnion(objects[i], objects[j]) >= iou)
                             objects[j].confidence = 0;
                 }
+                /*for(std::vector<DetectionObject>::iterator iter=objects.begin(); iter!=objects.end(); )
+                {
+                     if(iter->confidence == 0){
+                         iter = objects.erase(iter);
+                     }
+                     else{
+                         iter++;
+                     }
+                }*/
             }
         }
         else{
@@ -393,14 +402,14 @@ int Detector::Detect(int idx, const cv::Mat frame, std::vector<DetectionObject>&
                     CNNLayerPtr layer = netReader.getNetwork().getLayerByName(output_name.c_str());
                     Blob::Ptr blob = IfReqs[temp_request_id]->GetBlob(output_name);
                     if(this->input_xml.find("SSD") != this->input_xml.npos){
-                        std::cout << "[INFO] SSD" << std::endl;
+                        std::cout << "[ INFO ] SSD" << std::endl;
                         ParseSSDNcsOutput(layer, blob, resized_im_h, resized_im_w, height, width, thresh, objects);
                     }else if(this->input_xml.find("TinyYoloV3") != this->input_xml.npos){
-                        std::cout << "[INFO] TinyYoloV3" << std::endl;
+                        std::cout << "[ INFO ] TinyYoloV3" << std::endl;
                         ParseYOLOV3TinyNcsOutput(layer, blob, resized_im_h, resized_im_w, height, width, layer_order_id, thresh, objects);
                         layer_order_id += 1;
                     }else if(this->input_xml.find("YoloV3") != this->input_xml.npos){
-                        std::cout << "[INFO] YoloV3" << std::endl;
+                        std::cout << "[ INFO ] YoloV3" << std::endl;
                         ParseYOLOV3Output(layer, blob, resized_im_h, resized_im_w, height, width, thresh, objects);
                     }
                 }
@@ -419,6 +428,15 @@ int Detector::Detect(int idx, const cv::Mat frame, std::vector<DetectionObject>&
                     for (int j = i + 1; j < objects.size(); ++j)
                         if (IntersectionOverUnion(objects[i], objects[j]) >= iou)
                             objects[j].confidence = 0;
+                }
+                for(std::vector<DetectionObject>::iterator iter=objects.begin(); iter!=objects.end(); )
+                {
+                     if(iter->confidence == 0){
+                         iter = objects.erase(iter);
+                     }
+                     else{
+                         iter++;
+                     }
                 }
             }
         }
