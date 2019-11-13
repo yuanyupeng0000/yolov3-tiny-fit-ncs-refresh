@@ -171,6 +171,9 @@ Project_BINARY_DIR:STATIC=/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/i
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async
 
+//Dependencies for the target
+object_detection_yolov3_async_LIB_DEPENDS:STATIC=general;clDNNPlugin;general;GNAPlugin;general;inference_engine;general;myriadPlugin;general;MKLDNNPlugin;general;HeteroPlugin;general;HDDLPlugin;general;cpu_extension_avx2;general;cpu_extension_sse4;general;gflags;general;dl;general;-L/usr/local/lib/;general;-lopencv_video;general;-lopencv_videoio;general;-lopencv_imgproc;general;-lopencv_core;general;-lopencv_highgui;general;-lopencv_ml;general;pthread;
+
 
 ########################
 # INTERNAL cache entries
