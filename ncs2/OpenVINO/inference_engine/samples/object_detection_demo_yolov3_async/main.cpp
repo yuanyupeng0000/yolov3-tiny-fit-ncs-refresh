@@ -85,7 +85,7 @@ int main(int argc, char *argv[]){
     typedef std::chrono::duration<double, std::ratio<1, 1000>> ms;
     auto t0 = std::chrono::high_resolution_clock::now();
     std::queue<cv::Mat> frame_que;
-    cv::VideoWriter writer("/media/yyp/DATA/667.avi", CV_FOURCC('X', 'V', 'I', 'D'), 15, cv::Size(640, 480));
+    cv::VideoWriter writer(FLAGS_s, CV_FOURCC('X', 'V', 'I', 'D'), 15, cv::Size(640, 480));
     while (true) {
         N += 1;
 
@@ -107,7 +107,7 @@ int main(int argc, char *argv[]){
         if(ret_code < 0 && ret_code != -100){
             continue;
         }
-        std::cout << "[INFO]: nboxes = " << objects.size() << std::endl;
+        std::cout << "[ INFO ]: nboxes = " << objects.size() << std::endl;
         // Drawing boxes
         cv::Mat frame_show = frame_que.front();
         for (auto &object : objects) {
@@ -137,7 +137,7 @@ int main(int argc, char *argv[]){
         cv::Mat dst;
         cv::resize(frame_show, dst, cv::Size(640, 480));
         cv::imshow("Detection results", dst);
-        if(FLAGS_s){
+        if(!FLAGS_s.empty()){
             writer.write(dst);
         }
         frame_que.pop();

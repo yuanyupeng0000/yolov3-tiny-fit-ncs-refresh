@@ -108,6 +108,12 @@ static int EntryIndex(int side, int lcoords, int lclasses, int location, int ent
     return n * side * side * (lcoords + lclasses + 1) + entry * side * side + loc;
 }
 
+static int EntryIndex(int side_h, int side_w, int lcoords, int lclasses, int location, int entry) {
+    int n = location / (side_h * side_w);
+    int loc = location % (side_h * side_w);
+    return n * side_h * side_w * (lcoords + lclasses + 1) + entry * side_h * side_w + loc;
+}
+
 double IntersectionOverUnion(const DetectionObject &box_1, const DetectionObject &box_2) {
     double width_of_overlap_area = fmin(box_1.xmax, box_2.xmax) - fmax(box_1.xmin, box_2.xmin);
     double height_of_overlap_area = fmin(box_1.ymax, box_2.ymax) - fmax(box_1.ymin, box_2.ymin);
@@ -432,6 +438,94 @@ void ParseYOLOV3TinyNcsOutput(const CNNLayerPtr &layer, const Blob::Ptr &blob, c
 
             for (int j = 0; j < classes; ++j) {
                 int class_index = EntryIndex(side, coords, classes, n * side_square + i, coords + 1 + j);
+                float prob = scale * logistic_activate(output_blob[class_index]);
+                if (prob < threshold)
+                    continue;
+                DetectionObject obj(x, y, height, width, j, prob,
+                        static_cast<float>(original_im_h) / static_cast<float>(resized_im_h),
+                        static_cast<float>(original_im_w) / static_cast<float>(resized_im_w));
+                objects.push_back(obj);
+            }
+            #endif
+        }
+    }
+}
+
+void ParseYOLOV3TinyNcsOutputHW(const CNNLayerPtr &layer, const Blob::Ptr &blob, const unsigned long resized_im_h,
+                       const unsigned long resized_im_w, const unsigned long original_im_h,
+                       const unsigned long original_im_w, const unsigned long layer_order_id,
+                       const double threshold, std::vector<DetectionObject> &objects) {
+    // --------------------------- Validating output parameters -------------------------------------
+    /*if (layer->type != "RegionYolo")
+        throw std::runtime_error("Invalid output type: " + layer->type + ". RegionYolo expected");*/
+    const int out_blob_c = static_cast<int>(blob->getTensorDesc().getDims()[1]);
+    //std::cout << "[ INFO ] Output blob chanel = " << out_blob_c << std::endl;
+    const int out_blob_h = static_cast<int>(blob->getTensorDesc().getDims()[2]);
+    const int out_blob_w = static_cast<int>(blob->getTensorDesc().getDims()[3]);
+    /*if (out_blob_h != out_blob_w)
+        throw std::runtime_error("Invalid size of output " + layer->name +
+        " It should be in NCHW layout and H should be equal to W. Current H = " + std::to_string(out_blob_h) +
+        ", current W = " + std::to_string(out_blob_h));*/
+    // --------------------------- Extracting layer parameters -------------------------------------
+    /*auto num = layer->GetParamAsInt("num");
+    try { num = layer->GetParamAsInts("mask").size(); } catch (...) {}
+    auto coords = layer->GetParamAsInt("coords");
+    auto classes = layer->GetParamAsInt("classes");
+    */
+    int num = 3;
+    int coords = 4;
+    int classes = out_blob_c/num - coords - 1;
+    //std::vector<float> anchors = {10.0, 13.0, 16.0, 30.0, 33.0, 23.0, 30.0, 61.0, 62.0, 45.0, 59.0, 119.0, 116.0, 90.0,
+    //                             156.0, 198.0, 373.0, 326.0};
+    std::vector<float> anchors = {10,25,  20,50,  30,75, 50,125,  80,200,  150,150};
+    try { anchors = layer->GetParamAsFloats("anchors"); } catch (...) {}
+    auto side = out_blob_h;
+    auto side_h = out_blob_h;
+    auto side_w = out_blob_w;
+    int anchor_offset = 0;
+
+    anchor_offset = 2*(1-layer_order_id)*3;
+    //std::cout << "[ INFO ] layer_order_id = " << layer_order_id << std::endl;
+    auto side_square = side_h * side_w; //auto side_square = side * side;
+
+    const float *output_blob = blob->buffer().as<PrecisionTrait<Precision::FP32>::value_type *>();
+    // --------------------------- Parsing YOLO Region output -------------------------------------
+    for (int i = 0; i < side_square; ++i) {
+        int row = i / side_w; //side;
+        int col = i % side_w; //side;
+        for (int n = 0; n < num; ++n) {
+            int obj_index = EntryIndex(side_h, side_w, coords, classes, n * side_h * side_w + i, coords);
+            int box_index = EntryIndex(side_h, side_w, coords, classes, n * side_h * side_w + i, 0);
+            #if 0
+            float scale = output_blob[obj_index];
+            if (scale < threshold)
+                continue;
+            double x = (col + output_blob[box_index + 0 * side_square]) / side * resized_im_w;
+            double y = (row + output_blob[box_index + 1 * side_square]) / side * resized_im_h;
+            double height = std::exp(output_blob[box_index + 3 * side_square]) * anchors[anchor_offset + 2 * n + 1];
+            double width = std::exp(output_blob[box_index + 2 * side_square]) * anchors[anchor_offset + 2 * n];
+
+            for (int j = 0; j < classes; ++j) {
+                int class_index = EntryIndex(side, coords, classes, n * side_square + i, coords + 1 + j);
+                float prob = scale * output_blob[class_index];
+                if (prob < threshold)
+                    continue;
+                DetectionObject obj(x, y, height, width, j, prob,
+                        static_cast<float>(original_im_h) / static_cast<float>(resized_im_h),
+                        static_cast<float>(original_im_w) / static_cast<float>(resized_im_w));
+                objects.push_back(obj);
+            }
+            #else
+            float scale = logistic_activate(output_blob[obj_index]);
+            if (scale < threshold)
+                continue;
+            double x = (col + logistic_activate(output_blob[box_index + 0 * side_square])) / side_w * resized_im_w;
+            double y = (row + logistic_activate(output_blob[box_index + 1 * side_square])) / side_h * resized_im_h;
+            double height = std::exp(output_blob[box_index + 3 * side_square]) * anchors[anchor_offset + 2 * n + 1];
+            double width = std::exp(output_blob[box_index + 2 * side_square]) * anchors[anchor_offset + 2 * n];
+
+            for (int j = 0; j < classes; ++j) {
+                int class_index = EntryIndex(side_h, side_w, coords, classes, n * side_square + i, coords + 1 + j);
                 float prob = scale * logistic_activate(output_blob[class_index]);
                 if (prob < threshold)
                     continue;

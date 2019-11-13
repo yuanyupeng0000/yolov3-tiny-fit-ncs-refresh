@@ -55,8 +55,8 @@ static const char input_resizable_message[] = "Optional. Enable resizable input 
 /// @brief Message infer request number
 static const char infer_request_numer_message[] = "Optional.  Infer request number";
 
-/// @brief Message whether to save model or not
-static const char to_save_video_message[] = "Optional.  Whether to save video or not";
+/// @brief Message save video file name
+static const char save_video_name_message[] = "Optional.  Save video file name";
 
 
 /// \brief Defines flag for showing help message <br>
@@ -104,8 +104,9 @@ DEFINE_bool(auto_resize, false, input_resizable_message);
 /// It is an optinal parameter
 DEFINE_int32(nireq, 4, infer_request_numer_message);
 
-/// \brief Defines to save video
-DEFINE_bool(s, false, to_save_video_message);
+/// \brief
+/// It is an optinal parameter
+DEFINE_string(s, "", save_video_name_message);
 
 
 /**
@@ -129,6 +130,6 @@ static void showUsage() {
     std::cout << "    -iou_t                    " << iou_thresh_output_message << std::endl;
     std::cout << "    -auto_resize              " << input_resizable_message << std::endl;
     std::cout << "    -nireq                    " << infer_request_numer_message << std::endl;
-    std::cout << "    -s                        " << to_save_video_message << std::endl;
+    std::cout << "    -s                        " << save_video_name_message << std::endl;
 }
 #endif //OBJECT_DETECTION_DEMO_YOLOV3_ASYNC_H

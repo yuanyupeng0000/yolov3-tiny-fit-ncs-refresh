@@ -312,7 +312,7 @@ int Detector::Detect(const cv::Mat frame, std::vector<DetectionObject>& objects)
                         ParseSSDNcsOutput(layer, blob, resized_im_h, resized_im_w, height, width, thresh, objects);
                     }else if(this->input_xml.find("TinyYoloV3") != this->input_xml.npos){
                         std::cout << "[ INFO ] TinyYoloV3" << std::endl;
-                        ParseYOLOV3TinyNcsOutput(layer, blob, resized_im_h, resized_im_w, height, width, layer_order_id, thresh, objects);
+                        ParseYOLOV3TinyNcsOutputHW(layer, blob, resized_im_h, resized_im_w, height, width, layer_order_id, thresh, objects);
                         layer_order_id += 1;
                     }else if(this->input_xml.find("YoloV3") != this->input_xml.npos){
                         std::cout << "[ INFO ] YoloV3" << std::endl;

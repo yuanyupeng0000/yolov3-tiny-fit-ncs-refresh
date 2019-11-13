@@ -74,6 +74,10 @@ void ParseYOLOV3TinyNcsOutput(const CNNLayerPtr &layer, const Blob::Ptr &blob, c
                        const unsigned long resized_im_w, const unsigned long original_im_h,
                        const unsigned long original_im_w, const unsigned long layer_order_id,
                        const double threshold, std::vector<DetectionObject> &objects);
+void ParseYOLOV3TinyNcsOutputHW(const CNNLayerPtr &layer, const Blob::Ptr &blob, const unsigned long resized_im_h,
+                       const unsigned long resized_im_w, const unsigned long original_im_h,
+                       const unsigned long original_im_w, const unsigned long layer_order_id,
+                       const double threshold, std::vector<DetectionObject> &objects);
 void ParseSSDNcsOutput(const CNNLayerPtr &layer, const Blob::Ptr &blob, const unsigned long resized_im_h,
                        const unsigned long resized_im_w, const unsigned long original_im_h,
                        const unsigned long original_im_w,
