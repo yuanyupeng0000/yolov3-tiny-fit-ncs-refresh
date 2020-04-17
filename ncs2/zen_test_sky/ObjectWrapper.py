@@ -375,6 +375,8 @@ class ObjectWrapper():
                     if status is not 0:
                         raise Exception("Infer request not completed successfully")
                     output_ = self.lpr_exec_net.requests[self.lpr_previous_request_id].outputs
+                    print('\n----------------------output--------------------------------\n')
+                    print(output_)
                     onedarray = output_['decode'].reshape((88))
                     #print(type(onedarray))
                     text = ''
@@ -428,7 +430,7 @@ class ObjectWrapper():
             else:
                 nmsed_between_layer_results = self.parse_ncs2_ssd_output(output=output, frame=frame)
                 # -------------------------------------------------- run LPR ---------------------------------------------------
-            nmsed_between_layer_results = self.get_LPR(nmsed_between_layer_results, frame)
+            nmsed_between_layer_results = self.get_LPR(nmsed_between_layer_results, frame) ###TODO:exactly,this frame is not the result frame. But as to the video input, the frame nearlly  as the same.
         self.cur_request_id += 1
         if self.cur_request_id >= self.num_requests:
             self.cur_request_id = 0

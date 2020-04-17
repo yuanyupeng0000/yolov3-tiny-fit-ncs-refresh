@@ -10,11 +10,9 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/opt/intel/computer_vision_sdk/deployment_tools/inference_engine/include"
-  "/opt/intel/computer_vision_sdk/deployment_tools/inference_engine/samples/common"
-  "/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/common"
-  "/opt/intel/computer_vision_sdk/deployment_tools/inference_engine/src/extension"
-  "/opt/intel/computer_vision_sdk_2018.5.445/opencv/include"
+  "/opt/intel/openvino/deployment_tools/inference_engine/include"
+  "/opt/intel/openvino/deployment_tools/inference_engine/samples/common"
+  "/opt/intel/openvino/deployment_tools/inference_engine/src/extension"
   )
 
 # Targets to which this target links.

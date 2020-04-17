@@ -1,0 +1,54 @@
+[16:31:32][info](main.c:23)====>.............programe start.............
+[16:31:33][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Access denied for user 'root'@'localhost' (using password: YES)
+
+[16:31:33][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[16:31:33][info](camera_service.c:212)====>camera[0] open: /video/09_58_09.264 
+
+[16:31:33][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[16:31:36][info](common.c:739)====> err================================>seg fault,restart system
+
+[16:31:36][info](common.c:787)====>calling exit@@@@@@@@@@@@@@@@@@@@
+[16:32:19][info](main.c:23)====>.............programe start.............
+[16:32:19][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Access denied for user 'root'@'localhost' (using password: YES)
+
+[16:32:19][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[16:32:19][info](camera_service.c:212)====>camera[0] open: /video/09_58_09.264 
+
+[16:32:19][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[16:32:19][info](common.c:739)====> err================================>seg fault,restart system
+
+[16:32:19][info](common.c:787)====>calling exit@@@@@@@@@@@@@@@@@@@@
+[16:32:21][info](main.c:23)====>.............programe start.............
+[16:32:21][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Access denied for user 'root'@'localhost' (using password: YES)
+
+[16:32:21][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[16:32:21][info](camera_service.c:212)====>camera[0] open: /video/09_58_09.264 
+
+[16:32:21][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[16:32:21][info](common.c:739)====> err================================>seg fault,restart system
+
+[16:32:21][info](common.c:787)====>calling exit@@@@@@@@@@@@@@@@@@@@
+[16:33:9][info](main.c:23)====>.............programe start.............
+[16:33:9][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Access denied for user 'root'@'localhost' (using password: YES)
+
+[16:33:9][info](client_net.c:944)====>checkaddr: 智能交通设备 loglevel: 3
+[16:33:9][info](camera_service.c:212)====>camera[0] open: /video/09_58_09.264 
+
+[16:33:9][info](common.c:1139)====>./res/ntpclient -s -i 216000 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[16:33:15][info](camera_service.c:527)====>cam_info[0]: creating thread
+[16:33:16][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:12 / 197 list: 3
+[16:33:17][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[16:33:18][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[16:33:19][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:12 / 26 list: 3
+[16:33:20][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 25 list: 2
+[16:33:21][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 26 list: 3
+[16:33:22][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 26 list: 3
+[16:33:23][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[16:33:24][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[16:33:25][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 3
+[16:33:26][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:12 / 26 list: 3
+[16:33:27][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:13 / 25 list: 2
+[16:33:28][info](camera_service.c:679)====>watchdog dog for cam 0 , fp10s:14 / 26 list: 2
+[16:33:29][info](common.c:739)====> err================================>seg fault,restart system
+
+[16:33:29][info](common.c:787)====>calling exit@@@@@@@@@@@@@@@@@@@@

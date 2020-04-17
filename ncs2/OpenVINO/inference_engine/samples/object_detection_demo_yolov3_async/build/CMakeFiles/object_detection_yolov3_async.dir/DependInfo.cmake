@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/detector.cpp" "/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o"
   "/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/intel_dldt.cpp" "/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o"
   "/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/main.cpp" "/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o"
+  "/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/recognizer.cpp" "/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -27,6 +27,7 @@
 #include "object_detection_demo_yolov3_async.hpp"
 #include <ext_list.hpp>
 #include "detector.h"
+#include "recognizer.h"
 #include "intel_dldt.h"
 using namespace InferenceEngine;
 
@@ -77,15 +78,18 @@ int main(int argc, char *argv[]){
     }
     // -----------------------------------------------------------------------------------------------------
     std::string binFileName = fileNameNoExt(FLAGS_m) + ".bin";
-    Detector detector(FLAGS_m, binFileName, FLAGS_d, FLAGS_t, FLAGS_iou_t, FLAGS_nireq);
-    slog::info << "Start inference " << slog::endl;
+    ///Detector detector(FLAGS_m, binFileName, FLAGS_d, FLAGS_t, FLAGS_iou_t, FLAGS_nireq);
+    ///Recognizer Recognizer()
+    intel_dldt_init("FP16/vpu_config.ini");
+    ///
+    //slog::info << "Start inference " << slog::endl;
 
     bool isLastFrame = false;
     int N = 0;
     typedef std::chrono::duration<double, std::ratio<1, 1000>> ms;
     auto t0 = std::chrono::high_resolution_clock::now();
     std::queue<cv::Mat> frame_que;
-    cv::VideoWriter writer(FLAGS_s, CV_FOURCC('X', 'V', 'I', 'D'), 15, cv::Size(640, 480));
+    cv::VideoWriter writer(FLAGS_s, CV_FOURCC('X', 'V', 'I', 'D'), 1, cv::Size(1280, 960));
     while (true) {
         N += 1;
 
@@ -101,41 +105,45 @@ int main(int argc, char *argv[]){
         }
         //detector.Detect(frame);
         frame_que.push(frame);
-        std::cout << "[ INFO ] Qeue size:" << frame_que.size() << std::endl;
+        //std::cout << "[ INFO ] Qeue size:" << frame_que.size() << std::endl;
         std::vector<DetectionObject> objects;
-        int ret_code = detector.Detect(frame, objects);
+
+        int ret_code = intel_dldt_detect(frame, 1, objects);
+        ///int ret_code = detector.Detect(frame, objects);
+        std::cout << "[ INFO ] ret_code " << ret_code << std::endl;
         if(ret_code < 0 && ret_code != -100){
             continue;
         }
-        std::cout << "[ INFO ]: nboxes = " << objects.size() << std::endl;
+
+        //std::cout << "[ INFO ] nboxes = " << objects.size() << std::endl;
         // Drawing boxes
         cv::Mat frame_show = frame_que.front();
         for (auto &object : objects) {
-            if (object.confidence < detector.thresh){
+            if (object.confidence < FLAGS_t/*detector.thresh*/){
                 //std::cout << "[INFO]: confidence = " << object.confidence << std::endl;
                 continue;
             }
             auto label = object.class_id;
             float confidence = object.confidence;
-            if (/*FLAGS_r*/true) {
+            if (true) {
                 std::cout << "[" << label << "] element, prob = " << confidence <<
                           "    (" << object.xmin << "," << object.ymin << ")-(" << object.xmax << "," << object.ymax << ")"
-                          << ((confidence > detector.thresh) ? " WILL BE RENDERED!" : "") << std::endl;
+                          << ((confidence > FLAGS_t/*detector.thresh*/) ? " WILL BE RENDERED!" : "") << std::endl;
             }
-            if (confidence > detector.thresh) {
+            if (confidence > FLAGS_t/*detector.thresh*/) {
                 /** Drawing only objects when >confidence_threshold probability **/
                 std::ostringstream conf;
                 conf << ":" << std::fixed << std::setprecision(3) << confidence;
                 cv::putText(frame_show,
-                        (label < detector.labels.size() ? detector.labels[label] : std::string("label #") + std::to_string(label))
-                            + conf.str(),
+                        (object.class_id == 6 ? object.text: /*label < detector.labels.size() ? detector.labels[label] : */
+                                                std::string("#") + std::to_string(label)) + conf.str(),
                             cv::Point2f(object.xmin, object.ymin - 5), cv::FONT_HERSHEY_COMPLEX_SMALL, 1,
                             cv::Scalar(0, 0, 255));
-                cv::rectangle(frame_show, cv::Point2f(object.xmin, object.ymin), cv::Point2f(object.xmax, object.ymax), cv::Scalar(0, 0, 255));
+                cv::rectangle(frame_show, cv::Point2f(object.xmin, object.ymin), cv::Point2f(object.xmax, object.ymax), cv::Scalar(0, 0, 255), 2);
             }
         }
         cv::Mat dst;
-        cv::resize(frame_show, dst, cv::Size(640, 480));
+        cv::resize(frame_show, dst, cv::Size(1280, 960));
         cv::imshow("Detection results", dst);
         if(!FLAGS_s.empty()){
             writer.write(dst);

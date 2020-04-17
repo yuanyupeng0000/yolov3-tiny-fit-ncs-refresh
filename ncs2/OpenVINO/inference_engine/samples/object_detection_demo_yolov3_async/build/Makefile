@@ -231,6 +231,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/object_detection_yolov3_async.dir/build.make CMakeFiles/object_detection_yolov3_async.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+recognizer.o: recognizer.cpp.o
+
+.PHONY : recognizer.o
+
+# target to build an object file
+recognizer.cpp.o:
+	$(MAKE) -f CMakeFiles/object_detection_yolov3_async.dir/build.make CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o
+.PHONY : recognizer.cpp.o
+
+recognizer.i: recognizer.cpp.i
+
+.PHONY : recognizer.i
+
+# target to preprocess a source file
+recognizer.cpp.i:
+	$(MAKE) -f CMakeFiles/object_detection_yolov3_async.dir/build.make CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.i
+.PHONY : recognizer.cpp.i
+
+recognizer.s: recognizer.cpp.s
+
+.PHONY : recognizer.s
+
+# target to generate assembly for a file
+recognizer.cpp.s:
+	$(MAKE) -f CMakeFiles/object_detection_yolov3_async.dir/build.make CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.s
+.PHONY : recognizer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -252,6 +279,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... recognizer.o"
+	@echo "... recognizer.i"
+	@echo "... recognizer.s"
 .PHONY : help
 
 

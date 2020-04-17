@@ -1,5 +1,6 @@
 #include "intel_dldt.h"
 #include "detector.h"
+#include "recognizer.h"
 #include <memory>
 #include <iostream>
 #include <stdio.h>
@@ -12,9 +13,11 @@
 #define DETECTOR_NUM 1
 #define DETECTOR_MODE_ONE
 Detector* detectors[DETECTOR_NUM] = {0};
+Recognizer* recognizers[DETECTOR_H] = {0};
 
-// Intel deep learning development tool parameter
+// Intel deep learning development tool base detector parameter
 struct IntelDldtParam {
+
     std::string model_xml, model_bin, model_dev;
     float thresh_confidence, thresh_iou;
     int number_infer_requests;
@@ -29,6 +32,29 @@ struct IntelDldtParam {
         this->number_infer_requests = number_infer_requests;
     }
 };
+
+// Intel deep learning development tool license plate recognizer parameter
+struct IntelDldtLPRParam {
+
+    std::string model_xml, model_bin, model_dev;
+    float thresh_confidence, thresh_iou;
+    int number_infer_requests;
+    bool lpr_flag;
+
+    IntelDldtLPRParam(std::string model_xml="", std::string model_bin="", std::string model_dev="",
+                   bool lpr_flag=false, float thresh_confidence=0.3, float thresh_iou=0.5, int number_infer_requests=1) {
+        this->model_xml = model_xml;
+        this->model_bin = model_bin;
+        this->model_dev = model_dev;
+        this->thresh_confidence = thresh_confidence;
+        this->thresh_iou = thresh_iou;
+        this->number_infer_requests = number_infer_requests;
+        this->lpr_flag = lpr_flag;
+    }
+};
+
+IntelDldtParam intel_dldt_param;
+IntelDldtLPRParam intel_dldt_lpr_param;
 
 static bool intel_dldt_query_str(const std::string& src, const std::string& query, std::string& target){
     size_t pos_start = src.find(query, 0);
@@ -54,7 +80,9 @@ static bool intel_dldt_query_str(const std::string& src, const std::string& quer
         }
     }
 }
-static void intel_dldt_read_config(const std::string& config, IntelDldtParam& intel_dldt_param){
+static void intel_dldt_read_config(const std::string& config,
+                                   IntelDldtParam& intel_dldt_param,
+                                   IntelDldtLPRParam& intel_dldt_lpr_param){
     std::ifstream cfg(config);
     std::stringstream buffer;
     buffer << cfg.rdbuf();
@@ -78,23 +106,66 @@ static void intel_dldt_read_config(const std::string& config, IntelDldtParam& in
     if(intel_dldt_query_str(contents, "nireq=", target)){
         intel_dldt_param.number_infer_requests = std::stoi(target);
     }
+    if(intel_dldt_query_str(contents, "lpr_flag=", target)){
+        if("true" == target){
+            intel_dldt_lpr_param.lpr_flag = true;
+            if(intel_dldt_query_str(contents, "model_xml_lpr=", target)){
+                intel_dldt_lpr_param.model_xml = target;
+            }
+            if(intel_dldt_query_str(contents, "model_bin_lpr=", target)){
+                intel_dldt_lpr_param.model_bin = target;
+            }
+            if(intel_dldt_query_str(contents, "model_dev_lpr=", target)){
+                intel_dldt_lpr_param.model_dev = target;
+            }
+            if(intel_dldt_query_str(contents, "thresh_lpr=", target)){
+                intel_dldt_lpr_param.thresh_confidence = std::stof(target);
+            }
+            if(intel_dldt_query_str(contents, "nms_lpr=", target)){
+                intel_dldt_lpr_param.thresh_iou = std::stof(target);
+            }
+            if(intel_dldt_query_str(contents, "nireq_lpr=", target)){
+                intel_dldt_lpr_param.number_infer_requests = std::stoi(target);
+            }
+        }
+    }
 }
 
 int intel_dldt_init(const std::string& config/*const IntelDldtParam& intel_dldt_param*/){
-    IntelDldtParam intel_dldt_param;
-    intel_dldt_read_config(config, intel_dldt_param);
+    //IntelDldtParam intel_dldt_param;
+    //IntelDldtLPRParam intel_dldt_lpr_param;
+    intel_dldt_read_config(config, intel_dldt_param, intel_dldt_lpr_param);
+    if(intel_dldt_lpr_param.lpr_flag){
+        for(int i=0; i<DETECTOR_NUM; i++){
+            recognizers[i] = new Recognizer(intel_dldt_lpr_param.model_xml, intel_dldt_lpr_param.model_bin,
+                                            intel_dldt_lpr_param.model_dev, intel_dldt_lpr_param.thresh_confidence,
+                                            intel_dldt_lpr_param.thresh_iou, intel_dldt_lpr_param.number_infer_requests);
+        }
+    }
     for(int i=0; i<DETECTOR_NUM; i++){
         detectors[i] = new Detector(intel_dldt_param.model_xml, intel_dldt_param.model_bin,
                                     intel_dldt_param.model_dev, intel_dldt_param.thresh_confidence,
                                     intel_dldt_param.thresh_iou, intel_dldt_param.number_infer_requests);
     }
+
     return NCS_NUM;
 }
-void intel_dldt_detect(const cv::Mat frame, int NCS_ID, std::vector<DetectionObject>& objs){
-    std::cout << "[ INFO ] NCS_ID " << NCS_ID << std::endl;
+int intel_dldt_detect(const cv::Mat frame, int NCS_ID, std::vector<DetectionObject>& objs){
+    //std::cout << "[ INFO ] NCS_ID " << NCS_ID << std::endl;
 #ifdef DETECTOR_MODE_ONE
-    detectors[0]->Detect(NCS_ID, frame, objs);
+    int iRet = detectors[0]->Detect(NCS_ID, frame, objs);
+    if(intel_dldt_lpr_param.lpr_flag && iRet==0){
+        if(detectors[0]->current_result_frame_map.find(NCS_ID) ==
+                detectors[0]->current_result_frame_map.end()){
+            return 0;
+        }
+        else
+        {
+            recognizers[0]->Recognize(NCS_ID, detectors[0]->current_result_frame_map[NCS_ID], objs);
+        }
+    }
 #else
-    detectors[NCS_ID]->Detect(frame, objs);
+    int iRet = detectors[NCS_ID]->Detect(frame, objs);
 #endif
+    return iRet;
 }

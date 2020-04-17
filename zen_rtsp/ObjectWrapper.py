@@ -72,7 +72,7 @@ def non_max_suppress(predicts_dict, threshold=0.3):
 class ObjectWrapper():
     args_device = 'MYRIAD'
     args_plugin_dir = None
-    num_requests = 4
+    num_requests = 2
     args_cpu_extension = False
     N = 0
     time0 = time.time()

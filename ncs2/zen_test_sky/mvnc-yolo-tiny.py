@@ -46,10 +46,10 @@ def init1():
 
 detector = []
 NUM = 1
-model_xml = 'FP16/20190826111508_TinyYoloV3NCS.xml'
-model_bin = 'FP16/20190826111508_TinyYoloV3NCS.bin'
-#model_xml = 'FP16/vehicle-license-plate-detection-barrier-0106.xml'
-#model_bin = 'FP16/vehicle-license-plate-detection-barrier-0106.bin'
+#model_xml = 'FP16/20190826111508_TinyYoloV3NCS.xml'
+#model_bin = 'FP16/20190826111508_TinyYoloV3NCS.bin'
+model_xml = 'FP16/vehicle-license-plate-detection-barrier-0106.xml'
+model_bin = 'FP16/vehicle-license-plate-detection-barrier-0106.bin'
 def init(): 
     xml_exists = 'model_xml' in locals() or 'model_xml' in globals()
     bin_exists = 'model_xml' in locals() or 'model_xml' in globals()

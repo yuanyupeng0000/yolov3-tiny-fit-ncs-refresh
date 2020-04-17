@@ -23,6 +23,8 @@ public:
     int Detect(const cv::Mat frame, std::vector<DetectionObject>& objects);
     int Detect(int idx, const cv::Mat frame, std::vector<DetectionObject>& objects);
     void InitIdxSteps();
+    void InitIdxSizeMap();
+    void InitIdxMatMap();
     int GetInferIndexes(int index);
     InferRequest::Ptr async_infer_request_next;
     InferRequest::Ptr async_infer_request_curr;
@@ -36,8 +38,26 @@ public:
     int current_request_id;
     float iou;
     std::map<int, int> idx_steps;
-    std::string input_xml;
+    struct Image_Size{
+        size_t h, w;
+    };
+    //TODO: 1.change to multi cameras more than four. 2.the size queue will be remove
+    std::queue<Image_Size> size_queue0;
+    std::queue<Image_Size> size_queue1;
+    std::queue<Image_Size> size_queue2;
+    std::queue<Image_Size> size_queue3;
 
+    std::queue<cv::Mat> mat_queue0;
+    std::queue<cv::Mat> mat_queue1;
+    std::queue<cv::Mat> mat_queue2;
+    std::queue<cv::Mat> mat_queue3;
+
+    std::map<int, std::queue<Image_Size>> idx_size_map;
+    std::map<int, std::queue<cv::Mat>> idx_mat_map;
+
+    std::map<int, cv::Mat> current_result_frame_map;
+
+    std::string input_xml;
     /**
      * @brief A destructor
      */

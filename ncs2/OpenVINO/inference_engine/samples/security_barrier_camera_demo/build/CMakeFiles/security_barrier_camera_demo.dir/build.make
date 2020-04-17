@@ -18,6 +18,9 @@ SUFFIXES =
 .SUFFIXES: .hpux_make_needs_suffix_list
 
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Suppress display of executed commands.
 $(VERBOSE).SILENT:
 
@@ -90,11 +93,6 @@ security_barrier_camera_demo_EXTERNAL_OBJECTS =
 
 libsecurity_barrier_camera_demo.so: CMakeFiles/security_barrier_camera_demo.dir/intel_dldt.cpp.o
 libsecurity_barrier_camera_demo.so: CMakeFiles/security_barrier_camera_demo.dir/build.make
-libsecurity_barrier_camera_demo.so: /opt/intel/computer_vision_sdk_2018.5.445/opencv/lib/libopencv_highgui.so.4.0.1
-libsecurity_barrier_camera_demo.so: /opt/intel/computer_vision_sdk_2018.5.445/opencv/lib/libopencv_videoio.so.4.0.1
-libsecurity_barrier_camera_demo.so: /opt/intel/computer_vision_sdk_2018.5.445/opencv/lib/libopencv_imgcodecs.so.4.0.1
-libsecurity_barrier_camera_demo.so: /opt/intel/computer_vision_sdk_2018.5.445/opencv/lib/libopencv_imgproc.so.4.0.1
-libsecurity_barrier_camera_demo.so: /opt/intel/computer_vision_sdk_2018.5.445/opencv/lib/libopencv_core.so.4.0.1
 libsecurity_barrier_camera_demo.so: CMakeFiles/security_barrier_camera_demo.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/security_barrier_camera_demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libsecurity_barrier_camera_demo.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/security_barrier_camera_demo.dir/link.txt --verbose=$(VERBOSE)

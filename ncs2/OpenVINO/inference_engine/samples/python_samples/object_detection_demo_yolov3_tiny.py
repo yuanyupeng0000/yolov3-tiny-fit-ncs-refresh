@@ -59,15 +59,15 @@ class YoloV3Params:
     def __init__(self, param, side):
         self.num = 3 if 'num' not in param else len(param['mask'].split(',')) if 'mask' in param else int(param['num'])
         self.coords = 4 if 'coords' not in param else int(param['coords'])
-        self.classes = 6 if 'classes' not in param else int(param['classes'])
+        self.classes = 7 if 'classes' not in param else int(param['classes'])
         self.anchors = [10,25,  20,50,  30,75, 50,125,  80,200,  150,150] if 'anchors' not in param else [float(a) for a in param['anchors'].split(',')]
         self.side = side
-        if self.side == 13:
+        if self.side == 26:
             self.anchor_offset = 2 * 3
-        elif self.side == 26:
+        elif self.side == 52:
             self.anchor_offset = 2 * 0
         else:
-            assert False, "Invalid output size. Only 13, 26 sizes are supported for output spatial dimensions"
+            assert False, "Invalid output size. Only 26 and 52 sizes are supported for output spatial dimensions"
 
     def log_params(self):
         params_to_print = {'classes': self.classes, 'num': self.num, 'coords': self.coords, 'anchors': self.anchors}
@@ -87,6 +87,9 @@ def scale_bbox(x, y, h, w, class_id, confidence, h_scale, w_scale):
     xmax = int(xmin + w * w_scale)
     ymax = int(ymin + h * h_scale)
     return dict(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax, class_id=class_id, confidence=confidence)
+
+def logistic_activate(x):
+    return 1/(1+exp(-x))
 
 
 def parse_yolo_region(blob, resized_image_shape, original_im_shape, params, threshold):
@@ -109,12 +112,12 @@ def parse_yolo_region(blob, resized_image_shape, original_im_shape, params, thre
         col = i % params.side
         for n in range(params.num):
             obj_index = entry_index(params.side, params.coords, params.classes, n * side_square + i, params.coords)
-            scale = predictions[obj_index]
+            scale = logistic_activate(predictions[obj_index])
             if scale < threshold:
                 continue
             box_index = entry_index(params.side, params.coords, params.classes, n * side_square + i, 0)
-            x = (col + predictions[box_index + 0 * side_square]) / params.side * resized_image_w
-            y = (row + predictions[box_index + 1 * side_square]) / params.side * resized_image_h
+            x = (col + logistic_activate(predictions[box_index + 0 * side_square])) / params.side * resized_image_w
+            y = (row + logistic_activate(predictions[box_index + 1 * side_square])) / params.side * resized_image_h
             # Value for exp is very big number in some cases so following construction is using here
             try:
                 w_exp = exp(predictions[box_index + 2 * side_square])
@@ -126,7 +129,7 @@ def parse_yolo_region(blob, resized_image_shape, original_im_shape, params, thre
             for j in range(params.classes):
                 class_index = entry_index(params.side, params.coords, params.classes, n * side_square + i,
                                           params.coords + 1 + j)
-                confidence = scale * predictions[class_index]
+                confidence = scale * logistic_activate(predictions[class_index])
                 if confidence < threshold:
                     continue
                 objects.append(scale_bbox(x=x, y=y, h=h, w=w, class_id=j, confidence=confidence,
@@ -176,7 +179,7 @@ def main():
             sys.exit(1)
 
     assert len(net.inputs.keys()) == 1, "Sample supports only YOLO V3 based single input topologies"
-    #assert len(net.outputs) == 3, "Sample supports only YOLO V3 based triple output topologies"
+    assert len(net.outputs) == 2, "Sample supports only YOLO V3 based triple output topologies"
 
     # ---------------------------------------------- 4. Preparing inputs -----------------------------------------------
     log.info("Preparing inputs")
@@ -236,8 +239,6 @@ def main():
 
         # resize input_frame to network size
         in_frame = in_frame.transpose((2, 0, 1))  # Change data layout from HWC to CHW
-        #in_frame = in_frame/255.0
-        #print(in_frame)
         in_frame = in_frame.reshape((n, c, h, w))
 
         # Start inference
@@ -252,14 +253,19 @@ def main():
 
             start_time = time()
             for layer_name, out_blob in output.items():
-                print(layer_name)
-                print(out_blob)
                 layer_params = YoloV3Params(net.layers[layer_name].params, out_blob.shape[2])
                 log.info("Layer {} parameters: ".format(layer_name))
                 layer_params.log_params()
+                ##Just for testing
+                ###################################
+                if(layer_name == 'layer28-conv'):
+                    continue
+                ###################################
                 objects += parse_yolo_region(out_blob, in_frame.shape[2:],
                                              frame.shape[:-1], layer_params,
                                              args.prob_threshold)
+                log.info("len objects : {0}".format(len(objects)))
+                
             parsing_time = time() - start_time
 
         # Filtering overlapping boxes with respect to the --iou_threshold CLI parameter
@@ -280,8 +286,8 @@ def main():
         origin_im_size = frame.shape[:-1]
         for obj in objects:
             # Validation bbox of detected object
-            if obj['xmax'] > origin_im_size[0] or obj['ymax'] > origin_im_size[0] or obj['xmin'] < 0 or obj['ymin'] < 0:
-                continue
+            ##if obj['xmax'] > origin_im_size[0] or obj['ymax'] > origin_im_size[0] or obj['xmin'] < 0 or obj['ymin'] < 0:
+            ##    continue
             color = (int(min(obj['class_id'] * 12.5, 255)),
                      min(obj['class_id'] * 7, 255), min(obj['class_id'] * 5, 255))
             det_label = labels_map[obj['class_id']] if labels_map and len(labels_map) >= obj['class_id'] else \
@@ -314,11 +320,10 @@ def main():
         render_time = time() - start_time
 
         if is_async_mode:
-            #print('is_async_mode')
             cur_request_id, next_request_id = next_request_id, cur_request_id
             frame = next_frame
 
-        key = cv2.waitKey(1)
+        key = cv2.waitKey(10000)
         # Tab key
         if key == 27:
             break

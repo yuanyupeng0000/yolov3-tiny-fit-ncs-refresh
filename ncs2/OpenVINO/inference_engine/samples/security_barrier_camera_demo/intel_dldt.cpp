@@ -686,10 +686,10 @@ int main_process(int argc, char *argv[], std::string &strInput, std::vector<LPOb
                 continue;
             }
             slog::info << "Loading plugin " << flag << slog::endl;
-            InferencePlugin plugin = PluginDispatcher({"../../../lib/intel64", ""}).getPluginByDevice(flag);
+            InferencePlugin plugin = PluginDispatcher({"../../../lib/ubuntu_16.04/intel64", ""}).getPluginByDevice(flag);
 
             /** Printing plugin version **/
-            printPluginVersion(plugin, std::cout);
+            ///printPluginVersion(plugin, std::cout);
 
             if ((flag.find("CPU") != std::string::npos)) {
                 /** Load default extensions lib for the CPU plugin (e.g. SSD's DetectionOutput)**/
@@ -1154,7 +1154,7 @@ int main_process(int argc, char *argv[], std::string &strInput, std::vector<LPOb
         if (FLAGS_pc) {
             for (auto && plugin : pluginsForNetworks) {
                 std::cout << "Performance counts for " << plugin.first << " plugin";
-                printPerformanceCountsPlugin(plugin.second, std::cout);
+                ///printPerformanceCountsPlugin(plugin.second, std::cout);
             }
         }
 
@@ -1269,10 +1269,10 @@ int main(int argc, char *argv[]) {
                 continue;
             }
             slog::info << "Loading plugin " << flag << slog::endl;
-            InferencePlugin plugin = PluginDispatcher({"../../../lib/intel64", ""}).getPluginByDevice(flag);
+            InferencePlugin plugin = PluginDispatcher({"../../../lib/ubuntu_16.04/intel64", ""}).getPluginByDevice(flag);
 
             /** Printing plugin version **/
-            printPluginVersion(plugin, std::cout);
+            ///printPluginVersion(plugin, std::cout);
 
             if ((flag.find("CPU") != std::string::npos)) {
                 /** Load default extensions lib for the CPU plugin (e.g. SSD's DetectionOutput)**/
@@ -1728,7 +1728,7 @@ int main(int argc, char *argv[]) {
         if (FLAGS_pc) {
             for (auto && plugin : pluginsForNetworks) {
                 std::cout << "Performance counts for " << plugin.first << " plugin";
-                printPerformanceCountsPlugin(plugin.second, std::cout);
+                ///printPerformanceCountsPlugin(plugin.second, std::cout);
             }
         }
 

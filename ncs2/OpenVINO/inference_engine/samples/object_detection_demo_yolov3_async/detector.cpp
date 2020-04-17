@@ -8,6 +8,7 @@
 #include <samples/common.hpp> //#include <samples/ocv_common.hpp>
 #include <ext_list.hpp>
 #include <chrono>
+#include "recognizer.h"
 //#define YOLOV3_ORIG
 using namespace InferenceEngine;
 
@@ -16,6 +17,22 @@ void Detector::InitIdxSteps(){
        this->idx_steps[i] = 0;
     }
 }
+void Detector::InitIdxSizeMap(){
+    //TODO:change to for loop
+    this->idx_size_map[0] = this->size_queue0;
+    this->idx_size_map[1] = this->size_queue1;
+    this->idx_size_map[2] = this->size_queue2;
+    this->idx_size_map[3] = this->size_queue3;
+}
+
+void Detector::InitIdxMatMap(){
+    //TODO:change to for loop
+    this->idx_mat_map[0] = this->mat_queue0;
+    this->idx_mat_map[1] = this->mat_queue1;
+    this->idx_mat_map[2] = this->mat_queue2;
+    this->idx_mat_map[3] = this->mat_queue3;
+}
+
 int Detector::GetInferIndexes(int index){
     if(this->idx_steps[index] % 2 == 0){
         return 2*index + 1;
@@ -111,7 +128,7 @@ Detector::Detector(const std::string& inputXml, const std::string& inputBin, con
         // -----------------------------------------------------------------------------------------------------
 
         // --------------------------- 4. Loading model to the plugin ------------------------------------------
-        slog::info << "Loading model to the plugin" << slog::endl;
+        slog::info << "Loading detector model to the plugin" << slog::endl;
         ExecutableNetwork network = plugin.LoadNetwork(netReader.getNetwork(), {});
 
         // -----------------------------------------------------------------------------------------------------
@@ -131,6 +148,7 @@ Detector::Detector(const std::string& inputXml, const std::string& inputBin, con
         std::cerr << "[ ERROR ] Unknown/internal exception happened." << std::endl;
     }
     InitIdxSteps();
+    InitIdxSizeMap();
 }
 void Detector::Detect(const cv::Mat frame){
     try {
@@ -371,8 +389,17 @@ int Detector::Detect(const cv::Mat frame, std::vector<DetectionObject>& objects)
 
 int Detector::Detect(int idx, const cv::Mat frame, std::vector<DetectionObject>& objects){
     try {
+        const size_t width  = (size_t)frame.size().width;
+        const size_t height = (size_t)frame.size().height;
+        struct Image_Size st_image_size;
+        st_image_size.h = height;
+        st_image_size.w = width;
+        slog::info << "idx_position1 " << idx << slog::endl;
+        this->idx_size_map[idx].push(st_image_size);
+        this->idx_mat_map[idx].push(frame);
+        slog::info << "idx_position2 " << idx << slog::endl;
         // --------------------------- 6. Doing inference ------------------------------------------------------
-        slog::info << "Start inference " << slog::endl;
+        //slog::info << "Start inference " << slog::endl;
         typedef std::chrono::duration<double, std::ratio<1, 1000>> ms;
         // Here is the first asynchronous point:
         // in the Async mode, we capture frame to populate the NEXT infer request
@@ -392,8 +419,14 @@ int Detector::Detect(int idx, const cv::Mat frame, std::vector<DetectionObject>&
                 // Processing results of the CURRENT request
                 unsigned long resized_im_h = inputInfo.begin()->second.get()->getDims()[0];
                 unsigned long resized_im_w = inputInfo.begin()->second.get()->getDims()[1];
-                const size_t width  = (size_t)frame.size().width;
-                const size_t height = (size_t)frame.size().height;
+                //const size_t width  = (size_t)frame.size().width;
+                //const size_t height = (size_t)frame.size().height;
+                struct Image_Size st_image_size = this->idx_size_map[idx].front();
+                this->current_result_frame_map[idx] = idx_mat_map[idx].front();
+                const size_t width = st_image_size.w;
+                const size_t height = st_image_size.h;
+                this->idx_size_map[idx].pop();
+                this->idx_mat_map[idx].pop();
                 //std::vector<DetectionObject> objects;
                 // Parsing outputs
                 unsigned long layer_order_id = 0;
@@ -402,14 +435,14 @@ int Detector::Detect(int idx, const cv::Mat frame, std::vector<DetectionObject>&
                     CNNLayerPtr layer = netReader.getNetwork().getLayerByName(output_name.c_str());
                     Blob::Ptr blob = IfReqs[temp_request_id]->GetBlob(output_name);
                     if(this->input_xml.find("SSD") != this->input_xml.npos){
-                        std::cout << "[ INFO ] SSD" << std::endl;
+                        //std::cout << "[ INFO ] SSD" << std::endl;
                         ParseSSDNcsOutput(layer, blob, resized_im_h, resized_im_w, height, width, thresh, objects);
                     }else if(this->input_xml.find("TinyYoloV3") != this->input_xml.npos){
-                        std::cout << "[ INFO ] TinyYoloV3" << std::endl;
+                        //std::cout << "[ INFO ] TinyYoloV3" << std::endl;
                         ParseYOLOV3TinyNcsOutput(layer, blob, resized_im_h, resized_im_w, height, width, layer_order_id, thresh, objects);
                         layer_order_id += 1;
                     }else if(this->input_xml.find("YoloV3") != this->input_xml.npos){
-                        std::cout << "[ INFO ] YoloV3" << std::endl;
+                        //std::cout << "[ INFO ] YoloV3" << std::endl;
                         ParseYOLOV3Output(layer, blob, resized_im_h, resized_im_w, height, width, thresh, objects);
                     }
                 }
@@ -417,7 +450,7 @@ int Detector::Detect(int idx, const cv::Mat frame, std::vector<DetectionObject>&
                 //if (/*FLAGS_pc*/current_request_id >=0) {
                 //    printPerformanceCounts(*IfReqs[current_request_id], std::cout);
                 //}
-                slog::info << "current_request_id:" << temp_request_id << slog::endl;
+                //slog::info << "current_request_id:" << temp_request_id << slog::endl;
                 FrameToBlob(frame, IfReqs[temp_request_id], inputName);
                 IfReqs[temp_request_id]->StartAsync();
                 // Filtering overlapping boxes
@@ -441,9 +474,10 @@ int Detector::Detect(int idx, const cv::Mat frame, std::vector<DetectionObject>&
             }
         }
         else{
-            slog::info << "current_request_id:" << temp_request_id << slog::endl;
+            //slog::info << "current_request_id:" << temp_request_id << slog::endl;
             FrameToBlob(frame, IfReqs[temp_request_id], inputName);
             IfReqs[temp_request_id]->StartAsync();
+            return -1;
         }
     }
     catch (const std::exception& error) {

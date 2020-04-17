@@ -57,6 +57,8 @@ ext_list.hpp
 -
 chrono
 -
+recognizer.h
+/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/recognizer.h
 
 /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/detector.h
 stdio.h
@@ -77,6 +79,8 @@ intel_dldt.h
 /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/intel_dldt.h
 detector.h
 /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/detector.h
+recognizer.h
+/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/recognizer.h
 memory
 -
 iostream
@@ -133,6 +137,8 @@ ext_list.hpp
 -
 detector.h
 /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/detector.h
+recognizer.h
+/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/recognizer.h
 intel_dldt.h
 /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/intel_dldt.h
 
@@ -149,6 +155,42 @@ os/windows/w_dirent.h
 -
 dirent.h
 -
+
+/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/recognizer.cpp
+recognizer.h
+/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/recognizer.h
+Common.h
+/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/Common.h
+samples/slog.hpp
+-
+inference_engine.hpp
+-
+iostream
+-
+stdio.h
+-
+gflags/gflags.h
+-
+samples/common.hpp
+-
+ext_list.hpp
+-
+chrono
+-
+
+/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/recognizer.h
+stdio.h
+-
+string
+-
+iostream
+-
+samples/ocv_common.hpp
+-
+inference_engine.hpp
+-
+Common.h
+/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/Common.h
 
 /opt/intel/openvino/deployment_tools/inference_engine/include/cpp/ie_cnn_net_reader.h
 string
@@ -883,21 +925,19 @@ ie_plugin_config.hpp
 /opt/intel/openvino/deployment_tools/inference_engine/include/multi-device/ie_plugin_config.hpp
 
 /opt/intel/openvino/deployment_tools/inference_engine/samples/common/os/windows/w_dirent.h
-winsock2.h
--
-windows.h
--
-stdlib.h
--
-unistd.h
--
-cstdlib
--
-string.h
--
 string
 -
+windef.h
+-
+fileapi.h
+-
+Winbase.h
+-
 sys/stat.h
+-
+sys/types.h
+-
+dirent.h
 -
 
 /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/common.hpp
