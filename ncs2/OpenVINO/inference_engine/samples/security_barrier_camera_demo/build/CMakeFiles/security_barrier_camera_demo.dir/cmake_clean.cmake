@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/security_barrier_camera_demo.dir/intel_dldt.cpp.o"
-  "libsecurity_barrier_camera_demo.pdb"
-  "libsecurity_barrier_camera_demo.so"
+  "security_barrier_camera_demo.pdb"
+  "security_barrier_camera_demo"
 )
 
 # Per-language clean rules from dependency scanning.

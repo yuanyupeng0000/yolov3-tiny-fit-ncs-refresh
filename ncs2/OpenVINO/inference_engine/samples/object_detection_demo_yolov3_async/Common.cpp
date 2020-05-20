@@ -547,4 +547,5 @@ void ChangeMotorLPR2VeichleLPR(cv::Mat& motor_lpr, cv::Mat& veichle_lpr){
     cv::Rect rect_top_middle = cv::Rect(w/5, 0, 3*w/5, h/2);
     cv::Rect rect_bottom = cv::Rect(0, h/2, w, h/2);
     cv::hconcat(motor_lpr(rect_top_middle), motor_lpr(rect_bottom), veichle_lpr);
+    //veichle_lpr = motor_lpr(rect_bottom);
 }

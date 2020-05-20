@@ -10,6 +10,7 @@
 #include <chrono>
 #define ONE_LINE_LPR_CLASS_ID 6
 #define TWO_LINE_LPR_CLASS_ID 5
+#define PROVINCE "<GuiLin>"
 Recognizer::Recognizer(const std::string& inputXml, const std::string& inputBin, const std::string& inputDevice,
                        const float thresh, const float iou, const int nireq):input_xml(inputXml), thresh(thresh), iou(iou), nireq(nireq){
         try {
@@ -157,7 +158,7 @@ bool Recognizer::FindClassObjects(std::vector<DetectionObject>& objects,
     bool bRet = false;
     size_t len = objects.size();
     for(size_t i=0; i<len; i++){
-        if(objects[i].class_id == target_class_id){
+        if((objects[i].class_id == target_class_id) && (objects[i].confidence > this->thresh)){
             target_idxes.push_back(i);
             bRet = true;
         }
@@ -167,10 +168,14 @@ bool Recognizer::FindClassObjects(std::vector<DetectionObject>& objects,
 
 bool Recognizer::CropObjectRegion(DetectionObject& object, cv::Mat frame, cv::Mat& object_region){
     cv::Rect roi ;
-    roi.x = object.xmin;
-    roi.y = object.ymin;
-    roi.width = std::min(object.xmax - object.xmin, frame.cols - roi.x);
-    roi.height = std::min(object.ymax - object.ymin, frame.rows - roi.y);
+    int width = object.xmax - object.xmin;
+    int height = object.ymax - object.ymin;
+    int expand_w = width * 0.1;
+    int expand_h = height * 0.2;
+    roi.x = std::max(0, object.xmin - expand_w);
+    roi.y = std::max(0, object.ymin - expand_h);
+    roi.width = std::min(object.xmax - object.xmin + 2*expand_w, frame.cols - roi.x);
+    roi.height = std::min(object.ymax - object.ymin + 2*expand_h, frame.rows - roi.y);
     //slog::info << "roi.x:" << roi.x << " roi.y:" << roi.y << " roi.width:" << roi.width << " roi.height:"<< roi.height << slog::endl;
     object_region = frame(roi);
     return true;
@@ -187,6 +192,19 @@ bool Recognizer::GetTargetFrames(cv::Mat frame, std::vector<DetectionObject>& ob
     return bRet;
 }
 
+void Recognizer::FakeProvinceFeild(std::string& lpr_txt){
+    int iPos1 = lpr_txt.find('<');
+    int iPos2 = lpr_txt.find('>');
+    //std::string str_target = lpr_txt.substr(iPos1, iPos2-iPos1 + 1);
+    if((iPos1 != lpr_txt.npos) && (iPos2 != lpr_txt.npos)){
+        lpr_txt.replace(iPos1, iPos2-iPos1+1, PROVINCE);
+    }
+    else{
+        lpr_txt.insert(0, PROVINCE);
+    }
+    //lpr_txt.replace(lpr_txt.find("<police>"), strlen("<police>"), "");
+}
+
 int Recognizer::Recognize(int idx, const cv::Mat coresponding_frame, std::vector<DetectionObject>& objects){
     std::vector<int> plate_idxes;
     //slog::info << "into lpr recognize " << slog::endl;
@@ -200,22 +218,28 @@ int Recognizer::Recognize(int idx, const cv::Mat coresponding_frame, std::vector
                 cv::Mat frame = plate_frames[i];
                 /*cv::Mat temp;
                 ChangeMotorLPR2VeichleLPR(frame, temp);
-                frame = temp*/
+                frame = temp;*/
                 //cv::imwrite("one_line_lpr.jpg", frame);
                 // --------------------------- 6. Doing inference ------------------------------------------------------
-                //slog::info << "Start lpr inference " << slog::endl;
+                slog::info << "Start lpr inference " << slog::endl;
                 typedef std::chrono::duration<double, std::ratio<1, 1000>> ms;
+                auto t0 = std::chrono::high_resolution_clock::now();
                 auto inputName = inputInfo.begin()->first;
-                // Main sync point:
+                //Main sync point:
                 //slog::info << "current_request_id:" << idx << slog::endl;
                 FrameToBlob(frame, IfReqs[idx], inputName);
                 this->fillSeqBlob(IfReqs[idx]);
                 IfReqs[idx]->StartAsync();
                 if (OK == IfReqs[idx]->Wait(IInferRequest::WaitMode::RESULT_READY)){
                     std::string str_plate = GetLicencePlateText(IfReqs[idx]);
+                    //FakeProvinceFeild(str_plate);
                     slog::info << "plate: " << str_plate << slog::endl;
+                    //cv::imwrite("./lpr_result_dir/"+str_plate+".jpg", frame);
                     objects[plate_idxes[i]].set_text(str_plate);
                 }
+                auto t1 = std::chrono::high_resolution_clock::now();
+                ms recognization = std::chrono::duration_cast<ms>(t1 - t0);
+                slog::info << "recognization duration : " << recognization.count() << slog::endl;
             }
 
         }

@@ -151,7 +151,7 @@ int intel_dldt_init(const std::string& config/*const IntelDldtParam& intel_dldt_
     return NCS_NUM;
 }
 int intel_dldt_detect(const cv::Mat frame, int NCS_ID, std::vector<DetectionObject>& objs){
-    //std::cout << "[ INFO ] NCS_ID " << NCS_ID << std::endl;
+    std::cout << "[ INFO ] NCS_ID " << NCS_ID << std::endl;
 #ifdef DETECTOR_MODE_ONE
     int iRet = detectors[0]->Detect(NCS_ID, frame, objs);
     if(intel_dldt_lpr_param.lpr_flag && iRet==0){

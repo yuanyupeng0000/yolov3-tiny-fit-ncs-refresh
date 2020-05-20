@@ -22,6 +22,9 @@ static const char help_message[] = "Print a usage message.";
 /// @brief Message for images argument
 static const char video_message[] = "Required. Path to a video file (specify \"cam\" to work with camera).";
 
+/// @brief Message for images argument
+static const char image_message[] = "Required. Path to a image file.";
+
 /// @brief Message for model argument
 static const char model_message[] = "Required. Path to an .xml file with a trained model.";
 
@@ -65,6 +68,10 @@ DEFINE_bool(h, false, help_message);
 /// \brief Define parameter for set video file of reading from camera <br>
 /// It is a required parameter
 DEFINE_string(i, "", video_message);
+
+/// \brief Define parameter for set video file of reading from camera <br>
+/// It is a required parameter
+DEFINE_string(j, "", image_message);
 
 /// \brief Defines parameter for setting path to a model file <br>
 /// It is a required parameter

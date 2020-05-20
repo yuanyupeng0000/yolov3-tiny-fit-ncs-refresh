@@ -40,8 +40,8 @@ bool ParseAndCheckCommandLine(int argc, char *argv[]) {
     }
     slog::info << "Parsing input parameters" << slog::endl;
 
-    if (FLAGS_i.empty()) {
-        throw std::logic_error("Parameter -i is not set");
+    if (FLAGS_i.empty() && FLAGS_j.empty()) {
+        throw std::logic_error("Parameter -i and -j is not set");
     }
 
     if (FLAGS_m.empty()) {
@@ -58,27 +58,29 @@ int main(int argc, char *argv[]){
     if (!ParseAndCheckCommandLine(argc, argv)) {
         return 0;
     }
-
     slog::info << "Reading input" << slog::endl;
     cv::VideoCapture cap;
-    if (!((FLAGS_i == "cam") ? cap.open(0) : cap.open(FLAGS_i.c_str()))) {
-        throw std::logic_error("Cannot open input file or camera: " + FLAGS_i);
+    // read input (video) frame
+    cv::Mat frame;
+    cv::Mat next_frame;
+    if(FLAGS_j == ""){
+        if (!((FLAGS_i == "cam") ? cap.open(0) : cap.open(FLAGS_i.c_str()))) {
+            throw std::logic_error("Cannot open input file or camera: " + FLAGS_i);
+        }
+        cap >> frame;
     }
 
-    // read input (video) frame
-    cv::Mat frame;  cap >> frame;
-    cv::Mat next_frame;
+    //const size_t width  = (size_t) cap.get(cv::CAP_PROP_FRAME_WIDTH);
+    //const size_t height = (size_t) cap.get(cv::CAP_PROP_FRAME_HEIGHT);
 
-    const size_t width  = (size_t) cap.get(cv::CAP_PROP_FRAME_WIDTH);
-    const size_t height = (size_t) cap.get(cv::CAP_PROP_FRAME_HEIGHT);
-
-    if (!cap.grab()) {
+    /*if (!cap.grab()) {
         throw std::logic_error("This demo supports only video (or camera) inputs !!! "
                                "Failed to get next frame from the " + FLAGS_i);
-    }
+    }*/
     // -----------------------------------------------------------------------------------------------------
     std::string binFileName = fileNameNoExt(FLAGS_m) + ".bin";
-    ///Detector detector(FLAGS_m, binFileName, FLAGS_d, FLAGS_t, FLAGS_iou_t, FLAGS_nireq);
+    ///Detect
+    /// or detector(FLAGS_m, binFileName, FLAGS_d, FLAGS_t, FLAGS_iou_t, FLAGS_nireq);
     ///Recognizer Recognizer()
     intel_dldt_init("FP16/vpu_config.ini");
     ///
@@ -89,20 +91,26 @@ int main(int argc, char *argv[]){
     typedef std::chrono::duration<double, std::ratio<1, 1000>> ms;
     auto t0 = std::chrono::high_resolution_clock::now();
     std::queue<cv::Mat> frame_que;
-    cv::VideoWriter writer(FLAGS_s, CV_FOURCC('X', 'V', 'I', 'D'), 1, cv::Size(1280, 960));
+    cv::VideoWriter writer(FLAGS_s, CV_FOURCC('X', 'V', 'I', 'D'), 2, cv::Size(1280, 960));
     while (true) {
         N += 1;
 
         // Here is the first asynchronous point:
         // in the Async mode, we capture frame to populate the NEXT infer request
         // in the regular mode, we capture frame to the CURRENT infer request
-        if (!cap.read(next_frame)) {
-            if (next_frame.empty()) {
-                isLastFrame = true;  // end of video file
-            } else {
-                throw std::logic_error("Failed to get frame from cv::VideoCapture");
+        if(FLAGS_j != ""){
+            frame = cv::imread(FLAGS_j);
+        }
+        else{
+            if (!cap.read(next_frame)) {
+                if (next_frame.empty()) {
+                    isLastFrame = true;  // end of video file
+                } else {
+                    throw std::logic_error("Failed to get frame from cv::VideoCapture");
+                }
             }
         }
+
         //detector.Detect(frame);
         frame_que.push(frame);
         //std::cout << "[ INFO ] Qeue size:" << frame_que.size() << std::endl;
@@ -136,7 +144,7 @@ int main(int argc, char *argv[]){
                 conf << ":" << std::fixed << std::setprecision(3) << confidence;
                 cv::putText(frame_show,
                         (object.class_id == 6 ? object.text: /*label < detector.labels.size() ? detector.labels[label] : */
-                                                std::string("#") + std::to_string(label)) + conf.str(),
+                                                std::string("#") + std::to_string(label)) /*+ conf.str()*/,
                             cv::Point2f(object.xmin, object.ymin - 5), cv::FONT_HERSHEY_COMPLEX_SMALL, 1,
                             cv::Scalar(0, 0, 255));
                 cv::rectangle(frame_show, cv::Point2f(object.xmin, object.ymin), cv::Point2f(object.xmax, object.ymax), cv::Scalar(0, 0, 255), 2);
@@ -148,6 +156,7 @@ int main(int argc, char *argv[]){
         if(!FLAGS_s.empty()){
             writer.write(dst);
         }
+        cv::imwrite("saved_result.jpg", frame_show);
         frame_que.pop();
         auto t1 = std::chrono::high_resolution_clock::now();
         ms detection = std::chrono::duration_cast<ms>(t1 - t0);
@@ -157,6 +166,11 @@ int main(int argc, char *argv[]){
         const int key = cv::waitKey(2);
         if (27 == key)  // Esc
             break;
+        if(FLAGS_j != ""){
+            const int key = cv::waitKey(5000);
+            if (27 == key)  // Esc
+                break;
+        }
     }
     writer.release();
     slog::info << "exit." << slog::endl;

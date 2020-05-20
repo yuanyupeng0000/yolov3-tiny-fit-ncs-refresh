@@ -7,7 +7,7 @@
 #include <inference_engine.hpp>
 #include "Common.h"
 using namespace InferenceEngine;
-#define LPR_MAX_INFER_SIZE 4
+#define LPR_MAX_INFER_SIZE 48
 class Recognizer
 {
 public:
@@ -23,6 +23,7 @@ public:
                                       std::vector<int>& target_idxes,
                                       const int target_class_id);
     bool GetTargetFrames(cv::Mat frame, std::vector<DetectionObject>& objects, std::vector<int>& plate_idxes, std::vector<cv::Mat>& plate_frames);
+    void FakeProvinceFeild(std::string& lpr_txt);
     bool CropObjectRegion(DetectionObject& object, cv::Mat frame, cv::Mat& object_region);
     void fillSeqBlob(InferRequest::Ptr);
     std::string GetLicencePlateText(InferRequest::Ptr);

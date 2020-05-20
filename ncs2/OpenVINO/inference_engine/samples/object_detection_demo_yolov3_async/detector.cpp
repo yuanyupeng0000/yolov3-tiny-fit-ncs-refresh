@@ -19,18 +19,18 @@ void Detector::InitIdxSteps(){
 }
 void Detector::InitIdxSizeMap(){
     //TODO:change to for loop
-    this->idx_size_map[0] = this->size_queue0;
+    /*this->idx_size_map[0] = this->size_queue0;
     this->idx_size_map[1] = this->size_queue1;
     this->idx_size_map[2] = this->size_queue2;
-    this->idx_size_map[3] = this->size_queue3;
+    this->idx_size_map[3] = this->size_queue3;*/
 }
 
 void Detector::InitIdxMatMap(){
     //TODO:change to for loop
-    this->idx_mat_map[0] = this->mat_queue0;
+    /*this->idx_mat_map[0] = this->mat_queue0;
     this->idx_mat_map[1] = this->mat_queue1;
     this->idx_mat_map[2] = this->mat_queue2;
-    this->idx_mat_map[3] = this->mat_queue3;
+    this->idx_mat_map[3] = this->mat_queue3;*/
 }
 
 int Detector::GetInferIndexes(int index){
@@ -394,10 +394,10 @@ int Detector::Detect(int idx, const cv::Mat frame, std::vector<DetectionObject>&
         struct Image_Size st_image_size;
         st_image_size.h = height;
         st_image_size.w = width;
-        slog::info << "idx_position1 " << idx << slog::endl;
+        //slog::info << "idx_position1 " << idx << slog::endl;
         this->idx_size_map[idx].push(st_image_size);
         this->idx_mat_map[idx].push(frame);
-        slog::info << "idx_position2 " << idx << slog::endl;
+        //slog::info << "idx_position2 " << idx << slog::endl;
         // --------------------------- 6. Doing inference ------------------------------------------------------
         //slog::info << "Start inference " << slog::endl;
         typedef std::chrono::duration<double, std::ratio<1, 1000>> ms;

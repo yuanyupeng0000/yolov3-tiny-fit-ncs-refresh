@@ -925,19 +925,21 @@ ie_plugin_config.hpp
 /opt/intel/openvino/deployment_tools/inference_engine/include/multi-device/ie_plugin_config.hpp
 
 /opt/intel/openvino/deployment_tools/inference_engine/samples/common/os/windows/w_dirent.h
+winsock2.h
+-
+windows.h
+-
+stdlib.h
+-
+unistd.h
+-
+cstdlib
+-
+string.h
+-
 string
 -
-windef.h
--
-fileapi.h
--
-Winbase.h
--
 sys/stat.h
--
-sys/types.h
--
-dirent.h
 -
 
 /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/common.hpp

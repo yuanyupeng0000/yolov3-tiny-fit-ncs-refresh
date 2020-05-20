@@ -42,7 +42,7 @@ public:
         size_t h, w;
     };
     //TODO: 1.change to multi cameras more than four. 2.the size queue will be remove
-    std::queue<Image_Size> size_queue0;
+    /*std::queue<Image_Size> size_queue0;
     std::queue<Image_Size> size_queue1;
     std::queue<Image_Size> size_queue2;
     std::queue<Image_Size> size_queue3;
@@ -50,7 +50,7 @@ public:
     std::queue<cv::Mat> mat_queue0;
     std::queue<cv::Mat> mat_queue1;
     std::queue<cv::Mat> mat_queue2;
-    std::queue<cv::Mat> mat_queue3;
+    std::queue<cv::Mat> mat_queue3;*/
 
     std::map<int, std::queue<Image_Size>> idx_size_map;
     std::map<int, std::queue<cv::Mat>> idx_mat_map;
