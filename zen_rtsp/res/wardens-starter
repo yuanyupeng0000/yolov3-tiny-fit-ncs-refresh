@@ -1,2 +1,0 @@
-#!/bin/bash
-nohup /bin/bash /home/shanghai/res/wardens start 2 &
