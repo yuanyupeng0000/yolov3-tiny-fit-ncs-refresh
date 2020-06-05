@@ -16,7 +16,7 @@ SOURCES += \
     ../intel_dldt.cpp \
     ../main.cpp \
     ../recognizer.cpp
-INCLUDEPATH += /opt/intel/computer_vision_sdk/deployment_tools/inference_engine/include \
-    /opt/intel/computer_vision_sdk/deployment_tools/inference_engine/samples/common \
-    /opt/intel/computer_vision_sdk/deployment_tools/inference_engine/src/extension \
+INCLUDEPATH += /opt/intel/openvino/deployment_tools/inference_engine/include \
+    /opt/intel/openvino/deployment_tools/inference_engine/samples/common \
+    /opt/intel/openvino/deployment_tools/inference_engine/src/extension \
     ../

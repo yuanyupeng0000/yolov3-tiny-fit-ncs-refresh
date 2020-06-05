@@ -1,0 +1,3 @@
+/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo/build/CMakeFiles/edit_cache.dir
+/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo/build/CMakeFiles/rebuild_cache.dir
+/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo/build/CMakeFiles/face_eye_emotion_detect.dir

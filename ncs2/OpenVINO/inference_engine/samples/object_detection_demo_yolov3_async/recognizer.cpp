@@ -56,6 +56,7 @@ Recognizer::Recognizer(const std::string& inputXml, const std::string& inputBin,
             // ---------------------------Check inputs ------------------------------------------------------
             slog::info << "Checking LPR Network inputs" << slog::endl;
             inputInfo = InputsDataMap (netReader.getNetwork().getInputsInfo());
+#ifdef LPR_ONE_INPUT
             if (inputInfo.size() != 2) {
                 throw std::logic_error("LPR should have 2 inputs");
             }
@@ -73,6 +74,19 @@ Recognizer::Recognizer(const std::string& inputXml, const std::string& inputBin,
             if (sequenceInput->second->getTensorDesc().getDims()[0] != maxSequenceSizePerPlate) {
                 throw std::logic_error("LPR post-processing assumes certain maximum sequences");
             }
+#else
+            if (inputInfo.size() != 1) {
+                throw std::logic_error("LPR should have 1 inputs");
+            }
+            InputInfo::Ptr& inputInfoFirst = inputInfo.begin()->second;
+            inputInfoFirst->setInputPrecision(Precision::U8);
+            if (/*FLAGS_auto_resize*/false) {
+                inputInfoFirst->getPreProcess().setResizeAlgorithm(ResizeAlgorithm::RESIZE_BILINEAR);
+                inputInfoFirst->getInputData()->setLayout(Layout::NHWC);
+            } else {
+                inputInfoFirst->getInputData()->setLayout(Layout::NCHW);
+            }
+#endif
             // -----------------------------------------------------------------------------------------------------
 
 
@@ -113,6 +127,7 @@ Recognizer::Recognizer(const std::string& inputXml, const std::string& inputBin,
 }
 
 std::string Recognizer::GetLicencePlateText(InferRequest::Ptr request) {
+#ifndef CHINESE
     static std::vector<std::string> items = {
             "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
             "<Anhui>", "<Beijing>", "<Chongqing>", "<Fujian>",
@@ -128,10 +143,28 @@ std::string Recognizer::GetLicencePlateText(InferRequest::Ptr request) {
             "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
             "U", "V", "W", "X", "Y", "Z"
     };
+#else
+    static std::vector<std::string> items = {
+            "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+            "皖", "京", "渝", "闽",
+            "甘", "粤", "桂", "贵",
+            "琼", "冀", "黑", "豫",
+            "港", "鄂", "湘", "蒙",
+            "苏", "赣", "吉", "辽",
+            "澳", "宁", "青", "陕",
+            "鲁", "沪", "晋", "川",
+            "津", "台", "新", "云",
+            "浙", "<WJ>",
+            "A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
+            "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
+            "U", "V", "W", "X", "Y", "Z"
+    };
+#endif
     // up to 88 items per license plate, ended with "-1"
     const auto data = request->GetBlob(outputName)->buffer().as<float*>();
     std::string result;
     for (int i = 0; i < maxSequenceSizePerPlate; i++) {
+        //slog::info << data[i] << slog::endl;
         if (data[i] == -1)
             break;
         result += items[data[i]];
@@ -226,9 +259,9 @@ int Recognizer::Recognize(int idx, const cv::Mat coresponding_frame, std::vector
                 auto t0 = std::chrono::high_resolution_clock::now();
                 auto inputName = inputInfo.begin()->first;
                 //Main sync point:
-                //slog::info << "current_request_id:" << idx << slog::endl;
+                slog::info << "inputName:" << inputName << slog::endl;
                 FrameToBlob(frame, IfReqs[idx], inputName);
-                this->fillSeqBlob(IfReqs[idx]);
+                ///this->fillSeqBlob(IfReqs[idx]);
                 IfReqs[idx]->StartAsync();
                 if (OK == IfReqs[idx]->Wait(IInferRequest::WaitMode::RESULT_READY)){
                     std::string str_plate = GetLicencePlateText(IfReqs[idx]);

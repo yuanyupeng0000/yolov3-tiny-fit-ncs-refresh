@@ -96,3 +96,4 @@ float box_union(ibox a, ibox b);
 float box_iou(ibox a, ibox b);
 int max_index(float *a, int n);
 
+int cvPutChineseTextTest();

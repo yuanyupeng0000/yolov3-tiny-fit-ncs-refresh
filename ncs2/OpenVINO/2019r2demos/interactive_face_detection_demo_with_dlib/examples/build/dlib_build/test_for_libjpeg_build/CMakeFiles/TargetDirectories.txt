@@ -1,0 +1,3 @@
+/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo_with_dlib/examples/build/dlib_build/test_for_libjpeg_build/CMakeFiles/rebuild_cache.dir
+/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo_with_dlib/examples/build/dlib_build/test_for_libjpeg_build/CMakeFiles/edit_cache.dir
+/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo_with_dlib/examples/build/dlib_build/test_for_libjpeg_build/CMakeFiles/libjpeg_test.dir

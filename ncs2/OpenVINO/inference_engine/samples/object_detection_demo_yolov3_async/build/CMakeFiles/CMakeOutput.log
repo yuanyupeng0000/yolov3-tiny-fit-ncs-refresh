@@ -28,15 +28,15 @@ The CXX compiler identification is GNU, found in "/data/github_repos/yolov3-tiny
 Determining if the C compiler works passed with the following output:
 Change Dir: /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c2d1f/fast"
+Run Build Command:"/usr/bin/make" "cmTC_a7931/fast"
 make[1]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_c2d1f.dir/build.make CMakeFiles/cmTC_c2d1f.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_a7931.dir/build.make CMakeFiles/cmTC_a7931.dir/build
 make[2]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c2d1f.dir/testCCompiler.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_c2d1f.dir/testCCompiler.c.o   -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_c2d1f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2d1f.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_c2d1f.dir/testCCompiler.c.o  -o cmTC_c2d1f -rdynamic 
+Building C object CMakeFiles/cmTC_a7931.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_a7931.dir/testCCompiler.c.o   -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_a7931
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7931.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_a7931.dir/testCCompiler.c.o  -o cmTC_a7931 -rdynamic 
 make[2]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 
@@ -44,15 +44,15 @@ make[1]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_34032/fast"
+Run Build Command:"/usr/bin/make" "cmTC_31f83/fast"
 make[1]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_34032.dir/build.make CMakeFiles/cmTC_34032.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_31f83.dir/build.make CMakeFiles/cmTC_31f83.dir/build
 make[2]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_34032.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_34032.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_34032
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34032.dir/link.txt --verbose=1
-/usr/bin/cc      -v CMakeFiles/cmTC_34032.dir/CMakeCCompilerABI.c.o  -o cmTC_34032 -rdynamic  
+Building C object CMakeFiles/cmTC_31f83.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_31f83.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_31f83
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31f83.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_31f83.dir/CMakeCCompilerABI.c.o  -o cmTC_31f83 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -62,8 +62,8 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_34032' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccItN4Qn.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_34032 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_34032.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_31f83' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccnFr45f.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_31f83 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_31f83.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
 make[2]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 
@@ -72,15 +72,15 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_34032/fast"]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_31f83/fast"]
   ignore line: [make[1]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_34032.dir/build.make CMakeFiles/cmTC_34032.dir/build]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_31f83.dir/build.make CMakeFiles/cmTC_31f83.dir/build]
   ignore line: [make[2]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_34032.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_34032.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_34032]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34032.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_34032.dir/CMakeCCompilerABI.c.o  -o cmTC_34032 -rdynamic  ]
+  ignore line: [Building C object CMakeFiles/cmTC_31f83.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_31f83.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_31f83]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31f83.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_31f83.dir/CMakeCCompilerABI.c.o  -o cmTC_31f83 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_34032' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccItN4Qn.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_34032 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_34032.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_31f83' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccnFr45f.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_31f83 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_31f83.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccItN4Qn.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccnFr45f.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -114,7 +114,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_34032] ==> ignore
+    arg [cmTC_31f83] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -126,7 +126,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_34032.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_31f83.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -160,15 +160,15 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_297ae/fast"
+Run Build Command:"/usr/bin/make" "cmTC_dfe62/fast"
 make[1]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_297ae.dir/build.make CMakeFiles/cmTC_297ae.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_dfe62.dir/build.make CMakeFiles/cmTC_dfe62.dir/build
 make[2]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_297ae.dir/feature_tests.c.o
-/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_297ae.dir/feature_tests.c.o   -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_297ae
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_297ae.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_297ae.dir/feature_tests.c.o  -o cmTC_297ae -rdynamic 
+Building C object CMakeFiles/cmTC_dfe62.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_dfe62.dir/feature_tests.c.o   -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_dfe62
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dfe62.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_dfe62.dir/feature_tests.c.o  -o cmTC_dfe62 -rdynamic 
 make[2]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 
@@ -182,15 +182,15 @@ make[1]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_76fe5/fast"
+Run Build Command:"/usr/bin/make" "cmTC_73c33/fast"
 make[1]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_76fe5.dir/build.make CMakeFiles/cmTC_76fe5.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_73c33.dir/build.make CMakeFiles/cmTC_73c33.dir/build
 make[2]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_76fe5.dir/feature_tests.c.o
-/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_76fe5.dir/feature_tests.c.o   -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_76fe5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76fe5.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_76fe5.dir/feature_tests.c.o  -o cmTC_76fe5 -rdynamic 
+Building C object CMakeFiles/cmTC_73c33.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_73c33.dir/feature_tests.c.o   -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_73c33
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_73c33.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_73c33.dir/feature_tests.c.o  -o cmTC_73c33 -rdynamic 
 make[2]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 
@@ -204,15 +204,15 @@ make[1]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9cb10/fast"
+Run Build Command:"/usr/bin/make" "cmTC_4e643/fast"
 make[1]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_9cb10.dir/build.make CMakeFiles/cmTC_9cb10.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_4e643.dir/build.make CMakeFiles/cmTC_4e643.dir/build
 make[2]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9cb10.dir/feature_tests.c.o
-/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_9cb10.dir/feature_tests.c.o   -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_9cb10
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9cb10.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_9cb10.dir/feature_tests.c.o  -o cmTC_9cb10 -rdynamic 
+Building C object CMakeFiles/cmTC_4e643.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_4e643.dir/feature_tests.c.o   -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_4e643
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4e643.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_4e643.dir/feature_tests.c.o  -o cmTC_4e643 -rdynamic 
 make[2]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 
@@ -224,15 +224,15 @@ make[1]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4f2a1/fast"
+Run Build Command:"/usr/bin/make" "cmTC_4dcfa/fast"
 make[1]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_4f2a1.dir/build.make CMakeFiles/cmTC_4f2a1.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_4dcfa.dir/build.make CMakeFiles/cmTC_4dcfa.dir/build
 make[2]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_4f2a1.dir/testCXXCompiler.cxx.o
-/usr/bin/c++      -o CMakeFiles/cmTC_4f2a1.dir/testCXXCompiler.cxx.o -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_4f2a1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4f2a1.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_4f2a1.dir/testCXXCompiler.cxx.o  -o cmTC_4f2a1 -rdynamic 
+Building CXX object CMakeFiles/cmTC_4dcfa.dir/testCXXCompiler.cxx.o
+/usr/bin/c++      -o CMakeFiles/cmTC_4dcfa.dir/testCXXCompiler.cxx.o -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_4dcfa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4dcfa.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_4dcfa.dir/testCXXCompiler.cxx.o  -o cmTC_4dcfa -rdynamic 
 make[2]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 
@@ -240,15 +240,15 @@ make[1]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ac75a/fast"
+Run Build Command:"/usr/bin/make" "cmTC_01de0/fast"
 make[1]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_ac75a.dir/build.make CMakeFiles/cmTC_ac75a.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_01de0.dir/build.make CMakeFiles/cmTC_01de0.dir/build
 make[2]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_ac75a.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++      -o CMakeFiles/cmTC_ac75a.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_ac75a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac75a.dir/link.txt --verbose=1
-/usr/bin/c++       -v CMakeFiles/cmTC_ac75a.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ac75a -rdynamic  
+Building CXX object CMakeFiles/cmTC_01de0.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++      -o CMakeFiles/cmTC_01de0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_01de0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01de0.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTC_01de0.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_01de0 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -258,8 +258,8 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ac75a' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpRhkyK.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_ac75a /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_ac75a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_01de0' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWfKSGV.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_01de0 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_01de0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
 make[2]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 
@@ -268,15 +268,15 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_ac75a/fast"]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_01de0/fast"]
   ignore line: [make[1]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_ac75a.dir/build.make CMakeFiles/cmTC_ac75a.dir/build]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_01de0.dir/build.make CMakeFiles/cmTC_01de0.dir/build]
   ignore line: [make[2]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_ac75a.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_ac75a.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_ac75a]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac75a.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_ac75a.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ac75a -rdynamic  ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_01de0.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_01de0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_01de0]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01de0.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_01de0.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_01de0 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -286,13 +286,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ac75a' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpRhkyK.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_ac75a /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_ac75a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_01de0' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWfKSGV.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_01de0 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_01de0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccpRhkyK.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccWfKSGV.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -310,7 +310,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_ac75a] ==> ignore
+    arg [cmTC_01de0] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -322,7 +322,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_ac75a.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_01de0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -354,15 +354,15 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_fec78/fast"
+Run Build Command:"/usr/bin/make" "cmTC_56835/fast"
 make[1]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_fec78.dir/build.make CMakeFiles/cmTC_fec78.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_56835.dir/build.make CMakeFiles/cmTC_56835.dir/build
 make[2]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_fec78.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_fec78.dir/feature_tests.cxx.o -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_fec78
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fec78.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_fec78.dir/feature_tests.cxx.o  -o cmTC_fec78 -rdynamic 
+Building CXX object CMakeFiles/cmTC_56835.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_56835.dir/feature_tests.cxx.o -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_56835
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56835.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_56835.dir/feature_tests.cxx.o  -o cmTC_56835 -rdynamic 
 make[2]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 
@@ -429,15 +429,15 @@ make[1]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_bf722/fast"
+Run Build Command:"/usr/bin/make" "cmTC_9bda3/fast"
 make[1]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_bf722.dir/build.make CMakeFiles/cmTC_bf722.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_9bda3.dir/build.make CMakeFiles/cmTC_9bda3.dir/build
 make[2]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_bf722.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_bf722.dir/feature_tests.cxx.o -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_bf722
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf722.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_bf722.dir/feature_tests.cxx.o  -o cmTC_bf722 -rdynamic 
+Building CXX object CMakeFiles/cmTC_9bda3.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_9bda3.dir/feature_tests.cxx.o -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_9bda3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9bda3.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_9bda3.dir/feature_tests.cxx.o  -o cmTC_9bda3 -rdynamic 
 make[2]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 
@@ -504,15 +504,15 @@ make[1]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2d4f6/fast"
+Run Build Command:"/usr/bin/make" "cmTC_17963/fast"
 make[1]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_2d4f6.dir/build.make CMakeFiles/cmTC_2d4f6.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_17963.dir/build.make CMakeFiles/cmTC_17963.dir/build
 make[2]: Entering directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2d4f6.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_2d4f6.dir/feature_tests.cxx.o -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_2d4f6
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d4f6.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_2d4f6.dir/feature_tests.cxx.o  -o cmTC_2d4f6 -rdynamic 
+Building CXX object CMakeFiles/cmTC_17963.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_17963.dir/feature_tests.cxx.o -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_17963
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17963.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_17963.dir/feature_tests.cxx.o  -o cmTC_17963 -rdynamic 
 make[2]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles/CMakeTmp'
 

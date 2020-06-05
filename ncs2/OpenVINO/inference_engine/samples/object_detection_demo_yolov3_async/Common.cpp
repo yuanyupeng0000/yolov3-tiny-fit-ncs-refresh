@@ -1,6 +1,5 @@
 #include "Common.h"
 
-
 int indexsort_comparator(const void *pa, const void *pb)
 {
     float proba = ((indexsort *)pa)->prob[((indexsort *)pa)->index * ((indexsort *)pa)->channel + ((indexsort *)pa)->iclass];
@@ -548,4 +547,42 @@ void ChangeMotorLPR2VeichleLPR(cv::Mat& motor_lpr, cv::Mat& veichle_lpr){
     cv::Rect rect_bottom = cv::Rect(0, h/2, w, h/2);
     cv::hconcat(motor_lpr(rect_top_middle), motor_lpr(rect_bottom), veichle_lpr);
     //veichle_lpr = motor_lpr(rect_bottom);
+}
+
+int cvPutChineseTextTest(){
+    /*
+    cv::Mat img=cv::imread("/home/图片/Plates/abc.jpg");
+
+    string text="这次肯定能Put上中文！";
+
+    int fontHeight=60;
+    int thickness=-1;
+    int linestyle=8;
+    int baseline=0;
+
+    cv::Ptr<cv::freetype::FreeType2> ft2;
+    ft2=cv::freetype::createFreeType2();
+    ft2->loadFontData("/usr/share/fonts/winFonts/simkai.ttf",0);
+
+    cv::Size textSize=ft2->getTextSize(text,fontHeight,thickness,&baseline);
+
+    if (thickness>0) baseline+=thickness;
+
+    // center the text
+    cv::Point textOrg((img.cols - textSize.width) / 2,
+              (img.rows + textSize.height) / 2);
+    // draw the box
+    cv::rectangle(img, textOrg + cv::Point(0, baseline),
+          textOrg + cv::Point(textSize.width, -textSize.height),
+          cv::Scalar(0,255,0),1,8);
+    // ... and the baseline first
+    cv::line(img, textOrg + cv::Point(0, thickness),
+     textOrg + cv::Point(textSize.width, thickness),
+     cv::Scalar(0, 0, 255),1,8);
+    // then put the text itself
+    ft2->putText(img, text, textOrg, fontHeight,
+             cv::Scalar(255,0,0), thickness, linestyle, true );
+
+    cv::imshow("效果",img);
+    if (cv::waitKey(0)==27)*/ return 0;
 }
