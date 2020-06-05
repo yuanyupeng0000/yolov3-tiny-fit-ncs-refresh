@@ -88,7 +88,7 @@ std::vector<float> main_(const dlib::shape_predictor& sp, const dlib::frontal_fa
         ///for (int i = 2; i < argc; ++i)
         {
             array2d<rgb_pixel> img;
-            dlib::cv_image<rgb_pixel> cv_img_dlib(img_src);
+            dlib::cv_image<bgr_pixel> cv_img_dlib(img_src);
 
             // Make the image larger so we can detect small faces.
             assign_image(img, cv_img_dlib);
@@ -116,8 +116,8 @@ std::vector<float> main_(const dlib::shape_predictor& sp, const dlib::frontal_fa
 
                 for(unsigned long i = 0; i <= 67; ++i){
                     cout << (shape.part(i))(0)/float(img_src.cols) << " , " << (shape.part(i))(1)/float(img_src.rows) << endl;
-                    landmarks.push_back((shape.part(i))(0)/float(img_src.cols));
-                    landmarks.push_back((shape.part(i))(1)/float(img_src.rows));
+                    landmarks.push_back(((shape.part(i))(0)-face_rect.x)/float(face_rect.width));
+                    landmarks.push_back(((shape.part(i))(1)-face_rect.y)/float(face_rect.height));
                 }
                 // Right eye
                 /*
