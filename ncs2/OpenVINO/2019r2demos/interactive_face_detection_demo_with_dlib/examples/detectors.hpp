@@ -187,8 +187,7 @@ struct FacialLandmarksDetection : BaseDetection {
     //add for dlib
     dlib::shape_predictor sp;
     dlib::frontal_face_detector ffdetector;
-    cv::Mat cvimg;
-    std::vector<float> dlibLandmarks;
+    std::vector<std::vector<float>> dlibLandmarks;
 
 };
 

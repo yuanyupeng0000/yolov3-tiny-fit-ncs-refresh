@@ -654,7 +654,6 @@ FacialLandmarksDetection::FacialLandmarksDetection(const std::string &pathToMode
     //init dlib model
     std::string model_shape_dlib = "/data/github_repos/dlib_samples/model/shape_predictor_68_face_landmarks.dat";
     dlib::deserialize(model_shape_dlib) >> sp;
-    this->cvimg = cv::imread("/home/yyp/图片/face1.png");
     this->ffdetector = dlib::get_frontal_face_detector();
 }
 
@@ -692,7 +691,7 @@ void FacialLandmarksDetection::enqueue(const cv::Mat &frame, const cv::Rect &fac
     typedef std::chrono::duration<double, std::ratio<1, 1000>> ms;
     auto t0 = std::chrono::high_resolution_clock::now();
 
-    dlibLandmarks = std::move(main_(this->sp, this->ffdetector, frame, face_rect));
+    dlibLandmarks.push_back(main_(this->sp, this->ffdetector, frame, face_rect));
 
     std::cout << "main_ in dlib finished" << std::endl;
     auto t1 = std::chrono::high_resolution_clock::now();
@@ -702,8 +701,8 @@ void FacialLandmarksDetection::enqueue(const cv::Mat &frame, const cv::Rect &fac
 }
 
 std::vector<float> FacialLandmarksDetection::operator[] (int idx) const {
+#ifdef DO_NOT_USE_DLIB
     std::vector<float> normedLandmarks;
-#ifndef USE_DLIB
     auto landmarksBlob = request->GetBlob(outputFacialLandmarksBlobName);
     auto n_lm = getTensorChannels(landmarksBlob->getTensorDesc());
     const float *normed_coordinates = request->GetBlob(outputFacialLandmarksBlobName)->buffer().as<float *>();
@@ -718,19 +717,17 @@ std::vector<float> FacialLandmarksDetection::operator[] (int idx) const {
         float normed_x = normed_coordinates[2 * i_lm];
         float normed_y = normed_coordinates[2 * i_lm + 1];
 
-        if (/*doRawOutputMessages*/true) {
+        if (doRawOutputMessages) {
             std::cout << normed_x << ", " << normed_y << std::endl;
         }
 
         normedLandmarks.push_back(normed_x);
         normedLandmarks.push_back(normed_y);
     }
+    return normedLandmarks;
 #else
-
+    return dlibLandmarks[idx];
 #endif
-    return dlibLandmarks;
-
-    //return normedLandmarks;
 }
 
 CNNNetwork FacialLandmarksDetection::read() {

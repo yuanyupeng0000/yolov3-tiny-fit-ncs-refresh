@@ -41,16 +41,44 @@ void Face::updateEmotions(std::map<std::string, float> values) {
     }
 }
 
+void Face::updateEyeState(float thresh){
+    //36~47 is the eye points
+    float l_eye_h, r_eye_h, l_eye_w, r_eye_w;
+    l_eye_h = _landmarks[41*2+1] - _landmarks[37*2+1]
+            + _landmarks[40*2+1] - _landmarks[38*2+1];
+
+    r_eye_h = _landmarks[47*2+1] - _landmarks[43*2+1]
+            + _landmarks[46*2+1] - _landmarks[44*2+1];
+
+    l_eye_w = _landmarks[39*2] - _landmarks[36*2];
+    r_eye_h = _landmarks[45*2] - _landmarks[42*2];
+
+    float eye_aspect_ratio = (l_eye_h + r_eye_h)/(l_eye_w + r_eye_w);
+    std::cout  << "esr:" << eye_aspect_ratio << std::endl;
+    if(eye_aspect_ratio < thresh){
+        _isEyeClosed = true;
+    }
+    else{
+        _isEyeClosed = false;
+    }
+
+}
+
 void Face::updateHeadPose(HeadPoseDetection::Results values) {
     _headPose = values;
 }
 
 void Face::updateLandmarks(std::vector<float> values) {
     _landmarks = std::move(values);
+    updateEyeState();
 }
 
 int Face::getAge() {
     return static_cast<int>(std::floor(_age + 0.5f));
+}
+
+bool Face::getEyeState(){
+    return _isEyeClosed;
 }
 
 bool Face::isMale() {

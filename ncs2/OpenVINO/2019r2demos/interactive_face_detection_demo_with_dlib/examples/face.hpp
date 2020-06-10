@@ -26,9 +26,11 @@ public:
     void updateEmotions(std::map<std::string, float> values);
     void updateHeadPose(HeadPoseDetection::Results values);
     void updateLandmarks(std::vector<float> values);
+    void updateEyeState(const float thresh=1.4);
 
     int getAge();
     bool isMale();
+    bool getEyeState();
     std::map<std::string, float> getEmotions();
     std::pair<std::string, float> getMainEmotion();
     HeadPoseDetection::Results getHeadPose();
@@ -62,6 +64,9 @@ private:
     bool _isEmotionsEnabled;
     bool _isHeadPoseEnabled;
     bool _isLandmarksEnabled;
+
+    //for dlib
+    bool _isEyeClosed;
 };
 
 // ----------------------------------- Utils -----------------------------------------------------------------

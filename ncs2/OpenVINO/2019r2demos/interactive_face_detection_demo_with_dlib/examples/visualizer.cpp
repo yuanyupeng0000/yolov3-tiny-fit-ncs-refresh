@@ -203,9 +203,14 @@ void Visualizer::drawFace(cv::Mat& img, Face::Ptr f, bool drawEmotionBar) {
         out << "," << emotion.first;
     }
 
+    if (f->isLandmarksEnabled()){
+         out << "," << (f->getEyeState() ? "eye:closed" : "eye:opend");
+    }
+
     cv::putText(img,
                 out.str(),
-                cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y - 20)),
+                //cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y - 20)),
+                cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y + 20)),
                 cv::FONT_HERSHEY_COMPLEX_SMALL,
                 1.5,
                 genderColor, 2);

@@ -98,7 +98,8 @@ int main(int argc, char *argv[]) {
 
         cv::VideoWriter videoWriter;
         if (!FLAGS_o.empty()) {
-            videoWriter.open(FLAGS_o, cv::VideoWriter::fourcc('I', 'Y', 'U', 'V'), 25, cv::Size(width, height));
+            int fps = 25;
+            videoWriter.open(FLAGS_o, cv::VideoWriter::fourcc('I', 'Y', 'U', 'V'), fps, cv::Size(width, height));
         }
         // ---------------------------------------------------------------------------------------------------
         // --------------------------- 1. Loading Inference Engine -----------------------------
@@ -228,6 +229,8 @@ int main(int argc, char *argv[]) {
             }
 
             // Filling inputs of face analytics networks
+            facialLandmarksDetector.dlibLandmarks.clear(); // For dlib muti faces landmarks
+
             for (auto &&face : prev_detection_results) {
                 if (isFaceAnalyticsEnabled) {
                     auto clippedRect = face.location & cv::Rect(0, 0, width, height);
@@ -235,7 +238,7 @@ int main(int argc, char *argv[]) {
                     ageGenderDetector.enqueue(face);
                     headPoseDetector.enqueue(face);
                     emotionsDetector.enqueue(face);
-#ifdef USE_DLIB
+#ifdef NOT_USE_DLIB
                     facialLandmarksDetector.enqueue(face);
 #else
                     facialLandmarksDetector.enqueue(prev_frame, clippedRect);
@@ -332,11 +335,11 @@ int main(int argc, char *argv[]) {
 
             //  Visualizing results
             if (!FLAGS_no_show || !FLAGS_o.empty()) {
-                out.str("");
+                /*out.str("");
                 out << "Total image throughput: " << std::fixed << std::setprecision(2)
                     << 1000.f / (timer["total"].getSmoothedDuration()) << " fps";
                 cv::putText(prev_frame, out.str(), cv::Point2f(10, 45), cv::FONT_HERSHEY_TRIPLEX, 1.2,
-                            cv::Scalar(255, 0, 0), 2);
+                            cv::Scalar(255, 0, 0), 2);*/
 
                 // drawing faces
                 visualizer->draw(prev_frame, faces);
