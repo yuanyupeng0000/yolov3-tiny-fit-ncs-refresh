@@ -652,7 +652,7 @@ FacialLandmarksDetection::FacialLandmarksDetection(const std::string &pathToMode
     : BaseDetection("Facial Landmarks", pathToModel, deviceForInference, maxBatch, isBatchDynamic, isAsync, doRawOutputMessages),
       outputFacialLandmarksBlobName("align_fc3"), enquedFaces(0) {
     //init dlib model
-    std::string model_shape_dlib = "/data/github_repos/dlib_samples/model/shape_predictor_68_face_landmarks.dat";
+    std::string model_shape_dlib = "shape_predictor_68_face_landmarks.dat";
     dlib::deserialize(model_shape_dlib) >> sp;
     this->ffdetector = dlib::get_frontal_face_detector();
 }

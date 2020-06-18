@@ -26,7 +26,7 @@ public:
     void updateEmotions(std::map<std::string, float> values);
     void updateHeadPose(HeadPoseDetection::Results values);
     void updateLandmarks(std::vector<float> values);
-    void updateEyeState(const float thresh=1.4);
+    void updateEyeState(const float thresh=1.45);
 
     int getAge();
     bool isMale();

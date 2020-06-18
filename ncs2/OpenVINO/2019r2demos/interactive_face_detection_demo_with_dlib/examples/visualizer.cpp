@@ -194,23 +194,43 @@ void Visualizer::drawFace(cv::Mat& img, Face::Ptr f, bool drawEmotionBar) {
 
     std::ostringstream out;
     if (f->isAgeGenderEnabled()) {
-        out << (f->isMale() ? "Male" : "Female");
-        out << "," << f->getAge();
+        out << "Attributes: ";
+        out << (f->isMale() ? "male" : "female");
+        out << " " << f->getAge();
     }
+
+    std::ostringstream out_em;
 
     if (f->isEmotionsEnabled()) {
         auto emotion = f->getMainEmotion();
-        out << "," << emotion.first;
+        out_em << "Emotion  : ";
+        out_em << emotion.first;
     }
+    std::ostringstream out_eye;
 
     if (f->isLandmarksEnabled()){
-         out << "," << (f->getEyeState() ? "eye:closed" : "eye:opend");
+        out_eye << "Eye State : " ;
+         out_eye << (f->getEyeState() ? "closed" : "opend");
     }
 
     cv::putText(img,
                 out.str(),
                 //cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y - 20)),
                 cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y + 20)),
+                cv::FONT_HERSHEY_COMPLEX_SMALL,
+                1.5,
+                genderColor, 2);
+    cv::putText(img,
+                out_em.str(),
+                //cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y - 20)),
+                cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y + 45)),
+                cv::FONT_HERSHEY_COMPLEX_SMALL,
+                1.5,
+                genderColor, 2);
+    cv::putText(img,
+                out_eye.str(),
+                //cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y - 20)),
+                cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y + 70)),
                 cv::FONT_HERSHEY_COMPLEX_SMALL,
                 1.5,
                 genderColor, 2);

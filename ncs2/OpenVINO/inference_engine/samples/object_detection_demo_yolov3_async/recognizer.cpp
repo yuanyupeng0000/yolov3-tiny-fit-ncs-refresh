@@ -56,7 +56,8 @@ Recognizer::Recognizer(const std::string& inputXml, const std::string& inputBin,
             // ---------------------------Check inputs ------------------------------------------------------
             slog::info << "Checking LPR Network inputs" << slog::endl;
             inputInfo = InputsDataMap (netReader.getNetwork().getInputsInfo());
-#ifdef LPR_ONE_INPUT
+#define LPR_ONE_INPUT
+#ifndef LPR_ONE_INPUT
             if (inputInfo.size() != 2) {
                 throw std::logic_error("LPR should have 2 inputs");
             }
@@ -127,7 +128,8 @@ Recognizer::Recognizer(const std::string& inputXml, const std::string& inputBin,
 }
 
 std::string Recognizer::GetLicencePlateText(InferRequest::Ptr request) {
-#ifndef CHINESE
+    slog::info << "start static defination" << slog::endl;
+#ifdef CHINESE
     static std::vector<std::string> items = {
             "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
             "<Anhui>", "<Beijing>", "<Chongqing>", "<Fujian>",
@@ -161,12 +163,14 @@ std::string Recognizer::GetLicencePlateText(InferRequest::Ptr request) {
     };
 #endif
     // up to 88 items per license plate, ended with "-1"
+    slog::info << "start request->GetBlob" << slog::endl;
     const auto data = request->GetBlob(outputName)->buffer().as<float*>();
     std::string result;
     for (int i = 0; i < maxSequenceSizePerPlate; i++) {
-        //slog::info << data[i] << slog::endl;
-        if (data[i] == -1)
+        slog::info << data[i] << slog::endl;
+        if (data[i] < 0)
             break;
+        slog::info << items[data[i]] << slog::endl;
         result += items[data[i]];
     }
 
@@ -203,8 +207,8 @@ bool Recognizer::CropObjectRegion(DetectionObject& object, cv::Mat frame, cv::Ma
     cv::Rect roi ;
     int width = object.xmax - object.xmin;
     int height = object.ymax - object.ymin;
-    int expand_w = width * 0.1;
-    int expand_h = height * 0.2;
+    int expand_w = width * 0.2;
+    int expand_h = height * 0.3;
     roi.x = std::max(0, object.xmin - expand_w);
     roi.y = std::max(0, object.ymin - expand_h);
     roi.width = std::min(object.xmax - object.xmin + 2*expand_w, frame.cols - roi.x);
@@ -261,13 +265,15 @@ int Recognizer::Recognize(int idx, const cv::Mat coresponding_frame, std::vector
                 //Main sync point:
                 slog::info << "inputName:" << inputName << slog::endl;
                 FrameToBlob(frame, IfReqs[idx], inputName);
-                ///this->fillSeqBlob(IfReqs[idx]);
+#ifndef LPR_ONE_INPUT
+                this->fillSeqBlob(IfReqs[idx]);
+#endif
                 IfReqs[idx]->StartAsync();
                 if (OK == IfReqs[idx]->Wait(IInferRequest::WaitMode::RESULT_READY)){
                     std::string str_plate = GetLicencePlateText(IfReqs[idx]);
                     //FakeProvinceFeild(str_plate);
                     slog::info << "plate: " << str_plate << slog::endl;
-                    //cv::imwrite("./lpr_result_dir/"+str_plate+".jpg", frame);
+                    cv::imwrite("./lpr_result_dir/"+str_plate+".jpg", frame);
                     objects[plate_idxes[i]].set_text(str_plate);
                 }
                 auto t1 = std::chrono::high_resolution_clock::now();
