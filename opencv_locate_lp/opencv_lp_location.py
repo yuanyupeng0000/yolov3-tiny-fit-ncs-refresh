@@ -89,14 +89,8 @@ def locate_license(img, orgimg):
 def find_license(img):
 	'''预处理'''
 	# 压缩图像
-	cv2.imshow("src", img)
-	cv2.waitKey(10000000)
-	cv2.destroyAllWindows()
 	SHRINK = 100
-	img = cv2.resize(img, (SHRINK, int(SHRINK*img.shape[0]/img.shape[1])))
-	cv2.imshow("resized", img)
-	cv2.waitKey(10000000)
-	cv2.destroyAllWindows()	 
+	img = cv2.resize(img, (SHRINK, int(SHRINK*img.shape[0]/img.shape[1]))) 
 	# RGB转灰色
 	grayimg = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 	 
@@ -109,23 +103,13 @@ def find_license(img):
 	r = 4
 	h = w = r * 2 + 1
 	kernel = np.zeros((h, w), dtype=np.uint8)
-	cv2.circle(kernel, (r, r), r, 1, -1)
-	 
+	cv2.circle(kernel, (r, r), r, 1, -1)	 
 	openingimg = cv2.morphologyEx(stretchedimg, cv2.MORPH_OPEN, kernel)
-	#cv2.imshow("opening1 img", openingimg)
-	#cv2.waitKey(100000)
-	#cv2.destroyAllWindows()
 	strtimg = cv2.absdiff(stretchedimg, openingimg)
-	#cv2.imshow("absdiff", strtimg)
-	#cv2.waitKey(100000)
-	#cv2.destroyAllWindows()
 		 
 	# 图像二值化
 	###binaryimg = dobinaryzation(strtimg)
-	binaryimg = dobinaryzation(stretchedimg)
-	#cv2.imshow("binaryimg", binaryimg)
-	#cv2.waitKey(100000)
-	#cv2.destroyAllWindows()	 
+	binaryimg = dobinaryzation(stretchedimg)	 
 	# 使用Canny函数做边缘检测
 	cannyimg = cv2.Canny(binaryimg, binaryimg.shape[0], binaryimg.shape[1])
 	img1 = cannyimg.copy()
@@ -137,9 +121,6 @@ def find_license(img):
 	###kernel = np.ones((5,19), np.uint8)
 	kernel = np.ones((5, 5), np.uint8)
 	closingimg = cv2.morphologyEx(cannyimg, cv2.MORPH_CLOSE, kernel, iterations = 1)
-	cv2.imshow("closingimg1", closingimg)
-	cv2.waitKey(100000000)
-	cv2.destroyAllWindows()
 	#返回图像的高和宽
 	(h,w)=closingimg.shape 
 	#初始化一个跟图像高一样长度的数组，用于记录每一行的黑点个数
@@ -152,14 +133,28 @@ def find_license(img):
 	for i in range(0,h):          #遍历每一行
 		for j in range(0,a[i]):   #从该行应该变黑的最左边的点开始向最右边的点设置黑点
 			img1[i,j]=0           #设置黑点
-	cv2.imshow("img1",img1) 
-	key = cv2.waitKey(10000000)
-	cv2.destroyAllWindows()
-	kernel = np.ones((1,9),np.uint8)  
+	
+	kernel = np.ones((1,7),np.uint8)  
 	erosion = cv2.erode(img1,kernel,iterations = 1)
 	cv2.imshow("erosion", erosion)
 	cv2.waitKey(100000)
 	cv2.destroyAllWindows()
+	(h,w)=erosion.shape
+	a=[0 for z in range(0,h)] 
+	for i in range(0,h):          #遍历每一行
+		for j in range(0,w):      #遍历每一列
+			if erosion[i,j]==0:      #判断该点是否为黑点，0代表黑点
+				a[i]+=1           #该行的计数器加一
+	a1 = a[:int(len(a)/3)]
+	a2 = a[int(len(a)/3*2):]
+	a1.reverse()
+	target_y_min = int(len(a)/3) - a1.index(max(a1))
+	target_y_max = int(len(a)/3*2) + a2.index(max(a2))
+	if((w - max(a1)) >= 4):
+		target_y_min = 0
+	if((w - max(a2)) >= 4):
+		target_y_max = len(a) -1
+	print(target_y_min, target_y_max)
 	#返回图像的高和宽
 
 	#初始化一个跟图像宽一样长度的数组，用于记录每一列的黑点个数
@@ -173,14 +168,35 @@ def find_license(img):
 		for i in range(0,w):           #遍历每一列
 			for j in range(h-a[i],h):  #从该列应该变黑的最顶部的开始向最底部设为黑点
 				img2[j,i]=0            #设为黑点
-	cv2.imshow("img2",img2)
-	cv2.waitKey(10000000)
-	cv2.destroyAllWindows()
-	kernel = np.ones((9,1),np.uint8)  
+	kernel = np.ones((5,1),np.uint8)  
 	erosion = cv2.erode(img2,kernel,iterations = 1)
 	cv2.imshow("erosion", erosion)
 	cv2.waitKey(100000)
 	cv2.destroyAllWindows()
+	(h,w)=erosion.shape
+	b=[0 for z in range(0,w)] 
+	for i in range(0,w):          #遍历每一行
+		for j in range(0,h):      #遍历每一列
+			if erosion[j,i]==0:      #判断该点是否为黑点，0代表黑点
+				b[i]+=1           #该行的计数器加一
+	print(b)
+	b1 = b[:int(len(b)/4)]
+	b2 = b[int(len(b)/4*3):]
+	b1.reverse()
+	target_x_min = int(len(b)/4) - b1.index(max(b1))
+	target_x_max = int(len(b)/4*3) + b2.index(max(b2))
+	if((h - max(b2)) >= 5):
+		target_x_max = len(b) -1
+	if((h - max(b1)) > 5):
+		target_x_min = 0
+	print(target_x_min, target_x_max)
+
+	cv2.rectangle(img, (target_x_min, target_y_min), (target_x_max, target_y_max), (0,255,0),2)
+
+	cv2.imshow("result", img)
+	cv2.waitKey(100000)
+	cv2.destroyAllWindows()
+	return img
 	'''
 	kernel = np.ones((2,2),np.uint8)  
 	erosion = cv2.erode(closingimg,kernel,iterations = 3)
@@ -212,27 +228,6 @@ def find_license(img):
 	cv2.imshow("closingimg2", closingimg)
 	cv2.waitKey(100000000)
 	cv2.destroyAllWindows()
-	# 进行闭运算
-	###kernel = np.ones((5,19), np.uint8)
-	#kernel = np.ones((5,19), np.uint8)
-	#closingimg = cv2.morphologyEx(closingimg, cv2.MORPH_CLOSE, kernel)
-	#cv2.imshow("closingimg3", closingimg)
-	#cv2.waitKey(100000)
-	#cv2.destroyAllWindows()
-	# 进行闭运算
-	###kernel = np.ones((5,19), np.uint8)
-	#kernel = np.ones((5,19), np.uint8)
-	#closingimg = cv2.morphologyEx(closingimg, cv2.MORPH_CLOSE, kernel)
-	#cv2.imshow("closingimg4", closingimg)
-	#cv2.waitKey(100000)
-	#cv2.destroyAllWindows()
-	# 进行闭运算
-	###kernel = np.ones((5,19), np.uint8)
-	#kernel = np.ones((5,19), np.uint8)
-	#closingimg = cv2.morphologyEx(closingimg, cv2.MORPH_CLOSE, kernel)
-	#cv2.imshow("closingimg5", closingimg)
-	#cv2.waitKey(100000)
-	#cv2.destroyAllWindows()
         
 	# 进行开运算
 	'''
@@ -270,11 +265,13 @@ if __name__ == '__main__':
 	for i in img_list:
 		print(i)
 		orgimg = cv2.imread(i)
-		rect, img = find_license(orgimg)
+		###rect, img = find_license(orgimg)
+		img = find_license(orgimg)
+		cv2.imwrite(i.split('/')[-1], img)
  
 		# 框出车牌
-		cv2.rectangle(img, (rect[0], rect[1]), (rect[2], rect[3]), (0,255,0),2)
-		cv2.imshow(i.split('/')[-1], img)
+		#cv2.rectangle(img, (rect[0], rect[1]), (rect[2], rect[3]), (0,255,0),2)
+		#cv2.imshow(i.split('/')[-1], img)
  
-		cv2.waitKey(3000)
-		cv2.destroyAllWindows()
+		#cv2.waitKey(3000)
+		#cv2.destroyAllWindows()
