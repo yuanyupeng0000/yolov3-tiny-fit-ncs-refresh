@@ -203,6 +203,10 @@ bool Recognizer::FindClassObjects(std::vector<DetectionObject>& objects,
     return bRet;
 }
 
+void RefineLPLocation(cv::Mat lp){
+
+}
+
 bool Recognizer::CropObjectRegion(DetectionObject& object, cv::Mat frame, cv::Mat& object_region){
     cv::Rect roi ;
     int width = object.xmax - object.xmin;

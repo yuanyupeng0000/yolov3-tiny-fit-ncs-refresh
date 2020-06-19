@@ -271,7 +271,6 @@ if __name__ == '__main__':
  
 		# 框出车牌
 		#cv2.rectangle(img, (rect[0], rect[1]), (rect[2], rect[3]), (0,255,0),2)
-		#cv2.imshow(i.split('/')[-1], img)
- 
+		#cv2.imshow(i.split('/')[-1], img) 
 		#cv2.waitKey(3000)
 		#cv2.destroyAllWindows()

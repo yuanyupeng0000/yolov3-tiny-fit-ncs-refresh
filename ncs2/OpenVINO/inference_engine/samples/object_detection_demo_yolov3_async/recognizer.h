@@ -27,6 +27,7 @@ public:
     bool CropObjectRegion(DetectionObject& object, cv::Mat frame, cv::Mat& object_region);
     void fillSeqBlob(InferRequest::Ptr);
     std::string GetLicencePlateText(InferRequest::Ptr);
+    void RefineLPLocation(cv::Mat lp);
     CNNNetReader netReader;
     InputsDataMap inputInfo;
     OutputsDataMap outputInfo;
