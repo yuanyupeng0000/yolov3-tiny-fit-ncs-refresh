@@ -203,8 +203,79 @@ bool Recognizer::FindClassObjects(std::vector<DetectionObject>& objects,
     return bRet;
 }
 
-void RefineLPLocation(cv::Mat lp){
+bool Recognizer::dobinaryzation(cv::Mat gray, cv::Mat& dst){
+    double max, min;
+    cv::Point min_loc, max_loc;
+    cv::minMaxLoc(gray, &min, &max, &min_loc, &max_loc);
 
+    float x = max - ((max-min) / 2);
+    cv::threshold(gray, dst, x, 255, cv::THRESH_BINARY);
+    return true;
+}
+
+void Recognizer::CaculateXLocation(cv::Mat& edges, cv::Point& left_top){
+    left_top.x = 0;
+    left_top.y = 0;
+    unsigned int h = edges.size().height;
+    unsigned int w = edges.size().width;
+    slog::info << "h:" << h << " w:" << w <<slog::endl;
+    unsigned int statistics[h] = {0};
+    for(unsigned int i=0; i<h; i++){
+        for(unsigned int j=0; j<w; j++){
+            if(edges.at<uchar>(i,j) == 0){
+                statistics[i] += 1;
+                slog::info << "i:" << i << " j:" << j << slog::endl;
+                edges.at<uchar>(i,j) = 255;//将其改为白点
+            }
+        }
+    }
+    //从该行应该变黑的最左边的点开始向最右边的点设置黑点
+    for(int i=0; i<h; i++){
+        for(int j=0; j<statistics[i]; j++){
+            edges.at<uchar>(i,j) = 0;
+        }
+    }
+    slog::info << "haahhhh3" << slog::endl;
+    cv::Mat erosion;
+    cv::Mat kernel_horizion = cv::Mat::ones(cv::Size(1,7),CV_8UC1);
+    cv::erode(edges, erosion, kernel_horizion);
+    memset(statistics, 0, sizeof(statistics));
+    for(int i=0; i<h; i++){
+        for(int j=0; j<w; j++){
+            if(edges.at<uchar>(i,j) == 0){
+                statistics[i] += 1;
+            }
+        }
+    }
+    slog::info << "haahhhh4" << slog::endl;
+    std::vector<int> vec_front(statistics, statistics+(h/3));
+    std::vector<int> vec_back(statistics+(h/3*2), statistics+h-1);
+    std::reverse(vec_front.begin(), vec_front.end());
+    std::vector<int>::iterator biggest = std::max_element(std::begin(vec_front), std::end(vec_front));
+    slog::info << "biggest pos:" << h/3 - int(biggest-std::begin(vec_front)) << slog::endl;
+    slog::info << "biggest val:" << *biggest << slog::endl;
+}
+bool Recognizer::ReLocateLicensePlate(cv::Mat plate){
+    bool bRet = false;
+    int SHRINK =100;
+    cv::Mat resized, gray, binary, canny, close;
+    cv::resize(plate, resized, cv::Size(SHRINK, SHRINK*plate.size().height/plate.size().width));
+    cv::cvtColor(resized, gray, cv::COLOR_BGR2GRAY);
+    dobinaryzation(gray, binary);
+    cv::Canny(binary, canny, binary.size().height, binary.size().width); // TODO:how to set the thresh1 and thresh2 ?
+    cv::Mat kernel = cv::Mat::ones(cv::Size(5,5),CV_8UC1);
+    cv::morphologyEx(canny, close, cv::MORPH_CLOSE, kernel);
+    cv::Point left_top;
+    CaculateXLocation(canny, left_top);
+    return bRet;
+
+}
+bool Recognizer::ReLocateLicensePlates(std::vector<cv::Mat>& plate_frames){
+    bool bRet = false;
+    for (int i=0; i<plate_frames.size(); i++){
+        bRet = ReLocateLicensePlate(plate_frames[i]);
+    }
+    return bRet;
 }
 
 bool Recognizer::CropObjectRegion(DetectionObject& object, cv::Mat frame, cv::Mat& object_region){
@@ -225,9 +296,10 @@ bool Recognizer::CropObjectRegion(DetectionObject& object, cv::Mat frame, cv::Ma
 bool Recognizer::GetTargetFrames(cv::Mat frame, std::vector<DetectionObject>& objects, std::vector<int>& plate_idxes, std::vector<cv::Mat>& plate_frames){
     bool bRet = false;
     for(int i=0; i<plate_idxes.size(); i++){
-        cv::Mat region;
+        cv::Mat region;        
         this->CropObjectRegion(objects[plate_idxes[i]], frame, region);
         plate_frames.push_back(region);
+        ReLocateLicensePlates(plate_frames);
         bRet=true;
     }
     return bRet;
@@ -260,7 +332,7 @@ int Recognizer::Recognize(int idx, const cv::Mat coresponding_frame, std::vector
                 /*cv::Mat temp;
                 ChangeMotorLPR2VeichleLPR(frame, temp);
                 frame = temp;*/
-                //cv::imwrite("one_line_lpr.jpg", frame);
+                cv::imwrite("one_line_lpr.jpg", frame);
                 // --------------------------- 6. Doing inference ------------------------------------------------------
                 slog::info << "Start lpr inference " << slog::endl;
                 typedef std::chrono::duration<double, std::ratio<1, 1000>> ms;

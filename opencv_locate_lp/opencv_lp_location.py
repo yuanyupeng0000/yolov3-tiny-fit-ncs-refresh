@@ -145,15 +145,20 @@ def find_license(img):
 		for j in range(0,w):      #遍历每一列
 			if erosion[i,j]==0:      #判断该点是否为黑点，0代表黑点
 				a[i]+=1           #该行的计数器加一
+	#for i in range(1,len(a)):
+	#	a[i] = abs(a[i] - a[i-1])
+	print("a",a)	
 	a1 = a[:int(len(a)/3)]
 	a2 = a[int(len(a)/3*2):]
 	a1.reverse()
 	target_y_min = int(len(a)/3) - a1.index(max(a1))
 	target_y_max = int(len(a)/3*2) + a2.index(max(a2))
+	
 	if((w - max(a1)) >= 4):
 		target_y_min = 0
 	if((w - max(a2)) >= 4):
 		target_y_max = len(a) -1
+	
 	print(target_y_min, target_y_max)
 	#返回图像的高和宽
 
@@ -179,16 +184,21 @@ def find_license(img):
 		for j in range(0,h):      #遍历每一列
 			if erosion[j,i]==0:      #判断该点是否为黑点，0代表黑点
 				b[i]+=1           #该行的计数器加一
-	print(b)
+	#print(b)
+	#for i in range(1,len(b)):
+	#	b[i] = abs(b[i] - b[i-1])
+	print("b",b)	
 	b1 = b[:int(len(b)/4)]
 	b2 = b[int(len(b)/4*3):]
 	b1.reverse()
 	target_x_min = int(len(b)/4) - b1.index(max(b1))
 	target_x_max = int(len(b)/4*3) + b2.index(max(b2))
+	
 	if((h - max(b2)) >= 5):
 		target_x_max = len(b) -1
 	if((h - max(b1)) > 5):
 		target_x_min = 0
+	
 	print(target_x_min, target_x_max)
 
 	cv2.rectangle(img, (target_x_min, target_y_min), (target_x_max, target_y_max), (0,255,0),2)
