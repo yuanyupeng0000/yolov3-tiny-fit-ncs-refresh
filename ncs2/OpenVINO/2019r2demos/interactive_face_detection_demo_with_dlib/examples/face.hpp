@@ -27,10 +27,15 @@ public:
     void updateHeadPose(HeadPoseDetection::Results values);
     void updateLandmarks(std::vector<float> values);
     void updateEyeState(const float thresh=1.45);
+    void updateLipState(float thresh=0.30);
+    void updateHeadPostureState(HeadPoseDetection::Results& values);
 
     int getAge();
     bool isMale();
     bool getEyeState();
+    bool getSleepyState();
+    bool getMouseOpenedState();
+    bool getHeadPostureString(std::string& posture);
     std::map<std::string, float> getEmotions();
     std::pair<std::string, float> getMainEmotion();
     HeadPoseDetection::Results getHeadPose();
@@ -67,6 +72,13 @@ private:
 
     //for dlib
     bool _isEyeClosed;
+    bool _isMouseOpened;
+    bool _isHeadDown, _isHeadLeft, _isHeadTurnLeft;
+    unsigned int _headKeepDownFrameCount, _headKeepUpFrameCount;
+    unsigned int _headKeepLeftFrameCount, _headKeepRightFrameCount;
+    unsigned int _headKeepTurnLeftFrameCount, _headKeepTurnRightFrameCount;
+    unsigned int _eyeKeepClosedFrameCount;
+    unsigned int _mouseKeepOpenedFrameCount;
 };
 
 // ----------------------------------- Utils -----------------------------------------------------------------

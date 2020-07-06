@@ -201,16 +201,26 @@ void Visualizer::drawFace(cv::Mat& img, Face::Ptr f, bool drawEmotionBar) {
 
     std::ostringstream out_em;
 
-    if (f->isEmotionsEnabled()) {
+    if(f->isEmotionsEnabled()) {
         auto emotion = f->getMainEmotion();
         out_em << "Emotion  : ";
         out_em << emotion.first;
     }
-    std::ostringstream out_eye;
 
+    std::ostringstream out_eye;
     if (f->isLandmarksEnabled()){
-        out_eye << "Eye State : " ;
-         out_eye << (f->getEyeState() ? "closed" : "opend");
+        if (f->getHeadPose().angle_p < 60){
+            out_eye << "Sleepy    : " ;
+            //out_eye << (f->getEyeState() ? "closed" : "opened");
+            out_eye << (f->getSleepyState() ? "Yes" : "No");
+        }
+        else{
+            f->landmarksEnable(false);
+        }
+
+        std::cout << "P:" << f->getHeadPose().angle_p << std::endl;
+        std::cout << "R:" << f->getHeadPose().angle_r << std::endl;
+        std::cout << "Y:" << f->getHeadPose().angle_y << std::endl;
     }
 
     cv::putText(img,
@@ -235,11 +245,20 @@ void Visualizer::drawFace(cv::Mat& img, Face::Ptr f, bool drawEmotionBar) {
                 1.5,
                 genderColor, 2);
 
+    std::string headPose;
     if (f->isHeadPoseEnabled()) {
         cv::Point3f center(static_cast<float>(f->_location.x + f->_location.width / 2),
                            static_cast<float>(f->_location.y + f->_location.height / 2),
                            0.0f);
         headPoseVisualizer->draw(img, center, f->getHeadPose());
+        f->getHeadPostureString(headPose);
+        cv::putText(img,
+                    headPose,
+                    //cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y - 20)),
+                    cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y + 95)),
+                    cv::FONT_HERSHEY_COMPLEX_SMALL,
+                    1.5,
+                    genderColor, 2);
     }
 
     if (f->isLandmarksEnabled()) {

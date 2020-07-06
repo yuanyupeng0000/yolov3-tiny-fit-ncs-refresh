@@ -84,6 +84,10 @@ std::vector<float> main_(const dlib::shape_predictor& sp, dlib::frontal_face_det
 {
     //shrink cv Rect. You can change the digital to refine the result
     cv::Rect face_rect;
+    //face_rect.x = face_rect_.x + face_rect_.width/8;
+    //face_rect.y = face_rect_.y + face_rect_.height/4;
+    //face_rect.width= face_rect_.width/8*6;
+    //face_rect.height = face_rect_.height/10*6;
     face_rect.x = face_rect_.x + face_rect_.width/8;
     face_rect.y = face_rect_.y + face_rect_.height/4;
     face_rect.width= face_rect_.width/8*6;
@@ -120,12 +124,12 @@ std::vector<float> main_(const dlib::shape_predictor& sp, dlib::frontal_face_det
                 //long l1= p(0);
                 cout << "number of parts: "<< shape.num_parts() << endl;
 
-                //68 landmarks, but 60~67 not use. Lips inner side
+                //68 landmarks
                 for(unsigned long i = 0; i <= 67; ++i){
                     //cout << (shape.part(i))(0)/float(img_src.cols) << " , " << (shape.part(i))(1)/float(img_src.rows) << endl;
-                    if(/*(i>30 && i<36) ||*/ (i>59)){
+                    /*if((i>30 && i<36) || (i>59)){
                         continue;
-                    }
+                    }*/
                     landmarks.push_back(((shape.part(i))(0)-face_rect_.x)/float(face_rect_.width));
                     landmarks.push_back(((shape.part(i))(1)-face_rect_.y)/float(face_rect_.height));
                 }

@@ -57,20 +57,83 @@ void Face::updateEyeState(float thresh){
     std::cout  << "esr:" << eye_aspect_ratio << std::endl;
     if(eye_aspect_ratio < thresh){
         _isEyeClosed = true;
+        _eyeKeepClosedFrameCount += 1;
     }
     else{
         _isEyeClosed = false;
+        _eyeKeepClosedFrameCount = 0;
+    }
+
+}
+
+void Face::updateHeadPostureState(HeadPoseDetection::Results& values){
+    float diff_yaw, diff_pitch, diff_roll;
+    diff_pitch = values.angle_p - _headPose.angle_p;
+    diff_roll = values.angle_r - _headPose.angle_r;
+    diff_yaw = values.angle_y - _headPose.angle_y;
+
+    if (diff_pitch  > 0){
+        _headKeepDownFrameCount += 1;
+        _headKeepUpFrameCount = 0;
+    }
+    else
+    {
+        _headKeepUpFrameCount += 1;
+        _headKeepDownFrameCount = 0;
+    }
+    if (diff_roll > 0){
+        _headKeepLeftFrameCount += 1;
+        _headKeepRightFrameCount = 0;
+    }
+    else
+    {
+        _headKeepRightFrameCount += 1;
+        _headKeepLeftFrameCount = 0;
+    }
+    if (diff_yaw > 0){
+        _headKeepTurnLeftFrameCount +=1;
+        _headKeepTurnRightFrameCount = 0;
+    }
+    else
+    {
+        _headKeepTurnRightFrameCount +=1;
+        _headKeepTurnLeftFrameCount = 0;
+    }
+}
+
+void Face::updateLipState(float thresh){
+    //60~67 is the lips inner side points
+    float m_h, m_w;
+    m_h = (_landmarks[58*2+1] - _landmarks[50*2+1]
+            + _landmarks[57*2+1] - _landmarks[51*2+1]
+            + _landmarks[56*2+1] - _landmarks[52*2+1])/3.0;
+
+    m_w = (_landmarks[64*2] + _landmarks[54*2])/2.0- (_landmarks[48*28]
+             + _landmarks[60*2])/2.0;
+
+    float mouse_aspect_ratio = m_h/m_w;
+    printf("\nmouse_aspect_ratio=%f\n", mouse_aspect_ratio);
+    std::cout  << "msr:" << mouse_aspect_ratio << std::endl;
+    if(mouse_aspect_ratio > thresh){
+        _isMouseOpened = true;
+        _mouseKeepOpenedFrameCount += 1;
+    }
+    else{
+        _isMouseOpened = false;
+        _mouseKeepOpenedFrameCount = 0;
     }
 
 }
 
 void Face::updateHeadPose(HeadPoseDetection::Results values) {
+    updateHeadPostureState(values); //yyp added
     _headPose = values;
 }
 
 void Face::updateLandmarks(std::vector<float> values) {
     _landmarks = std::move(values);
     updateEyeState();
+    updateLipState();
 }
 
 int Face::getAge() {
@@ -79,6 +142,49 @@ int Face::getAge() {
 
 bool Face::getEyeState(){
     return _isEyeClosed;
+}
+bool Face::getSleepyState(){
+    if(_eyeKeepClosedFrameCount > 15 || this->getMouseOpenedState()){
+        return true;
+    }
+    return false;
+}
+bool Face::getMouseOpenedState(){
+    if(_mouseKeepOpenedFrameCount > 5){
+        return true;
+    }
+    return false;
+}
+bool Face::getHeadPostureString(std::string& posture){
+    posture.clear();
+    if (_headPose.angle_r < -10 ){
+        posture += "lean-right ";
+    }
+    else if (_headPose.angle_r > 10){
+        posture += "lean-left ";
+    }
+    if (20 < _headPose.angle_p ){
+        posture += "lean-forward ";
+    }
+    else if (_headPose.angle_p < -10){
+        posture += "lean-backward ";
+    }
+
+    if (_headPose.angle_y < -10){
+        posture += "turn-right ";
+    }
+    else if (_headPose.angle_y > 10){
+        posture += "turn-left ";
+    }
+
+    if (posture.empty()){
+        posture += "Head pose: common";
+    }
+    else{
+        posture = "Head pose: " + posture;
+    }
+
+
 }
 
 bool Face::isMale() {
