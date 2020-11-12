@@ -116,7 +116,7 @@ int main(int argc, char *argv[]){
         //std::cout << "[ INFO ] Qeue size:" << frame_que.size() << std::endl;
         std::vector<DetectionObject> objects;
 
-        int ret_code = intel_dldt_detect(frame, 1, objects);
+        int ret_code = intel_dldt_detect(frame, 0, objects);
         ///int ret_code = detector.Detect(frame, objects);
         std::cout << "[ INFO ] ret_code " << ret_code << std::endl;
         if(ret_code < 0 && ret_code != -100){

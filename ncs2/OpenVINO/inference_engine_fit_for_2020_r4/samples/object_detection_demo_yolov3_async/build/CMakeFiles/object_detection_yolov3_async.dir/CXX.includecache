@@ -51,6 +51,8 @@ gflags/gflags.h
 -
 samples/common.hpp
 -
+multi-device/multi_device_config.hpp
+-
 chrono
 -
 recognizer.h
@@ -925,6 +927,12 @@ ie_plugin_dispatcher.hpp
 -
 ie_version.hpp
 -
+
+/opt/intel/openvino/deployment_tools/inference_engine/include/multi-device/multi_device_config.hpp
+string
+-
+ie_plugin_config.hpp
+/opt/intel/openvino/deployment_tools/inference_engine/include/multi-device/ie_plugin_config.hpp
 
 /opt/intel/openvino/deployment_tools/inference_engine/samples/cpp/common/os/windows/w_dirent.h
 string

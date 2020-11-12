@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <gflags/gflags.h>
 #include <samples/common.hpp> //#include <samples/ocv_common.hpp>
+#include <multi-device/multi_device_config.hpp>
 //#include <ext_list.hpp>
 #include <chrono>
 #include "recognizer.h"
@@ -136,9 +137,35 @@ Detector::Detector(const std::string& inputXml, const std::string& inputBin, con
         }
         // -----------------------------------------------------------------------------------------------------
 
+        //get all avalibale devices
+        std::string allDevices = "MULTI:";
+        std::vector<std::string> availableDevices = ie.GetAvailableDevices();
+
+        for (auto && device : availableDevices) {
+            if(device == "HDDL" || device == "CPU" || device == "GNA"){
+                continue;
+            }
+            allDevices += device;
+            allDevices += ((device == availableDevices[availableDevices.size()-1]) ? "" : ",");
+        }
+        slog::info << "allDevices:" << allDevices << slog::endl;
         // --------------------------- 4. Loading model to the plugin ------------------------------------------
         slog::info << "Loading detector model to the plugin" << slog::endl;
-        ExecutableNetwork network = ie.LoadNetwork(cnnNetwork, inputDevice);
+        ExecutableNetwork network;
+        if(inputDevice=="MULTI"){
+            /*std::string allDevices = "MULTI:";
+            std::vector<std::string> myriadDevices = ie.GetMetric("MYRIAD", METRIC_KEY(myriadDevices));
+            for (int i = 0; i < myriadDevices.size(); ++i) {
+                allDevices += std::string("MYRIAD.")
+                                      + myriadDevices[i]
+                                      + std::string(i < (myriadDevices.size() -1) ? "," : "");
+            }*/
+            network = ie.LoadNetwork(cnnNetwork, allDevices, {});
+        }
+        else{
+            network = ie.LoadNetwork(cnnNetwork, inputDevice);
+        }
+        //ExecutableNetwork network = ie.LoadNetwork(cnnNetwork, inputDevice);
 
         // -----------------------------------------------------------------------------------------------------
 

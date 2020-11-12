@@ -419,7 +419,7 @@ int Recognizer::Recognize(int idx, const cv::Mat coresponding_frame, std::vector
                 /*cv::Mat temp;
                 ChangeMotorLPR2VeichleLPR(frame, temp);
                 frame = temp;*/
-                cv::imwrite("one_line_lpr.jpg", frame);
+                //cv::imwrite("one_line_lpr.jpg", frame);
                 // --------------------------- 6. Doing inference ------------------------------------------------------
                 slog::info << "Start lpr inference " << slog::endl;
                 typedef std::chrono::duration<double, std::ratio<1, 1000>> ms;
@@ -436,7 +436,7 @@ int Recognizer::Recognize(int idx, const cv::Mat coresponding_frame, std::vector
                     std::string str_plate = GetLicencePlateText(IfReqs[idx]);
                     //FakeProvinceFeild(str_plate);
                     slog::info << "plate: " << str_plate << slog::endl;
-                    cv::imwrite("./lpr_result_dir/"+str_plate+".jpg", frame);
+                    //cv::imwrite("./lpr_result_dir/"+str_plate+".jpg", frame);
                     objects[plate_idxes[i]].set_text(str_plate);
                 }
                 auto t1 = std::chrono::high_resolution_clock::now();

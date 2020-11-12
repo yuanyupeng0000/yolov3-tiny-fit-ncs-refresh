@@ -460,6 +460,62 @@ void ParseYOLOV3TinyNcsOutput(const CNNLayerPtr &layer, const Blob::Ptr &blob, c
     }
 }
 
+
+void ParseYOLOV3TinyNcsOutput(const CNNLayerPtr &layer, const Blob::Ptr &blob, const unsigned long resized_im_h,
+                       const unsigned long resized_im_w, const unsigned long original_im_h,
+                       const unsigned long original_im_w, const unsigned long layer_order_id,
+                       const double threshold, std::vector<DetectionObject> &objects, const unsigned int id_offset) {
+    // --------------------------- Validating output parameters -------------------------------------
+    const int out_blob_c = static_cast<int>(blob->getTensorDesc().getDims()[1]);
+    const int out_blob_h = static_cast<int>(blob->getTensorDesc().getDims()[2]);
+    const int out_blob_w = static_cast<int>(blob->getTensorDesc().getDims()[3]);
+    if (out_blob_h != out_blob_w)
+        throw std::runtime_error("Invalid size of output " + layer->name +
+        " It should be in NCHW layout and H should be equal to W. Current H = " + std::to_string(out_blob_h) +
+        ", current W = " + std::to_string(out_blob_h));
+    // --------------------------- Extracting layer parameters -------------------------------------
+
+    int num = 3;
+    int coords = 4;
+    int classes = out_blob_c/num - coords - 1;
+    std::vector<float> anchors = {10,25,  20,50,  30,75, 50,125,  80,200,  150,150};
+    try { anchors = layer->GetParamAsFloats("anchors"); } catch (...) {}
+    auto side = out_blob_h;
+    int anchor_offset = 0;
+    anchor_offset = 2*(1-layer_order_id)*3;
+
+    auto side_square = side * side;
+    const float *output_blob = blob->buffer().as<PrecisionTrait<Precision::FP32>::value_type *>();
+    // --------------------------- Parsing YOLO Region output -------------------------------------
+    for (int i = 0; i < side_square; ++i) {
+        int row = i / side;
+        int col = i % side;
+        for (int n = 0; n < num; ++n) {
+            int obj_index = EntryIndex(side, coords, classes, n * side * side + i, coords);
+            int box_index = EntryIndex(side, coords, classes, n * side * side + i, 0);
+
+            float scale = logistic_activate(output_blob[obj_index]);
+            if (scale < threshold)
+                continue;
+            double x = (col + logistic_activate(output_blob[box_index + 0 * side_square])) / side * resized_im_w;
+            double y = (row + logistic_activate(output_blob[box_index + 1 * side_square])) / side * resized_im_h;
+            double height = std::exp(output_blob[box_index + 3 * side_square]) * anchors[anchor_offset + 2 * n + 1];
+            double width = std::exp(output_blob[box_index + 2 * side_square]) * anchors[anchor_offset + 2 * n];
+
+            for (int j = 0; j < classes; ++j) {
+                int class_index = EntryIndex(side, coords, classes, n * side_square + i, coords + 1 + j);
+                float prob = scale * logistic_activate(output_blob[class_index]);
+                if (prob < threshold)
+                    continue;
+                DetectionObject obj(x, y, height, width, j+id_offset, prob,
+                        static_cast<float>(original_im_h) / static_cast<float>(resized_im_h),
+                        static_cast<float>(original_im_w) / static_cast<float>(resized_im_w));
+                objects.push_back(obj);
+            }
+        }
+    }
+}
+
 void ParseYOLOV3TinyNcsOutputHW(const CNNLayerPtr &layer, const Blob::Ptr &blob, const unsigned long resized_im_h,
                        const unsigned long resized_im_w, const unsigned long original_im_h,
                        const unsigned long original_im_w, const unsigned long layer_order_id,

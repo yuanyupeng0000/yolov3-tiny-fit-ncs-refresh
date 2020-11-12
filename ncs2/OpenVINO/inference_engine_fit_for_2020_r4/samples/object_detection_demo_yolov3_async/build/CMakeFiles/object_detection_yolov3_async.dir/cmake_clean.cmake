@@ -4,8 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o"
   "CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o"
   "CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o"
-  "object_detection_yolov3_async.pdb"
-  "object_detection_yolov3_async"
+  "libobject_detection_yolov3_async.pdb"
+  "libobject_detection_yolov3_async.so"
 )
 
 # Per-language clean rules from dependency scanning.
