@@ -1,0 +1,61 @@
+##########################output layers#############################################
+layer {
+    bottom: "btnkcsp6-end-conv"
+    top: "conv_out_1"
+    name: "conv_out_1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 36
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: true
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+layer {
+    bottom: "btnkcsp7-end-conv"
+    top: "conv_out_2"
+    name: "conv_out_2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 36
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: true
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+layer {
+    bottom: "btnkcsp8-end-conv"
+    top: "conv_out_3"
+    name: "conv_out_3"
+    type: "Convolution"
+    convolution_param {
+        num_output: 36
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: true
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+
+
+

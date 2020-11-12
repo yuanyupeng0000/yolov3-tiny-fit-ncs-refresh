@@ -84,14 +84,14 @@ std::vector<float> main_(const dlib::shape_predictor& sp, dlib::frontal_face_det
 {
     //shrink cv Rect. You can change the digital to refine the result
     cv::Rect face_rect;
-    //face_rect.x = face_rect_.x + face_rect_.width/8;
-    //face_rect.y = face_rect_.y + face_rect_.height/4;
-    //face_rect.width= face_rect_.width/8*6;
-    //face_rect.height = face_rect_.height/10*6;
-    face_rect.x = face_rect_.x + face_rect_.width/8;
+    face_rect.x = face_rect_.x + face_rect_.width/10;
     face_rect.y = face_rect_.y + face_rect_.height/4;
-    face_rect.width= face_rect_.width/8*6;
-    face_rect.height = face_rect_.height/10*6;
+    face_rect.width= face_rect_.width/10*8;
+    face_rect.height = face_rect_.height/4*3;
+    //face_rect.x = face_rect_.x;
+    //face_rect.y = face_rect_.y + face_rect_.height/10*2;
+    //face_rect.width= face_rect_.width;
+    //face_rect.height = face_rect_.height/10*8;
 
     std::vector<float> landmarks;
     try

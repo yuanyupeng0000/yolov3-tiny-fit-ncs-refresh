@@ -56,7 +56,7 @@ Recognizer::Recognizer(const std::string& inputXml, const std::string& inputBin,
             // ---------------------------Check inputs ------------------------------------------------------
             slog::info << "Checking LPR Network inputs" << slog::endl;
             inputInfo = InputsDataMap (netReader.getNetwork().getInputsInfo());
-#define LPR_ONE_INPUT
+//#define LPR_ONE_INPUT
 #ifndef LPR_ONE_INPUT
             if (inputInfo.size() != 2) {
                 throw std::logic_error("LPR should have 2 inputs");
@@ -129,7 +129,8 @@ Recognizer::Recognizer(const std::string& inputXml, const std::string& inputBin,
 
 std::string Recognizer::GetLicencePlateText(InferRequest::Ptr request) {
     slog::info << "start static defination" << slog::endl;
-#ifdef CHINESE
+#define CHINESE
+#ifndef CHINESE
     static std::vector<std::string> items = {
             "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
             "<Anhui>", "<Beijing>", "<Chongqing>", "<Fujian>",
@@ -213,60 +214,137 @@ bool Recognizer::dobinaryzation(cv::Mat gray, cv::Mat& dst){
     return true;
 }
 
-void Recognizer::CaculateXLocation(cv::Mat& edges, cv::Point& left_top){
+void Recognizer::CaculateXYLocation(cv::Mat& edges, cv::Point& left_top, cv::Point& right_bottom){
     left_top.x = 0;
     left_top.y = 0;
     unsigned int h = edges.size().height;
     unsigned int w = edges.size().width;
+    cv::Mat canny;
+    edges.copyTo(canny);
     slog::info << "h:" << h << " w:" << w <<slog::endl;
-    unsigned int statistics[h] = {0};
+    //初始化一个跟图像高一样长度的数组，用于记录每一行的黑点个数
+    unsigned int statistics_h[h] = {0};
     for(unsigned int i=0; i<h; i++){
         for(unsigned int j=0; j<w; j++){
             if(edges.at<uchar>(i,j) == 0){
-                statistics[i] += 1;
-                slog::info << "i:" << i << " j:" << j << slog::endl;
+                statistics_h[i] += 1;
                 edges.at<uchar>(i,j) = 255;//将其改为白点
             }
         }
     }
     //从该行应该变黑的最左边的点开始向最右边的点设置黑点
     for(int i=0; i<h; i++){
-        for(int j=0; j<statistics[i]; j++){
+        for(int j=0; j<statistics_h[i]; j++){
             edges.at<uchar>(i,j) = 0;
         }
     }
-    slog::info << "haahhhh3" << slog::endl;
     cv::Mat erosion;
     cv::Mat kernel_horizion = cv::Mat::ones(cv::Size(1,7),CV_8UC1);
     cv::erode(edges, erosion, kernel_horizion);
-    memset(statistics, 0, sizeof(statistics));
+    memset(statistics_h, 0, sizeof(statistics_h));
     for(int i=0; i<h; i++){
         for(int j=0; j<w; j++){
             if(edges.at<uchar>(i,j) == 0){
-                statistics[i] += 1;
+                statistics_h[i] += 1;
             }
         }
     }
-    slog::info << "haahhhh4" << slog::endl;
-    std::vector<int> vec_front(statistics, statistics+(h/3));
-    std::vector<int> vec_back(statistics+(h/3*2), statistics+h-1);
+
+    std::vector<int> vec_front(statistics_h, statistics_h+(h/3));
+    std::vector<int> vec_back(statistics_h+(h/3*2), statistics_h+h-1);
+    //ShowVec(vec_front);
     std::reverse(vec_front.begin(), vec_front.end());
-    std::vector<int>::iterator biggest = std::max_element(std::begin(vec_front), std::end(vec_front));
-    slog::info << "biggest pos:" << h/3 - int(biggest-std::begin(vec_front)) << slog::endl;
-    slog::info << "biggest val:" << *biggest << slog::endl;
+    //ShowVec(vec_front);
+    std::vector<int>::iterator biggest_front = std::max_element(std::begin(vec_front), std::end(vec_front));
+    std::vector<int>::iterator biggest_back  = std::max_element(std::begin(vec_back), std::end(vec_back));
+    unsigned int ymin_position = h/3 - int(biggest_front-std::begin(vec_front));
+    unsigned int ymax_position = h/3*2 + int(biggest_back-std::begin(vec_back));
+
+    //some refine operation
+    if((w - (*biggest_front)) >= 4){
+        ymin_position = 0;
+    }
+    if((w - *biggest_back) >= 4){
+        ymax_position = h - 1;
+    }
+
+    slog::info << "ymin pos:" << ymin_position << slog::endl;
+    //slog::info << "ymin val:" << *biggest_front << slog::endl;
+    slog::info << "ymax pos" << ymax_position << slog::endl;
+    cv::Mat close, bk;
+    cv::Mat kernel = cv::Mat::ones(cv::Size(5,5),CV_8UC1);
+    cv::morphologyEx(canny, close, cv::MORPH_CLOSE, kernel);
+    close.copyTo(bk);
+    //初始化一个跟图像宽一样长度的数组，用于记录每一列的黑点个数
+    unsigned int statistics_w[w] = {0};
+    for(unsigned int i=0; i<w; i++){
+        for(unsigned int j=0; j<h; j++){
+            if(close.at<uchar>(j,i) == 0){
+                statistics_w[i] += 1;
+                close.at<uchar>(j,i) = 255;//将其改为白点
+            }
+        }
+    }
+    //从该列应该变黑的最顶部的开始向最底部设为黑点
+    for(int i=0; i<w; i++){
+        for(int j=0; j<h-statistics_w[i]; j++){
+            close.at<uchar>(j,i) = 0; //设为黑点
+        }
+    }
+    cv::Mat erod;
+    cv::Mat kernel_virtical = cv::Mat::ones(cv::Size(5,1),CV_8UC1);
+    cv::erode(bk, erod, kernel_virtical);
+
+    //初始化一个跟图像宽一样长度的数组，用于记录每一列的黑点个数
+    memset(statistics_w, 0, sizeof(statistics_w));
+    for(unsigned int i=0; i<w; i++){
+        for(unsigned int j=0; j<h; j++){
+            if(erod.at<uchar>(j,i) == 0){
+                statistics_w[i] += 1;
+            }
+        }
+    }
+    std::vector<int> vec_ft(statistics_w, statistics_w+(w/4));
+    std::vector<int> vec_bk(statistics_w+(w/4*3), statistics_w+w-1);
+    //ShowVec(vec_ft);
+    std::reverse(vec_ft.begin(), vec_ft.end());
+    //ShowVec(vec_ft);
+    std::vector<int>::iterator biggest_ft = std::max_element(std::begin(vec_ft), std::end(vec_ft));
+    std::vector<int>::iterator biggest_bk  = std::max_element(std::begin(vec_bk), std::end(vec_bk));
+    unsigned int xmin_position = w/4 - int(biggest_ft-std::begin(vec_ft));
+    unsigned int xmax_position = w/4*3 + int(biggest_bk-std::begin(vec_bk));
+    if((h - *biggest_ft) >= 5){
+        xmax_position = w - 1;
+    }
+    if((h - *biggest_bk) > 5){
+        xmin_position = 0;
+    }
+    slog::info << "xmin pos:" << xmin_position << slog::endl;
+    //slog::info << "ymin val:" << *biggest_front << slog::endl;
+    slog::info << "xmax pos" << xmax_position << slog::endl;
+    left_top.x = xmin_position;
+    left_top.y = ymin_position;
+    right_bottom.x = xmax_position;
+    right_bottom.y = ymax_position;
 }
-bool Recognizer::ReLocateLicensePlate(cv::Mat plate){
+bool Recognizer::ReLocateLicensePlate(cv::Mat& plate){
     bool bRet = false;
     int SHRINK =100;
     cv::Mat resized, gray, binary, canny, close;
     cv::resize(plate, resized, cv::Size(SHRINK, SHRINK*plate.size().height/plate.size().width));
     cv::cvtColor(resized, gray, cv::COLOR_BGR2GRAY);
+    slog::info << "plate size height:" << plate.size().height << " plate size width:" << plate.size().width << slog::endl;
     dobinaryzation(gray, binary);
     cv::Canny(binary, canny, binary.size().height, binary.size().width); // TODO:how to set the thresh1 and thresh2 ?
-    cv::Mat kernel = cv::Mat::ones(cv::Size(5,5),CV_8UC1);
-    cv::morphologyEx(canny, close, cv::MORPH_CLOSE, kernel);
-    cv::Point left_top;
-    CaculateXLocation(canny, left_top);
+    cv::Point left_top, right_bottom;
+    CaculateXYLocation(canny, left_top, right_bottom);
+    cv::Rect roi;
+    roi.x = left_top.x;
+    roi.y = left_top.y;
+    roi.width = right_bottom.x - left_top.x;
+    roi.height = right_bottom.y - left_top.y;
+    slog::info << "roi.x:" << roi.x << " roi.y:" << roi.y << " roi.width:" << roi.width << " roi.height:"<< roi.height << slog::endl;
+    plate = resized(roi);
     return bRet;
 
 }
@@ -280,14 +358,23 @@ bool Recognizer::ReLocateLicensePlates(std::vector<cv::Mat>& plate_frames){
 
 bool Recognizer::CropObjectRegion(DetectionObject& object, cv::Mat frame, cv::Mat& object_region){
     cv::Rect roi ;
+    int min_height = 30;
     int width = object.xmax - object.xmin;
     int height = object.ymax - object.ymin;
-    int expand_w = width * 0.2;
-    int expand_h = height * 0.3;
+    if((float(width/height) < 1.5) /*|| (object.ymax < frame.rows/2)*/){
+        object.confidence = 0;
+        return false;
+    }
+    int expand_w = std::max(width, int(min_height*2.5)) * 0.1;
+    int expand_h = std::max(height, min_height) * 0.15;
     roi.x = std::max(0, object.xmin - expand_w);
     roi.y = std::max(0, object.ymin - expand_h);
-    roi.width = std::min(object.xmax - object.xmin + 2*expand_w, frame.cols - roi.x);
-    roi.height = std::min(object.ymax - object.ymin + 2*expand_h, frame.rows - roi.y);
+    roi.width = std::min(std::max(int(min_height*2.5), object.xmax - object.xmin + 2*expand_w), frame.cols - roi.x);
+    roi.height = std::min(std::max(min_height, object.ymax - object.ymin + 2*expand_h), frame.rows - roi.y);
+    object.xmin = roi.x;
+    object.ymin = roi.y;
+    object.xmax = roi.x + roi.width -1;
+    object.ymax = roi.y + roi.height -1;
     //slog::info << "roi.x:" << roi.x << " roi.y:" << roi.y << " roi.width:" << roi.width << " roi.height:"<< roi.height << slog::endl;
     object_region = frame(roi);
     return true;
@@ -299,7 +386,7 @@ bool Recognizer::GetTargetFrames(cv::Mat frame, std::vector<DetectionObject>& ob
         cv::Mat region;        
         this->CropObjectRegion(objects[plate_idxes[i]], frame, region);
         plate_frames.push_back(region);
-        ReLocateLicensePlates(plate_frames);
+        //ReLocateLicensePlates(plate_frames);
         bRet=true;
     }
     return bRet;

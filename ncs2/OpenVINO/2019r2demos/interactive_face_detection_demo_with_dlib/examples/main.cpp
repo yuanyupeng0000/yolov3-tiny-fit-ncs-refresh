@@ -99,7 +99,7 @@ int main(int argc, char *argv[]) {
         cv::VideoWriter videoWriter;
         if (!FLAGS_o.empty()) {
             int fps = 25;
-            videoWriter.open(FLAGS_o, cv::VideoWriter::fourcc('I', 'Y', 'U', 'V'), fps, cv::Size(width, height));
+            videoWriter.open(FLAGS_o, cv::VideoWriter::fourcc('M', 'J', 'P', 'G'), fps, cv::Size(width, height));
         }
         // ---------------------------------------------------------------------------------------------------
         // --------------------------- 1. Loading Inference Engine -----------------------------
@@ -221,6 +221,7 @@ int main(int argc, char *argv[]) {
             faceDetector.wait();
             faceDetector.fetchResults();
             auto prev_detection_results = faceDetector.results;
+            std::cout << "faceDetector.results.size(): " << faceDetector.results.size() << std::endl;
 
             // No valid frame to infer if previous frame is the last
             if (!isLastFrame) {
@@ -230,7 +231,6 @@ int main(int argc, char *argv[]) {
 
             // Filling inputs of face analytics networks
             facialLandmarksDetector.dlibLandmarks.clear(); // For dlib muti faces landmarks
-
             for (auto &&face : prev_detection_results) {
                 if (isFaceAnalyticsEnabled) {
                     auto clippedRect = face.location & cv::Rect(0, 0, width, height);
@@ -299,7 +299,7 @@ int main(int argc, char *argv[]) {
                     }
 
                     face->_intensity_mean = intensity_mean;
-                    face->_location = rect;
+                    face->_location = rect; // benchmark
                 } else {
                     face = std::make_shared<Face>(id++, rect);
                 }
@@ -343,6 +343,9 @@ int main(int argc, char *argv[]) {
 
                 // drawing faces
                 visualizer->draw(prev_frame, faces);
+#ifdef USE_YOLOV3TINY
+                visualizer->draw(prev_frame, faceDetector.results_map);
+#endif
 
                 if (!FLAGS_no_show) {
                     cv::imshow("Detection results", prev_frame);

@@ -105,9 +105,33 @@ CMakeFiles/face_eye_emotion_detect.dir/face.cpp.o.provides: CMakeFiles/face_eye_
 CMakeFiles/face_eye_emotion_detect.dir/face.cpp.o.provides.build: CMakeFiles/face_eye_emotion_detect.dir/face.cpp.o
 
 
+CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.o: CMakeFiles/face_eye_emotion_detect.dir/flags.make
+CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.o: ../Common.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo_with_dlib/examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.o -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo_with_dlib/examples/Common.cpp
+
+CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo_with_dlib/examples/Common.cpp > CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.i
+
+CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo_with_dlib/examples/Common.cpp -o CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.s
+
+CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.o.requires:
+
+.PHONY : CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.o.requires
+
+CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.o.provides: CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.o.requires
+	$(MAKE) -f CMakeFiles/face_eye_emotion_detect.dir/build.make CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.o.provides.build
+.PHONY : CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.o.provides
+
+CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.o.provides.build: CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.o
+
+
 CMakeFiles/face_eye_emotion_detect.dir/main.cpp.o: CMakeFiles/face_eye_emotion_detect.dir/flags.make
 CMakeFiles/face_eye_emotion_detect.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo_with_dlib/examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/face_eye_emotion_detect.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo_with_dlib/examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/face_eye_emotion_detect.dir/main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/face_eye_emotion_detect.dir/main.cpp.o -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo_with_dlib/examples/main.cpp
 
 CMakeFiles/face_eye_emotion_detect.dir/main.cpp.i: cmake_force
@@ -131,7 +155,7 @@ CMakeFiles/face_eye_emotion_detect.dir/main.cpp.o.provides.build: CMakeFiles/fac
 
 CMakeFiles/face_eye_emotion_detect.dir/detectors.cpp.o: CMakeFiles/face_eye_emotion_detect.dir/flags.make
 CMakeFiles/face_eye_emotion_detect.dir/detectors.cpp.o: ../detectors.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo_with_dlib/examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/face_eye_emotion_detect.dir/detectors.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo_with_dlib/examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/face_eye_emotion_detect.dir/detectors.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/face_eye_emotion_detect.dir/detectors.cpp.o -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo_with_dlib/examples/detectors.cpp
 
 CMakeFiles/face_eye_emotion_detect.dir/detectors.cpp.i: cmake_force
@@ -155,7 +179,7 @@ CMakeFiles/face_eye_emotion_detect.dir/detectors.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/face_eye_emotion_detect.dir/visualizer.cpp.o: CMakeFiles/face_eye_emotion_detect.dir/flags.make
 CMakeFiles/face_eye_emotion_detect.dir/visualizer.cpp.o: ../visualizer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo_with_dlib/examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/face_eye_emotion_detect.dir/visualizer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo_with_dlib/examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/face_eye_emotion_detect.dir/visualizer.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/face_eye_emotion_detect.dir/visualizer.cpp.o -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo_with_dlib/examples/visualizer.cpp
 
 CMakeFiles/face_eye_emotion_detect.dir/visualizer.cpp.i: cmake_force
@@ -181,6 +205,7 @@ CMakeFiles/face_eye_emotion_detect.dir/visualizer.cpp.o.provides.build: CMakeFil
 face_eye_emotion_detect_OBJECTS = \
 "CMakeFiles/face_eye_emotion_detect.dir/face_landmark_detection_ex.cpp.o" \
 "CMakeFiles/face_eye_emotion_detect.dir/face.cpp.o" \
+"CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.o" \
 "CMakeFiles/face_eye_emotion_detect.dir/main.cpp.o" \
 "CMakeFiles/face_eye_emotion_detect.dir/detectors.cpp.o" \
 "CMakeFiles/face_eye_emotion_detect.dir/visualizer.cpp.o"
@@ -190,12 +215,13 @@ face_eye_emotion_detect_EXTERNAL_OBJECTS =
 
 face_eye_emotion_detect: CMakeFiles/face_eye_emotion_detect.dir/face_landmark_detection_ex.cpp.o
 face_eye_emotion_detect: CMakeFiles/face_eye_emotion_detect.dir/face.cpp.o
+face_eye_emotion_detect: CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.o
 face_eye_emotion_detect: CMakeFiles/face_eye_emotion_detect.dir/main.cpp.o
 face_eye_emotion_detect: CMakeFiles/face_eye_emotion_detect.dir/detectors.cpp.o
 face_eye_emotion_detect: CMakeFiles/face_eye_emotion_detect.dir/visualizer.cpp.o
 face_eye_emotion_detect: CMakeFiles/face_eye_emotion_detect.dir/build.make
 face_eye_emotion_detect: CMakeFiles/face_eye_emotion_detect.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo_with_dlib/examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable face_eye_emotion_detect"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/2019r2demos/interactive_face_detection_demo_with_dlib/examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable face_eye_emotion_detect"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/face_eye_emotion_detect.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -205,6 +231,7 @@ CMakeFiles/face_eye_emotion_detect.dir/build: face_eye_emotion_detect
 
 CMakeFiles/face_eye_emotion_detect.dir/requires: CMakeFiles/face_eye_emotion_detect.dir/face_landmark_detection_ex.cpp.o.requires
 CMakeFiles/face_eye_emotion_detect.dir/requires: CMakeFiles/face_eye_emotion_detect.dir/face.cpp.o.requires
+CMakeFiles/face_eye_emotion_detect.dir/requires: CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.o.requires
 CMakeFiles/face_eye_emotion_detect.dir/requires: CMakeFiles/face_eye_emotion_detect.dir/main.cpp.o.requires
 CMakeFiles/face_eye_emotion_detect.dir/requires: CMakeFiles/face_eye_emotion_detect.dir/detectors.cpp.o.requires
 CMakeFiles/face_eye_emotion_detect.dir/requires: CMakeFiles/face_eye_emotion_detect.dir/visualizer.cpp.o.requires

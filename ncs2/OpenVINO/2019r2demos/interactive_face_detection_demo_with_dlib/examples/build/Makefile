@@ -123,6 +123,33 @@ face_eye_emotion_detect/fast:
 	$(MAKE) -f CMakeFiles/face_eye_emotion_detect.dir/build.make CMakeFiles/face_eye_emotion_detect.dir/build
 .PHONY : face_eye_emotion_detect/fast
 
+Common.o: Common.cpp.o
+
+.PHONY : Common.o
+
+# target to build an object file
+Common.cpp.o:
+	$(MAKE) -f CMakeFiles/face_eye_emotion_detect.dir/build.make CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.o
+.PHONY : Common.cpp.o
+
+Common.i: Common.cpp.i
+
+.PHONY : Common.i
+
+# target to preprocess a source file
+Common.cpp.i:
+	$(MAKE) -f CMakeFiles/face_eye_emotion_detect.dir/build.make CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.i
+.PHONY : Common.cpp.i
+
+Common.s: Common.cpp.s
+
+.PHONY : Common.s
+
+# target to generate assembly for a file
+Common.cpp.s:
+	$(MAKE) -f CMakeFiles/face_eye_emotion_detect.dir/build.make CMakeFiles/face_eye_emotion_detect.dir/Common.cpp.s
+.PHONY : Common.cpp.s
+
 detectors.o: detectors.cpp.o
 
 .PHONY : detectors.o
@@ -267,6 +294,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... face_eye_emotion_detect"
+	@echo "... Common.o"
+	@echo "... Common.i"
+	@echo "... Common.s"
 	@echo "... detectors.o"
 	@echo "... detectors.i"
 	@echo "... detectors.s"

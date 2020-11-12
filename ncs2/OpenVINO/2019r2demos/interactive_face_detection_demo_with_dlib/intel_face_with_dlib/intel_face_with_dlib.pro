@@ -1258,7 +1258,9 @@ HEADERS += \
     ../examples/face.hpp \
     ../examples/interactive_face_detection.hpp \
     ../examples/visualizer.hpp \
-    ../examples/face_landmark_detection_ex.hpp
+    ../examples/face_landmark_detection_ex.hpp \
+    ../examples/Common.h \
+    ../examples/intel_dldt.h
 
 SOURCES += \
     ../dlib/all/source.cpp \
@@ -1739,7 +1741,8 @@ SOURCES += \
     ../dlib/external/zlib/zutil.c \
     ../examples/build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c \
     ../examples/build/CMakeFiles/CheckTypeSize/SIZE_OF_VOID_PTR.c \
-    ../examples/build/CMakeFiles/feature_tests.c
+    ../examples/build/CMakeFiles/feature_tests.c \
+    ../examples/Common.cpp
 INCLUDEPATH += /opt/intel/openvino/deployment_tools/inference_engine/include \
     /opt/intel/openvino/deployment_tools/inference_engine/samples/common \
     /opt/intel/openvino/deployment_tools/inference_engine/src/extension \

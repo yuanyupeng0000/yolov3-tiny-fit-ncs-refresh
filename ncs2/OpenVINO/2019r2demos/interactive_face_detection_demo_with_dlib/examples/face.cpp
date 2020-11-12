@@ -1,4 +1,4 @@
-// Copyright (C) 2018-2019 Intel Corporation
+﻿// Copyright (C) 2018-2019 Intel Corporation
 // SPDX-License-Identifier: Apache-2.0
 //
 
@@ -178,10 +178,10 @@ bool Face::getHeadPostureString(std::string& posture){
     }
 
     if (posture.empty()){
-        posture += "Head pose: common";
+        posture += "Head pose : common";
     }
     else{
-        posture = "Head pose: " + posture;
+        posture = "Head pose : " + posture;
     }
 
 

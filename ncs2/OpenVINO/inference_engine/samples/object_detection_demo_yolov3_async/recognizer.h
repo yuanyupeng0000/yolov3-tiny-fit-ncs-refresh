@@ -28,9 +28,9 @@ public:
     void fillSeqBlob(InferRequest::Ptr);
     std::string GetLicencePlateText(InferRequest::Ptr);
     bool dobinaryzation(cv::Mat gray, cv::Mat& dst);
-    bool ReLocateLicensePlate(cv::Mat plate);
+    bool ReLocateLicensePlate(cv::Mat& plate);
     bool ReLocateLicensePlates(std::vector<cv::Mat>& plate_frames);
-    void CaculateXLocation(cv::Mat& edges, cv::Point& left_top);
+    void CaculateXYLocation(cv::Mat& edges, cv::Point& left_top, cv::Point& right_bottom);
     CNNNetReader netReader;
     InputsDataMap inputInfo;
     OutputsDataMap outputInfo;

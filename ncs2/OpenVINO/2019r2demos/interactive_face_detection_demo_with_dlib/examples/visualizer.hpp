@@ -100,6 +100,9 @@ public:
 
     void enableEmotionBar(std::vector<std::string> const& emotionNames);
     void draw(cv::Mat img, std::list<Face::Ptr> faces);
+#ifdef USE_YOLOV3TINY
+    void draw(cv::Mat img, std::map<int, std::vector<FaceDetection::Result>>&);
+#endif
 
 private:
     void drawFace(cv::Mat& img, Face::Ptr f, bool drawEmotionBar);

@@ -30,7 +30,6 @@ CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_common.h
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_core.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_data.h
- /opt/intel/openvino/deployment_tools/inference_engine/include/ie_device.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_error.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_extension.h
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_net_reader.h
@@ -38,7 +37,6 @@ CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_network_stats.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iexecutable_network.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iextension.h
- /opt/intel/openvino/deployment_tools/inference_engine/include/ie_ihetero_plugin.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iinfer_request.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_imemory_state.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_input_info.hpp
@@ -59,10 +57,6 @@ CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_version.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/inference_engine.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/multi-device/multi_device_config.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/common.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/ocv_common.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/slog.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/src/extension/ext_list.hpp
 CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o
  /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/Common.h
  /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/detector.cpp
@@ -94,7 +88,6 @@ CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_common.h
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_core.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_data.h
- /opt/intel/openvino/deployment_tools/inference_engine/include/ie_device.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_error.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_extension.h
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_net_reader.h
@@ -102,7 +95,6 @@ CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_network_stats.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iexecutable_network.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iextension.h
- /opt/intel/openvino/deployment_tools/inference_engine/include/ie_ihetero_plugin.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iinfer_request.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_imemory_state.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_input_info.hpp
@@ -123,10 +115,6 @@ CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_version.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/inference_engine.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/multi-device/multi_device_config.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/common.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/ocv_common.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/slog.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/src/extension/ext_list.hpp
 CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o
  /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/Common.h
  /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/detector.h
@@ -158,7 +146,6 @@ CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_common.h
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_core.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_data.h
- /opt/intel/openvino/deployment_tools/inference_engine/include/ie_device.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_error.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_extension.h
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_net_reader.h
@@ -166,7 +153,6 @@ CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_network_stats.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iexecutable_network.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iextension.h
- /opt/intel/openvino/deployment_tools/inference_engine/include/ie_ihetero_plugin.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iinfer_request.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_imemory_state.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_input_info.hpp
@@ -187,10 +173,6 @@ CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_version.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/inference_engine.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/multi-device/multi_device_config.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/common.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/ocv_common.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/slog.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/src/extension/ext_list.hpp
 CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o
  /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/Common.h
  /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/detector.h
@@ -223,7 +205,6 @@ CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_common.h
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_core.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_data.h
- /opt/intel/openvino/deployment_tools/inference_engine/include/ie_device.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_error.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_extension.h
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_net_reader.h
@@ -231,7 +212,6 @@ CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_network_stats.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iexecutable_network.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iextension.h
- /opt/intel/openvino/deployment_tools/inference_engine/include/ie_ihetero_plugin.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iinfer_request.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_imemory_state.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_input_info.hpp
@@ -252,11 +232,6 @@ CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_version.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/inference_engine.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/multi-device/multi_device_config.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/samples/common/os/windows/w_dirent.h
- /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/common.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/ocv_common.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/slog.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/src/extension/ext_list.hpp
 CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o
  /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/Common.h
  /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/intel_dldt.h
@@ -287,7 +262,6 @@ CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_common.h
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_core.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_data.h
- /opt/intel/openvino/deployment_tools/inference_engine/include/ie_device.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_error.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_extension.h
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_net_reader.h
@@ -295,7 +269,6 @@ CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_network_stats.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iexecutable_network.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iextension.h
- /opt/intel/openvino/deployment_tools/inference_engine/include/ie_ihetero_plugin.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iinfer_request.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_imemory_state.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_input_info.hpp
@@ -316,7 +289,3 @@ CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o
  /opt/intel/openvino/deployment_tools/inference_engine/include/ie_version.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/inference_engine.hpp
  /opt/intel/openvino/deployment_tools/inference_engine/include/multi-device/multi_device_config.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/common.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/ocv_common.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/slog.hpp
- /opt/intel/openvino/deployment_tools/inference_engine/src/extension/ext_list.hpp

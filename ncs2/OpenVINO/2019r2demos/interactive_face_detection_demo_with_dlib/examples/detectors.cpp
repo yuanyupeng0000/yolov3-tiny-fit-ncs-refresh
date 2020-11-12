@@ -27,6 +27,8 @@
 #include "detectors.hpp"
 
 #include "face_landmark_detection_ex.hpp"
+#include "intel_dldt.h"
+#include "Common.h"
 
 
 using namespace InferenceEngine;
@@ -94,7 +96,8 @@ FaceDetection::FaceDetection(const std::string &pathToModel,
       detectionThreshold(detectionThreshold),
       maxProposalCount(0), objectSize(0), enquedFrames(0), width(0), height(0),
       bb_enlarge_coefficient(bb_enlarge_coefficient), bb_dx_coefficient(bb_dx_coefficient),
-      bb_dy_coefficient(bb_dy_coefficient), resultsFetched(false) {}
+      bb_dy_coefficient(bb_dy_coefficient), resultsFetched(false) {
+}
 
 void FaceDetection::submitRequest() {
     if (!enquedFrames) return;
@@ -123,7 +126,9 @@ void FaceDetection::enqueue(const cv::Mat &frame) {
 
 CNNNetwork FaceDetection::read()  {
     slog::info << "Loading network files for Face Detection" << slog::endl;
+#ifndef USE_YOLOV3TINY
     CNNNetReader netReader;
+#endif
     /** Read network model **/
     netReader.ReadNetwork(pathToModel);
     /** Set batch size to 1 **/
@@ -144,7 +149,11 @@ CNNNetwork FaceDetection::read()  {
     /** SSD-based network should have one input and one output **/
     // ---------------------------Check inputs -------------------------------------------------------------
     slog::info << "Checking Face Detection network inputs" << slog::endl;
+#ifdef USE_YOLOV3TINY
+    inputInfo = InputsDataMap(netReader.getNetwork().getInputsInfo());
+#else
     InputsDataMap inputInfo(netReader.getNetwork().getInputsInfo());
+#endif
     if (inputInfo.size() != 1) {
         throw std::logic_error("Face Detection network should have only one input");
     }
@@ -153,6 +162,16 @@ CNNNetwork FaceDetection::read()  {
     // -----------------------------------------------------------------------------------------------------
 
     // ---------------------------Check outputs ------------------------------------------------------------
+#ifdef USE_YOLOV3TINY
+    // --------------------------------- Preparing output blobs --------------------------------------------
+    slog::info << "Checking that the outputs are as the demo expects" << slog::endl;
+    outputInfo = OutputsDataMap(netReader.getNetwork().getOutputsInfo());
+    for (auto &output : outputInfo) {
+        output.second->setPrecision(Precision::FP32);
+        output.second->setLayout(Layout::NCHW);
+    }
+    // -----------------------------------------------------------------------------------------------------
+#else
     slog::info << "Checking Face Detection network outputs" << slog::endl;
     OutputsDataMap outputInfo(netReader.getNetwork().getOutputsInfo());
     if (outputInfo.size() != 1) {
@@ -190,10 +209,70 @@ CNNNetwork FaceDetection::read()  {
                                std::to_string(outputDims.size()));
     }
     _output->setPrecision(Precision::FP32);
-
+#endif
     slog::info << "Loading Face Detection model to the "<< deviceForInference << " device" << slog::endl;
     input = inputInfo.begin()->first;
     return netReader.getNetwork();
+}
+
+void FaceDetection::ParseYOLOV3TinyNcsOutput(const InferenceEngine::CNNLayerPtr &layer, const InferenceEngine::Blob::Ptr &blob,
+                                             const unsigned long resized_im_h, const unsigned long resized_im_w,
+                                             const unsigned long original_im_h, const unsigned long original_im_w,
+                                             const unsigned long layer_order_id, const double threshold, std::vector<DetectionObject>& objects){
+
+    // --------------------------- Validating output parameters -------------------------------------
+    const int out_blob_c = static_cast<int>(blob->getTensorDesc().getDims()[1]);
+    const int out_blob_h = static_cast<int>(blob->getTensorDesc().getDims()[2]);
+    const int out_blob_w = static_cast<int>(blob->getTensorDesc().getDims()[3]);
+    if (out_blob_h != out_blob_w)
+        throw std::runtime_error("Invalid size of output " + layer->name +
+        " It should be in NCHW layout and H should be equal to W. Current H = " + std::to_string(out_blob_h) +
+        ", current W = " + std::to_string(out_blob_h));
+    // --------------------------- Extracting layer parameters -------------------------------------
+
+    int num = 3;
+    int coords = 4;
+    int classes = out_blob_c/num - coords - 1;
+    //std::vector<float> anchors = {10.0, 13.0, 16.0, 30.0, 33.0, 23.0, 30.0, 61.0, 62.0, 45.0, 59.0, 119.0, 116.0, 90.0,
+    //                             156.0, 198.0, 373.0, 326.0};
+    std::vector<float> anchors = {10,25,  20,50,  30,75, 50,125,  80,200,  150,150};
+    try { anchors = layer->GetParamAsFloats("anchors"); } catch (...) {}
+    auto side = out_blob_h;
+    int anchor_offset = 0;
+
+    anchor_offset = 2*(1-layer_order_id)*3;
+    //std::cout << "[ INFO ] layer_order_id = " << layer_order_id << std::endl;
+    auto side_square = side * side;
+    const float *output_blob = blob->buffer().as<PrecisionTrait<Precision::FP32>::value_type *>();
+    // --------------------------- Parsing YOLO Region output -------------------------------------
+    for (int i = 0; i < side_square; ++i) {
+        int row = i / side;
+        int col = i % side;
+        for (int n = 0; n < num; ++n) {
+            int obj_index = EntryIndex(side, coords, classes, n * side * side + i, coords);
+            int box_index = EntryIndex(side, coords, classes, n * side * side + i, 0);
+
+            float scale = logistic_activate(output_blob[obj_index]);
+            if (scale < threshold)
+                continue;
+            double x = (col + logistic_activate(output_blob[box_index + 0 * side_square])) / side * resized_im_w;
+            double y = (row + logistic_activate(output_blob[box_index + 1 * side_square])) / side * resized_im_h;
+            double height = std::exp(output_blob[box_index + 3 * side_square]) * anchors[anchor_offset + 2 * n + 1];
+            double width = std::exp(output_blob[box_index + 2 * side_square]) * anchors[anchor_offset + 2 * n];
+
+            for (int j = 0; j < classes; ++j) {
+                int class_index = EntryIndex(side, coords, classes, n * side_square + i, coords + 1 + j);
+                float prob = scale * logistic_activate(output_blob[class_index]);
+                if (prob < threshold)
+                    continue;
+                DetectionObject obj(x, y, height, width, j, prob,
+                        static_cast<float>(original_im_h) / static_cast<float>(resized_im_h),
+                        static_cast<float>(original_im_w) / static_cast<float>(resized_im_w));
+                objects.push_back(obj);
+            }
+        }
+    }
+
 }
 
 void FaceDetection::fetchResults() {
@@ -201,6 +280,57 @@ void FaceDetection::fetchResults() {
     results.clear();
     if (resultsFetched) return;
     resultsFetched = true;
+#ifdef USE_YOLOV3TINY
+#define FACE_ID  0
+    results_map.clear();
+    std::vector<DetectionObject> objects;
+    // Processing results of the CURRENT request
+    unsigned long resized_im_h = inputInfo.begin()->second.get()->getDims()[0];
+    unsigned long resized_im_w = inputInfo.begin()->second.get()->getDims()[1];
+    unsigned long layer_order_id = 0;
+    for (auto &output : outputInfo) {
+        auto output_name = output.first;
+        std::cout << "output_name : " << output_name << std::endl;
+        CNNLayerPtr layer = netReader.getNetwork().getLayerByName(output_name.c_str());
+        std::cout << "before request->GetBlob(output_name)" << std::endl;
+        Blob::Ptr blob = request->GetBlob(output_name);
+        std::cout << "after request->GetBlob(output_name)" << std::endl;
+        ParseYOLOV3TinyNcsOutput(layer, blob, resized_im_h, resized_im_w, height, width, layer_order_id, 0.3, objects);
+        layer_order_id += 1;
+    }
+    std::sort(objects.begin(), objects.end());
+    for (int i = 0; i < objects.size(); ++i) {
+        if (objects[i].confidence == 0)
+            continue;
+        for (int j = i + 1; j < objects.size(); ++j)
+            if (IntersectionOverUnion(objects[i], objects[j]) >= 0.45)
+                objects[j].confidence = 0;
+    }
+    for(std::vector<DetectionObject>::iterator iter=objects.begin(); iter!=objects.end(); )
+    {
+         if(iter->confidence == 0){
+             iter = objects.erase(iter);
+         }
+         else{
+             Result r;
+             r.confidence = iter->confidence;
+             r.label = iter->class_id;
+             r.location.x = iter->xmin;
+             r.location.y = iter->ymin;
+             r.location.height = iter->ymax - iter->ymin;
+             r.location.width = iter->xmax - iter->xmin;
+             if(iter->class_id == FACE_ID){
+                 //refine face location to fit other models
+                 r.location.x -= r.location.width/10;
+                 r.location.width = int(r.location.width*1.2);
+                 results.push_back(r);
+             }
+             results_map[iter->class_id].push_back(r);
+             iter++;
+         }
+    }
+    std::cout << "nboxes=" << objects.size() << std::endl;
+#else
     const float *detections = request->GetBlob(output)->buffer().as<float *>();
 
     for (int i = 0; i < maxProposalCount; i++) {
@@ -249,6 +379,7 @@ void FaceDetection::fetchResults() {
             results.push_back(r);
         }
     }
+#endif
 }
 
 

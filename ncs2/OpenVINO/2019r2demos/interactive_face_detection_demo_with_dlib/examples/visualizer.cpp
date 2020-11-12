@@ -194,27 +194,35 @@ void Visualizer::drawFace(cv::Mat& img, Face::Ptr f, bool drawEmotionBar) {
 
     std::ostringstream out;
     if (f->isAgeGenderEnabled()) {
-        out << "Attributes: ";
+        out << "Attribut   : ";
         out << (f->isMale() ? "male" : "female");
         out << " " << f->getAge();
     }
-
     std::ostringstream out_em;
 
     if(f->isEmotionsEnabled()) {
         auto emotion = f->getMainEmotion();
-        out_em << "Emotion  : ";
-        out_em << emotion.first;
+        out_em << "Emotion   : ";
+        if(f->getMouseOpenedState()){
+            out_em << "yawn" ;
+        }
+        else{
+            out_em << emotion.first;
+        }
     }
 
     std::ostringstream out_eye;
     if (f->isLandmarksEnabled()){
-        if (f->getHeadPose().angle_p < 60){
-            out_eye << "Sleepy    : " ;
-            //out_eye << (f->getEyeState() ? "closed" : "opened");
-            out_eye << (f->getSleepyState() ? "Yes" : "No");
+        if (-30 < f->getHeadPose().angle_p && f->getHeadPose().angle_p < 30 &&
+            30 > f->getHeadPose().angle_y && f->getHeadPose().angle_y > -30 &&
+            30 > f->getHeadPose().angle_r &&f->getHeadPose().angle_r > -30){
+            f->HeadPoseNormKeepFrames += 1;
+            out_eye << "Eye state  : " ;
+            out_eye << (f->getEyeState() ? "closed" : "opened");
+            //out_eye << (f->getSleepyState() ? "Yes" : "No");
         }
         else{
+            f->HeadPoseNormKeepFrames = 0;
             f->landmarksEnable(false);
         }
 
@@ -226,21 +234,21 @@ void Visualizer::drawFace(cv::Mat& img, Face::Ptr f, bool drawEmotionBar) {
     cv::putText(img,
                 out.str(),
                 //cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y - 20)),
-                cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y + 20)),
+                cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y - 20)),
                 cv::FONT_HERSHEY_COMPLEX_SMALL,
                 1.5,
                 genderColor, 2);
     cv::putText(img,
                 out_em.str(),
                 //cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y - 20)),
-                cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y + 45)),
+                cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y - 70)),
                 cv::FONT_HERSHEY_COMPLEX_SMALL,
                 1.5,
                 genderColor, 2);
     cv::putText(img,
                 out_eye.str(),
                 //cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y - 20)),
-                cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y + 70)),
+                cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y - 45)),
                 cv::FONT_HERSHEY_COMPLEX_SMALL,
                 1.5,
                 genderColor, 2);
@@ -255,13 +263,13 @@ void Visualizer::drawFace(cv::Mat& img, Face::Ptr f, bool drawEmotionBar) {
         cv::putText(img,
                     headPose,
                     //cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y - 20)),
-                    cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y + 95)),
+                    cv::Point2f(static_cast<float>(f->_location.x), static_cast<float>(f->_location.y - 95)),
                     cv::FONT_HERSHEY_COMPLEX_SMALL,
                     1.5,
                     genderColor, 2);
     }
 
-    if (f->isLandmarksEnabled()) {
+    if (f->isLandmarksEnabled() && (f->HeadPoseNormKeepFrames > 10)) {
         auto& normed_landmarks = f->getLandmarks();
         size_t n_lm = normed_landmarks.size();
         for (size_t i_lm = 0UL; i_lm < n_lm / 2; ++i_lm) {
@@ -332,7 +340,17 @@ cv::Point Visualizer::findCellForEmotionBar() {
     return cv::Point(-1, -1);
 }
 
+void Visualizer::draw(cv::Mat img, std::map<int, std::vector<FaceDetection::Result>>& objects){
+
+    for(int i=1; i<objects.size(); i++){
+        for(auto &&element : objects[i]){
+            this->photoFrameVisualizer->draw(img, element.location, cv::Scalar(255, 0, 0));
+        }
+    }
+}
+
 void Visualizer::draw(cv::Mat img, std::list<Face::Ptr> faces) {
+    std::cout << "faces.size: " << faces.size() << std::endl;
     drawMap.setTo(0);
     frameCounter++;
 

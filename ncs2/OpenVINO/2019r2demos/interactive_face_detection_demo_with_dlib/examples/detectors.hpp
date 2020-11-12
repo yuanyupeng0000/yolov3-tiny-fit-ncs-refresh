@@ -30,7 +30,9 @@
 
 #include <dlib/image_processing.h>
 #include "face_landmark_detection_ex.hpp"
+#include "intel_dldt.h"
 
+#define USE_YOLOV3TINY
 // -------------------------Generic routines for detection networks-------------------------------------------------
 
 struct BaseDetection {
@@ -84,7 +86,57 @@ struct FaceDetection : BaseDetection {
     std::vector<std::string> labels;
     std::vector<Result> results;
 
+#ifdef USE_YOLOV3TINY
+    std::map<int, std::vector<Result>> results_map;
+    InferenceEngine::CNNNetReader netReader;
+    InferenceEngine::InputsDataMap inputInfo;
+    InferenceEngine::OutputsDataMap outputInfo;
+#endif
+
     FaceDetection(const std::string &pathToModel,
+                  const std::string &deviceForInference,
+                  int maxBatch, bool isBatchDynamic, bool isAsync,
+                  double detectionThreshold, bool doRawOutputMessages,
+                  float bb_enlarge_coefficient, float bb_dx_coefficient,
+                  float bb_dy_coefficient);
+
+    InferenceEngine::CNNNetwork read() override;
+    void submitRequest() override;
+
+    void enqueue(const cv::Mat &frame);
+    void fetchResults();
+    void ParseYOLOV3TinyNcsOutput(const InferenceEngine::CNNLayerPtr &layer, const InferenceEngine::Blob::Ptr &blob, const unsigned long resized_im_h,
+                                  const unsigned long resized_im_w, const unsigned long original_im_h,
+                                  const unsigned long original_im_w, const unsigned long layer_order_id,
+                                  const double threshold, std::vector<DetectionObject>& objects);
+};
+
+struct YoloV3TinyDetection : BaseDetection {
+    struct Result {
+        int label;
+        float confidence;
+        cv::Rect location;
+    };
+    InferenceEngine::CNNNetReader netReader;
+    InferenceEngine::InputsDataMap inputInfo;
+    InferenceEngine::OutputsDataMap outputInfo;
+
+    std::string input;
+    std::string output;
+    double detectionThreshold;
+    int maxProposalCount;
+    int objectSize;
+    int enquedFrames;
+    float width;
+    float height;
+    float bb_enlarge_coefficient;
+    float bb_dx_coefficient;
+    float bb_dy_coefficient;
+    bool resultsFetched;
+    std::vector<std::string> labels;
+    std::vector<Result> results;
+
+    YoloV3TinyDetection(const std::string &pathToModel,
                   const std::string &deviceForInference,
                   int maxBatch, bool isBatchDynamic, bool isAsync,
                   double detectionThreshold, bool doRawOutputMessages,

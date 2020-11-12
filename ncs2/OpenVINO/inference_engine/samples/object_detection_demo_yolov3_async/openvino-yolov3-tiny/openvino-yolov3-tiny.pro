@@ -1,7 +1,6 @@
 DISTFILES += \
     ../README.md \
     ../CMakeLists.txt
-
 HEADERS += \
     ../Common.h \
     ../object_detection_demo_yolov3_async.hpp \

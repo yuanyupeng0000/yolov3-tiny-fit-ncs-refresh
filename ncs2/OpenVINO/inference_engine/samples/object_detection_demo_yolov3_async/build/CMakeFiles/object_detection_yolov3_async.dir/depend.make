@@ -29,7 +29,6 @@ CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/d
 CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_common.h
 CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_core.hpp
 CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_data.h
-CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_device.hpp
 CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_error.hpp
 CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_extension.h
 CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_net_reader.h
@@ -37,7 +36,6 @@ CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/d
 CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_network_stats.hpp
 CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iexecutable_network.hpp
 CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iextension.h
-CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_ihetero_plugin.hpp
 CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iinfer_request.hpp
 CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_imemory_state.hpp
 CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_input_info.hpp
@@ -58,10 +56,6 @@ CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/d
 CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_version.hpp
 CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/inference_engine.hpp
 CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/multi-device/multi_device_config.hpp
-CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/common.hpp
-CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/ocv_common.hpp
-CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/slog.hpp
-CMakeFiles/object_detection_yolov3_async.dir/Common.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/src/extension/ext_list.hpp
 
 CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: ../Common.h
 CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: ../detector.cpp
@@ -93,7 +87,6 @@ CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino
 CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_common.h
 CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_core.hpp
 CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_data.h
-CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_device.hpp
 CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_error.hpp
 CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_extension.h
 CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_net_reader.h
@@ -101,7 +94,6 @@ CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino
 CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_network_stats.hpp
 CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iexecutable_network.hpp
 CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iextension.h
-CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_ihetero_plugin.hpp
 CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iinfer_request.hpp
 CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_imemory_state.hpp
 CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_input_info.hpp
@@ -122,10 +114,6 @@ CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino
 CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_version.hpp
 CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/inference_engine.hpp
 CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/multi-device/multi_device_config.hpp
-CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/common.hpp
-CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/ocv_common.hpp
-CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/slog.hpp
-CMakeFiles/object_detection_yolov3_async.dir/detector.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/src/extension/ext_list.hpp
 
 CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: ../Common.h
 CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: ../detector.h
@@ -157,7 +145,6 @@ CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvi
 CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_common.h
 CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_core.hpp
 CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_data.h
-CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_device.hpp
 CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_error.hpp
 CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_extension.h
 CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_net_reader.h
@@ -165,7 +152,6 @@ CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvi
 CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_network_stats.hpp
 CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iexecutable_network.hpp
 CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iextension.h
-CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_ihetero_plugin.hpp
 CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iinfer_request.hpp
 CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_imemory_state.hpp
 CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_input_info.hpp
@@ -186,10 +172,6 @@ CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvi
 CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_version.hpp
 CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/inference_engine.hpp
 CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/multi-device/multi_device_config.hpp
-CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/common.hpp
-CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/ocv_common.hpp
-CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/slog.hpp
-CMakeFiles/object_detection_yolov3_async.dir/intel_dldt.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/src/extension/ext_list.hpp
 
 CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: ../Common.h
 CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: ../detector.h
@@ -222,7 +204,6 @@ CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/dep
 CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_common.h
 CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_core.hpp
 CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_data.h
-CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_device.hpp
 CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_error.hpp
 CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_extension.h
 CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_net_reader.h
@@ -230,7 +211,6 @@ CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/dep
 CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_network_stats.hpp
 CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iexecutable_network.hpp
 CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iextension.h
-CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_ihetero_plugin.hpp
 CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iinfer_request.hpp
 CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_imemory_state.hpp
 CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_input_info.hpp
@@ -251,11 +231,6 @@ CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/dep
 CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_version.hpp
 CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/inference_engine.hpp
 CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/multi-device/multi_device_config.hpp
-CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/samples/common/os/windows/w_dirent.h
-CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/common.hpp
-CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/ocv_common.hpp
-CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/slog.hpp
-CMakeFiles/object_detection_yolov3_async.dir/main.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/src/extension/ext_list.hpp
 
 CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: ../Common.h
 CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: ../intel_dldt.h
@@ -286,7 +261,6 @@ CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvi
 CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_common.h
 CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_core.hpp
 CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_data.h
-CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_device.hpp
 CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_error.hpp
 CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_extension.h
 CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_net_reader.h
@@ -294,7 +268,6 @@ CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvi
 CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_icnn_network_stats.hpp
 CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iexecutable_network.hpp
 CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iextension.h
-CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_ihetero_plugin.hpp
 CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_iinfer_request.hpp
 CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_imemory_state.hpp
 CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_input_info.hpp
@@ -315,8 +288,4 @@ CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvi
 CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/ie_version.hpp
 CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/inference_engine.hpp
 CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/include/multi-device/multi_device_config.hpp
-CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/common.hpp
-CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/ocv_common.hpp
-CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/samples/common/samples/slog.hpp
-CMakeFiles/object_detection_yolov3_async.dir/recognizer.cpp.o: /opt/intel/openvino/deployment_tools/inference_engine/src/extension/ext_list.hpp
 

@@ -147,13 +147,15 @@ def find_license(img):
 				a[i]+=1           #该行的计数器加一
 	#for i in range(1,len(a)):
 	#	a[i] = abs(a[i] - a[i-1])
-	print("a",a)	
+		
 	a1 = a[:int(len(a)/3)]
 	a2 = a[int(len(a)/3*2):]
+	print("a1",a1)
 	a1.reverse()
+	print("a1",a1)
 	target_y_min = int(len(a)/3) - a1.index(max(a1))
 	target_y_max = int(len(a)/3*2) + a2.index(max(a2))
-	
+	print("y_min,y_max", target_y_min, target_y_max)
 	if((w - max(a1)) >= 4):
 		target_y_min = 0
 	if((w - max(a2)) >= 4):
@@ -170,9 +172,9 @@ def find_license(img):
 			if img2[j,i]==0:       #判断该点是否为黑点，0代表是黑点
 				a[i]+=1            #该列的计数器加1
 				img2[j,i]=255      #记录完后将其变为白色，即等于255
-		for i in range(0,w):           #遍历每一列
-			for j in range(h-a[i],h):  #从该列应该变黑的最顶部的开始向最底部设为黑点
-				img2[j,i]=0            #设为黑点
+	for i in range(0,w):           #遍历每一列
+		for j in range(h-a[i],h):  #从该列应该变黑的最顶部的开始向最底部设为黑点
+			img2[j,i]=0            #设为黑点
 	kernel = np.ones((5,1),np.uint8)  
 	erosion = cv2.erode(img2,kernel,iterations = 1)
 	cv2.imshow("erosion", erosion)
@@ -187,13 +189,15 @@ def find_license(img):
 	#print(b)
 	#for i in range(1,len(b)):
 	#	b[i] = abs(b[i] - b[i-1])
-	print("b",b)	
+		
 	b1 = b[:int(len(b)/4)]
 	b2 = b[int(len(b)/4*3):]
+	print("b1",b1)
 	b1.reverse()
+	print("b1",b1)
 	target_x_min = int(len(b)/4) - b1.index(max(b1))
 	target_x_max = int(len(b)/4*3) + b2.index(max(b2))
-	
+	print(target_x_min, target_x_max)
 	if((h - max(b2)) >= 5):
 		target_x_max = len(b) -1
 	if((h - max(b1)) > 5):
