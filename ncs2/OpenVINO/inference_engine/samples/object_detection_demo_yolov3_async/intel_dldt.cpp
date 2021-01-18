@@ -15,7 +15,7 @@
 Detector* detectors[DETECTOR_NUM] = {0};
 Recognizer* recognizers[DETECTOR_NUM] = {0};
 Detector_Fire* detectors_fire[DETECTOR_NUM] ={0};
-unsigned int steps_for_trop[NCS_NUM] = {0};
+unsigned int steps_for_drop[NCS_NUM] = {0};
 
 // Intel deep learning development tool base detector parameter
 struct IntelDldtParam {
@@ -230,13 +230,13 @@ int intel_dldt_detect(const cv::Mat frame, int NCS_ID, std::vector<DetectionObje
         }
         else
         {
-            if(steps_for_trop[NCS_ID] % intel_dldt_fire_param.interval == 0){
-                if(steps_for_trop[NCS_ID] == intel_dldt_fire_param.interval){
-                    steps_for_trop[NCS_ID] = 0;
+            if(steps_for_drop[NCS_ID] % intel_dldt_fire_param.interval == 0){
+                if(steps_for_drop[NCS_ID] == intel_dldt_fire_param.interval){
+                    steps_for_drop[NCS_ID] = 0;
                 }
                 detectors_fire[0]->Detect(NCS_ID, detectors[0]->current_result_frame_map[NCS_ID], objs);
             }
-            steps_for_trop[NCS_ID] += 1;
+            steps_for_drop[NCS_ID] += 1;
         }
 
     }

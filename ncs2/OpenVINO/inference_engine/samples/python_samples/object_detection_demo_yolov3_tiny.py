@@ -253,13 +253,14 @@ def main():
 
             start_time = time()
             for layer_name, out_blob in output.items():
+                print(layer_name, out_blob)
                 layer_params = YoloV3Params(net.layers[layer_name].params, out_blob.shape[2])
                 log.info("Layer {} parameters: ".format(layer_name))
                 layer_params.log_params()
                 ##Just for testing
                 ###################################
-                if(layer_name == 'layer28-conv'):
-                    continue
+                #if(layer_name == 'layer28-conv'):
+                #    continue
                 ###################################
                 objects += parse_yolo_region(out_blob, in_frame.shape[2:],
                                              frame.shape[:-1], layer_params,
