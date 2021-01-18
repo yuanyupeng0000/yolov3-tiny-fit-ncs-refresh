@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string>
 #include <iostream>
-#include <samples/ocv_common.hpp>
+//#include <samples/ocv_common.hpp>
 #include <inference_engine.hpp>
 #include "Common.h"
 using namespace InferenceEngine;
@@ -33,7 +33,7 @@ public:
     void CaculateXYLocation(cv::Mat& edges, cv::Point& left_top, cv::Point& right_bottom);
     ///CNNNetReader netReader;
     CNNNetwork cnnNetwork;
-    Core ie;
+    //Core ie;
     ICNNNetwork::InputShapes inputShapes;
     InputsDataMap inputInfo;
     OutputsDataMap outputInfo;

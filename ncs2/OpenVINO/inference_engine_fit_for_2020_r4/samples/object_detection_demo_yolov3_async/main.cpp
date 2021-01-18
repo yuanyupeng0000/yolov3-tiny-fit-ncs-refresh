@@ -58,17 +58,6 @@ int main(int argc, char *argv[]){
     if (!ParseAndCheckCommandLine(argc, argv)) {
         return 0;
     }
-    slog::info << "Reading input" << slog::endl;
-    cv::VideoCapture cap;
-    // read input (video) frame
-    cv::Mat frame;
-    cv::Mat next_frame;
-    if(FLAGS_j == ""){
-        if (!((FLAGS_i == "cam") ? cap.open(0) : cap.open(FLAGS_i.c_str()))) {
-            throw std::logic_error("Cannot open input file or camera: " + FLAGS_i);
-        }
-        cap >> frame;
-    }
 
     //const size_t width  = (size_t) cap.get(cv::CAP_PROP_FRAME_WIDTH);
     //const size_t height = (size_t) cap.get(cv::CAP_PROP_FRAME_HEIGHT);
@@ -85,91 +74,108 @@ int main(int argc, char *argv[]){
     intel_dldt_init("FP16/vpu_config.ini");
     ///
     //slog::info << "Start inference " << slog::endl;
-
-    bool isLastFrame = false;
-    int N = 0;
-    typedef std::chrono::duration<double, std::ratio<1, 1000>> ms;
-    auto t0 = std::chrono::high_resolution_clock::now();
-    std::queue<cv::Mat> frame_que;
-    cv::VideoWriter writer(FLAGS_s, CV_FOURCC('X', 'V', 'I', 'D'), 15, cv::Size(1280, 960));
-    while (true) {
-        N += 1;
-
-        // Here is the first asynchronous point:
-        // in the Async mode, we capture frame to populate the NEXT infer request
-        // in the regular mode, we capture frame to the CURRENT infer request
-        if(FLAGS_j != ""){
-            frame = cv::imread(FLAGS_j);
+    while(true)
+    {
+        slog::info << "Reading input" << slog::endl;
+        cv::VideoCapture cap;
+        // read input (video) frame
+        cv::Mat frame;
+        cv::Mat next_frame;
+        if(FLAGS_j == ""){
+            if (!((FLAGS_i == "cam") ? cap.open(0) : cap.open(FLAGS_i.c_str()))) {
+                throw std::logic_error("Cannot open input file or camera: " + FLAGS_i);
+            }
+            cap >> frame;
         }
-        else{
-            if (!cap.read(next_frame)) {
-                if (next_frame.empty()) {
-                    isLastFrame = true;  // end of video file
-                } else {
-                    throw std::logic_error("Failed to get frame from cv::VideoCapture");
+        bool isLastFrame = false;
+        int N = 0;
+        typedef std::chrono::duration<double, std::ratio<1, 1000>> ms;
+        auto t0 = std::chrono::high_resolution_clock::now();
+        std::queue<cv::Mat> frame_que;
+        cv::VideoWriter writer(FLAGS_s, CV_FOURCC('X', 'V', 'I', 'D'), 15, cv::Size(1280, 960));
+        while (true) {
+            N += 1;
+
+            // Here is the first asynchronous point:
+            // in the Async mode, we capture frame to populate the NEXT infer request
+            // in the regular mode, we capture frame to the CURRENT infer request
+            if(FLAGS_j != ""){
+                frame = cv::imread(FLAGS_j);
+            }
+            else{
+                if (!cap.read(next_frame)) {
+                    if (next_frame.empty()) {
+                        isLastFrame = true;  // end of video file
+                        break;
+                    } else {
+                        throw std::logic_error("Failed to get frame from cv::VideoCapture");
+                    }
                 }
             }
-        }
 
-        //detector.Detect(frame);
-        frame_que.push(frame);
-        //std::cout << "[ INFO ] Qeue size:" << frame_que.size() << std::endl;
-        std::vector<DetectionObject> objects;
+            //detector.Detect(frame);
+            frame_que.push(frame);
+            //std::cout << "[ INFO ] Qeue size:" << frame_que.size() << std::endl;
+            std::vector<DetectionObject> objects;
 
-        int ret_code = intel_dldt_detect(frame, 1, objects);
-        ///int ret_code = detector.Detect(frame, objects);
-        std::cout << "[ INFO ] ret_code " << ret_code << std::endl;
-        if(ret_code < 0 && ret_code != -100){
-            continue;
-        }
-
-        //std::cout << "[ INFO ] nboxes = " << objects.size() << std::endl;
-        // Drawing boxes
-        cv::Mat frame_show = frame_que.front();
-        for (auto &object : objects) {
-            if (object.confidence < FLAGS_t/*detector.thresh*/){
-                //std::cout << "[INFO]: confidence = " << object.confidence << std::endl;
+            int ret_code = intel_dldt_detect(frame, 1, objects);
+            ///int ret_code = detector.Detect(frame, objects);
+            std::cout << "[ INFO ] ret_code " << ret_code << std::endl;
+            if(ret_code < 0 && ret_code != -100){
                 continue;
             }
-            auto label = object.class_id;
-            float confidence = object.confidence;
-            if (true) {
-                std::cout << "[" << label << "] element, prob = " << confidence <<
-                          "    (" << object.xmin << "," << object.ymin << ")-(" << object.xmax << "," << object.ymax << ")"
-                          << ((confidence > FLAGS_t/*detector.thresh*/) ? " WILL BE RENDERED!" : "") << std::endl;
+
+            //std::cout << "[ INFO ] nboxes = " << objects.size() << std::endl;
+            // Drawing boxes
+            cv::Mat frame_show = frame_que.front();
+            for (auto &object : objects) {
+                if (object.confidence < FLAGS_t/*detector.thresh*/){
+                    //std::cout << "[INFO]: confidence = " << object.confidence << std::endl;
+                    continue;
+                }
+                auto label = object.class_id;
+                float confidence = object.confidence;
+                if (true) {
+                    std::cout << "[" << label << "] element, prob = " << confidence <<
+                              "    (" << object.xmin << "," << object.ymin << ")-(" << object.xmax << "," << object.ymax << ")"
+                              << ((confidence > FLAGS_t/*detector.thresh*/) ? " WILL BE RENDERED!" : "") << std::endl;
+                }
+                if (confidence > FLAGS_t/*detector.thresh*/) {
+                    /** Drawing only objects when >confidence_threshold probability **/
+                    std::ostringstream conf;
+                    conf << ":" << std::fixed << std::setprecision(3) << confidence;
+                    cv::putText(frame_show,
+                            (object.class_id == 6 ? object.text: /*label < detector.labels.size() ? detector.labels[label] : */
+                                                    std::string("#") + std::to_string(label)) /*+ conf.str()*/,
+                                cv::Point2f(object.xmin, object.ymin - 5), cv::FONT_HERSHEY_COMPLEX_SMALL, 1,
+                                cv::Scalar(0, 0, 255));
+                    cv::rectangle(frame_show, cv::Point2f(object.xmin, object.ymin), cv::Point2f(object.xmax, object.ymax), cv::Scalar(0, 0, 255), 2);
+                }
             }
-            if (confidence > FLAGS_t/*detector.thresh*/) {
-                /** Drawing only objects when >confidence_threshold probability **/
-                std::ostringstream conf;
-                conf << ":" << std::fixed << std::setprecision(3) << confidence;
-                cv::putText(frame_show,
-                        (object.class_id == 6 ? object.text: /*label < detector.labels.size() ? detector.labels[label] : */
-                                                std::string("#") + std::to_string(label)) /*+ conf.str()*/,
-                            cv::Point2f(object.xmin, object.ymin - 5), cv::FONT_HERSHEY_COMPLEX_SMALL, 1,
-                            cv::Scalar(0, 0, 255));
-                cv::rectangle(frame_show, cv::Point2f(object.xmin, object.ymin), cv::Point2f(object.xmax, object.ymax), cv::Scalar(0, 0, 255), 2);
+            cv::Mat dst;
+            cv::resize(frame_show, dst, cv::Size(640, 480));
+            cv::imshow("Detection results", dst);
+            if(!FLAGS_s.empty()){
+                writer.write(dst);
             }
-        }
-        cv::Mat dst;
-        cv::resize(frame_show, dst, cv::Size(640, 480));
-        cv::imshow("Detection results", dst);
-        if(!FLAGS_s.empty()){
-            writer.write(dst);
-        }
-        //cv::imwrite("saved_result.jpg", frame_show);
-        frame_que.pop();
-        auto t1 = std::chrono::high_resolution_clock::now();
-        ms detection = std::chrono::duration_cast<ms>(t1 - t0);
-        slog::info << "Duration fps:" << 1000*N/detection.count() << slog::endl;
-        frame = next_frame;
-        next_frame = cv::Mat();
-        const int key = cv::waitKey(2);
-        if (27 == key)  // Esc
-            break;
-        if(FLAGS_j != ""){
-            const int key = cv::waitKey(5000);
+            //cv::imwrite("saved_result.jpg", frame_show);
+            frame_que.pop();
+            auto t1 = std::chrono::high_resolution_clock::now();
+            ms detection = std::chrono::duration_cast<ms>(t1 - t0);
+            slog::info << "Duration fps:" << 1000*N/detection.count() << slog::endl;
+            frame = next_frame;
+            next_frame = cv::Mat();
+            const int key = cv::waitKey(2);
             if (27 == key)  // Esc
                 break;
+            if(FLAGS_j != ""){
+                const int key = cv::waitKey(5000);
+                if (27 == key)  // Esc
+                    break;
+            }
+        }
+        if(isLastFrame){
+            continue;
         }
     }
     //writer.release();

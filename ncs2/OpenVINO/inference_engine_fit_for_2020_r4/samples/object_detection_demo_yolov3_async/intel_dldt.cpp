@@ -14,6 +14,9 @@
 #define DETECTOR_MODE_ONE
 Detector* detectors[DETECTOR_NUM] = {0};
 Recognizer* recognizers[DETECTOR_H] = {0};
+Detector_Fire* detectors_fire[DETECTOR_NUM] ={0};
+unsigned int steps_for_drop[NCS_NUM] = {0};
+
 
 // Intel deep learning development tool base detector parameter
 struct IntelDldtParam {
@@ -53,8 +56,30 @@ struct IntelDldtLPRParam {
     }
 };
 
+struct IntelDldtFireParam {
+
+    std::string model_xml, model_bin, model_dev;
+    float thresh_confidence, thresh_iou;
+    int number_infer_requests;
+    bool fire_flag;
+    int interval;
+
+    IntelDldtFireParam(std::string model_xml="", std::string model_bin="", std::string model_dev="", int interval=10,
+                   bool fire_flag=false, float thresh_confidence=0.3, float thresh_iou=0.5, int number_infer_requests=1) {
+        this->model_xml = model_xml;
+        this->model_bin = model_bin;
+        this->model_dev = model_dev;
+        this->thresh_confidence = thresh_confidence;
+        this->thresh_iou = thresh_iou;
+        this->number_infer_requests = number_infer_requests;
+        this->fire_flag = fire_flag;
+        this->interval = 10;
+    }
+};
+
 IntelDldtParam intel_dldt_param;
 IntelDldtLPRParam intel_dldt_lpr_param;
+IntelDldtFireParam intel_dldt_fire_param;
 
 static bool intel_dldt_query_str(const std::string& src, const std::string& query, std::string& target){
     size_t pos_start = src.find(query, 0);
@@ -128,6 +153,32 @@ static void intel_dldt_read_config(const std::string& config,
                 intel_dldt_lpr_param.number_infer_requests = std::stoi(target);
             }
         }
+    }   
+    if(intel_dldt_query_str(contents, "fire_flag=", target)){
+        if("true" == target){
+            intel_dldt_fire_param.fire_flag = true;
+            if(intel_dldt_query_str(contents, "model_xml_fire=", target)){
+                intel_dldt_fire_param.model_xml = target;
+            }
+            if(intel_dldt_query_str(contents, "model_bin_fire=", target)){
+                intel_dldt_fire_param.model_bin = target;
+            }
+            if(intel_dldt_query_str(contents, "model_dev_fire=", target)){
+                intel_dldt_fire_param.model_dev = target;
+            }
+            if(intel_dldt_query_str(contents, "thresh_fire=", target)){
+                intel_dldt_fire_param.thresh_confidence = std::stof(target);
+            }
+            if(intel_dldt_query_str(contents, "nms_fire=", target)){
+                intel_dldt_fire_param.thresh_iou = std::stof(target);
+            }
+            if(intel_dldt_query_str(contents, "nireq_fire=", target)){
+                intel_dldt_fire_param.number_infer_requests = std::stoi(target);
+            }
+            if(intel_dldt_query_str(contents, "interval_fire=", target)){
+                intel_dldt_fire_param.interval = std::stoi(target);
+            }
+        }
     }
 }
 
@@ -147,13 +198,19 @@ int intel_dldt_init(const std::string& config/*const IntelDldtParam& intel_dldt_
                                     intel_dldt_param.model_dev, intel_dldt_param.thresh_confidence,
                                     intel_dldt_param.thresh_iou, intel_dldt_param.number_infer_requests);
     }
-
+    for(int i=0; i<DETECTOR_NUM; i++){
+        detectors_fire[i] = new Detector_Fire(intel_dldt_fire_param.model_xml, intel_dldt_fire_param.model_bin,
+                                    intel_dldt_fire_param.model_dev, intel_dldt_fire_param.thresh_confidence,
+                                    intel_dldt_fire_param.thresh_iou, intel_dldt_fire_param.number_infer_requests);
+    }
     return NCS_NUM;
 }
 int intel_dldt_detect(const cv::Mat frame, int NCS_ID, std::vector<DetectionObject>& objs){
     std::cout << "[ INFO ] NCS_ID " << NCS_ID << std::endl;
 #ifdef DETECTOR_MODE_ONE
     int iRet = detectors[0]->Detect(NCS_ID, frame, objs);
+
+    //deal with lpr
     if(intel_dldt_lpr_param.lpr_flag && iRet==0){
         if(detectors[0]->current_result_frame_map.find(NCS_ID) ==
                 detectors[0]->current_result_frame_map.end()){
@@ -163,6 +220,25 @@ int intel_dldt_detect(const cv::Mat frame, int NCS_ID, std::vector<DetectionObje
         {
             recognizers[0]->Recognize(NCS_ID, detectors[0]->current_result_frame_map[NCS_ID], objs);
         }
+    }
+
+    //deal with fire disaster
+    if(intel_dldt_fire_param.fire_flag && iRet==0){
+        if(detectors[0]->current_result_frame_map.find(NCS_ID) ==
+                detectors[0]->current_result_frame_map.end()){
+            return 0;
+        }
+        else
+        {
+            if(steps_for_drop[NCS_ID] % intel_dldt_fire_param.interval == 0){
+                if(steps_for_drop[NCS_ID] == intel_dldt_fire_param.interval){
+                    steps_for_drop[NCS_ID] = 0;
+                }
+                detectors_fire[0]->Detect(NCS_ID, detectors[0]->current_result_frame_map[NCS_ID], objs);
+            }
+            steps_for_drop[NCS_ID] += 1;
+        }
+
     }
 #else
     int iRet = detectors[NCS_ID]->Detect(frame, objs);

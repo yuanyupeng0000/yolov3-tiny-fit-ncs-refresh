@@ -11,6 +11,7 @@
 #define ONE_LINE_LPR_CLASS_ID 6
 #define TWO_LINE_LPR_CLASS_ID 5
 #define PROVINCE "<GuiLin>"
+extern Core ie;
 Recognizer::Recognizer(const std::string& inputXml, const std::string& inputBin, const std::string& inputDevice,
                        const float thresh, const float iou, const int nireq):input_xml(inputXml), thresh(thresh), iou(iou), nireq(nireq){
         try {
@@ -368,7 +369,7 @@ bool Recognizer::CropObjectRegion(DetectionObject& object, cv::Mat frame, cv::Ma
     object.ymin = roi.y;
     object.xmax = roi.x + roi.width -1;
     object.ymax = roi.y + roi.height -1;
-    //slog::info << "roi.x:" << roi.x << " roi.y:" << roi.y << " roi.width:" << roi.width << " roi.height:"<< roi.height << slog::endl;
+    std::cout << "roi.x:" << roi.x << " roi.y:" << roi.y << " roi.width:" << roi.width << " roi.height:"<< roi.height << std::endl;
     object_region = frame(roi);
     return true;
 }
@@ -409,6 +410,9 @@ int Recognizer::Recognize(int idx, const cv::Mat coresponding_frame, std::vector
             for(int i=0; i<plate_frames.size(); i++){
                 //slog::info << "Start lpr inference " << slog::endl;
                 cv::Mat frame = plate_frames[i];
+                if(frame.size().width <= 0 || frame.size().height <=0){
+                    continue;
+                }
                 /*cv::Mat temp;
                 ChangeMotorLPR2VeichleLPR(frame, temp);
                 frame = temp;*/

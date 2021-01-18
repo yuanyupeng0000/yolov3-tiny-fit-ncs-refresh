@@ -46,13 +46,13 @@ file (GLOB MAIN_HEADERS
 
 # Create named folders for the sources within the .vcproj
 # Empty name lists them directly under the .vcproj
-source_group("src" FILES ${MAIN_SRC})
-source_group("include" FILES ${MAIN_HEADERS})
+##source_group("src" FILES ${MAIN_SRC})
+##source_group("include" FILES ${MAIN_HEADERS})
 
-link_directories(${LIB_FOLDER})
+###link_directories(${LIB_FOLDER})
 
 # Create library file from sources.
-###add_executable(${TARGET_NAME} ${MAIN_SRC} ${MAIN_HEADERS})
+#add_executable(${TARGET_NAME} ${MAIN_SRC} ${MAIN_HEADERS})
 add_library(${TARGET_NAME} SHARED ${MAIN_SRC} ${MAIN_HEADERS})
 
 ##add_dependencies(${TARGET_NAME} gflags)  ###why to complie gflags?
@@ -60,11 +60,8 @@ add_library(${TARGET_NAME} SHARED ${MAIN_SRC} ${MAIN_HEADERS})
 set_target_properties(${TARGET_NAME} PROPERTIES "CMAKE_CXX_FLAGS" "${CMAKE_CXX_FLAGS} -fPIE"
         COMPILE_PDB_NAME ${TARGET_NAME})
 
-
-#target_link_libraries(${TARGET_NAME} IE::ie_cpu_extension ${InferenceEngine_LIBRARIES} gflags ${OpenCV_LIBRARIES})
-#target_link_libraries(${TARGET_NAME} ${InferenceEngine_LIBRARIES} clDNNPlugin GNAPlugin inference_engine myriadPlugin MKLDNNPlugin HeteroPlugin HDDLPlugin cpu_extension_avx2 cpu_extension_sse4 gflags ${OpenCV_LIBRARIES} dl)
-#target_link_libraries(${TARGET_NAME} ${InferenceEngine_LIBRARIES} clDNNPlugin GNAPlugin inference_engine myriadPlugin MKLDNNPlugin HeteroPlugin HDDLPlugin cpu_extension_avx2 cpu_extension_sse4 gflags dl)
-target_link_libraries(${TARGET_NAME} ${InferenceEngine_LIBRARIES} clDNNPlugin GNAPlugin inference_engine_legacy inference_engine myriadPlugin MKLDNNPlugin HeteroPlugin HDDLPlugin gflags dl)
+#target_link_libraries(${TARGET_NAME} ${InferenceEngine_LIBRARIES} clDNNPlugin GNAPlugin inference_engine_legacy inference_engine myriadPlugin MKLDNNPlugin HeteroPlugin HDDLPlugin gflags dl)
+target_link_libraries(${TARGET_NAME} clDNNPlugin GNAPlugin inference_engine_legacy inference_engine myriadPlugin MKLDNNPlugin HeteroPlugin HDDLPlugin gflags dl)
 target_link_libraries(${TARGET_NAME} -L/usr/local/lib/ -lopencv_video -lopencv_videoio -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs -lopencv_ml)
 target_link_libraries(${TARGET_NAME} -L/usr/lib/x86_64-linux-gnu/ -lgflags)
 

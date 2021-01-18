@@ -1,0 +1,7103 @@
+name: "Darkent2Caffe"
+layer {
+  name: "data"
+  type: "Input"
+  top: "data"
+  input_param {
+    shape {
+      dim: 1
+      dim: 3
+      dim: 416
+      dim: 416
+    }
+  }
+}
+
+layer {
+  name:"data_slice"
+  type:"Slice"
+  bottom:"data"
+  top:"data_0"
+  top:"data_1"
+  top:"data_2"
+  top:"data_3"
+  top:"data_4"
+  top:"data_5"
+  top:"data_6"	
+  top:"data_7"	
+  top:"data_8"	
+  top:"data_9"	
+  top:"data_10"	
+  top:"data_11"	
+  top:"data_12"	
+  top:"data_13"	
+  top:"data_14"	
+  top:"data_15"	
+  top:"data_16"	
+  top:"data_17"	
+  top:"data_18"	
+  top:"data_19"	
+  top:"data_20"	
+  top:"data_21"	
+  top:"data_22"	
+  top:"data_23"	
+  top:"data_24"	
+  top:"data_25"	
+  top:"data_26"	
+  top:"data_27"	
+  top:"data_28"	
+  top:"data_29"	
+  top:"data_30"	
+  top:"data_31"	
+  top:"data_32"	
+  top:"data_33"	
+  top:"data_34"	
+  top:"data_35"	
+  top:"data_36"	
+  top:"data_37"	
+  top:"data_38"	
+  top:"data_39"	
+  top:"data_40"	
+  top:"data_41"	
+  top:"data_42"	
+  top:"data_43"	
+  top:"data_44"	
+  top:"data_45"	
+  top:"data_46"	
+  top:"data_47"	
+  top:"data_48"	
+  top:"data_49"	
+  top:"data_50"	
+  top:"data_51"	
+  top:"data_52"	
+  top:"data_53"	
+  top:"data_54"	
+  top:"data_55"	
+  top:"data_56"	
+  top:"data_57"	
+  top:"data_58"	
+  top:"data_59"	
+  top:"data_60"	
+  top:"data_61"	
+  top:"data_62"	
+  top:"data_63"	
+  top:"data_64"	
+  top:"data_65"	
+  top:"data_66"	
+  top:"data_67"	
+  top:"data_68"	
+  top:"data_69"	
+  top:"data_70"	
+  top:"data_71"	
+  top:"data_72"	
+  top:"data_73"	
+  top:"data_74"	
+  top:"data_75"	
+  top:"data_76"	
+  top:"data_77"	
+  top:"data_78"	
+  top:"data_79"	
+  top:"data_80"	
+  top:"data_81"	
+  top:"data_82"	
+  top:"data_83"	
+  top:"data_84"	
+  top:"data_85"	
+  top:"data_86"	
+  top:"data_87"	
+  top:"data_88"	
+  top:"data_89"	
+  top:"data_90"	
+  top:"data_91"	
+  top:"data_92"	
+  top:"data_93"	
+  top:"data_94"	
+  top:"data_95"	
+  top:"data_96"	
+  top:"data_97"	
+  top:"data_98"	
+  top:"data_99"	
+  top:"data_100"	
+  top:"data_101"	
+  top:"data_102"	
+  top:"data_103"	
+  top:"data_104"	
+  top:"data_105"	
+  top:"data_106"	
+  top:"data_107"	
+  top:"data_108"	
+  top:"data_109"	
+  top:"data_110"	
+  top:"data_111"	
+  top:"data_112"	
+  top:"data_113"	
+  top:"data_114"	
+  top:"data_115"	
+  top:"data_116"	
+  top:"data_117"	
+  top:"data_118"	
+  top:"data_119"	
+  top:"data_120"	
+  top:"data_121"	
+  top:"data_122"	
+  top:"data_123"	
+  top:"data_124"	
+  top:"data_125"	
+  top:"data_126"	
+  top:"data_127"	
+  top:"data_128"	
+  top:"data_129"	
+  top:"data_130"	
+  top:"data_131"	
+  top:"data_132"	
+  top:"data_133"	
+  top:"data_134"	
+  top:"data_135"	
+  top:"data_136"	
+  top:"data_137"	
+  top:"data_138"	
+  top:"data_139"	
+  top:"data_140"	
+  top:"data_141"	
+  top:"data_142"	
+  top:"data_143"	
+  top:"data_144"	
+  top:"data_145"	
+  top:"data_146"	
+  top:"data_147"	
+  top:"data_148"	
+  top:"data_149"	
+  top:"data_150"	
+  top:"data_151"	
+  top:"data_152"	
+  top:"data_153"	
+  top:"data_154"	
+  top:"data_155"	
+  top:"data_156"	
+  top:"data_157"	
+  top:"data_158"	
+  top:"data_159"	
+  top:"data_160"	
+  top:"data_161"	
+  top:"data_162"	
+  top:"data_163"	
+  top:"data_164"	
+  top:"data_165"	
+  top:"data_166"	
+  top:"data_167"	
+  top:"data_168"	
+  top:"data_169"	
+  top:"data_170"	
+  top:"data_171"	
+  top:"data_172"	
+  top:"data_173"	
+  top:"data_174"	
+  top:"data_175"	
+  top:"data_176"	
+  top:"data_177"	
+  top:"data_178"	
+  top:"data_179"	
+  top:"data_180"	
+  top:"data_181"	
+  top:"data_182"	
+  top:"data_183"	
+  top:"data_184"	
+  top:"data_185"	
+  top:"data_186"	
+  top:"data_187"	
+  top:"data_188"	
+  top:"data_189"	
+  top:"data_190"	
+  top:"data_191"	
+  top:"data_192"	
+  top:"data_193"	
+  top:"data_194"	
+  top:"data_195"	
+  top:"data_196"	
+  top:"data_197"	
+  top:"data_198"	
+  top:"data_199"	
+  top:"data_200"	
+  top:"data_201"	
+  top:"data_202"	
+  top:"data_203"	
+  top:"data_204"	
+  top:"data_205"	
+  top:"data_206"	
+  top:"data_207"	
+  top:"data_208"	
+  top:"data_209"	
+  top:"data_210"	
+  top:"data_211"	
+  top:"data_212"	
+  top:"data_213"	
+  top:"data_214"	
+  top:"data_215"	
+  top:"data_216"	
+  top:"data_217"	
+  top:"data_218"	
+  top:"data_219"	
+  top:"data_220"	
+  top:"data_221"	
+  top:"data_222"	
+  top:"data_223"	
+  top:"data_224"	
+  top:"data_225"	
+  top:"data_226"	
+  top:"data_227"	
+  top:"data_228"	
+  top:"data_229"	
+  top:"data_230"	
+  top:"data_231"	
+  top:"data_232"	
+  top:"data_233"	
+  top:"data_234"	
+  top:"data_235"	
+  top:"data_236"	
+  top:"data_237"	
+  top:"data_238"	
+  top:"data_239"	
+  top:"data_240"	
+  top:"data_241"	
+  top:"data_242"	
+  top:"data_243"	
+  top:"data_244"	
+  top:"data_245"	
+  top:"data_246"	
+  top:"data_247"	
+  top:"data_248"	
+  top:"data_249"	
+  top:"data_250"	
+  top:"data_251"	
+  top:"data_252"	
+  top:"data_253"	
+  top:"data_254"	
+  top:"data_255"	
+  top:"data_256"	
+  top:"data_257"	
+  top:"data_258"	
+  top:"data_259"	
+  top:"data_260"	
+  top:"data_261"	
+  top:"data_262"	
+  top:"data_263"	
+  top:"data_264"	
+  top:"data_265"	
+  top:"data_266"	
+  top:"data_267"	
+  top:"data_268"	
+  top:"data_269"	
+  top:"data_270"	
+  top:"data_271"	
+  top:"data_272"	
+  top:"data_273"	
+  top:"data_274"	
+  top:"data_275"	
+  top:"data_276"	
+  top:"data_277"	
+  top:"data_278"	
+  top:"data_279"	
+  top:"data_280"	
+  top:"data_281"	
+  top:"data_282"	
+  top:"data_283"	
+  top:"data_284"	
+  top:"data_285"	
+  top:"data_286"	
+  top:"data_287"	
+  top:"data_288"	
+  top:"data_289"	
+  top:"data_290"	
+  top:"data_291"	
+  top:"data_292"	
+  top:"data_293"	
+  top:"data_294"	
+  top:"data_295"	
+  top:"data_296"	
+  top:"data_297"	
+  top:"data_298"	
+  top:"data_299"	
+  top:"data_300"	
+  top:"data_301"	
+  top:"data_302"	
+  top:"data_303"	
+  top:"data_304"	
+  top:"data_305"	
+  top:"data_306"	
+  top:"data_307"	
+  top:"data_308"	
+  top:"data_309"	
+  top:"data_310"	
+  top:"data_311"	
+  top:"data_312"	
+  top:"data_313"	
+  top:"data_314"	
+  top:"data_315"	
+  top:"data_316"	
+  top:"data_317"	
+  top:"data_318"	
+  top:"data_319"	
+  top:"data_320"	
+  top:"data_321"	
+  top:"data_322"	
+  top:"data_323"	
+  top:"data_324"	
+  top:"data_325"	
+  top:"data_326"	
+  top:"data_327"	
+  top:"data_328"	
+  top:"data_329"	
+  top:"data_330"	
+  top:"data_331"	
+  top:"data_332"	
+  top:"data_333"	
+  top:"data_334"	
+  top:"data_335"	
+  top:"data_336"	
+  top:"data_337"	
+  top:"data_338"	
+  top:"data_339"	
+  top:"data_340"	
+  top:"data_341"	
+  top:"data_342"	
+  top:"data_343"	
+  top:"data_344"	
+  top:"data_345"	
+  top:"data_346"	
+  top:"data_347"	
+  top:"data_348"	
+  top:"data_349"	
+  top:"data_350"	
+  top:"data_351"	
+  top:"data_352"	
+  top:"data_353"	
+  top:"data_354"	
+  top:"data_355"	
+  top:"data_356"	
+  top:"data_357"	
+  top:"data_358"	
+  top:"data_359"	
+  top:"data_360"	
+  top:"data_361"	
+  top:"data_362"	
+  top:"data_363"	
+  top:"data_364"	
+  top:"data_365"	
+  top:"data_366"	
+  top:"data_367"	
+  top:"data_368"	
+  top:"data_369"	
+  top:"data_370"	
+  top:"data_371"	
+  top:"data_372"	
+  top:"data_373"	
+  top:"data_374"	
+  top:"data_375"	
+  top:"data_376"	
+  top:"data_377"	
+  top:"data_378"	
+  top:"data_379"	
+  top:"data_380"	
+  top:"data_381"	
+  top:"data_382"	
+  top:"data_383"	
+  top:"data_384"	
+  top:"data_385"	
+  top:"data_386"	
+  top:"data_387"	
+  top:"data_388"	
+  top:"data_389"	
+  top:"data_390"	
+  top:"data_391"	
+  top:"data_392"	
+  top:"data_393"	
+  top:"data_394"	
+  top:"data_395"	
+  top:"data_396"	
+  top:"data_397"	
+  top:"data_398"	
+  top:"data_399"	
+  top:"data_400"	
+  top:"data_401"	
+  top:"data_402"	
+  top:"data_403"	
+  top:"data_404"	
+  top:"data_405"	
+  top:"data_406"	
+  top:"data_407"	
+  top:"data_408"	
+  top:"data_409"	
+  top:"data_410"	
+  top:"data_411"	
+  top:"data_412"	
+  top:"data_413"	
+  top:"data_414"	
+  top:"data_415"	
+
+  slice_param {
+    axis:2
+    slice_point:1	
+    slice_point:2	
+    slice_point:3	
+    slice_point:4	
+    slice_point:5	
+    slice_point:6	
+    slice_point:7	
+    slice_point:8	
+    slice_point:9	
+    slice_point:10	
+    slice_point:11	
+    slice_point:12	
+    slice_point:13	
+    slice_point:14	
+    slice_point:15	
+    slice_point:16	
+    slice_point:17	
+    slice_point:18	
+    slice_point:19	
+    slice_point:20	
+    slice_point:21	
+    slice_point:22	
+    slice_point:23	
+    slice_point:24	
+    slice_point:25	
+    slice_point:26	
+    slice_point:27	
+    slice_point:28	
+    slice_point:29	
+    slice_point:30	
+    slice_point:31	
+    slice_point:32	
+    slice_point:33	
+    slice_point:34	
+    slice_point:35	
+    slice_point:36	
+    slice_point:37	
+    slice_point:38	
+    slice_point:39	
+    slice_point:40	
+    slice_point:41	
+    slice_point:42	
+    slice_point:43	
+    slice_point:44	
+    slice_point:45	
+    slice_point:46	
+    slice_point:47	
+    slice_point:48	
+    slice_point:49	
+    slice_point:50	
+    slice_point:51	
+    slice_point:52	
+    slice_point:53	
+    slice_point:54	
+    slice_point:55	
+    slice_point:56	
+    slice_point:57	
+    slice_point:58	
+    slice_point:59	
+    slice_point:60	
+    slice_point:61	
+    slice_point:62	
+    slice_point:63	
+    slice_point:64	
+    slice_point:65	
+    slice_point:66	
+    slice_point:67	
+    slice_point:68	
+    slice_point:69	
+    slice_point:70	
+    slice_point:71	
+    slice_point:72	
+    slice_point:73	
+    slice_point:74	
+    slice_point:75	
+    slice_point:76	
+    slice_point:77	
+    slice_point:78	
+    slice_point:79	
+    slice_point:80	
+    slice_point:81	
+    slice_point:82	
+    slice_point:83	
+    slice_point:84	
+    slice_point:85	
+    slice_point:86	
+    slice_point:87	
+    slice_point:88	
+    slice_point:89	
+    slice_point:90	
+    slice_point:91	
+    slice_point:92	
+    slice_point:93	
+    slice_point:94	
+    slice_point:95	
+    slice_point:96	
+    slice_point:97	
+    slice_point:98	
+    slice_point:99	
+    slice_point:100	
+    slice_point:101	
+    slice_point:102	
+    slice_point:103	
+    slice_point:104	
+    slice_point:105	
+    slice_point:106	
+    slice_point:107	
+    slice_point:108	
+    slice_point:109	
+    slice_point:110	
+    slice_point:111	
+    slice_point:112	
+    slice_point:113	
+    slice_point:114	
+    slice_point:115	
+    slice_point:116	
+    slice_point:117	
+    slice_point:118	
+    slice_point:119	
+    slice_point:120	
+    slice_point:121	
+    slice_point:122	
+    slice_point:123	
+    slice_point:124	
+    slice_point:125	
+    slice_point:126	
+    slice_point:127	
+    slice_point:128	
+    slice_point:129	
+    slice_point:130	
+    slice_point:131	
+    slice_point:132	
+    slice_point:133	
+    slice_point:134	
+    slice_point:135	
+    slice_point:136	
+    slice_point:137	
+    slice_point:138	
+    slice_point:139	
+    slice_point:140	
+    slice_point:141	
+    slice_point:142	
+    slice_point:143	
+    slice_point:144	
+    slice_point:145	
+    slice_point:146	
+    slice_point:147	
+    slice_point:148	
+    slice_point:149	
+    slice_point:150	
+    slice_point:151	
+    slice_point:152	
+    slice_point:153	
+    slice_point:154	
+    slice_point:155	
+    slice_point:156	
+    slice_point:157	
+    slice_point:158	
+    slice_point:159	
+    slice_point:160	
+    slice_point:161	
+    slice_point:162	
+    slice_point:163	
+    slice_point:164	
+    slice_point:165	
+    slice_point:166	
+    slice_point:167	
+    slice_point:168	
+    slice_point:169	
+    slice_point:170	
+    slice_point:171	
+    slice_point:172	
+    slice_point:173	
+    slice_point:174	
+    slice_point:175	
+    slice_point:176	
+    slice_point:177	
+    slice_point:178	
+    slice_point:179	
+    slice_point:180	
+    slice_point:181	
+    slice_point:182	
+    slice_point:183	
+    slice_point:184	
+    slice_point:185	
+    slice_point:186	
+    slice_point:187	
+    slice_point:188	
+    slice_point:189	
+    slice_point:190	
+    slice_point:191	
+    slice_point:192	
+    slice_point:193	
+    slice_point:194	
+    slice_point:195	
+    slice_point:196	
+    slice_point:197	
+    slice_point:198	
+    slice_point:199	
+    slice_point:200	
+    slice_point:201	
+    slice_point:202	
+    slice_point:203	
+    slice_point:204	
+    slice_point:205	
+    slice_point:206	
+    slice_point:207	
+    slice_point:208	
+    slice_point:209	
+    slice_point:210	
+    slice_point:211	
+    slice_point:212	
+    slice_point:213	
+    slice_point:214	
+    slice_point:215	
+    slice_point:216	
+    slice_point:217	
+    slice_point:218	
+    slice_point:219	
+    slice_point:220	
+    slice_point:221	
+    slice_point:222	
+    slice_point:223	
+    slice_point:224	
+    slice_point:225	
+    slice_point:226	
+    slice_point:227	
+    slice_point:228	
+    slice_point:229	
+    slice_point:230	
+    slice_point:231	
+    slice_point:232	
+    slice_point:233	
+    slice_point:234	
+    slice_point:235	
+    slice_point:236	
+    slice_point:237	
+    slice_point:238	
+    slice_point:239	
+    slice_point:240	
+    slice_point:241	
+    slice_point:242	
+    slice_point:243	
+    slice_point:244	
+    slice_point:245	
+    slice_point:246	
+    slice_point:247	
+    slice_point:248	
+    slice_point:249	
+    slice_point:250	
+    slice_point:251	
+    slice_point:252	
+    slice_point:253	
+    slice_point:254	
+    slice_point:255	
+    slice_point:256	
+    slice_point:257	
+    slice_point:258	
+    slice_point:259	
+    slice_point:260	
+    slice_point:261	
+    slice_point:262	
+    slice_point:263	
+    slice_point:264	
+    slice_point:265	
+    slice_point:266	
+    slice_point:267	
+    slice_point:268	
+    slice_point:269	
+    slice_point:270	
+    slice_point:271	
+    slice_point:272	
+    slice_point:273	
+    slice_point:274	
+    slice_point:275	
+    slice_point:276	
+    slice_point:277	
+    slice_point:278	
+    slice_point:279	
+    slice_point:280	
+    slice_point:281	
+    slice_point:282	
+    slice_point:283	
+    slice_point:284	
+    slice_point:285	
+    slice_point:286	
+    slice_point:287	
+    slice_point:288	
+    slice_point:289	
+    slice_point:290	
+    slice_point:291	
+    slice_point:292	
+    slice_point:293	
+    slice_point:294	
+    slice_point:295	
+    slice_point:296	
+    slice_point:297	
+    slice_point:298	
+    slice_point:299	
+    slice_point:300	
+    slice_point:301	
+    slice_point:302	
+    slice_point:303	
+    slice_point:304	
+    slice_point:305	
+    slice_point:306	
+    slice_point:307	
+    slice_point:308	
+    slice_point:309	
+    slice_point:310	
+    slice_point:311	
+    slice_point:312	
+    slice_point:313	
+    slice_point:314	
+    slice_point:315	
+    slice_point:316	
+    slice_point:317	
+    slice_point:318	
+    slice_point:319	
+    slice_point:320	
+    slice_point:321	
+    slice_point:322	
+    slice_point:323	
+    slice_point:324	
+    slice_point:325	
+    slice_point:326	
+    slice_point:327	
+    slice_point:328	
+    slice_point:329	
+    slice_point:330	
+    slice_point:331	
+    slice_point:332	
+    slice_point:333	
+    slice_point:334	
+    slice_point:335	
+    slice_point:336	
+    slice_point:337	
+    slice_point:338	
+    slice_point:339	
+    slice_point:340	
+    slice_point:341	
+    slice_point:342	
+    slice_point:343	
+    slice_point:344	
+    slice_point:345	
+    slice_point:346	
+    slice_point:347	
+    slice_point:348	
+    slice_point:349	
+    slice_point:350	
+    slice_point:351	
+    slice_point:352	
+    slice_point:353	
+    slice_point:354	
+    slice_point:355	
+    slice_point:356	
+    slice_point:357	
+    slice_point:358	
+    slice_point:359	
+    slice_point:360	
+    slice_point:361	
+    slice_point:362	
+    slice_point:363	
+    slice_point:364	
+    slice_point:365	
+    slice_point:366	
+    slice_point:367	
+    slice_point:368	
+    slice_point:369	
+    slice_point:370	
+    slice_point:371	
+    slice_point:372	
+    slice_point:373	
+    slice_point:374	
+    slice_point:375	
+    slice_point:376	
+    slice_point:377	
+    slice_point:378	
+    slice_point:379	
+    slice_point:380	
+    slice_point:381	
+    slice_point:382	
+    slice_point:383	
+    slice_point:384	
+    slice_point:385	
+    slice_point:386	
+    slice_point:387	
+    slice_point:388	
+    slice_point:389	
+    slice_point:390	
+    slice_point:391	
+    slice_point:392	
+    slice_point:393	
+    slice_point:394	
+    slice_point:395	
+    slice_point:396	
+    slice_point:397	
+    slice_point:398	
+    slice_point:399	
+    slice_point:400	
+    slice_point:401	
+    slice_point:402	
+    slice_point:403	
+    slice_point:404	
+    slice_point:405	
+    slice_point:406	
+    slice_point:407	
+    slice_point:408	
+    slice_point:409	
+    slice_point:410	
+    slice_point:411	
+    slice_point:412	
+    slice_point:413	
+    slice_point:414	
+    slice_point:415
+  }
+}
+layer {
+    bottom:"data_0"	
+    bottom:"data_2"	
+    bottom:"data_4"	
+    bottom:"data_6"	
+    bottom:"data_8"	
+    bottom:"data_10"	
+    bottom:"data_12"	
+    bottom:"data_14"	
+    bottom:"data_16"	
+    bottom:"data_18"	
+    bottom:"data_20"	
+    bottom:"data_22"	
+    bottom:"data_24"	
+    bottom:"data_26"	
+    bottom:"data_28"	
+    bottom:"data_30"	
+    bottom:"data_32"	
+    bottom:"data_34"	
+    bottom:"data_36"	
+    bottom:"data_38"	
+    bottom:"data_40"	
+    bottom:"data_42"	
+    bottom:"data_44"	
+    bottom:"data_46"	
+    bottom:"data_48"	
+    bottom:"data_50"	
+    bottom:"data_52"	
+    bottom:"data_54"	
+    bottom:"data_56"	
+    bottom:"data_58"	
+    bottom:"data_60"	
+    bottom:"data_62"	
+    bottom:"data_64"	
+    bottom:"data_66"	
+    bottom:"data_68"	
+    bottom:"data_70"	
+    bottom:"data_72"	
+    bottom:"data_74"	
+    bottom:"data_76"	
+    bottom:"data_78"	
+    bottom:"data_80"	
+    bottom:"data_82"	
+    bottom:"data_84"	
+    bottom:"data_86"	
+    bottom:"data_88"	
+    bottom:"data_90"	
+    bottom:"data_92"	
+    bottom:"data_94"	
+    bottom:"data_96"	
+    bottom:"data_98"	
+    bottom:"data_100"	
+    bottom:"data_102"	
+    bottom:"data_104"	
+    bottom:"data_106"	
+    bottom:"data_108"	
+    bottom:"data_110"	
+    bottom:"data_112"	
+    bottom:"data_114"	
+    bottom:"data_116"	
+    bottom:"data_118"	
+    bottom:"data_120"	
+    bottom:"data_122"	
+    bottom:"data_124"	
+    bottom:"data_126"	
+    bottom:"data_128"	
+    bottom:"data_130"	
+    bottom:"data_132"	
+    bottom:"data_134"	
+    bottom:"data_136"	
+    bottom:"data_138"	
+    bottom:"data_140"	
+    bottom:"data_142"	
+    bottom:"data_144"	
+    bottom:"data_146"	
+    bottom:"data_148"	
+    bottom:"data_150"	
+    bottom:"data_152"	
+    bottom:"data_154"	
+    bottom:"data_156"	
+    bottom:"data_158"	
+    bottom:"data_160"	
+    bottom:"data_162"	
+    bottom:"data_164"	
+    bottom:"data_166"	
+    bottom:"data_168"	
+    bottom:"data_170"	
+    bottom:"data_172"	
+    bottom:"data_174"	
+    bottom:"data_176"	
+    bottom:"data_178"	
+    bottom:"data_180"	
+    bottom:"data_182"	
+    bottom:"data_184"	
+    bottom:"data_186"	
+    bottom:"data_188"	
+    bottom:"data_190"	
+    bottom:"data_192"	
+    bottom:"data_194"	
+    bottom:"data_196"	
+    bottom:"data_198"	
+    bottom:"data_200"	
+    bottom:"data_202"	
+    bottom:"data_204"	
+    bottom:"data_206"	
+    bottom:"data_208"	
+    bottom:"data_210"	
+    bottom:"data_212"	
+    bottom:"data_214"	
+    bottom:"data_216"	
+    bottom:"data_218"	
+    bottom:"data_220"	
+    bottom:"data_222"	
+    bottom:"data_224"	
+    bottom:"data_226"	
+    bottom:"data_228"	
+    bottom:"data_230"	
+    bottom:"data_232"	
+    bottom:"data_234"	
+    bottom:"data_236"	
+    bottom:"data_238"	
+    bottom:"data_240"	
+    bottom:"data_242"	
+    bottom:"data_244"	
+    bottom:"data_246"	
+    bottom:"data_248"	
+    bottom:"data_250"	
+    bottom:"data_252"	
+    bottom:"data_254"	
+    bottom:"data_256"	
+    bottom:"data_258"	
+    bottom:"data_260"	
+    bottom:"data_262"	
+    bottom:"data_264"	
+    bottom:"data_266"	
+    bottom:"data_268"	
+    bottom:"data_270"	
+    bottom:"data_272"	
+    bottom:"data_274"	
+    bottom:"data_276"	
+    bottom:"data_278"	
+    bottom:"data_280"	
+    bottom:"data_282"	
+    bottom:"data_284"	
+    bottom:"data_286"	
+    bottom:"data_288"	
+    bottom:"data_290"	
+    bottom:"data_292"	
+    bottom:"data_294"	
+    bottom:"data_296"	
+    bottom:"data_298"	
+    bottom:"data_300"	
+    bottom:"data_302"	
+    bottom:"data_304"	
+    bottom:"data_306"	
+    bottom:"data_308"	
+    bottom:"data_310"	
+    bottom:"data_312"	
+    bottom:"data_314"	
+    bottom:"data_316"	
+    bottom:"data_318"	
+    bottom:"data_320"	
+    bottom:"data_322"	
+    bottom:"data_324"	
+    bottom:"data_326"	
+    bottom:"data_328"	
+    bottom:"data_330"	
+    bottom:"data_332"	
+    bottom:"data_334"	
+    bottom:"data_336"	
+    bottom:"data_338"	
+    bottom:"data_340"	
+    bottom:"data_342"	
+    bottom:"data_344"	
+    bottom:"data_346"	
+    bottom:"data_348"	
+    bottom:"data_350"	
+    bottom:"data_352"	
+    bottom:"data_354"	
+    bottom:"data_356"	
+    bottom:"data_358"	
+    bottom:"data_360"	
+    bottom:"data_362"	
+    bottom:"data_364"	
+    bottom:"data_366"	
+    bottom:"data_368"	
+    bottom:"data_370"	
+    bottom:"data_372"	
+    bottom:"data_374"	
+    bottom:"data_376"	
+    bottom:"data_378"	
+    bottom:"data_380"	
+    bottom:"data_382"	
+    bottom:"data_384"	
+    bottom:"data_386"	
+    bottom:"data_388"	
+    bottom:"data_390"	
+    bottom:"data_392"	
+    bottom:"data_394"	
+    bottom:"data_396"	
+    bottom:"data_398"	
+    bottom:"data_400"	
+    bottom:"data_402"	
+    bottom:"data_404"	
+    bottom:"data_406"	
+    bottom:"data_408"	
+    bottom:"data_410"	
+    bottom:"data_412"	
+    bottom:"data_414"    
+    top: "data_even"
+    name: "concat_even"
+    type: "Concat"
+  concat_param {
+    axis: 2
+  }
+}
+layer {
+    bottom:"data_1"	
+    bottom:"data_3"	
+    bottom:"data_5"	
+    bottom:"data_7"	
+    bottom:"data_9"	
+    bottom:"data_11"	
+    bottom:"data_13"	
+    bottom:"data_15"	
+    bottom:"data_17"	
+    bottom:"data_19"	
+    bottom:"data_21"	
+    bottom:"data_23"	
+    bottom:"data_25"	
+    bottom:"data_27"	
+    bottom:"data_29"	
+    bottom:"data_31"	
+    bottom:"data_33"	
+    bottom:"data_35"	
+    bottom:"data_37"	
+    bottom:"data_39"	
+    bottom:"data_41"	
+    bottom:"data_43"	
+    bottom:"data_45"	
+    bottom:"data_47"	
+    bottom:"data_49"	
+    bottom:"data_51"	
+    bottom:"data_53"	
+    bottom:"data_55"	
+    bottom:"data_57"	
+    bottom:"data_59"	
+    bottom:"data_61"	
+    bottom:"data_63"	
+    bottom:"data_65"	
+    bottom:"data_67"	
+    bottom:"data_69"	
+    bottom:"data_71"	
+    bottom:"data_73"	
+    bottom:"data_75"	
+    bottom:"data_77"	
+    bottom:"data_79"	
+    bottom:"data_81"	
+    bottom:"data_83"	
+    bottom:"data_85"	
+    bottom:"data_87"	
+    bottom:"data_89"	
+    bottom:"data_91"	
+    bottom:"data_93"	
+    bottom:"data_95"	
+    bottom:"data_97"	
+    bottom:"data_99"	
+    bottom:"data_101"	
+    bottom:"data_103"	
+    bottom:"data_105"	
+    bottom:"data_107"	
+    bottom:"data_109"	
+    bottom:"data_111"	
+    bottom:"data_113"	
+    bottom:"data_115"	
+    bottom:"data_117"	
+    bottom:"data_119"	
+    bottom:"data_121"	
+    bottom:"data_123"	
+    bottom:"data_125"	
+    bottom:"data_127"	
+    bottom:"data_129"	
+    bottom:"data_131"	
+    bottom:"data_133"	
+    bottom:"data_135"	
+    bottom:"data_137"	
+    bottom:"data_139"	
+    bottom:"data_141"	
+    bottom:"data_143"	
+    bottom:"data_145"	
+    bottom:"data_147"	
+    bottom:"data_149"	
+    bottom:"data_151"	
+    bottom:"data_153"	
+    bottom:"data_155"	
+    bottom:"data_157"	
+    bottom:"data_159"	
+    bottom:"data_161"	
+    bottom:"data_163"	
+    bottom:"data_165"	
+    bottom:"data_167"	
+    bottom:"data_169"	
+    bottom:"data_171"	
+    bottom:"data_173"	
+    bottom:"data_175"	
+    bottom:"data_177"	
+    bottom:"data_179"	
+    bottom:"data_181"	
+    bottom:"data_183"	
+    bottom:"data_185"	
+    bottom:"data_187"	
+    bottom:"data_189"	
+    bottom:"data_191"	
+    bottom:"data_193"	
+    bottom:"data_195"	
+    bottom:"data_197"	
+    bottom:"data_199"	
+    bottom:"data_201"	
+    bottom:"data_203"	
+    bottom:"data_205"	
+    bottom:"data_207"	
+    bottom:"data_209"	
+    bottom:"data_211"	
+    bottom:"data_213"	
+    bottom:"data_215"	
+    bottom:"data_217"	
+    bottom:"data_219"	
+    bottom:"data_221"	
+    bottom:"data_223"	
+    bottom:"data_225"	
+    bottom:"data_227"	
+    bottom:"data_229"	
+    bottom:"data_231"	
+    bottom:"data_233"	
+    bottom:"data_235"	
+    bottom:"data_237"	
+    bottom:"data_239"	
+    bottom:"data_241"	
+    bottom:"data_243"	
+    bottom:"data_245"	
+    bottom:"data_247"	
+    bottom:"data_249"	
+    bottom:"data_251"	
+    bottom:"data_253"	
+    bottom:"data_255"	
+    bottom:"data_257"	
+    bottom:"data_259"	
+    bottom:"data_261"	
+    bottom:"data_263"	
+    bottom:"data_265"	
+    bottom:"data_267"	
+    bottom:"data_269"	
+    bottom:"data_271"	
+    bottom:"data_273"	
+    bottom:"data_275"	
+    bottom:"data_277"	
+    bottom:"data_279"	
+    bottom:"data_281"	
+    bottom:"data_283"	
+    bottom:"data_285"	
+    bottom:"data_287"	
+    bottom:"data_289"	
+    bottom:"data_291"	
+    bottom:"data_293"	
+    bottom:"data_295"	
+    bottom:"data_297"	
+    bottom:"data_299"	
+    bottom:"data_301"	
+    bottom:"data_303"	
+    bottom:"data_305"	
+    bottom:"data_307"	
+    bottom:"data_309"	
+    bottom:"data_311"	
+    bottom:"data_313"	
+    bottom:"data_315"	
+    bottom:"data_317"	
+    bottom:"data_319"	
+    bottom:"data_321"	
+    bottom:"data_323"	
+    bottom:"data_325"	
+    bottom:"data_327"	
+    bottom:"data_329"	
+    bottom:"data_331"	
+    bottom:"data_333"	
+    bottom:"data_335"	
+    bottom:"data_337"	
+    bottom:"data_339"	
+    bottom:"data_341"	
+    bottom:"data_343"	
+    bottom:"data_345"	
+    bottom:"data_347"	
+    bottom:"data_349"	
+    bottom:"data_351"	
+    bottom:"data_353"	
+    bottom:"data_355"	
+    bottom:"data_357"	
+    bottom:"data_359"	
+    bottom:"data_361"	
+    bottom:"data_363"	
+    bottom:"data_365"	
+    bottom:"data_367"	
+    bottom:"data_369"	
+    bottom:"data_371"	
+    bottom:"data_373"	
+    bottom:"data_375"	
+    bottom:"data_377"	
+    bottom:"data_379"	
+    bottom:"data_381"	
+    bottom:"data_383"	
+    bottom:"data_385"	
+    bottom:"data_387"	
+    bottom:"data_389"	
+    bottom:"data_391"	
+    bottom:"data_393"	
+    bottom:"data_395"	
+    bottom:"data_397"	
+    bottom:"data_399"	
+    bottom:"data_401"	
+    bottom:"data_403"	
+    bottom:"data_405"	
+    bottom:"data_407"	
+    bottom:"data_409"	
+    bottom:"data_411"	
+    bottom:"data_413"	
+    bottom:"data_415"
+    top: "data_ods"
+    name: "concat_ods"
+    type: "Concat"
+  concat_param {
+    axis: 2
+  }
+}
+
+
+layer {
+  name:"data_even_slice"
+  type:"Slice"
+  bottom:"data_even"
+  top:"data_even_0"	
+  top:"data_even_1"	
+  top:"data_even_2"	
+  top:"data_even_3"	
+  top:"data_even_4"	
+  top:"data_even_5"	
+  top:"data_even_6"	
+  top:"data_even_7"	
+  top:"data_even_8"	
+  top:"data_even_9"	
+  top:"data_even_10"	
+  top:"data_even_11"	
+  top:"data_even_12"	
+  top:"data_even_13"	
+  top:"data_even_14"	
+  top:"data_even_15"	
+  top:"data_even_16"	
+  top:"data_even_17"	
+  top:"data_even_18"	
+  top:"data_even_19"	
+  top:"data_even_20"	
+  top:"data_even_21"	
+  top:"data_even_22"	
+  top:"data_even_23"	
+  top:"data_even_24"	
+  top:"data_even_25"	
+  top:"data_even_26"	
+  top:"data_even_27"	
+  top:"data_even_28"	
+  top:"data_even_29"	
+  top:"data_even_30"	
+  top:"data_even_31"	
+  top:"data_even_32"	
+  top:"data_even_33"	
+  top:"data_even_34"	
+  top:"data_even_35"	
+  top:"data_even_36"	
+  top:"data_even_37"	
+  top:"data_even_38"	
+  top:"data_even_39"	
+  top:"data_even_40"	
+  top:"data_even_41"	
+  top:"data_even_42"	
+  top:"data_even_43"	
+  top:"data_even_44"	
+  top:"data_even_45"	
+  top:"data_even_46"	
+  top:"data_even_47"	
+  top:"data_even_48"	
+  top:"data_even_49"	
+  top:"data_even_50"	
+  top:"data_even_51"	
+  top:"data_even_52"	
+  top:"data_even_53"	
+  top:"data_even_54"	
+  top:"data_even_55"	
+  top:"data_even_56"	
+  top:"data_even_57"	
+  top:"data_even_58"	
+  top:"data_even_59"	
+  top:"data_even_60"	
+  top:"data_even_61"	
+  top:"data_even_62"	
+  top:"data_even_63"	
+  top:"data_even_64"	
+  top:"data_even_65"	
+  top:"data_even_66"	
+  top:"data_even_67"	
+  top:"data_even_68"	
+  top:"data_even_69"	
+  top:"data_even_70"	
+  top:"data_even_71"	
+  top:"data_even_72"	
+  top:"data_even_73"	
+  top:"data_even_74"	
+  top:"data_even_75"	
+  top:"data_even_76"	
+  top:"data_even_77"	
+  top:"data_even_78"	
+  top:"data_even_79"	
+  top:"data_even_80"	
+  top:"data_even_81"	
+  top:"data_even_82"	
+  top:"data_even_83"	
+  top:"data_even_84"	
+  top:"data_even_85"	
+  top:"data_even_86"	
+  top:"data_even_87"	
+  top:"data_even_88"	
+  top:"data_even_89"	
+  top:"data_even_90"	
+  top:"data_even_91"	
+  top:"data_even_92"	
+  top:"data_even_93"	
+  top:"data_even_94"	
+  top:"data_even_95"	
+  top:"data_even_96"	
+  top:"data_even_97"	
+  top:"data_even_98"	
+  top:"data_even_99"	
+  top:"data_even_100"	
+  top:"data_even_101"	
+  top:"data_even_102"	
+  top:"data_even_103"	
+  top:"data_even_104"	
+  top:"data_even_105"	
+  top:"data_even_106"	
+  top:"data_even_107"	
+  top:"data_even_108"	
+  top:"data_even_109"	
+  top:"data_even_110"	
+  top:"data_even_111"	
+  top:"data_even_112"	
+  top:"data_even_113"	
+  top:"data_even_114"	
+  top:"data_even_115"	
+  top:"data_even_116"	
+  top:"data_even_117"	
+  top:"data_even_118"	
+  top:"data_even_119"	
+  top:"data_even_120"	
+  top:"data_even_121"	
+  top:"data_even_122"	
+  top:"data_even_123"	
+  top:"data_even_124"	
+  top:"data_even_125"	
+  top:"data_even_126"	
+  top:"data_even_127"	
+  top:"data_even_128"	
+  top:"data_even_129"	
+  top:"data_even_130"	
+  top:"data_even_131"	
+  top:"data_even_132"	
+  top:"data_even_133"	
+  top:"data_even_134"	
+  top:"data_even_135"	
+  top:"data_even_136"	
+  top:"data_even_137"	
+  top:"data_even_138"	
+  top:"data_even_139"	
+  top:"data_even_140"	
+  top:"data_even_141"	
+  top:"data_even_142"	
+  top:"data_even_143"	
+  top:"data_even_144"	
+  top:"data_even_145"	
+  top:"data_even_146"	
+  top:"data_even_147"	
+  top:"data_even_148"	
+  top:"data_even_149"	
+  top:"data_even_150"	
+  top:"data_even_151"	
+  top:"data_even_152"	
+  top:"data_even_153"	
+  top:"data_even_154"	
+  top:"data_even_155"	
+  top:"data_even_156"	
+  top:"data_even_157"	
+  top:"data_even_158"	
+  top:"data_even_159"	
+  top:"data_even_160"	
+  top:"data_even_161"	
+  top:"data_even_162"	
+  top:"data_even_163"	
+  top:"data_even_164"	
+  top:"data_even_165"	
+  top:"data_even_166"	
+  top:"data_even_167"	
+  top:"data_even_168"	
+  top:"data_even_169"	
+  top:"data_even_170"	
+  top:"data_even_171"	
+  top:"data_even_172"	
+  top:"data_even_173"	
+  top:"data_even_174"	
+  top:"data_even_175"	
+  top:"data_even_176"	
+  top:"data_even_177"	
+  top:"data_even_178"	
+  top:"data_even_179"	
+  top:"data_even_180"	
+  top:"data_even_181"	
+  top:"data_even_182"	
+  top:"data_even_183"	
+  top:"data_even_184"	
+  top:"data_even_185"	
+  top:"data_even_186"	
+  top:"data_even_187"	
+  top:"data_even_188"	
+  top:"data_even_189"	
+  top:"data_even_190"	
+  top:"data_even_191"	
+  top:"data_even_192"	
+  top:"data_even_193"	
+  top:"data_even_194"	
+  top:"data_even_195"	
+  top:"data_even_196"	
+  top:"data_even_197"	
+  top:"data_even_198"	
+  top:"data_even_199"	
+  top:"data_even_200"	
+  top:"data_even_201"	
+  top:"data_even_202"	
+  top:"data_even_203"	
+  top:"data_even_204"	
+  top:"data_even_205"	
+  top:"data_even_206"	
+  top:"data_even_207"	
+  top:"data_even_208"	
+  top:"data_even_209"	
+  top:"data_even_210"	
+  top:"data_even_211"	
+  top:"data_even_212"	
+  top:"data_even_213"	
+  top:"data_even_214"	
+  top:"data_even_215"	
+  top:"data_even_216"	
+  top:"data_even_217"	
+  top:"data_even_218"	
+  top:"data_even_219"	
+  top:"data_even_220"	
+  top:"data_even_221"	
+  top:"data_even_222"	
+  top:"data_even_223"	
+  top:"data_even_224"	
+  top:"data_even_225"	
+  top:"data_even_226"	
+  top:"data_even_227"	
+  top:"data_even_228"	
+  top:"data_even_229"	
+  top:"data_even_230"	
+  top:"data_even_231"	
+  top:"data_even_232"	
+  top:"data_even_233"	
+  top:"data_even_234"	
+  top:"data_even_235"	
+  top:"data_even_236"	
+  top:"data_even_237"	
+  top:"data_even_238"	
+  top:"data_even_239"	
+  top:"data_even_240"	
+  top:"data_even_241"	
+  top:"data_even_242"	
+  top:"data_even_243"	
+  top:"data_even_244"	
+  top:"data_even_245"	
+  top:"data_even_246"	
+  top:"data_even_247"	
+  top:"data_even_248"	
+  top:"data_even_249"	
+  top:"data_even_250"	
+  top:"data_even_251"	
+  top:"data_even_252"	
+  top:"data_even_253"	
+  top:"data_even_254"	
+  top:"data_even_255"	
+  top:"data_even_256"	
+  top:"data_even_257"	
+  top:"data_even_258"	
+  top:"data_even_259"	
+  top:"data_even_260"	
+  top:"data_even_261"	
+  top:"data_even_262"	
+  top:"data_even_263"	
+  top:"data_even_264"	
+  top:"data_even_265"	
+  top:"data_even_266"	
+  top:"data_even_267"	
+  top:"data_even_268"	
+  top:"data_even_269"	
+  top:"data_even_270"	
+  top:"data_even_271"	
+  top:"data_even_272"	
+  top:"data_even_273"	
+  top:"data_even_274"	
+  top:"data_even_275"	
+  top:"data_even_276"	
+  top:"data_even_277"	
+  top:"data_even_278"	
+  top:"data_even_279"	
+  top:"data_even_280"	
+  top:"data_even_281"	
+  top:"data_even_282"	
+  top:"data_even_283"	
+  top:"data_even_284"	
+  top:"data_even_285"	
+  top:"data_even_286"	
+  top:"data_even_287"	
+  top:"data_even_288"	
+  top:"data_even_289"	
+  top:"data_even_290"	
+  top:"data_even_291"	
+  top:"data_even_292"	
+  top:"data_even_293"	
+  top:"data_even_294"	
+  top:"data_even_295"	
+  top:"data_even_296"	
+  top:"data_even_297"	
+  top:"data_even_298"	
+  top:"data_even_299"	
+  top:"data_even_300"	
+  top:"data_even_301"	
+  top:"data_even_302"	
+  top:"data_even_303"	
+  top:"data_even_304"	
+  top:"data_even_305"	
+  top:"data_even_306"	
+  top:"data_even_307"	
+  top:"data_even_308"	
+  top:"data_even_309"	
+  top:"data_even_310"	
+  top:"data_even_311"	
+  top:"data_even_312"	
+  top:"data_even_313"	
+  top:"data_even_314"	
+  top:"data_even_315"	
+  top:"data_even_316"	
+  top:"data_even_317"	
+  top:"data_even_318"	
+  top:"data_even_319"	
+  top:"data_even_320"	
+  top:"data_even_321"	
+  top:"data_even_322"	
+  top:"data_even_323"	
+  top:"data_even_324"	
+  top:"data_even_325"	
+  top:"data_even_326"	
+  top:"data_even_327"	
+  top:"data_even_328"	
+  top:"data_even_329"	
+  top:"data_even_330"	
+  top:"data_even_331"	
+  top:"data_even_332"	
+  top:"data_even_333"	
+  top:"data_even_334"	
+  top:"data_even_335"	
+  top:"data_even_336"	
+  top:"data_even_337"	
+  top:"data_even_338"	
+  top:"data_even_339"	
+  top:"data_even_340"	
+  top:"data_even_341"	
+  top:"data_even_342"	
+  top:"data_even_343"	
+  top:"data_even_344"	
+  top:"data_even_345"	
+  top:"data_even_346"	
+  top:"data_even_347"	
+  top:"data_even_348"	
+  top:"data_even_349"	
+  top:"data_even_350"	
+  top:"data_even_351"	
+  top:"data_even_352"	
+  top:"data_even_353"	
+  top:"data_even_354"	
+  top:"data_even_355"	
+  top:"data_even_356"	
+  top:"data_even_357"	
+  top:"data_even_358"	
+  top:"data_even_359"	
+  top:"data_even_360"	
+  top:"data_even_361"	
+  top:"data_even_362"	
+  top:"data_even_363"	
+  top:"data_even_364"	
+  top:"data_even_365"	
+  top:"data_even_366"	
+  top:"data_even_367"	
+  top:"data_even_368"	
+  top:"data_even_369"	
+  top:"data_even_370"	
+  top:"data_even_371"	
+  top:"data_even_372"	
+  top:"data_even_373"	
+  top:"data_even_374"	
+  top:"data_even_375"	
+  top:"data_even_376"	
+  top:"data_even_377"	
+  top:"data_even_378"	
+  top:"data_even_379"	
+  top:"data_even_380"	
+  top:"data_even_381"	
+  top:"data_even_382"	
+  top:"data_even_383"	
+  top:"data_even_384"	
+  top:"data_even_385"	
+  top:"data_even_386"	
+  top:"data_even_387"	
+  top:"data_even_388"	
+  top:"data_even_389"	
+  top:"data_even_390"	
+  top:"data_even_391"	
+  top:"data_even_392"	
+  top:"data_even_393"	
+  top:"data_even_394"	
+  top:"data_even_395"	
+  top:"data_even_396"	
+  top:"data_even_397"	
+  top:"data_even_398"	
+  top:"data_even_399"	
+  top:"data_even_400"	
+  top:"data_even_401"	
+  top:"data_even_402"	
+  top:"data_even_403"	
+  top:"data_even_404"	
+  top:"data_even_405"	
+  top:"data_even_406"	
+  top:"data_even_407"	
+  top:"data_even_408"	
+  top:"data_even_409"	
+  top:"data_even_410"	
+  top:"data_even_411"	
+  top:"data_even_412"	
+  top:"data_even_413"	
+  top:"data_even_414"	
+  top:"data_even_415"		
+
+  slice_param {
+    axis:3
+    slice_point:1	
+    slice_point:2	
+    slice_point:3	
+    slice_point:4	
+    slice_point:5	
+    slice_point:6	
+    slice_point:7	
+    slice_point:8	
+    slice_point:9	
+    slice_point:10	
+    slice_point:11	
+    slice_point:12	
+    slice_point:13	
+    slice_point:14	
+    slice_point:15	
+    slice_point:16	
+    slice_point:17	
+    slice_point:18	
+    slice_point:19	
+    slice_point:20	
+    slice_point:21	
+    slice_point:22	
+    slice_point:23	
+    slice_point:24	
+    slice_point:25	
+    slice_point:26	
+    slice_point:27	
+    slice_point:28	
+    slice_point:29	
+    slice_point:30	
+    slice_point:31	
+    slice_point:32	
+    slice_point:33	
+    slice_point:34	
+    slice_point:35	
+    slice_point:36	
+    slice_point:37	
+    slice_point:38	
+    slice_point:39	
+    slice_point:40	
+    slice_point:41	
+    slice_point:42	
+    slice_point:43	
+    slice_point:44	
+    slice_point:45	
+    slice_point:46	
+    slice_point:47	
+    slice_point:48	
+    slice_point:49	
+    slice_point:50	
+    slice_point:51	
+    slice_point:52	
+    slice_point:53	
+    slice_point:54	
+    slice_point:55	
+    slice_point:56	
+    slice_point:57	
+    slice_point:58	
+    slice_point:59	
+    slice_point:60	
+    slice_point:61	
+    slice_point:62	
+    slice_point:63	
+    slice_point:64	
+    slice_point:65	
+    slice_point:66	
+    slice_point:67	
+    slice_point:68	
+    slice_point:69	
+    slice_point:70	
+    slice_point:71	
+    slice_point:72	
+    slice_point:73	
+    slice_point:74	
+    slice_point:75	
+    slice_point:76	
+    slice_point:77	
+    slice_point:78	
+    slice_point:79	
+    slice_point:80	
+    slice_point:81	
+    slice_point:82	
+    slice_point:83	
+    slice_point:84	
+    slice_point:85	
+    slice_point:86	
+    slice_point:87	
+    slice_point:88	
+    slice_point:89	
+    slice_point:90	
+    slice_point:91	
+    slice_point:92	
+    slice_point:93	
+    slice_point:94	
+    slice_point:95	
+    slice_point:96	
+    slice_point:97	
+    slice_point:98	
+    slice_point:99	
+    slice_point:100	
+    slice_point:101	
+    slice_point:102	
+    slice_point:103	
+    slice_point:104	
+    slice_point:105	
+    slice_point:106	
+    slice_point:107	
+    slice_point:108	
+    slice_point:109	
+    slice_point:110	
+    slice_point:111	
+    slice_point:112	
+    slice_point:113	
+    slice_point:114	
+    slice_point:115	
+    slice_point:116	
+    slice_point:117	
+    slice_point:118	
+    slice_point:119	
+    slice_point:120	
+    slice_point:121	
+    slice_point:122	
+    slice_point:123	
+    slice_point:124	
+    slice_point:125	
+    slice_point:126	
+    slice_point:127	
+    slice_point:128	
+    slice_point:129	
+    slice_point:130	
+    slice_point:131	
+    slice_point:132	
+    slice_point:133	
+    slice_point:134	
+    slice_point:135	
+    slice_point:136	
+    slice_point:137	
+    slice_point:138	
+    slice_point:139	
+    slice_point:140	
+    slice_point:141	
+    slice_point:142	
+    slice_point:143	
+    slice_point:144	
+    slice_point:145	
+    slice_point:146	
+    slice_point:147	
+    slice_point:148	
+    slice_point:149	
+    slice_point:150	
+    slice_point:151	
+    slice_point:152	
+    slice_point:153	
+    slice_point:154	
+    slice_point:155	
+    slice_point:156	
+    slice_point:157	
+    slice_point:158	
+    slice_point:159	
+    slice_point:160	
+    slice_point:161	
+    slice_point:162	
+    slice_point:163	
+    slice_point:164	
+    slice_point:165	
+    slice_point:166	
+    slice_point:167	
+    slice_point:168	
+    slice_point:169	
+    slice_point:170	
+    slice_point:171	
+    slice_point:172	
+    slice_point:173	
+    slice_point:174	
+    slice_point:175	
+    slice_point:176	
+    slice_point:177	
+    slice_point:178	
+    slice_point:179	
+    slice_point:180	
+    slice_point:181	
+    slice_point:182	
+    slice_point:183	
+    slice_point:184	
+    slice_point:185	
+    slice_point:186	
+    slice_point:187	
+    slice_point:188	
+    slice_point:189	
+    slice_point:190	
+    slice_point:191	
+    slice_point:192	
+    slice_point:193	
+    slice_point:194	
+    slice_point:195	
+    slice_point:196	
+    slice_point:197	
+    slice_point:198	
+    slice_point:199	
+    slice_point:200	
+    slice_point:201	
+    slice_point:202	
+    slice_point:203	
+    slice_point:204	
+    slice_point:205	
+    slice_point:206	
+    slice_point:207	
+    slice_point:208	
+    slice_point:209	
+    slice_point:210	
+    slice_point:211	
+    slice_point:212	
+    slice_point:213	
+    slice_point:214	
+    slice_point:215	
+    slice_point:216	
+    slice_point:217	
+    slice_point:218	
+    slice_point:219	
+    slice_point:220	
+    slice_point:221	
+    slice_point:222	
+    slice_point:223	
+    slice_point:224	
+    slice_point:225	
+    slice_point:226	
+    slice_point:227	
+    slice_point:228	
+    slice_point:229	
+    slice_point:230	
+    slice_point:231	
+    slice_point:232	
+    slice_point:233	
+    slice_point:234	
+    slice_point:235	
+    slice_point:236	
+    slice_point:237	
+    slice_point:238	
+    slice_point:239	
+    slice_point:240	
+    slice_point:241	
+    slice_point:242	
+    slice_point:243	
+    slice_point:244	
+    slice_point:245	
+    slice_point:246	
+    slice_point:247	
+    slice_point:248	
+    slice_point:249	
+    slice_point:250	
+    slice_point:251	
+    slice_point:252	
+    slice_point:253	
+    slice_point:254	
+    slice_point:255	
+    slice_point:256	
+    slice_point:257	
+    slice_point:258	
+    slice_point:259	
+    slice_point:260	
+    slice_point:261	
+    slice_point:262	
+    slice_point:263	
+    slice_point:264	
+    slice_point:265	
+    slice_point:266	
+    slice_point:267	
+    slice_point:268	
+    slice_point:269	
+    slice_point:270	
+    slice_point:271	
+    slice_point:272	
+    slice_point:273	
+    slice_point:274	
+    slice_point:275	
+    slice_point:276	
+    slice_point:277	
+    slice_point:278	
+    slice_point:279	
+    slice_point:280	
+    slice_point:281	
+    slice_point:282	
+    slice_point:283	
+    slice_point:284	
+    slice_point:285	
+    slice_point:286	
+    slice_point:287	
+    slice_point:288	
+    slice_point:289	
+    slice_point:290	
+    slice_point:291	
+    slice_point:292	
+    slice_point:293	
+    slice_point:294	
+    slice_point:295	
+    slice_point:296	
+    slice_point:297	
+    slice_point:298	
+    slice_point:299	
+    slice_point:300	
+    slice_point:301	
+    slice_point:302	
+    slice_point:303	
+    slice_point:304	
+    slice_point:305	
+    slice_point:306	
+    slice_point:307	
+    slice_point:308	
+    slice_point:309	
+    slice_point:310	
+    slice_point:311	
+    slice_point:312	
+    slice_point:313	
+    slice_point:314	
+    slice_point:315	
+    slice_point:316	
+    slice_point:317	
+    slice_point:318	
+    slice_point:319	
+    slice_point:320	
+    slice_point:321	
+    slice_point:322	
+    slice_point:323	
+    slice_point:324	
+    slice_point:325	
+    slice_point:326	
+    slice_point:327	
+    slice_point:328	
+    slice_point:329	
+    slice_point:330	
+    slice_point:331	
+    slice_point:332	
+    slice_point:333	
+    slice_point:334	
+    slice_point:335	
+    slice_point:336	
+    slice_point:337	
+    slice_point:338	
+    slice_point:339	
+    slice_point:340	
+    slice_point:341	
+    slice_point:342	
+    slice_point:343	
+    slice_point:344	
+    slice_point:345	
+    slice_point:346	
+    slice_point:347	
+    slice_point:348	
+    slice_point:349	
+    slice_point:350	
+    slice_point:351	
+    slice_point:352	
+    slice_point:353	
+    slice_point:354	
+    slice_point:355	
+    slice_point:356	
+    slice_point:357	
+    slice_point:358	
+    slice_point:359	
+    slice_point:360	
+    slice_point:361	
+    slice_point:362	
+    slice_point:363	
+    slice_point:364	
+    slice_point:365	
+    slice_point:366	
+    slice_point:367	
+    slice_point:368	
+    slice_point:369	
+    slice_point:370	
+    slice_point:371	
+    slice_point:372	
+    slice_point:373	
+    slice_point:374	
+    slice_point:375	
+    slice_point:376	
+    slice_point:377	
+    slice_point:378	
+    slice_point:379	
+    slice_point:380	
+    slice_point:381	
+    slice_point:382	
+    slice_point:383	
+    slice_point:384	
+    slice_point:385	
+    slice_point:386	
+    slice_point:387	
+    slice_point:388	
+    slice_point:389	
+    slice_point:390	
+    slice_point:391	
+    slice_point:392	
+    slice_point:393	
+    slice_point:394	
+    slice_point:395	
+    slice_point:396	
+    slice_point:397	
+    slice_point:398	
+    slice_point:399	
+    slice_point:400	
+    slice_point:401	
+    slice_point:402	
+    slice_point:403	
+    slice_point:404	
+    slice_point:405	
+    slice_point:406	
+    slice_point:407	
+    slice_point:408	
+    slice_point:409	
+    slice_point:410	
+    slice_point:411	
+    slice_point:412	
+    slice_point:413	
+    slice_point:414	
+    slice_point:415
+  }
+}
+layer {
+    bottom:"data_even_0"	
+    bottom:"data_even_2"	
+    bottom:"data_even_4"	
+    bottom:"data_even_6"	
+    bottom:"data_even_8"	
+    bottom:"data_even_10"	
+    bottom:"data_even_12"	
+    bottom:"data_even_14"	
+    bottom:"data_even_16"	
+    bottom:"data_even_18"	
+    bottom:"data_even_20"	
+    bottom:"data_even_22"	
+    bottom:"data_even_24"	
+    bottom:"data_even_26"	
+    bottom:"data_even_28"	
+    bottom:"data_even_30"	
+    bottom:"data_even_32"	
+    bottom:"data_even_34"	
+    bottom:"data_even_36"	
+    bottom:"data_even_38"	
+    bottom:"data_even_40"	
+    bottom:"data_even_42"	
+    bottom:"data_even_44"	
+    bottom:"data_even_46"	
+    bottom:"data_even_48"	
+    bottom:"data_even_50"	
+    bottom:"data_even_52"	
+    bottom:"data_even_54"	
+    bottom:"data_even_56"	
+    bottom:"data_even_58"	
+    bottom:"data_even_60"	
+    bottom:"data_even_62"	
+    bottom:"data_even_64"	
+    bottom:"data_even_66"	
+    bottom:"data_even_68"	
+    bottom:"data_even_70"	
+    bottom:"data_even_72"	
+    bottom:"data_even_74"	
+    bottom:"data_even_76"	
+    bottom:"data_even_78"	
+    bottom:"data_even_80"	
+    bottom:"data_even_82"	
+    bottom:"data_even_84"	
+    bottom:"data_even_86"	
+    bottom:"data_even_88"	
+    bottom:"data_even_90"	
+    bottom:"data_even_92"	
+    bottom:"data_even_94"	
+    bottom:"data_even_96"	
+    bottom:"data_even_98"	
+    bottom:"data_even_100"	
+    bottom:"data_even_102"	
+    bottom:"data_even_104"	
+    bottom:"data_even_106"	
+    bottom:"data_even_108"	
+    bottom:"data_even_110"	
+    bottom:"data_even_112"	
+    bottom:"data_even_114"	
+    bottom:"data_even_116"	
+    bottom:"data_even_118"	
+    bottom:"data_even_120"	
+    bottom:"data_even_122"	
+    bottom:"data_even_124"	
+    bottom:"data_even_126"	
+    bottom:"data_even_128"	
+    bottom:"data_even_130"	
+    bottom:"data_even_132"	
+    bottom:"data_even_134"	
+    bottom:"data_even_136"	
+    bottom:"data_even_138"	
+    bottom:"data_even_140"	
+    bottom:"data_even_142"	
+    bottom:"data_even_144"	
+    bottom:"data_even_146"	
+    bottom:"data_even_148"	
+    bottom:"data_even_150"	
+    bottom:"data_even_152"	
+    bottom:"data_even_154"	
+    bottom:"data_even_156"	
+    bottom:"data_even_158"	
+    bottom:"data_even_160"	
+    bottom:"data_even_162"	
+    bottom:"data_even_164"	
+    bottom:"data_even_166"	
+    bottom:"data_even_168"	
+    bottom:"data_even_170"	
+    bottom:"data_even_172"	
+    bottom:"data_even_174"	
+    bottom:"data_even_176"	
+    bottom:"data_even_178"	
+    bottom:"data_even_180"	
+    bottom:"data_even_182"	
+    bottom:"data_even_184"	
+    bottom:"data_even_186"	
+    bottom:"data_even_188"	
+    bottom:"data_even_190"	
+    bottom:"data_even_192"	
+    bottom:"data_even_194"	
+    bottom:"data_even_196"	
+    bottom:"data_even_198"	
+    bottom:"data_even_200"	
+    bottom:"data_even_202"	
+    bottom:"data_even_204"	
+    bottom:"data_even_206"	
+    bottom:"data_even_208"	
+    bottom:"data_even_210"	
+    bottom:"data_even_212"	
+    bottom:"data_even_214"	
+    bottom:"data_even_216"	
+    bottom:"data_even_218"	
+    bottom:"data_even_220"	
+    bottom:"data_even_222"	
+    bottom:"data_even_224"	
+    bottom:"data_even_226"	
+    bottom:"data_even_228"	
+    bottom:"data_even_230"	
+    bottom:"data_even_232"	
+    bottom:"data_even_234"	
+    bottom:"data_even_236"	
+    bottom:"data_even_238"	
+    bottom:"data_even_240"	
+    bottom:"data_even_242"	
+    bottom:"data_even_244"	
+    bottom:"data_even_246"	
+    bottom:"data_even_248"	
+    bottom:"data_even_250"	
+    bottom:"data_even_252"	
+    bottom:"data_even_254"	
+    bottom:"data_even_256"	
+    bottom:"data_even_258"	
+    bottom:"data_even_260"	
+    bottom:"data_even_262"	
+    bottom:"data_even_264"	
+    bottom:"data_even_266"	
+    bottom:"data_even_268"	
+    bottom:"data_even_270"	
+    bottom:"data_even_272"	
+    bottom:"data_even_274"	
+    bottom:"data_even_276"	
+    bottom:"data_even_278"	
+    bottom:"data_even_280"	
+    bottom:"data_even_282"	
+    bottom:"data_even_284"	
+    bottom:"data_even_286"	
+    bottom:"data_even_288"	
+    bottom:"data_even_290"	
+    bottom:"data_even_292"	
+    bottom:"data_even_294"	
+    bottom:"data_even_296"	
+    bottom:"data_even_298"	
+    bottom:"data_even_300"	
+    bottom:"data_even_302"	
+    bottom:"data_even_304"	
+    bottom:"data_even_306"	
+    bottom:"data_even_308"	
+    bottom:"data_even_310"	
+    bottom:"data_even_312"	
+    bottom:"data_even_314"	
+    bottom:"data_even_316"	
+    bottom:"data_even_318"	
+    bottom:"data_even_320"	
+    bottom:"data_even_322"	
+    bottom:"data_even_324"	
+    bottom:"data_even_326"	
+    bottom:"data_even_328"	
+    bottom:"data_even_330"	
+    bottom:"data_even_332"	
+    bottom:"data_even_334"	
+    bottom:"data_even_336"	
+    bottom:"data_even_338"	
+    bottom:"data_even_340"	
+    bottom:"data_even_342"	
+    bottom:"data_even_344"	
+    bottom:"data_even_346"	
+    bottom:"data_even_348"	
+    bottom:"data_even_350"	
+    bottom:"data_even_352"	
+    bottom:"data_even_354"	
+    bottom:"data_even_356"	
+    bottom:"data_even_358"	
+    bottom:"data_even_360"	
+    bottom:"data_even_362"	
+    bottom:"data_even_364"	
+    bottom:"data_even_366"	
+    bottom:"data_even_368"	
+    bottom:"data_even_370"	
+    bottom:"data_even_372"	
+    bottom:"data_even_374"	
+    bottom:"data_even_376"	
+    bottom:"data_even_378"	
+    bottom:"data_even_380"	
+    bottom:"data_even_382"	
+    bottom:"data_even_384"	
+    bottom:"data_even_386"	
+    bottom:"data_even_388"	
+    bottom:"data_even_390"	
+    bottom:"data_even_392"	
+    bottom:"data_even_394"	
+    bottom:"data_even_396"	
+    bottom:"data_even_398"	
+    bottom:"data_even_400"	
+    bottom:"data_even_402"	
+    bottom:"data_even_404"	
+    bottom:"data_even_406"	
+    bottom:"data_even_408"	
+    bottom:"data_even_410"	
+    bottom:"data_even_412"	
+    bottom:"data_even_414"	
+    top: "data_even_even"
+    name: "concat_even_even"
+    type: "Concat"
+  concat_param {
+    axis: 3
+  }
+}
+layer {
+    bottom:"data_even_1"	
+    bottom:"data_even_3"	
+    bottom:"data_even_5"	
+    bottom:"data_even_7"	
+    bottom:"data_even_9"	
+    bottom:"data_even_11"	
+    bottom:"data_even_13"	
+    bottom:"data_even_15"	
+    bottom:"data_even_17"	
+    bottom:"data_even_19"	
+    bottom:"data_even_21"	
+    bottom:"data_even_23"	
+    bottom:"data_even_25"	
+    bottom:"data_even_27"	
+    bottom:"data_even_29"	
+    bottom:"data_even_31"	
+    bottom:"data_even_33"	
+    bottom:"data_even_35"	
+    bottom:"data_even_37"	
+    bottom:"data_even_39"	
+    bottom:"data_even_41"	
+    bottom:"data_even_43"	
+    bottom:"data_even_45"	
+    bottom:"data_even_47"	
+    bottom:"data_even_49"	
+    bottom:"data_even_51"	
+    bottom:"data_even_53"	
+    bottom:"data_even_55"	
+    bottom:"data_even_57"	
+    bottom:"data_even_59"	
+    bottom:"data_even_61"	
+    bottom:"data_even_63"	
+    bottom:"data_even_65"	
+    bottom:"data_even_67"	
+    bottom:"data_even_69"	
+    bottom:"data_even_71"	
+    bottom:"data_even_73"	
+    bottom:"data_even_75"	
+    bottom:"data_even_77"	
+    bottom:"data_even_79"	
+    bottom:"data_even_81"	
+    bottom:"data_even_83"	
+    bottom:"data_even_85"	
+    bottom:"data_even_87"	
+    bottom:"data_even_89"	
+    bottom:"data_even_91"	
+    bottom:"data_even_93"	
+    bottom:"data_even_95"	
+    bottom:"data_even_97"	
+    bottom:"data_even_99"	
+    bottom:"data_even_101"	
+    bottom:"data_even_103"	
+    bottom:"data_even_105"	
+    bottom:"data_even_107"	
+    bottom:"data_even_109"	
+    bottom:"data_even_111"	
+    bottom:"data_even_113"	
+    bottom:"data_even_115"	
+    bottom:"data_even_117"	
+    bottom:"data_even_119"	
+    bottom:"data_even_121"	
+    bottom:"data_even_123"	
+    bottom:"data_even_125"	
+    bottom:"data_even_127"	
+    bottom:"data_even_129"	
+    bottom:"data_even_131"	
+    bottom:"data_even_133"	
+    bottom:"data_even_135"	
+    bottom:"data_even_137"	
+    bottom:"data_even_139"	
+    bottom:"data_even_141"	
+    bottom:"data_even_143"	
+    bottom:"data_even_145"	
+    bottom:"data_even_147"	
+    bottom:"data_even_149"	
+    bottom:"data_even_151"	
+    bottom:"data_even_153"	
+    bottom:"data_even_155"	
+    bottom:"data_even_157"	
+    bottom:"data_even_159"	
+    bottom:"data_even_161"	
+    bottom:"data_even_163"	
+    bottom:"data_even_165"	
+    bottom:"data_even_167"	
+    bottom:"data_even_169"	
+    bottom:"data_even_171"	
+    bottom:"data_even_173"	
+    bottom:"data_even_175"	
+    bottom:"data_even_177"	
+    bottom:"data_even_179"	
+    bottom:"data_even_181"	
+    bottom:"data_even_183"	
+    bottom:"data_even_185"	
+    bottom:"data_even_187"	
+    bottom:"data_even_189"	
+    bottom:"data_even_191"	
+    bottom:"data_even_193"	
+    bottom:"data_even_195"	
+    bottom:"data_even_197"	
+    bottom:"data_even_199"	
+    bottom:"data_even_201"	
+    bottom:"data_even_203"	
+    bottom:"data_even_205"	
+    bottom:"data_even_207"	
+    bottom:"data_even_209"	
+    bottom:"data_even_211"	
+    bottom:"data_even_213"	
+    bottom:"data_even_215"	
+    bottom:"data_even_217"	
+    bottom:"data_even_219"	
+    bottom:"data_even_221"	
+    bottom:"data_even_223"	
+    bottom:"data_even_225"	
+    bottom:"data_even_227"	
+    bottom:"data_even_229"	
+    bottom:"data_even_231"	
+    bottom:"data_even_233"	
+    bottom:"data_even_235"	
+    bottom:"data_even_237"	
+    bottom:"data_even_239"	
+    bottom:"data_even_241"	
+    bottom:"data_even_243"	
+    bottom:"data_even_245"	
+    bottom:"data_even_247"	
+    bottom:"data_even_249"	
+    bottom:"data_even_251"	
+    bottom:"data_even_253"	
+    bottom:"data_even_255"	
+    bottom:"data_even_257"	
+    bottom:"data_even_259"	
+    bottom:"data_even_261"	
+    bottom:"data_even_263"	
+    bottom:"data_even_265"	
+    bottom:"data_even_267"	
+    bottom:"data_even_269"	
+    bottom:"data_even_271"	
+    bottom:"data_even_273"	
+    bottom:"data_even_275"	
+    bottom:"data_even_277"	
+    bottom:"data_even_279"	
+    bottom:"data_even_281"	
+    bottom:"data_even_283"	
+    bottom:"data_even_285"	
+    bottom:"data_even_287"	
+    bottom:"data_even_289"	
+    bottom:"data_even_291"	
+    bottom:"data_even_293"	
+    bottom:"data_even_295"	
+    bottom:"data_even_297"	
+    bottom:"data_even_299"	
+    bottom:"data_even_301"	
+    bottom:"data_even_303"	
+    bottom:"data_even_305"	
+    bottom:"data_even_307"	
+    bottom:"data_even_309"	
+    bottom:"data_even_311"	
+    bottom:"data_even_313"	
+    bottom:"data_even_315"	
+    bottom:"data_even_317"	
+    bottom:"data_even_319"	
+    bottom:"data_even_321"	
+    bottom:"data_even_323"	
+    bottom:"data_even_325"	
+    bottom:"data_even_327"	
+    bottom:"data_even_329"	
+    bottom:"data_even_331"	
+    bottom:"data_even_333"	
+    bottom:"data_even_335"	
+    bottom:"data_even_337"	
+    bottom:"data_even_339"	
+    bottom:"data_even_341"	
+    bottom:"data_even_343"	
+    bottom:"data_even_345"	
+    bottom:"data_even_347"	
+    bottom:"data_even_349"	
+    bottom:"data_even_351"	
+    bottom:"data_even_353"	
+    bottom:"data_even_355"	
+    bottom:"data_even_357"	
+    bottom:"data_even_359"	
+    bottom:"data_even_361"	
+    bottom:"data_even_363"	
+    bottom:"data_even_365"	
+    bottom:"data_even_367"	
+    bottom:"data_even_369"	
+    bottom:"data_even_371"	
+    bottom:"data_even_373"	
+    bottom:"data_even_375"	
+    bottom:"data_even_377"	
+    bottom:"data_even_379"	
+    bottom:"data_even_381"	
+    bottom:"data_even_383"	
+    bottom:"data_even_385"	
+    bottom:"data_even_387"	
+    bottom:"data_even_389"	
+    bottom:"data_even_391"	
+    bottom:"data_even_393"	
+    bottom:"data_even_395"	
+    bottom:"data_even_397"	
+    bottom:"data_even_399"	
+    bottom:"data_even_401"	
+    bottom:"data_even_403"	
+    bottom:"data_even_405"	
+    bottom:"data_even_407"	
+    bottom:"data_even_409"	
+    bottom:"data_even_411"	
+    bottom:"data_even_413"	
+    bottom:"data_even_415"		
+    top: "data_even_ods"
+    name: "concat_even_ods"
+    type: "Concat"
+  concat_param {
+    axis: 3
+  }
+}
+
+
+layer {
+  name:"data_ods_slice"
+  type:"Slice"
+  bottom:"data_ods"
+  top:"data_ods_0"	
+  top:"data_ods_1"	
+  top:"data_ods_2"	
+  top:"data_ods_3"	
+  top:"data_ods_4"	
+  top:"data_ods_5"	
+  top:"data_ods_6"	
+  top:"data_ods_7"	
+  top:"data_ods_8"	
+  top:"data_ods_9"	
+  top:"data_ods_10"	
+  top:"data_ods_11"	
+  top:"data_ods_12"	
+  top:"data_ods_13"	
+  top:"data_ods_14"	
+  top:"data_ods_15"	
+  top:"data_ods_16"	
+  top:"data_ods_17"	
+  top:"data_ods_18"	
+  top:"data_ods_19"	
+  top:"data_ods_20"	
+  top:"data_ods_21"	
+  top:"data_ods_22"	
+  top:"data_ods_23"	
+  top:"data_ods_24"	
+  top:"data_ods_25"	
+  top:"data_ods_26"	
+  top:"data_ods_27"	
+  top:"data_ods_28"	
+  top:"data_ods_29"	
+  top:"data_ods_30"	
+  top:"data_ods_31"	
+  top:"data_ods_32"	
+  top:"data_ods_33"	
+  top:"data_ods_34"	
+  top:"data_ods_35"	
+  top:"data_ods_36"	
+  top:"data_ods_37"	
+  top:"data_ods_38"	
+  top:"data_ods_39"	
+  top:"data_ods_40"	
+  top:"data_ods_41"	
+  top:"data_ods_42"	
+  top:"data_ods_43"	
+  top:"data_ods_44"	
+  top:"data_ods_45"	
+  top:"data_ods_46"	
+  top:"data_ods_47"	
+  top:"data_ods_48"	
+  top:"data_ods_49"	
+  top:"data_ods_50"	
+  top:"data_ods_51"	
+  top:"data_ods_52"	
+  top:"data_ods_53"	
+  top:"data_ods_54"	
+  top:"data_ods_55"	
+  top:"data_ods_56"	
+  top:"data_ods_57"	
+  top:"data_ods_58"	
+  top:"data_ods_59"	
+  top:"data_ods_60"	
+  top:"data_ods_61"	
+  top:"data_ods_62"	
+  top:"data_ods_63"	
+  top:"data_ods_64"	
+  top:"data_ods_65"	
+  top:"data_ods_66"	
+  top:"data_ods_67"	
+  top:"data_ods_68"	
+  top:"data_ods_69"	
+  top:"data_ods_70"	
+  top:"data_ods_71"	
+  top:"data_ods_72"	
+  top:"data_ods_73"	
+  top:"data_ods_74"	
+  top:"data_ods_75"	
+  top:"data_ods_76"	
+  top:"data_ods_77"	
+  top:"data_ods_78"	
+  top:"data_ods_79"	
+  top:"data_ods_80"	
+  top:"data_ods_81"	
+  top:"data_ods_82"	
+  top:"data_ods_83"	
+  top:"data_ods_84"	
+  top:"data_ods_85"	
+  top:"data_ods_86"	
+  top:"data_ods_87"	
+  top:"data_ods_88"	
+  top:"data_ods_89"	
+  top:"data_ods_90"	
+  top:"data_ods_91"	
+  top:"data_ods_92"	
+  top:"data_ods_93"	
+  top:"data_ods_94"	
+  top:"data_ods_95"	
+  top:"data_ods_96"	
+  top:"data_ods_97"	
+  top:"data_ods_98"	
+  top:"data_ods_99"	
+  top:"data_ods_100"	
+  top:"data_ods_101"	
+  top:"data_ods_102"	
+  top:"data_ods_103"	
+  top:"data_ods_104"	
+  top:"data_ods_105"	
+  top:"data_ods_106"	
+  top:"data_ods_107"	
+  top:"data_ods_108"	
+  top:"data_ods_109"	
+  top:"data_ods_110"	
+  top:"data_ods_111"	
+  top:"data_ods_112"	
+  top:"data_ods_113"	
+  top:"data_ods_114"	
+  top:"data_ods_115"	
+  top:"data_ods_116"	
+  top:"data_ods_117"	
+  top:"data_ods_118"	
+  top:"data_ods_119"	
+  top:"data_ods_120"	
+  top:"data_ods_121"	
+  top:"data_ods_122"	
+  top:"data_ods_123"	
+  top:"data_ods_124"	
+  top:"data_ods_125"	
+  top:"data_ods_126"	
+  top:"data_ods_127"	
+  top:"data_ods_128"	
+  top:"data_ods_129"	
+  top:"data_ods_130"	
+  top:"data_ods_131"	
+  top:"data_ods_132"	
+  top:"data_ods_133"	
+  top:"data_ods_134"	
+  top:"data_ods_135"	
+  top:"data_ods_136"	
+  top:"data_ods_137"	
+  top:"data_ods_138"	
+  top:"data_ods_139"	
+  top:"data_ods_140"	
+  top:"data_ods_141"	
+  top:"data_ods_142"	
+  top:"data_ods_143"	
+  top:"data_ods_144"	
+  top:"data_ods_145"	
+  top:"data_ods_146"	
+  top:"data_ods_147"	
+  top:"data_ods_148"	
+  top:"data_ods_149"	
+  top:"data_ods_150"	
+  top:"data_ods_151"	
+  top:"data_ods_152"	
+  top:"data_ods_153"	
+  top:"data_ods_154"	
+  top:"data_ods_155"	
+  top:"data_ods_156"	
+  top:"data_ods_157"	
+  top:"data_ods_158"	
+  top:"data_ods_159"	
+  top:"data_ods_160"	
+  top:"data_ods_161"	
+  top:"data_ods_162"	
+  top:"data_ods_163"	
+  top:"data_ods_164"	
+  top:"data_ods_165"	
+  top:"data_ods_166"	
+  top:"data_ods_167"	
+  top:"data_ods_168"	
+  top:"data_ods_169"	
+  top:"data_ods_170"	
+  top:"data_ods_171"	
+  top:"data_ods_172"	
+  top:"data_ods_173"	
+  top:"data_ods_174"	
+  top:"data_ods_175"	
+  top:"data_ods_176"	
+  top:"data_ods_177"	
+  top:"data_ods_178"	
+  top:"data_ods_179"	
+  top:"data_ods_180"	
+  top:"data_ods_181"	
+  top:"data_ods_182"	
+  top:"data_ods_183"	
+  top:"data_ods_184"	
+  top:"data_ods_185"	
+  top:"data_ods_186"	
+  top:"data_ods_187"	
+  top:"data_ods_188"	
+  top:"data_ods_189"	
+  top:"data_ods_190"	
+  top:"data_ods_191"	
+  top:"data_ods_192"	
+  top:"data_ods_193"	
+  top:"data_ods_194"	
+  top:"data_ods_195"	
+  top:"data_ods_196"	
+  top:"data_ods_197"	
+  top:"data_ods_198"	
+  top:"data_ods_199"	
+  top:"data_ods_200"	
+  top:"data_ods_201"	
+  top:"data_ods_202"	
+  top:"data_ods_203"	
+  top:"data_ods_204"	
+  top:"data_ods_205"	
+  top:"data_ods_206"	
+  top:"data_ods_207"	
+  top:"data_ods_208"	
+  top:"data_ods_209"	
+  top:"data_ods_210"	
+  top:"data_ods_211"	
+  top:"data_ods_212"	
+  top:"data_ods_213"	
+  top:"data_ods_214"	
+  top:"data_ods_215"	
+  top:"data_ods_216"	
+  top:"data_ods_217"	
+  top:"data_ods_218"	
+  top:"data_ods_219"	
+  top:"data_ods_220"	
+  top:"data_ods_221"	
+  top:"data_ods_222"	
+  top:"data_ods_223"	
+  top:"data_ods_224"	
+  top:"data_ods_225"	
+  top:"data_ods_226"	
+  top:"data_ods_227"	
+  top:"data_ods_228"	
+  top:"data_ods_229"	
+  top:"data_ods_230"	
+  top:"data_ods_231"	
+  top:"data_ods_232"	
+  top:"data_ods_233"	
+  top:"data_ods_234"	
+  top:"data_ods_235"	
+  top:"data_ods_236"	
+  top:"data_ods_237"	
+  top:"data_ods_238"	
+  top:"data_ods_239"	
+  top:"data_ods_240"	
+  top:"data_ods_241"	
+  top:"data_ods_242"	
+  top:"data_ods_243"	
+  top:"data_ods_244"	
+  top:"data_ods_245"	
+  top:"data_ods_246"	
+  top:"data_ods_247"	
+  top:"data_ods_248"	
+  top:"data_ods_249"	
+  top:"data_ods_250"	
+  top:"data_ods_251"	
+  top:"data_ods_252"	
+  top:"data_ods_253"	
+  top:"data_ods_254"	
+  top:"data_ods_255"	
+  top:"data_ods_256"	
+  top:"data_ods_257"	
+  top:"data_ods_258"	
+  top:"data_ods_259"	
+  top:"data_ods_260"	
+  top:"data_ods_261"	
+  top:"data_ods_262"	
+  top:"data_ods_263"	
+  top:"data_ods_264"	
+  top:"data_ods_265"	
+  top:"data_ods_266"	
+  top:"data_ods_267"	
+  top:"data_ods_268"	
+  top:"data_ods_269"	
+  top:"data_ods_270"	
+  top:"data_ods_271"	
+  top:"data_ods_272"	
+  top:"data_ods_273"	
+  top:"data_ods_274"	
+  top:"data_ods_275"	
+  top:"data_ods_276"	
+  top:"data_ods_277"	
+  top:"data_ods_278"	
+  top:"data_ods_279"	
+  top:"data_ods_280"	
+  top:"data_ods_281"	
+  top:"data_ods_282"	
+  top:"data_ods_283"	
+  top:"data_ods_284"	
+  top:"data_ods_285"	
+  top:"data_ods_286"	
+  top:"data_ods_287"	
+  top:"data_ods_288"	
+  top:"data_ods_289"	
+  top:"data_ods_290"	
+  top:"data_ods_291"	
+  top:"data_ods_292"	
+  top:"data_ods_293"	
+  top:"data_ods_294"	
+  top:"data_ods_295"	
+  top:"data_ods_296"	
+  top:"data_ods_297"	
+  top:"data_ods_298"	
+  top:"data_ods_299"	
+  top:"data_ods_300"	
+  top:"data_ods_301"	
+  top:"data_ods_302"	
+  top:"data_ods_303"	
+  top:"data_ods_304"	
+  top:"data_ods_305"	
+  top:"data_ods_306"	
+  top:"data_ods_307"	
+  top:"data_ods_308"	
+  top:"data_ods_309"	
+  top:"data_ods_310"	
+  top:"data_ods_311"	
+  top:"data_ods_312"	
+  top:"data_ods_313"	
+  top:"data_ods_314"	
+  top:"data_ods_315"	
+  top:"data_ods_316"	
+  top:"data_ods_317"	
+  top:"data_ods_318"	
+  top:"data_ods_319"	
+  top:"data_ods_320"	
+  top:"data_ods_321"	
+  top:"data_ods_322"	
+  top:"data_ods_323"	
+  top:"data_ods_324"	
+  top:"data_ods_325"	
+  top:"data_ods_326"	
+  top:"data_ods_327"	
+  top:"data_ods_328"	
+  top:"data_ods_329"	
+  top:"data_ods_330"	
+  top:"data_ods_331"	
+  top:"data_ods_332"	
+  top:"data_ods_333"	
+  top:"data_ods_334"	
+  top:"data_ods_335"	
+  top:"data_ods_336"	
+  top:"data_ods_337"	
+  top:"data_ods_338"	
+  top:"data_ods_339"	
+  top:"data_ods_340"	
+  top:"data_ods_341"	
+  top:"data_ods_342"	
+  top:"data_ods_343"	
+  top:"data_ods_344"	
+  top:"data_ods_345"	
+  top:"data_ods_346"	
+  top:"data_ods_347"	
+  top:"data_ods_348"	
+  top:"data_ods_349"	
+  top:"data_ods_350"	
+  top:"data_ods_351"	
+  top:"data_ods_352"	
+  top:"data_ods_353"	
+  top:"data_ods_354"	
+  top:"data_ods_355"	
+  top:"data_ods_356"	
+  top:"data_ods_357"	
+  top:"data_ods_358"	
+  top:"data_ods_359"	
+  top:"data_ods_360"	
+  top:"data_ods_361"	
+  top:"data_ods_362"	
+  top:"data_ods_363"	
+  top:"data_ods_364"	
+  top:"data_ods_365"	
+  top:"data_ods_366"	
+  top:"data_ods_367"	
+  top:"data_ods_368"	
+  top:"data_ods_369"	
+  top:"data_ods_370"	
+  top:"data_ods_371"	
+  top:"data_ods_372"	
+  top:"data_ods_373"	
+  top:"data_ods_374"	
+  top:"data_ods_375"	
+  top:"data_ods_376"	
+  top:"data_ods_377"	
+  top:"data_ods_378"	
+  top:"data_ods_379"	
+  top:"data_ods_380"	
+  top:"data_ods_381"	
+  top:"data_ods_382"	
+  top:"data_ods_383"	
+  top:"data_ods_384"	
+  top:"data_ods_385"	
+  top:"data_ods_386"	
+  top:"data_ods_387"	
+  top:"data_ods_388"	
+  top:"data_ods_389"	
+  top:"data_ods_390"	
+  top:"data_ods_391"	
+  top:"data_ods_392"	
+  top:"data_ods_393"	
+  top:"data_ods_394"	
+  top:"data_ods_395"	
+  top:"data_ods_396"	
+  top:"data_ods_397"	
+  top:"data_ods_398"	
+  top:"data_ods_399"	
+  top:"data_ods_400"	
+  top:"data_ods_401"	
+  top:"data_ods_402"	
+  top:"data_ods_403"	
+  top:"data_ods_404"	
+  top:"data_ods_405"	
+  top:"data_ods_406"	
+  top:"data_ods_407"	
+  top:"data_ods_408"	
+  top:"data_ods_409"	
+  top:"data_ods_410"	
+  top:"data_ods_411"	
+  top:"data_ods_412"	
+  top:"data_ods_413"	
+  top:"data_ods_414"	
+  top:"data_ods_415"	
+
+  slice_param {
+    axis:3
+    slice_point:1	
+    slice_point:2	
+    slice_point:3	
+    slice_point:4	
+    slice_point:5	
+    slice_point:6	
+    slice_point:7	
+    slice_point:8	
+    slice_point:9	
+    slice_point:10	
+    slice_point:11	
+    slice_point:12	
+    slice_point:13	
+    slice_point:14	
+    slice_point:15	
+    slice_point:16	
+    slice_point:17	
+    slice_point:18	
+    slice_point:19	
+    slice_point:20	
+    slice_point:21	
+    slice_point:22	
+    slice_point:23	
+    slice_point:24	
+    slice_point:25	
+    slice_point:26	
+    slice_point:27	
+    slice_point:28	
+    slice_point:29	
+    slice_point:30	
+    slice_point:31	
+    slice_point:32	
+    slice_point:33	
+    slice_point:34	
+    slice_point:35	
+    slice_point:36	
+    slice_point:37	
+    slice_point:38	
+    slice_point:39	
+    slice_point:40	
+    slice_point:41	
+    slice_point:42	
+    slice_point:43	
+    slice_point:44	
+    slice_point:45	
+    slice_point:46	
+    slice_point:47	
+    slice_point:48	
+    slice_point:49	
+    slice_point:50	
+    slice_point:51	
+    slice_point:52	
+    slice_point:53	
+    slice_point:54	
+    slice_point:55	
+    slice_point:56	
+    slice_point:57	
+    slice_point:58	
+    slice_point:59	
+    slice_point:60	
+    slice_point:61	
+    slice_point:62	
+    slice_point:63	
+    slice_point:64	
+    slice_point:65	
+    slice_point:66	
+    slice_point:67	
+    slice_point:68	
+    slice_point:69	
+    slice_point:70	
+    slice_point:71	
+    slice_point:72	
+    slice_point:73	
+    slice_point:74	
+    slice_point:75	
+    slice_point:76	
+    slice_point:77	
+    slice_point:78	
+    slice_point:79	
+    slice_point:80	
+    slice_point:81	
+    slice_point:82	
+    slice_point:83	
+    slice_point:84	
+    slice_point:85	
+    slice_point:86	
+    slice_point:87	
+    slice_point:88	
+    slice_point:89	
+    slice_point:90	
+    slice_point:91	
+    slice_point:92	
+    slice_point:93	
+    slice_point:94	
+    slice_point:95	
+    slice_point:96	
+    slice_point:97	
+    slice_point:98	
+    slice_point:99	
+    slice_point:100	
+    slice_point:101	
+    slice_point:102	
+    slice_point:103	
+    slice_point:104	
+    slice_point:105	
+    slice_point:106	
+    slice_point:107	
+    slice_point:108	
+    slice_point:109	
+    slice_point:110	
+    slice_point:111	
+    slice_point:112	
+    slice_point:113	
+    slice_point:114	
+    slice_point:115	
+    slice_point:116	
+    slice_point:117	
+    slice_point:118	
+    slice_point:119	
+    slice_point:120	
+    slice_point:121	
+    slice_point:122	
+    slice_point:123	
+    slice_point:124	
+    slice_point:125	
+    slice_point:126	
+    slice_point:127	
+    slice_point:128	
+    slice_point:129	
+    slice_point:130	
+    slice_point:131	
+    slice_point:132	
+    slice_point:133	
+    slice_point:134	
+    slice_point:135	
+    slice_point:136	
+    slice_point:137	
+    slice_point:138	
+    slice_point:139	
+    slice_point:140	
+    slice_point:141	
+    slice_point:142	
+    slice_point:143	
+    slice_point:144	
+    slice_point:145	
+    slice_point:146	
+    slice_point:147	
+    slice_point:148	
+    slice_point:149	
+    slice_point:150	
+    slice_point:151	
+    slice_point:152	
+    slice_point:153	
+    slice_point:154	
+    slice_point:155	
+    slice_point:156	
+    slice_point:157	
+    slice_point:158	
+    slice_point:159	
+    slice_point:160	
+    slice_point:161	
+    slice_point:162	
+    slice_point:163	
+    slice_point:164	
+    slice_point:165	
+    slice_point:166	
+    slice_point:167	
+    slice_point:168	
+    slice_point:169	
+    slice_point:170	
+    slice_point:171	
+    slice_point:172	
+    slice_point:173	
+    slice_point:174	
+    slice_point:175	
+    slice_point:176	
+    slice_point:177	
+    slice_point:178	
+    slice_point:179	
+    slice_point:180	
+    slice_point:181	
+    slice_point:182	
+    slice_point:183	
+    slice_point:184	
+    slice_point:185	
+    slice_point:186	
+    slice_point:187	
+    slice_point:188	
+    slice_point:189	
+    slice_point:190	
+    slice_point:191	
+    slice_point:192	
+    slice_point:193	
+    slice_point:194	
+    slice_point:195	
+    slice_point:196	
+    slice_point:197	
+    slice_point:198	
+    slice_point:199	
+    slice_point:200	
+    slice_point:201	
+    slice_point:202	
+    slice_point:203	
+    slice_point:204	
+    slice_point:205	
+    slice_point:206	
+    slice_point:207	
+    slice_point:208	
+    slice_point:209	
+    slice_point:210	
+    slice_point:211	
+    slice_point:212	
+    slice_point:213	
+    slice_point:214	
+    slice_point:215	
+    slice_point:216	
+    slice_point:217	
+    slice_point:218	
+    slice_point:219	
+    slice_point:220	
+    slice_point:221	
+    slice_point:222	
+    slice_point:223	
+    slice_point:224	
+    slice_point:225	
+    slice_point:226	
+    slice_point:227	
+    slice_point:228	
+    slice_point:229	
+    slice_point:230	
+    slice_point:231	
+    slice_point:232	
+    slice_point:233	
+    slice_point:234	
+    slice_point:235	
+    slice_point:236	
+    slice_point:237	
+    slice_point:238	
+    slice_point:239	
+    slice_point:240	
+    slice_point:241	
+    slice_point:242	
+    slice_point:243	
+    slice_point:244	
+    slice_point:245	
+    slice_point:246	
+    slice_point:247	
+    slice_point:248	
+    slice_point:249	
+    slice_point:250	
+    slice_point:251	
+    slice_point:252	
+    slice_point:253	
+    slice_point:254	
+    slice_point:255	
+    slice_point:256	
+    slice_point:257	
+    slice_point:258	
+    slice_point:259	
+    slice_point:260	
+    slice_point:261	
+    slice_point:262	
+    slice_point:263	
+    slice_point:264	
+    slice_point:265	
+    slice_point:266	
+    slice_point:267	
+    slice_point:268	
+    slice_point:269	
+    slice_point:270	
+    slice_point:271	
+    slice_point:272	
+    slice_point:273	
+    slice_point:274	
+    slice_point:275	
+    slice_point:276	
+    slice_point:277	
+    slice_point:278	
+    slice_point:279	
+    slice_point:280	
+    slice_point:281	
+    slice_point:282	
+    slice_point:283	
+    slice_point:284	
+    slice_point:285	
+    slice_point:286	
+    slice_point:287	
+    slice_point:288	
+    slice_point:289	
+    slice_point:290	
+    slice_point:291	
+    slice_point:292	
+    slice_point:293	
+    slice_point:294	
+    slice_point:295	
+    slice_point:296	
+    slice_point:297	
+    slice_point:298	
+    slice_point:299	
+    slice_point:300	
+    slice_point:301	
+    slice_point:302	
+    slice_point:303	
+    slice_point:304	
+    slice_point:305	
+    slice_point:306	
+    slice_point:307	
+    slice_point:308	
+    slice_point:309	
+    slice_point:310	
+    slice_point:311	
+    slice_point:312	
+    slice_point:313	
+    slice_point:314	
+    slice_point:315	
+    slice_point:316	
+    slice_point:317	
+    slice_point:318	
+    slice_point:319	
+    slice_point:320	
+    slice_point:321	
+    slice_point:322	
+    slice_point:323	
+    slice_point:324	
+    slice_point:325	
+    slice_point:326	
+    slice_point:327	
+    slice_point:328	
+    slice_point:329	
+    slice_point:330	
+    slice_point:331	
+    slice_point:332	
+    slice_point:333	
+    slice_point:334	
+    slice_point:335	
+    slice_point:336	
+    slice_point:337	
+    slice_point:338	
+    slice_point:339	
+    slice_point:340	
+    slice_point:341	
+    slice_point:342	
+    slice_point:343	
+    slice_point:344	
+    slice_point:345	
+    slice_point:346	
+    slice_point:347	
+    slice_point:348	
+    slice_point:349	
+    slice_point:350	
+    slice_point:351	
+    slice_point:352	
+    slice_point:353	
+    slice_point:354	
+    slice_point:355	
+    slice_point:356	
+    slice_point:357	
+    slice_point:358	
+    slice_point:359	
+    slice_point:360	
+    slice_point:361	
+    slice_point:362	
+    slice_point:363	
+    slice_point:364	
+    slice_point:365	
+    slice_point:366	
+    slice_point:367	
+    slice_point:368	
+    slice_point:369	
+    slice_point:370	
+    slice_point:371	
+    slice_point:372	
+    slice_point:373	
+    slice_point:374	
+    slice_point:375	
+    slice_point:376	
+    slice_point:377	
+    slice_point:378	
+    slice_point:379	
+    slice_point:380	
+    slice_point:381	
+    slice_point:382	
+    slice_point:383	
+    slice_point:384	
+    slice_point:385	
+    slice_point:386	
+    slice_point:387	
+    slice_point:388	
+    slice_point:389	
+    slice_point:390	
+    slice_point:391	
+    slice_point:392	
+    slice_point:393	
+    slice_point:394	
+    slice_point:395	
+    slice_point:396	
+    slice_point:397	
+    slice_point:398	
+    slice_point:399	
+    slice_point:400	
+    slice_point:401	
+    slice_point:402	
+    slice_point:403	
+    slice_point:404	
+    slice_point:405	
+    slice_point:406	
+    slice_point:407	
+    slice_point:408	
+    slice_point:409	
+    slice_point:410	
+    slice_point:411	
+    slice_point:412	
+    slice_point:413	
+    slice_point:414	
+    slice_point:415
+  }
+}
+layer {
+    bottom:"data_ods_0"	
+    bottom:"data_ods_2"	
+    bottom:"data_ods_4"	
+    bottom:"data_ods_6"	
+    bottom:"data_ods_8"	
+    bottom:"data_ods_10"	
+    bottom:"data_ods_12"	
+    bottom:"data_ods_14"	
+    bottom:"data_ods_16"	
+    bottom:"data_ods_18"	
+    bottom:"data_ods_20"	
+    bottom:"data_ods_22"	
+    bottom:"data_ods_24"	
+    bottom:"data_ods_26"	
+    bottom:"data_ods_28"	
+    bottom:"data_ods_30"	
+    bottom:"data_ods_32"	
+    bottom:"data_ods_34"	
+    bottom:"data_ods_36"	
+    bottom:"data_ods_38"	
+    bottom:"data_ods_40"	
+    bottom:"data_ods_42"	
+    bottom:"data_ods_44"	
+    bottom:"data_ods_46"	
+    bottom:"data_ods_48"	
+    bottom:"data_ods_50"	
+    bottom:"data_ods_52"	
+    bottom:"data_ods_54"	
+    bottom:"data_ods_56"	
+    bottom:"data_ods_58"	
+    bottom:"data_ods_60"	
+    bottom:"data_ods_62"	
+    bottom:"data_ods_64"	
+    bottom:"data_ods_66"	
+    bottom:"data_ods_68"	
+    bottom:"data_ods_70"	
+    bottom:"data_ods_72"	
+    bottom:"data_ods_74"	
+    bottom:"data_ods_76"	
+    bottom:"data_ods_78"	
+    bottom:"data_ods_80"	
+    bottom:"data_ods_82"	
+    bottom:"data_ods_84"	
+    bottom:"data_ods_86"	
+    bottom:"data_ods_88"	
+    bottom:"data_ods_90"	
+    bottom:"data_ods_92"	
+    bottom:"data_ods_94"	
+    bottom:"data_ods_96"	
+    bottom:"data_ods_98"	
+    bottom:"data_ods_100"	
+    bottom:"data_ods_102"	
+    bottom:"data_ods_104"	
+    bottom:"data_ods_106"	
+    bottom:"data_ods_108"	
+    bottom:"data_ods_110"	
+    bottom:"data_ods_112"	
+    bottom:"data_ods_114"	
+    bottom:"data_ods_116"	
+    bottom:"data_ods_118"	
+    bottom:"data_ods_120"	
+    bottom:"data_ods_122"	
+    bottom:"data_ods_124"	
+    bottom:"data_ods_126"	
+    bottom:"data_ods_128"	
+    bottom:"data_ods_130"	
+    bottom:"data_ods_132"	
+    bottom:"data_ods_134"	
+    bottom:"data_ods_136"	
+    bottom:"data_ods_138"	
+    bottom:"data_ods_140"	
+    bottom:"data_ods_142"	
+    bottom:"data_ods_144"	
+    bottom:"data_ods_146"	
+    bottom:"data_ods_148"	
+    bottom:"data_ods_150"	
+    bottom:"data_ods_152"	
+    bottom:"data_ods_154"	
+    bottom:"data_ods_156"	
+    bottom:"data_ods_158"	
+    bottom:"data_ods_160"	
+    bottom:"data_ods_162"	
+    bottom:"data_ods_164"	
+    bottom:"data_ods_166"	
+    bottom:"data_ods_168"	
+    bottom:"data_ods_170"	
+    bottom:"data_ods_172"	
+    bottom:"data_ods_174"	
+    bottom:"data_ods_176"	
+    bottom:"data_ods_178"	
+    bottom:"data_ods_180"	
+    bottom:"data_ods_182"	
+    bottom:"data_ods_184"	
+    bottom:"data_ods_186"	
+    bottom:"data_ods_188"	
+    bottom:"data_ods_190"	
+    bottom:"data_ods_192"	
+    bottom:"data_ods_194"	
+    bottom:"data_ods_196"	
+    bottom:"data_ods_198"	
+    bottom:"data_ods_200"	
+    bottom:"data_ods_202"	
+    bottom:"data_ods_204"	
+    bottom:"data_ods_206"	
+    bottom:"data_ods_208"	
+    bottom:"data_ods_210"	
+    bottom:"data_ods_212"	
+    bottom:"data_ods_214"	
+    bottom:"data_ods_216"	
+    bottom:"data_ods_218"	
+    bottom:"data_ods_220"	
+    bottom:"data_ods_222"	
+    bottom:"data_ods_224"	
+    bottom:"data_ods_226"	
+    bottom:"data_ods_228"	
+    bottom:"data_ods_230"	
+    bottom:"data_ods_232"	
+    bottom:"data_ods_234"	
+    bottom:"data_ods_236"	
+    bottom:"data_ods_238"	
+    bottom:"data_ods_240"	
+    bottom:"data_ods_242"	
+    bottom:"data_ods_244"	
+    bottom:"data_ods_246"	
+    bottom:"data_ods_248"	
+    bottom:"data_ods_250"	
+    bottom:"data_ods_252"	
+    bottom:"data_ods_254"	
+    bottom:"data_ods_256"	
+    bottom:"data_ods_258"	
+    bottom:"data_ods_260"	
+    bottom:"data_ods_262"	
+    bottom:"data_ods_264"	
+    bottom:"data_ods_266"	
+    bottom:"data_ods_268"	
+    bottom:"data_ods_270"	
+    bottom:"data_ods_272"	
+    bottom:"data_ods_274"	
+    bottom:"data_ods_276"	
+    bottom:"data_ods_278"	
+    bottom:"data_ods_280"	
+    bottom:"data_ods_282"	
+    bottom:"data_ods_284"	
+    bottom:"data_ods_286"	
+    bottom:"data_ods_288"	
+    bottom:"data_ods_290"	
+    bottom:"data_ods_292"	
+    bottom:"data_ods_294"	
+    bottom:"data_ods_296"	
+    bottom:"data_ods_298"	
+    bottom:"data_ods_300"	
+    bottom:"data_ods_302"	
+    bottom:"data_ods_304"	
+    bottom:"data_ods_306"	
+    bottom:"data_ods_308"	
+    bottom:"data_ods_310"	
+    bottom:"data_ods_312"	
+    bottom:"data_ods_314"	
+    bottom:"data_ods_316"	
+    bottom:"data_ods_318"	
+    bottom:"data_ods_320"	
+    bottom:"data_ods_322"	
+    bottom:"data_ods_324"	
+    bottom:"data_ods_326"	
+    bottom:"data_ods_328"	
+    bottom:"data_ods_330"	
+    bottom:"data_ods_332"	
+    bottom:"data_ods_334"	
+    bottom:"data_ods_336"	
+    bottom:"data_ods_338"	
+    bottom:"data_ods_340"	
+    bottom:"data_ods_342"	
+    bottom:"data_ods_344"	
+    bottom:"data_ods_346"	
+    bottom:"data_ods_348"	
+    bottom:"data_ods_350"	
+    bottom:"data_ods_352"	
+    bottom:"data_ods_354"	
+    bottom:"data_ods_356"	
+    bottom:"data_ods_358"	
+    bottom:"data_ods_360"	
+    bottom:"data_ods_362"	
+    bottom:"data_ods_364"	
+    bottom:"data_ods_366"	
+    bottom:"data_ods_368"	
+    bottom:"data_ods_370"	
+    bottom:"data_ods_372"	
+    bottom:"data_ods_374"	
+    bottom:"data_ods_376"	
+    bottom:"data_ods_378"	
+    bottom:"data_ods_380"	
+    bottom:"data_ods_382"	
+    bottom:"data_ods_384"	
+    bottom:"data_ods_386"	
+    bottom:"data_ods_388"	
+    bottom:"data_ods_390"	
+    bottom:"data_ods_392"	
+    bottom:"data_ods_394"	
+    bottom:"data_ods_396"	
+    bottom:"data_ods_398"	
+    bottom:"data_ods_400"	
+    bottom:"data_ods_402"	
+    bottom:"data_ods_404"	
+    bottom:"data_ods_406"	
+    bottom:"data_ods_408"	
+    bottom:"data_ods_410"	
+    bottom:"data_ods_412"	
+    bottom:"data_ods_414"
+    top: "data_ods_even"
+    name: "concat_ods_even"
+    type: "Concat"
+  concat_param {
+    axis: 3
+  }
+}
+layer {
+    bottom:"data_ods_1"	
+    bottom:"data_ods_3"	
+    bottom:"data_ods_5"	
+    bottom:"data_ods_7"	
+    bottom:"data_ods_9"	
+    bottom:"data_ods_11"	
+    bottom:"data_ods_13"
+    bottom:"data_ods_15"
+    bottom:"data_ods_17"	
+    bottom:"data_ods_19"	
+    bottom:"data_ods_21"	
+    bottom:"data_ods_23"	
+    bottom:"data_ods_25"	
+    bottom:"data_ods_27"	
+    bottom:"data_ods_29"	
+    bottom:"data_ods_31"	
+    bottom:"data_ods_33"	
+    bottom:"data_ods_35"	
+    bottom:"data_ods_37"	
+    bottom:"data_ods_39"	
+    bottom:"data_ods_41"	
+    bottom:"data_ods_43"	
+    bottom:"data_ods_45"	
+    bottom:"data_ods_47"	
+    bottom:"data_ods_49"	
+    bottom:"data_ods_51"	
+    bottom:"data_ods_53"	
+    bottom:"data_ods_55"	
+    bottom:"data_ods_57"	
+    bottom:"data_ods_59"	
+    bottom:"data_ods_61"	
+    bottom:"data_ods_63"	
+    bottom:"data_ods_65"	
+    bottom:"data_ods_67"	
+    bottom:"data_ods_69"	
+    bottom:"data_ods_71"	
+    bottom:"data_ods_73"	
+    bottom:"data_ods_75"	
+    bottom:"data_ods_77"	
+    bottom:"data_ods_79"	
+    bottom:"data_ods_81"	
+    bottom:"data_ods_83"	
+    bottom:"data_ods_85"	
+    bottom:"data_ods_87"	
+    bottom:"data_ods_89"	
+    bottom:"data_ods_91"	
+    bottom:"data_ods_93"	
+    bottom:"data_ods_95"	
+    bottom:"data_ods_97"	
+    bottom:"data_ods_99"	
+    bottom:"data_ods_101"	
+    bottom:"data_ods_103"	
+    bottom:"data_ods_105"	
+    bottom:"data_ods_107"	
+    bottom:"data_ods_109"	
+    bottom:"data_ods_111"	
+    bottom:"data_ods_113"	
+    bottom:"data_ods_115"	
+    bottom:"data_ods_117"	
+    bottom:"data_ods_119"	
+    bottom:"data_ods_121"	
+    bottom:"data_ods_123"	
+    bottom:"data_ods_125"	
+    bottom:"data_ods_127"	
+    bottom:"data_ods_129"	
+    bottom:"data_ods_131"	
+    bottom:"data_ods_133"	
+    bottom:"data_ods_135"	
+    bottom:"data_ods_137"	
+    bottom:"data_ods_139"	
+    bottom:"data_ods_141"	
+    bottom:"data_ods_143"	
+    bottom:"data_ods_145"	
+    bottom:"data_ods_147"	
+    bottom:"data_ods_149"	
+    bottom:"data_ods_151"	
+    bottom:"data_ods_153"	
+    bottom:"data_ods_155"	
+    bottom:"data_ods_157"	
+    bottom:"data_ods_159"	
+    bottom:"data_ods_161"	
+    bottom:"data_ods_163"	
+    bottom:"data_ods_165"	
+    bottom:"data_ods_167"	
+    bottom:"data_ods_169"	
+    bottom:"data_ods_171"	
+    bottom:"data_ods_173"	
+    bottom:"data_ods_175"	
+    bottom:"data_ods_177"	
+    bottom:"data_ods_179"	
+    bottom:"data_ods_181"	
+    bottom:"data_ods_183"	
+    bottom:"data_ods_185"	
+    bottom:"data_ods_187"	
+    bottom:"data_ods_189"	
+    bottom:"data_ods_191"	
+    bottom:"data_ods_193"	
+    bottom:"data_ods_195"	
+    bottom:"data_ods_197"	
+    bottom:"data_ods_199"	
+    bottom:"data_ods_201"	
+    bottom:"data_ods_203"	
+    bottom:"data_ods_205"	
+    bottom:"data_ods_207"	
+    bottom:"data_ods_209"	
+    bottom:"data_ods_211"	
+    bottom:"data_ods_213"	
+    bottom:"data_ods_215"	
+    bottom:"data_ods_217"	
+    bottom:"data_ods_219"	
+    bottom:"data_ods_221"	
+    bottom:"data_ods_223"	
+    bottom:"data_ods_225"	
+    bottom:"data_ods_227"	
+    bottom:"data_ods_229"	
+    bottom:"data_ods_231"	
+    bottom:"data_ods_233"	
+    bottom:"data_ods_235"	
+    bottom:"data_ods_237"	
+    bottom:"data_ods_239"	
+    bottom:"data_ods_241"	
+    bottom:"data_ods_243"	
+    bottom:"data_ods_245"	
+    bottom:"data_ods_247"	
+    bottom:"data_ods_249"	
+    bottom:"data_ods_251"	
+    bottom:"data_ods_253"	
+    bottom:"data_ods_255"	
+    bottom:"data_ods_257"	
+    bottom:"data_ods_259"	
+    bottom:"data_ods_261"	
+    bottom:"data_ods_263"	
+    bottom:"data_ods_265"	
+    bottom:"data_ods_267"	
+    bottom:"data_ods_269"	
+    bottom:"data_ods_271"	
+    bottom:"data_ods_273"	
+    bottom:"data_ods_275"	
+    bottom:"data_ods_277"	
+    bottom:"data_ods_279"	
+    bottom:"data_ods_281"	
+    bottom:"data_ods_283"	
+    bottom:"data_ods_285"	
+    bottom:"data_ods_287"	
+    bottom:"data_ods_289"	
+    bottom:"data_ods_291"	
+    bottom:"data_ods_293"	
+    bottom:"data_ods_295"	
+    bottom:"data_ods_297"	
+    bottom:"data_ods_299"	
+    bottom:"data_ods_301"	
+    bottom:"data_ods_303"	
+    bottom:"data_ods_305"	
+    bottom:"data_ods_307"	
+    bottom:"data_ods_309"	
+    bottom:"data_ods_311"	
+    bottom:"data_ods_313"	
+    bottom:"data_ods_315"	
+    bottom:"data_ods_317"	
+    bottom:"data_ods_319"	
+    bottom:"data_ods_321"	
+    bottom:"data_ods_323"	
+    bottom:"data_ods_325"	
+    bottom:"data_ods_327"	
+    bottom:"data_ods_329"	
+    bottom:"data_ods_331"	
+    bottom:"data_ods_333"	
+    bottom:"data_ods_335"	
+    bottom:"data_ods_337"	
+    bottom:"data_ods_339"	
+    bottom:"data_ods_341"	
+    bottom:"data_ods_343"	
+    bottom:"data_ods_345"	
+    bottom:"data_ods_347"	
+    bottom:"data_ods_349"	
+    bottom:"data_ods_351"	
+    bottom:"data_ods_353"	
+    bottom:"data_ods_355"	
+    bottom:"data_ods_357"	
+    bottom:"data_ods_359"	
+    bottom:"data_ods_361"	
+    bottom:"data_ods_363"	
+    bottom:"data_ods_365"	
+    bottom:"data_ods_367"	
+    bottom:"data_ods_369"	
+    bottom:"data_ods_371"	
+    bottom:"data_ods_373"	
+    bottom:"data_ods_375"	
+    bottom:"data_ods_377"	
+    bottom:"data_ods_379"	
+    bottom:"data_ods_381"	
+    bottom:"data_ods_383"	
+    bottom:"data_ods_385"	
+    bottom:"data_ods_387"	
+    bottom:"data_ods_389"	
+    bottom:"data_ods_391"	
+    bottom:"data_ods_393"	
+    bottom:"data_ods_395"	
+    bottom:"data_ods_397"	
+    bottom:"data_ods_399"	
+    bottom:"data_ods_401"	
+    bottom:"data_ods_403"	
+    bottom:"data_ods_405"	
+    bottom:"data_ods_407"	
+    bottom:"data_ods_409"	
+    bottom:"data_ods_411"	
+    bottom:"data_ods_413"	
+    bottom:"data_ods_415"	
+    top: "data_ods_ods"
+    name: "concat_ods_ods"
+    type: "Concat"
+  concat_param {
+    axis: 3
+  }
+}
+layer {
+    bottom: "data_even_even"
+    bottom: "data_even_ods"
+    bottom: "data_ods_even"
+    bottom: "data_ods_ods"
+    top: "data_focus"
+    name: "layer_focus"
+    type: "Concat"
+}
+layer {
+    bottom: "data_focus"
+    top: "layer-conv0"
+    name: "layer-conv0"
+    type: "Convolution"
+    convolution_param {
+        num_output: 32
+        kernel_size: 3
+        pad: 1
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "layer-conv0"
+    top: "layer-conv0"
+    name: "conv0-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "layer-conv0"
+    top: "layer-conv0"
+    name: "conv0-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "layer-conv0"
+    top: "layer-conv0"
+    name: "conv0-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+###############focus end#####################################
+###############conv1 start#####################################
+
+layer {
+    bottom: "layer-conv0"
+    top: "layer-conv1"
+    name: "layer-conv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 64
+        kernel_size: 3
+        pad: 1
+        stride: 2
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "layer-conv1"
+    top: "layer-conv1"
+    name: "conv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "layer-conv1"
+    top: "layer-conv1"
+    name: "conv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "layer-conv1"
+    top: "layer-conv1"
+    name: "conv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############conv1 end#############################################
+############btnkcsp1 start#############################################
+
+layer {
+    bottom: "layer-conv1"
+    top: "btnkcsp-cv1"
+    name: "btnkcsp-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 32
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnkcsp-cv1"
+    top: "btnkcsp-cv1"
+    name: "btnkcsp-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp-cv1"
+    top: "btnkcsp-cv1"
+    name: "btnkcsp-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnkcsp-cv1"
+    top: "btnkcsp-cv1"
+    name: "btnkcsp-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############btnkcsp-cv1 end#############################################
+
+#########################btnck1 start###############################
+layer {
+    bottom: "btnkcsp-cv1"
+    top: "btnk-cv1"
+    name: "btnk-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 32
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+
+layer {
+    bottom: "btnk-cv1"
+    top: "btnk-cv1"
+    name: "btnk-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk-cv1"
+    top: "btnk-cv1"
+    name: "btnk-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk-cv1"
+    top: "btnk-cv1"
+    name: "btnk-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+
+layer {
+    bottom: "btnk-cv1"
+    top: "btnk-cv2"
+    name: "btnk-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 32
+        kernel_size: 3
+        pad: 1
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnk-cv2"
+    top: "btnk-cv2"
+    name: "btnk-cv2-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk-cv2"
+    top: "btnk-cv2"
+    name: "btnk-cv2-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk-cv2"
+    top: "btnk-cv2"
+    name: "btnk-cv2-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+layer {
+    bottom: "btnk-cv2"
+    bottom: "btnkcsp-cv1"
+    top: "btnkc1-out"
+    name: "btnkc1-out"
+    type: "Eltwise"
+    eltwise_param {
+        operation: SUM
+    }
+}
+############btnk1 end#############################################
+
+layer {
+    bottom: "btnkc1-out"
+    top: "btnkcsp-cv2"
+    name: "btnkcsp-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 32
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+layer {
+    bottom: "layer-conv1"
+    top: "btnkcsp-cv3"
+    name: "btnkcsp-cv3"
+    type: "Convolution"
+    convolution_param {
+        num_output: 32
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+
+layer {
+    bottom: "btnkcsp-cv2"
+    bottom: "btnkcsp-cv3"
+    top: "btnkcsp-concat1"
+    name: "btnkcsp-concat1"
+    type: "Concat"
+}
+
+layer {
+    bottom: "btnkcsp-concat1"
+    top: "btnkcsp-concat1-bn"
+    name: "btnkcsp-concat1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp-concat1-bn"
+    top: "btnkcsp-concat1-bn-act"
+    name: "btnkcsp-concat1-bn-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+layer {
+    bottom: "btnkcsp-concat1-bn-act"
+    top: "btnkcsp1-end-conv"
+    name: "btnkcsp1-end-conv"
+    type: "Convolution"
+    convolution_param {
+        num_output: 64
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+layer {
+    bottom: "btnkcsp1-end-conv"
+    top: "btnkcsp1-end-conv"
+    name: "btnkcsp1-end-conv-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp1-end-conv"
+    top: "btnkcsp1-end-conv"
+    name: "btnkcsp1-end-conv-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnkcsp1-end-conv"
+    top: "btnkcsp1-end-conv"
+    name: "btnkcsp1-end-conv-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+#########################btnckcsp1 end###############################
+##########################module conv down start################################
+
+layer {
+    bottom: "btnkcsp1-end-conv"
+    top: "conv_d_2"
+    name: "conv_d_2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 3
+        pad: 1
+        stride: 2
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+layer {
+    bottom: "conv_d_2"
+    top: "conv_d_2"
+    name: "conv_d_2-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "conv_d_2"
+    top: "conv_d_2"
+    name: "conv_d_2-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "conv_d_2"
+    top: "conv_d_2"
+    name: "conv_d_2-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+##########################module conv down end################################
+
+##########################module btnkcsp2 start################################
+
+layer {
+    bottom: "conv_d_2"
+    top: "btnkcsp2-cv1"
+    name: "btnkcsp2-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 64
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnkcsp2-cv1"
+    top: "btnkcsp2-cv1"
+    name: "btnkcsp2-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp2-cv1"
+    top: "btnkcsp2-cv1"
+    name: "btnkcsp2-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnkcsp2-cv1"
+    top: "btnkcsp2-cv1"
+    name: "btnkcsp2-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############btnkcsp2-cv1 end#############################################
+
+#########################btnck2 start###############################
+layer {
+    bottom: "btnkcsp2-cv1"
+    top: "btnk2-cv1"
+    name: "btnk2-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 64
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+
+layer {
+    bottom: "btnk2-cv1"
+    top: "btnk2-cv1"
+    name: "btnk2-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk2-cv1"
+    top: "btnk2-cv1"
+    name: "btnk2-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk2-cv1"
+    top: "btnk2-cv1"
+    name: "btnk2-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+
+layer {
+    bottom: "btnk2-cv1"
+    top: "btnk2-cv2"
+    name: "btnk2-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 64
+        kernel_size: 3
+        pad: 1
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnk2-cv2"
+    top: "btnk2-cv2"
+    name: "btnk2-cv2-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk2-cv2"
+    top: "btnk2-cv2"
+    name: "btnk2-cv2-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk2-cv2"
+    top: "btnk2-cv2"
+    name: "btnk2-cv2-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+layer {
+    bottom: "btnk2-cv2"
+    bottom: "btnkcsp2-cv1"
+    top: "btnkc2-out"
+    name: "btnkc2-out"
+    type: "Eltwise"
+    eltwise_param {
+        operation: SUM
+    }
+}
+############btnk2 end#############################################
+
+############btnk3 start###########################################
+layer {
+    bottom: "btnkc2-out"
+    top: "btnk3-cv1"
+    name: "btnk3-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 64
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+
+layer {
+    bottom: "btnk3-cv1"
+    top: "btnk3-cv1"
+    name: "btnk3-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk3-cv1"
+    top: "btnk3-cv1"
+    name: "btnk3-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk3-cv1"
+    top: "btnk3-cv1"
+    name: "btnk3-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+
+layer {
+    bottom: "btnk3-cv1"
+    top: "btnk3-cv2"
+    name: "btnk3-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 64
+        kernel_size: 3
+        pad: 1
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnk3-cv2"
+    top: "btnk3-cv2"
+    name: "btnk3-cv2-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk3-cv2"
+    top: "btnk3-cv2"
+    name: "btnk3-cv2-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk3-cv2"
+    top: "btnk3-cv2"
+    name: "btnk3-cv2-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+layer {
+    bottom: "btnk3-cv2"
+    bottom: "btnkc2-out"
+    top: "btnkc3-out"
+    name: "btnkc3-out"
+    type: "Eltwise"
+    eltwise_param {
+        operation: SUM
+    }
+}
+
+############btnk3 end#############################################
+
+############btnk4 start###########################################
+layer {
+    bottom: "btnkc3-out"
+    top: "btnk4-cv1"
+    name: "btnk4-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 64
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+
+layer {
+    bottom: "btnk4-cv1"
+    top: "btnk4-cv1"
+    name: "btnk4-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk4-cv1"
+    top: "btnk4-cv1"
+    name: "btnk4-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk4-cv1"
+    top: "btnk4-cv1"
+    name: "btnk4-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+
+layer {
+    bottom: "btnk4-cv1"
+    top: "btnk4-cv2"
+    name: "btnk4-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 64
+        kernel_size: 3
+        pad: 1
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnk4-cv2"
+    top: "btnk4-cv2"
+    name: "btnk4-cv2-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk4-cv2"
+    top: "btnk4-cv2"
+    name: "btnk4-cv2-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk4-cv2"
+    top: "btnk4-cv2"
+    name: "btnk4-cv2-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+layer {
+    bottom: "btnk4-cv2"
+    bottom: "btnkc3-out"
+    top: "btnkc4-out"
+    name: "btnkc4-out"
+    type: "Eltwise"
+    eltwise_param {
+        operation: SUM
+    }
+}
+
+############btnk4 end#############################################
+
+layer {
+    bottom: "btnkc4-out"
+    top: "btnkcsp2-cv2"
+    name: "btnkcsp2-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 64
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+layer {
+    bottom: "conv_d_2"
+    top: "btnkcsp2-cv3"
+    name: "btnkcsp2-cv3"
+    type: "Convolution"
+    convolution_param {
+        num_output: 64
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+
+layer {
+    bottom: "btnkcsp2-cv2"
+    bottom: "btnkcsp2-cv3"
+    top: "btnkcsp2-concat1"
+    name: "btnkcsp2-concat1"
+    type: "Concat"
+}
+
+layer {
+    bottom: "btnkcsp2-concat1"
+    top: "btnkcsp2-concat1-bn"
+    name: "btnkcsp2-concat1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp2-concat1-bn"
+    top: "btnkcsp2-concat1-bn-act"
+    name: "btnkcsp2-concat1-bn-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+layer {
+    bottom: "btnkcsp2-concat1-bn-act"
+    top: "btnkcsp2-end-conv"
+    name: "btnkcsp2-end-conv"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+layer {
+    bottom: "btnkcsp2-end-conv"
+    top: "btnkcsp2-end-conv"
+    name: "btnkcsp2-end-conv-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp2-end-conv"
+    top: "btnkcsp2-end-conv"
+    name: "btnkcsp2-end-conv-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnkcsp2-end-conv"
+    top: "btnkcsp2-end-conv"
+    name: "btnkcsp2-end-conv-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+#########################btnckcsp2 end###############################
+
+#########################conv_d_3 start###############################
+layer {
+    bottom: "btnkcsp2-end-conv"
+    top: "conv_d_3"
+    name: "conv_d_3"
+    type: "Convolution"
+    convolution_param {
+        num_output: 256
+        kernel_size: 3
+        pad: 1
+        stride: 2
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "conv_d_3"
+    top: "conv_d_3"
+    name: "conv_d_3-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "conv_d_3"
+    top: "conv_d_3"
+    name: "conv_d_3-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "conv_d_3"
+    top: "conv_d_3"
+    name: "conv_d_3-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############conv_d_3 end#############################################
+
+##########################module btnkcsp3 start################################
+
+layer {
+    bottom: "conv_d_3"
+    top: "btnkcsp3-cv1"
+    name: "btnkcsp3-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnkcsp3-cv1"
+    top: "btnkcsp3-cv1"
+    name: "btnkcsp3-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp3-cv1"
+    top: "btnkcsp3-cv1"
+    name: "btnkcsp3-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnkcsp3-cv1"
+    top: "btnkcsp3-cv1"
+    name: "btnkcsp3-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############btnkcsp3-cv1 end#############################################
+
+#########################btnck5 start###############################
+layer {
+    bottom: "btnkcsp3-cv1"
+    top: "btnk5-cv1"
+    name: "btnk5-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+
+layer {
+    bottom: "btnk5-cv1"
+    top: "btnk5-cv1"
+    name: "btnk5-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk5-cv1"
+    top: "btnk5-cv1"
+    name: "btnk5-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk5-cv1"
+    top: "btnk5-cv1"
+    name: "btnk5-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+
+layer {
+    bottom: "btnk5-cv1"
+    top: "btnk5-cv2"
+    name: "btnk5-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 3
+        pad: 1
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnk5-cv2"
+    top: "btnk5-cv2"
+    name: "btnk5-cv2-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk5-cv2"
+    top: "btnk5-cv2"
+    name: "btnk5-cv2-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk5-cv2"
+    top: "btnk5-cv2"
+    name: "btnk5-cv2-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+layer {
+    bottom: "btnk5-cv2"
+    bottom: "btnkcsp3-cv1"
+    top: "btnk5-out"
+    name: "btnk5-out"
+    type: "Eltwise"
+    eltwise_param {
+        operation: SUM
+    }
+}
+############btnk5 end#############################################
+
+############btnk6 start###########################################
+layer {
+    bottom: "btnk5-out"
+    top: "btnk6-cv1"
+    name: "btnk6-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+
+layer {
+    bottom: "btnk6-cv1"
+    top: "btnk6-cv1"
+    name: "btnk6-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk6-cv1"
+    top: "btnk6-cv1"
+    name: "btnk6-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk6-cv1"
+    top: "btnk6-cv1"
+    name: "btnk6-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+
+layer {
+    bottom: "btnk6-cv1"
+    top: "btnk6-cv2"
+    name: "btnk6-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 3
+        pad: 1
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnk6-cv2"
+    top: "btnk6-cv2"
+    name: "btnk6-cv2-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk6-cv2"
+    top: "btnk6-cv2"
+    name: "btnk6-cv2-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk6-cv2"
+    top: "btnk6-cv2"
+    name: "btnk6-cv2-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+layer {
+    bottom: "btnk6-cv2"
+    bottom: "btnk5-out"
+    top: "btnk6-out"
+    name: "btnk6-out"
+    type: "Eltwise"
+    eltwise_param {
+        operation: SUM
+    }
+}
+
+############btnk6 end#############################################
+
+############btnk7 start###########################################
+layer {
+    bottom: "btnk6-out"
+    top: "btnk7-cv1"
+    name: "btnk7-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+
+layer {
+    bottom: "btnk7-cv1"
+    top: "btnk7-cv1"
+    name: "btnk7-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk7-cv1"
+    top: "btnk7-cv1"
+    name: "btnk7-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk7-cv1"
+    top: "btnk7-cv1"
+    name: "btnk7-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+
+layer {
+    bottom: "btnk7-cv1"
+    top: "btnk7-cv2"
+    name: "btnk7-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 3
+        pad: 1
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnk7-cv2"
+    top: "btnk7-cv2"
+    name: "btnk7-cv2-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk7-cv2"
+    top: "btnk7-cv2"
+    name: "btnk7-cv2-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk7-cv2"
+    top: "btnk7-cv2"
+    name: "btnk7-cv2-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+layer {
+    bottom: "btnk7-cv2"
+    bottom: "btnk6-out"
+    top: "btnk7-out"
+    name: "btnk7-out"
+    type: "Eltwise"
+    eltwise_param {
+        operation: SUM
+    }
+}
+
+############btnk7 end#############################################
+
+layer {
+    bottom: "btnk7-out"
+    top: "btnkcsp3-cv2"
+    name: "btnkcsp3-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+layer {
+    bottom: "conv_d_3"
+    top: "btnkcsp3-cv3"
+    name: "btnkcsp3-cv3"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+
+layer {
+    bottom: "btnkcsp3-cv2"
+    bottom: "btnkcsp3-cv3"
+    top: "btnkcsp3-concat1"
+    name: "btnkcsp3-concat1"
+    type: "Concat"
+}
+
+layer {
+    bottom: "btnkcsp3-concat1"
+    top: "btnkcsp3-concat1-bn"
+    name: "btnkcsp3-concat1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp3-concat1-bn"
+    top: "btnkcsp3-concat1-bn-act"
+    name: "btnkcsp3-concat1-bn-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+layer {
+    bottom: "btnkcsp3-concat1-bn-act"
+    top: "btnkcsp3-end-conv"
+    name: "btnkcsp3-end-conv"
+    type: "Convolution"
+    convolution_param {
+        num_output: 256
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+layer {
+    bottom: "btnkcsp3-end-conv"
+    top: "btnkcsp3-end-conv"
+    name: "btnkcsp3-end-conv-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp3-end-conv"
+    top: "btnkcsp3-end-conv"
+    name: "btnkcsp3-end-conv-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnkcsp3-end-conv"
+    top: "btnkcsp3-end-conv"
+    name: "btnkcsp3-end-conv-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+#########################btnckcsp2 end###############################
+
+###############conv_d_4 start#####################################
+
+layer {
+    bottom: "btnkcsp3-end-conv"
+    top: "conv_d_4"
+    name: "conv_d_4"
+    type: "Convolution"
+    convolution_param {
+        num_output: 512
+        kernel_size: 3
+        pad: 1
+        stride: 2
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "conv_d_4"
+    top: "conv_d_4"
+    name: "conv_d_4-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "conv_d_4"
+    top: "conv_d_4"
+    name: "conv_d_4-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "conv_d_4"
+    top: "conv_d_4"
+    name: "conv_d_4-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############conv_d_4 end#############################################
+
+######################SPP start######################################
+####################spp conv1 start##################################
+layer {
+    bottom: "conv_d_4"
+    top: "spp_conv1"
+    name: "spp_conv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 256
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "spp_conv1"
+    top: "spp_conv1"
+    name: "spp_conv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "spp_conv1"
+    top: "spp_conv1"
+    name: "spp_conv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "spp_conv1"
+    top: "spp_conv1"
+    name: "spp_conv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+####################spp conv1  end##################################
+layer {
+    bottom: "spp_conv1"
+    top: "spp_maxpool_1"
+    name: "spp_maxpool_1"
+    type: "Pooling"
+    pooling_param {
+        kernel_size: 5
+        pad: 2
+        stride: 1
+        pool: MAX
+    }
+}
+
+layer {
+    bottom: "spp_conv1"
+    top: "spp_maxpool_2"
+    name: "spp_maxpool_2"
+    type: "Pooling"
+    pooling_param {
+        kernel_size: 9
+        pad: 4
+        stride: 1
+        pool: MAX
+    }
+}
+
+layer {
+    bottom: "spp_conv1"
+    top: "spp_maxpool_3"
+    name: "spp_maxpool_3"
+    type: "Pooling"
+    pooling_param {
+        kernel_size: 13
+        pad: 6
+        stride: 1
+        pool: MAX
+    }
+}
+
+layer {
+    bottom: "spp_conv1"
+    bottom: "spp_maxpool_1"
+    bottom: "spp_maxpool_2"
+    bottom: "spp_maxpool_3"
+    top: "spp_concat"
+    name: "spp_concat"
+    type: "Concat"
+}
+
+####################spp conv2 start##################################
+layer {
+    bottom: "spp_concat"
+    top: "spp_conv2"
+    name: "spp_conv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 512
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "spp_conv2"
+    top: "spp_conv2"
+    name: "spp_conv2-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "spp_conv2"
+    top: "spp_conv2"
+    name: "spp_conv2-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "spp_conv2"
+    top: "spp_conv2"
+    name: "spp_conv2-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+####################spp conv2  end##################################
+######################SPP end########################################
+
+############btnkcsp4 without shotcut start#############################################
+
+layer {
+    bottom: "spp_conv2"
+    top: "btnkcsp4-cv1"
+    name: "btnkcsp4-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 256
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnkcsp4-cv1"
+    top: "btnkcsp4-cv1"
+    name: "btnkcsp4-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp4-cv1"
+    top: "btnkcsp4-cv1"
+    name: "btnkcsp4-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnkcsp4-cv1"
+    top: "btnkcsp4-cv1"
+    name: "btnkcsp4-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############btnkcsp4-cv1 end#############################################
+
+#########################btnk8 start###############################
+layer {
+    bottom: "btnkcsp4-cv1"
+    top: "btnk8-cv1"
+    name: "btnk8-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 256
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+
+layer {
+    bottom: "btnk8-cv1"
+    top: "btnk8-cv1"
+    name: "btnk8-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk8-cv1"
+    top: "btnk8-cv1"
+    name: "btnk8-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk8-cv1"
+    top: "btnk8-cv1"
+    name: "btnk8-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+
+layer {
+    bottom: "btnk8-cv1"
+    top: "btnk8-cv2"
+    name: "btnk8-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 256
+        kernel_size: 3
+        pad: 1
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnk8-cv2"
+    top: "btnk8-cv2"
+    name: "btnk8-cv2-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk8-cv2"
+    top: "btnk8-cv2"
+    name: "btnk8-cv2-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk8-cv2"
+    top: "btnk8-cv2"
+    name: "btnk8-cv2-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############btnk8 end#############################################
+
+layer {
+    bottom: "btnk8-cv2"
+    top: "btnkcsp4-cv3"
+    name: "btnkcsp4-cv3"
+    type: "Convolution"
+    convolution_param {
+        num_output: 256
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+#####################################
+layer {
+    bottom: "spp_conv2"
+    top: "btnkcsp4-cv2"
+    name: "btnkcsp4-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 256
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+####################################
+layer {
+    bottom: "btnkcsp4-cv3"
+    bottom: "btnkcsp4-cv2"
+    top: "btnkcsp4-concat1"
+    name: "btnkcsp4-concat1"
+    type: "Concat"
+}
+
+layer {
+    bottom: "btnkcsp4-concat1"
+    top: "btnkcsp4-concat1-bn"
+    name: "btnkcsp4-concat1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp4-concat1-bn"
+    top: "btnkcsp4-concat1-bn-act"
+    name: "btnkcsp4-concat1-bn-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+layer {
+    bottom: "btnkcsp4-concat1-bn-act"
+    top: "btnkcsp4-end-conv"
+    name: "btnkcsp4-end-conv"
+    type: "Convolution"
+    convolution_param {
+        num_output: 512
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+layer {
+    bottom: "btnkcsp4-end-conv"
+    top: "btnkcsp4-end-conv"
+    name: "btnkcsp4-end-conv-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp4-end-conv"
+    top: "btnkcsp4-end-conv"
+    name: "btnkcsp4-end-conv-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnkcsp4-end-conv"
+    top: "btnkcsp4-end-conv"
+    name: "btnkcsp4-end-conv-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+#########################btnckcsp4 without shotcut end###############################
+
+###############conv5 start#####################################
+
+layer {
+    bottom: "btnkcsp4-end-conv"
+    top: "conv5"
+    name: "conv5"
+    type: "Convolution"
+    convolution_param {
+        num_output: 256
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "conv5"
+    top: "conv5"
+    name: "conv5-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "conv5"
+    top: "conv5"
+    name: "conv5-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "conv5"
+    top: "conv5"
+    name: "conv5-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############conv5 end#############################################
+############upsample start########################################
+layer {
+    bottom: "conv5"
+    top: "upsample1"
+    name: "upsample1"
+    type: "Upsample"
+    upsample_param {
+        scale: 2
+    }
+}
+############upsample end########################################
+layer {
+    bottom: "upsample1"
+    bottom: "btnkcsp3-end-conv"
+    top: "concat1-out"
+    name: "concat1-out"
+    type: "Concat"
+}
+################################################################
+
+############btnkcsp5 without shotcut start#############################################
+
+layer {
+    bottom: "concat1-out"
+    top: "btnkcsp5-cv1"
+    name: "btnkcsp5-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnkcsp5-cv1"
+    top: "btnkcsp5-cv1"
+    name: "btnkcsp5-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp5-cv1"
+    top: "btnkcsp5-cv1"
+    name: "btnkcsp5-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnkcsp5-cv1"
+    top: "btnkcsp5-cv1"
+    name: "btnkcsp5-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############btnkcsp5-cv1 end#############################################
+
+#########################btnk9 start###############################
+layer {
+    bottom: "btnkcsp5-cv1"
+    top: "btnk9-cv1"
+    name: "btnk9-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+
+layer {
+    bottom: "btnk9-cv1"
+    top: "btnk9-cv1"
+    name: "btnk9-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk9-cv1"
+    top: "btnk9-cv1"
+    name: "btnk9-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk9-cv1"
+    top: "btnk9-cv1"
+    name: "btnk9-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+
+layer {
+    bottom: "btnk9-cv1"
+    top: "btnk9-cv2"
+    name: "btnk9-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 3
+        pad: 1
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnk9-cv2"
+    top: "btnk9-cv2"
+    name: "btnk9-cv2-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk9-cv2"
+    top: "btnk9-cv2"
+    name: "btnk9-cv2-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk9-cv2"
+    top: "btnk9-cv2"
+    name: "btnk9-cv2-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############btnk9 end#############################################
+
+layer {
+    bottom: "btnk9-cv2"
+    top: "btnkcsp5-cv3"
+    name: "btnkcsp5-cv3"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+#####################################
+layer {
+    bottom: "concat1-out"
+    top: "btnkcsp5-cv2"
+    name: "btnkcsp5-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+####################################
+layer {
+    bottom: "btnkcsp5-cv3"
+    bottom: "btnkcsp5-cv2"
+    top: "btnkcsp5-concat1"
+    name: "btnkcsp5-concat1"
+    type: "Concat"
+}
+
+layer {
+    bottom: "btnkcsp5-concat1"
+    top: "btnkcsp5-concat1-bn"
+    name: "btnkcsp5-concat1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp5-concat1-bn"
+    top: "btnkcsp5-concat1-bn-act"
+    name: "btnkcsp5-concat1-bn-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+layer {
+    bottom: "btnkcsp5-concat1-bn-act"
+    top: "btnkcsp5-end-conv"
+    name: "btnkcsp5-end-conv"
+    type: "Convolution"
+    convolution_param {
+        num_output: 256
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+layer {
+    bottom: "btnkcsp5-end-conv"
+    top: "btnkcsp5-end-conv"
+    name: "btnkcsp5-end-conv-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp5-end-conv"
+    top: "btnkcsp5-end-conv"
+    name: "btnkcsp5-end-conv-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnkcsp5-end-conv"
+    top: "btnkcsp5-end-conv"
+    name: "btnkcsp5-end-conv-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+#########################btnckcsp5 without shotcut end###############################
+
+###############conv6 start#####################################
+
+layer {
+    bottom: "btnkcsp5-end-conv"
+    top: "conv6"
+    name: "conv6"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "conv6"
+    top: "conv6"
+    name: "conv6-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "conv6"
+    top: "conv6"
+    name: "conv6-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "conv6"
+    top: "conv6"
+    name: "conv6-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############conv6 end#############################################
+############upsample start########################################
+layer {
+    bottom: "conv6"
+    top: "upsample2"
+    name: "upsample2"
+    type: "Upsample"
+    upsample_param {
+        scale: 2
+    }
+}
+############upsample end########################################
+layer {
+    bottom: "upsample2"
+    bottom: "btnkcsp2-end-conv"
+    top: "concat2-out"
+    name: "concat2-out"
+    type: "Concat"
+}
+################################################################
+
+############btnkcsp6 without shotcut start#############################################
+
+layer {
+    bottom: "concat2-out"
+    top: "btnkcsp6-cv1"
+    name: "btnkcsp6-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 64
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnkcsp6-cv1"
+    top: "btnkcsp6-cv1"
+    name: "btnkcsp6-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp6-cv1"
+    top: "btnkcsp6-cv1"
+    name: "btnkcsp6-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnkcsp6-cv1"
+    top: "btnkcsp6-cv1"
+    name: "btnkcsp6-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############btnkcsp6-cv1 end#############################################
+
+#########################btnk10 start###############################
+layer {
+    bottom: "btnkcsp6-cv1"
+    top: "btnk10-cv1"
+    name: "btnk10-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 64
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+
+layer {
+    bottom: "btnk10-cv1"
+    top: "btnk10-cv1"
+    name: "btnk10-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk10-cv1"
+    top: "btnk10-cv1"
+    name: "btnk10-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk10-cv1"
+    top: "btnk10-cv1"
+    name: "btnk10-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+
+layer {
+    bottom: "btnk10-cv1"
+    top: "btnk10-cv2"
+    name: "btnk10-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 64
+        kernel_size: 3
+        pad: 1
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnk10-cv2"
+    top: "btnk10-cv2"
+    name: "btnk10-cv2-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk10-cv2"
+    top: "btnk10-cv2"
+    name: "btnk10-cv2-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk10-cv2"
+    top: "btnk10-cv2"
+    name: "btnk10-cv2-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############btnk10 end#############################################
+
+layer {
+    bottom: "btnk10-cv2"
+    top: "btnkcsp6-cv3"
+    name: "btnkcsp6-cv3"
+    type: "Convolution"
+    convolution_param {
+        num_output: 64
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+#####################################
+layer {
+    bottom: "concat2-out"
+    top: "btnkcsp6-cv2"
+    name: "btnkcsp6-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 64
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+####################################
+layer {
+    bottom: "btnkcsp6-cv3"
+    bottom: "btnkcsp6-cv2"
+    top: "btnkcsp6-concat1"
+    name: "btnkcsp6-concat1"
+    type: "Concat"
+}
+
+layer {
+    bottom: "btnkcsp6-concat1"
+    top: "btnkcsp6-concat1-bn"
+    name: "btnkcsp6-concat1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp6-concat1-bn"
+    top: "btnkcsp6-concat1-bn-act"
+    name: "btnkcsp6-concat1-bn-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+layer {
+    bottom: "btnkcsp6-concat1-bn-act"
+    top: "btnkcsp6-end-conv"
+    name: "btnkcsp6-end-conv"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+layer {
+    bottom: "btnkcsp6-end-conv"
+    top: "btnkcsp6-end-conv"
+    name: "btnkcsp6-end-conv-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp6-end-conv"
+    top: "btnkcsp6-end-conv"
+    name: "btnkcsp6-end-conv-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnkcsp6-end-conv"
+    top: "btnkcsp6-end-conv"
+    name: "btnkcsp6-end-conv-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+#########################btnckcsp6 without shotcut end###############################
+
+###############conv_d_5 start#####################################
+
+layer {
+    bottom: "btnkcsp6-end-conv"
+    top: "conv_d_5"
+    name: "conv_d_5"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 3
+        pad: 1
+        stride: 2
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "conv_d_5"
+    top: "conv_d_5"
+    name: "conv_d_5-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "conv_d_5"
+    top: "conv_d_5"
+    name: "conv_d_5-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "conv_d_5"
+    top: "conv_d_5"
+    name: "conv_d_5-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############conv_d_5 end#############################################
+layer {
+    bottom: "conv_d_5"
+    bottom: "conv6"
+    top: "concat3-out"
+    name: "concat3-out"
+    type: "Concat"
+}
+#####################################################################
+
+
+
+############btnkcsp7 without shotcut start#############################################
+
+layer {
+    bottom: "concat3-out"
+    top: "btnkcsp7-cv1"
+    name: "btnkcsp7-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnkcsp7-cv1"
+    top: "btnkcsp7-cv1"
+    name: "btnkcsp7-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp7-cv1"
+    top: "btnkcsp7-cv1"
+    name: "btnkcsp7-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnkcsp7-cv1"
+    top: "btnkcsp7-cv1"
+    name: "btnkcsp7-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############btnkcsp7-cv1 end#############################################
+
+#########################btnk11 start###############################
+layer {
+    bottom: "btnkcsp7-cv1"
+    top: "btnk11-cv1"
+    name: "btnk11-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+
+layer {
+    bottom: "btnk11-cv1"
+    top: "btnk11-cv1"
+    name: "btnk11-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk11-cv1"
+    top: "btnk11-cv1"
+    name: "btnk11-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk11-cv1"
+    top: "btnk11-cv1"
+    name: "btnk11-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+
+layer {
+    bottom: "btnk11-cv1"
+    top: "btnk11-cv2"
+    name: "btnk11-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 3
+        pad: 1
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnk11-cv2"
+    top: "btnk11-cv2"
+    name: "btnk11-cv2-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk11-cv2"
+    top: "btnk11-cv2"
+    name: "btnk11-cv2-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk11-cv2"
+    top: "btnk11-cv2"
+    name: "btnk11-cv2-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############btnk11 end#############################################
+
+layer {
+    bottom: "btnk11-cv2"
+    top: "btnkcsp7-cv3"
+    name: "btnkcsp7-cv3"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+#####################################
+layer {
+    bottom: "concat3-out"
+    top: "btnkcsp7-cv2"
+    name: "btnkcsp7-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 128
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+####################################
+layer {
+    bottom: "btnkcsp7-cv3"
+    bottom: "btnkcsp7-cv2"
+    top: "btnkcsp7-concat1"
+    name: "btnkcsp7-concat1"
+    type: "Concat"
+}
+
+layer {
+    bottom: "btnkcsp7-concat1"
+    top: "btnkcsp7-concat1-bn"
+    name: "btnkcsp7-concat1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp7-concat1-bn"
+    top: "btnkcsp7-concat1-bn-act"
+    name: "btnkcsp7-concat1-bn-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+layer {
+    bottom: "btnkcsp7-concat1-bn-act"
+    top: "btnkcsp7-end-conv"
+    name: "btnkcsp7-end-conv"
+    type: "Convolution"
+    convolution_param {
+        num_output: 256
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+layer {
+    bottom: "btnkcsp7-end-conv"
+    top: "btnkcsp7-end-conv"
+    name: "btnkcsp7-end-conv-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp7-end-conv"
+    top: "btnkcsp7-end-conv"
+    name: "btnkcsp7-end-conv-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnkcsp7-end-conv"
+    top: "btnkcsp7-end-conv"
+    name: "btnkcsp7-end-conv-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+#########################btnkcsp7 without shotcut end###############################
+
+###############conv_d_6 start#####################################
+
+layer {
+    bottom: "btnkcsp7-end-conv"
+    top: "conv_d_6"
+    name: "conv_d_6"
+    type: "Convolution"
+    convolution_param {
+        num_output: 256
+        kernel_size: 3
+        pad: 1
+        stride: 2
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "conv_d_6"
+    top: "conv_d_6"
+    name: "conv_d_6-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "conv_d_6"
+    top: "conv_d_6"
+    name: "conv_d_6-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "conv_d_6"
+    top: "conv_d_6"
+    name: "conv_d_6-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############conv_d_6 end#############################################
+layer {
+    bottom: "conv_d_6"
+    bottom: "conv5"
+    top: "concat4-out"
+    name: "concat4-out"
+    type: "Concat"
+}
+#####################################################################
+
+############btnkcsp8 without shotcut start#############################################
+
+layer {
+    bottom: "concat4-out"
+    top: "btnkcsp8-cv1"
+    name: "btnkcsp8-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 256
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnkcsp8-cv1"
+    top: "btnkcsp8-cv1"
+    name: "btnkcsp8-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp8-cv1"
+    top: "btnkcsp8-cv1"
+    name: "btnkcsp8-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnkcsp8-cv1"
+    top: "btnkcsp8-cv1"
+    name: "btnkcsp8-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############btnkcsp8-cv1 end#############################################
+
+#########################btnk12 start###############################
+layer {
+    bottom: "btnkcsp8-cv1"
+    top: "btnk12-cv1"
+    name: "btnk12-cv1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 256
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+
+layer {
+    bottom: "btnk12-cv1"
+    top: "btnk12-cv1"
+    name: "btnk12-cv1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk12-cv1"
+    top: "btnk12-cv1"
+    name: "btnk12-cv1-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk12-cv1"
+    top: "btnk12-cv1"
+    name: "btnk12-cv1-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+
+layer {
+    bottom: "btnk12-cv1"
+    top: "btnk12-cv2"
+    name: "btnk12-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 256
+        kernel_size: 3
+        pad: 1
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+layer {
+    bottom: "btnk12-cv2"
+    top: "btnk12-cv2"
+    name: "btnk12-cv2-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnk12-cv2"
+    top: "btnk12-cv2"
+    name: "btnk12-cv2-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnk12-cv2"
+    top: "btnk12-cv2"
+    name: "btnk12-cv2-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+############btnk12 end#############################################
+
+layer {
+    bottom: "btnk12-cv2"
+    top: "btnkcsp8-cv3"
+    name: "btnkcsp8-cv3"
+    type: "Convolution"
+    convolution_param {
+        num_output: 256
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+#####################################
+layer {
+    bottom: "concat4-out"
+    top: "btnkcsp8-cv2"
+    name: "btnkcsp8-cv2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 256
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+####################################
+layer {
+    bottom: "btnkcsp8-cv3"
+    bottom: "btnkcsp8-cv2"
+    top: "btnkcsp8-concat1"
+    name: "btnkcsp8-concat1"
+    type: "Concat"
+}
+
+layer {
+    bottom: "btnkcsp8-concat1"
+    top: "btnkcsp8-concat1-bn"
+    name: "btnkcsp8-concat1-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp8-concat1-bn"
+    top: "btnkcsp8-concat1-bn-act"
+    name: "btnkcsp8-concat1-bn-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+layer {
+    bottom: "btnkcsp8-concat1-bn-act"
+    top: "btnkcsp8-end-conv"
+    name: "btnkcsp8-end-conv"
+    type: "Convolution"
+    convolution_param {
+        num_output: 512
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: false
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+    }
+}
+
+layer {
+    bottom: "btnkcsp8-end-conv"
+    top: "btnkcsp8-end-conv"
+    name: "btnkcsp8-end-conv-bn"
+    type: "BatchNorm"
+    batch_norm_param {
+        use_global_stats: false
+    }
+}
+layer {
+    bottom: "btnkcsp8-end-conv"
+    top: "btnkcsp8-end-conv"
+    name: "btnkcsp8-end-conv-scale"
+    type: "Scale"
+    scale_param {
+        bias_term: true
+    }
+}
+layer {
+    bottom: "btnkcsp8-end-conv"
+    top: "btnkcsp8-end-conv"
+    name: "btnkcsp8-end-conv-act"
+    type: "ReLU"
+    relu_param {
+        negative_slope: 0.1
+    }
+}
+
+#########################btnkcsp8 without shotcut end###############################
+layer {
+    bottom: "btnkcsp6-end-conv"
+    top: "conv_out_1"
+    name: "conv_out_1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 36
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: true
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+        
+        bias_filler {
+            type: "constant"
+            value: 0
+        }
+    }
+}
+layer {
+    bottom: "btnkcsp7-end-conv"
+    top: "conv_out_2"
+    name: "conv_out_2"
+    type: "Convolution"
+    convolution_param {
+        num_output: 36
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: true
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+        
+        bias_filler {
+            type: "constant"
+            value: 0
+        }
+    }
+}
+layer {
+    bottom: "btnkcsp8-end-conv"
+    top: "conv_out_3"
+    name: "conv_out_3"
+    type: "Convolution"
+    convolution_param {
+        num_output: 36
+        kernel_size: 1
+        pad: 0
+        stride: 1
+        bias_term: true
+        weight_filler
+        {
+            type: "constant" 
+            value: 1
+        }
+        
+        bias_filler {
+            type: "constant"
+            value: 0
+        }
+    }
+}
+
